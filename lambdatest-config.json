@@ -1,0 +1,38 @@
+{
+  "browsers": [
+    {
+      "browser": "Chrome",
+      "platform": "Windows 10",
+      "versions": ["latest-1"]
+    },
+    {
+      "browser": "Firefox",
+      "platform": "Windows 10",
+      "versions": ["latest-1"]
+    },
+    {
+      "browser": "Webkit",
+      "platform": "MacOS Big sur",
+      "versions": ["latest"]
+    }
+  ],
+  "run_settings": {
+    "reporter_config_file": "base_reporter_config.json",
+    "build_name": "[Cypress] Execution of frontend-next on LambdaTest",
+    "parallels": 1,
+    "specs": "./cypress/e2e/*.cy.ts",
+    "ignore_files": "",
+    "network": true,
+    "headless": false,
+    "useNodeVersion": "22",
+    "npm_dependencies": {
+      "cypress": "^14.2.0",
+      "typescript": "^5.8.2"
+    },
+    "feature_file_suppport": false
+  },
+  "tunnel_settings": {
+    "tunnel": false,
+    "tunnel_name": null
+  }
+}

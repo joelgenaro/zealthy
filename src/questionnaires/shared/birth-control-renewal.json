@@ -1,0 +1,225 @@
+{
+  "name": "birth-control-prescription-renewal",
+  "version": "1",
+  "code": "BIRTH_CONTROL_RENEWAL",
+  "codingSystem": "http://schemas.getzealthy.canvasmedical.com/fhir/systems/internal",
+  "intro": {
+    "header": "Let’s help you with your prescription renewal. Just answer a few questions and your Zealthy care team will help with your prescription renewal in 1-3 business days."
+  },
+  "entry": "BIRTH_CONTROL_RENEWAL_Q1",
+  "questions": {
+    "BIRTH_CONTROL_RENEWAL_Q1": {
+      "header": "Are you happy with your birth control management?",
+      "type": "choice-details",
+      "next": "BIRTH_CONTROL_RENEWAL_Q2",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "BIRTH_CONTROL_RENEWAL_Q1_A1"
+        },
+        {
+          "text": "No",
+          "code": "BIRTH_CONTROL_RENEWAL_Q1_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "BIRTH_CONTROL_RENEWAL_Q1_A2",
+        "code": "BIRTH_CONTROL_RENEWAL_Q1_Q3",
+        "type": "text",
+        "description": "How would you like it to be improved?"
+      }
+    },
+    "BIRTH_CONTROL_RENEWAL_Q2": {
+      "header": "How many cigarettes do you smoke per day?",
+      "type": "choice",
+      "next": "BIRTH_CONTROL_RENEWAL_Q3",
+      "answerOptions": [
+        {
+          "text": "None at all",
+          "code": "BIRTH_CONTROL_RENEWAL_Q2_A1"
+        },
+        {
+          "text": "1-15",
+          "code": "BIRTH_CONTROL_RENEWAL_Q2_A2"
+        },
+        {
+          "text": "15+",
+          "code": "BIRTH_CONTROL_RENEWAL_Q2_A3"
+        }
+      ]
+    },
+    "BIRTH_CONTROL_RENEWAL_Q3": {
+      "header": "Did you start any new medications/herbal supplements since your last consultation with Zealthy?",
+      "type": "choice-details",
+      "index": 10,
+      "next": "BIRTH_CONTROL_RENEWAL_Q4",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "BIRTH_CONTROL_RENEWAL_Q3_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "BIRTH_CONTROL_RENEWAL_Q3_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "BIRTH_CONTROL_RENEWAL_Q3_A2",
+        "code": "BIRTH_CONTROL_RENEWAL_Q3_T1",
+        "type": "text",
+        "description": "Please list the medication(s) that you are currently taking.",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "BIRTH_CONTROL_RENEWAL_Q4": {
+      "header": "Are you pregnant or trying to get pregnant?",
+      "type": "choice",
+      "next": "BIRTH_CONTROL_RENEWAL_Q5",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "BIRTH_CONTROL_RENEWAL_Q4_A1"
+        },
+        {
+          "text": "No",
+          "code": "BIRTH_CONTROL_RENEWAL_Q4_A2"
+        }
+      ]
+    },
+    "BIRTH_CONTROL_RENEWAL_Q5": {
+      "header": "Have you been diagnosed with any new medical conditions since your last consultation with Zealthy?",
+      "type": "choice-details",
+      "index": 10,
+      "next": "BIRTH_CONTROL_RENEWAL_Q6",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "BIRTH_CONTROL_RENEWAL_Q5_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "BIRTH_CONTROL_RENEWAL_Q5_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "BIRTH_CONTROL_RENEWAL_Q5_A2",
+        "code": "BIRTH_CONTROL_RENEWAL_Q5_T1",
+        "type": "text",
+        "description": "Please list the condition(s)",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "BIRTH_CONTROL_RENEWAL_Q6": {
+      "header": "Have you had your blood pressure measured in the last year?",
+      "canvas_linkId": "5b2fe30a-9114-4d85-909b-457912037e7a",
+      "type": "choice",
+      "next": "BIRTH_CONTROL_RENEWAL_Q7",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "BIRTH_CONTROL_RENEWAL_Q6_A1"
+        },
+        {
+          "text": "No",
+          "code": "BIRTH_CONTROL_RENEWAL_Q6_A2"
+        }
+      ]
+    },
+    "BIRTH_CONTROL_RENEWAL_Q7": {
+      "header": "What was your most recent blood pressure reading?",
+      "type": "choice",
+      "next": "BIRTH_CONTROL_RENEWAL_Q8",
+      "answerOptions": [
+        {
+          "text": "I’m not sure but it was within the normal range",
+          "code": "BIRTH_CONTROL_RENEWAL_Q7_A1"
+        },
+        {
+          "text": "Elevated (130-139/80-89)",
+          "code": "BIRTH_CONTROL_RENEWAL_Q7_A3"
+        },
+        {
+          "text": "High (140-149/90-99)",
+          "code": "BIRTH_CONTROL_RENEWAL_Q7_A4"
+        },
+        {
+          "text": "Very High (More than 150/100)",
+          "code": "BIRTH_CONTROL_RENEWAL_Q7_A5"
+        }
+      ]
+    },
+    "BIRTH_CONTROL_RENEWAL_Q8": {
+      "header": "Are you on any blood pressure medications?",
+      "type": "choice-details",
+      "next": "BIRTH_CONTROL_RENEWAL_Q9",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "BIRTH_CONTROL_RENEWAL_Q8_A1"
+        },
+        {
+          "text": "No",
+          "code": "BIRTH_CONTROL_RENEWAL_Q8_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "BIRTH_CONTROL_RENEWAL_Q8_A1",
+        "code": "BIRTH_CONTROL_RENEWAL_Q8-2A",
+        "type": "text",
+        "description": "Please list medications"
+      }
+    },
+    "BIRTH_CONTROL_RENEWAL_Q9": {
+      "header": "Do you have any new drug or non-drug allergies?",
+      "type": "choice-details",
+      "next": "BIRTH_CONTROL_RENEWAL_Q10",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "BIRTH_CONTROL_RENEWAL_Q9_A1"
+        },
+        {
+          "text": "No",
+          "code": "BIRTH_CONTROL_RENEWAL_Q9_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "BIRTH_CONTROL_RENEWAL_Q9_A1",
+        "code": "BIRTH_CONTROL_RENEWAL_Q9_T1",
+        "type": "text",
+        "description": "Please list your drug allergies below."
+      }
+    },
+    "BIRTH_CONTROL_RENEWAL_Q10": {
+      "header": "Anything else you'd like to share about your experience with your birth control mangement? Please include details such as the dosage you tried, and any adverse reactions you experienced.",
+      "type": "text",
+      "next": "BIRTH_CONTROL_RENEWAL_Q11"
+    },
+    "BIRTH_CONTROL_RENEWAL_Q11": {
+      "header": "Is there anything else you would like your provider to know today?",
+      "type": "choice-details",
+      "next": "BIRTH_CONTROL_RENEWAL_Q12",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "BIRTH_CONTROL_RENEWAL_Q11_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "BIRTH_CONTROL_RENEWAL_Q11_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "BIRTH_CONTROL_RENEWAL_Q11_A2",
+        "code": "BIRTH_CONTROL_RENEWAL_Q11_T1",
+        "type": "text",
+        "description": "Please explain."
+      }
+    },
+    "BIRTH_CONTROL_RENEWAL_Q12": {
+      "header": "What happens next.",
+      "description": "You’re almost done; your Zealthy provider will review your responses prior to writing your prescription, if medically appropriate.",
+      "type": "async-what-happens-next-v2"
+    }
+  }
+}

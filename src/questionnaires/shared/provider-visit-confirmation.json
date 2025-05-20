@@ -1,0 +1,12 @@
+{
+  "name": "provider-visit-confirmation",
+  "version": "1",
+  "code": "PROVIDER-VC",
+  "entry": "PROVIDER-VC-Q1",
+  "questions": {
+    "PROVIDER-VC-Q1": {
+      "header": "Your visit is now scheduled.",
+      "type": "confirmation"
+    }
+  }
+}

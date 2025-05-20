@@ -1,0 +1,76 @@
+{
+  "name": "additional-pa",
+  "version": "1",
+  "code": "PA",
+  "entry": "PA_Q1",
+  "questions": {
+    "PA_Q1": {
+      "header": "Have you tried a weight management program for at least 6 months within the past year? (e.g. Noom, Weight Watchers)",
+      "description": "If you have, this will increase the likelihood of insurance covering your GLP-1 medication.",
+      "type": "choice",
+      "next": "PA_Q2",
+      "index": 1,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PA_Q1_A1"
+        },
+        {
+          "text": "No",
+          "code": "PA_Q1_A2"
+        }
+      ]
+    },
+    "PA_Q2": {
+      "header": "Please describe your weight loss journey.",
+      "description": "How long have you struggled with weight? Are there particular life events or triggers for your weight gain?",
+      "type": "text",
+      "index": 2,
+      "next": "PA_Q3",
+      "input_placeholder": "Share your story"
+    },
+    "PA_Q3": {
+      "header": "What race do you identify with?",
+      "description": "You may select all that apply. At times, our providers will use this for clinical decisions.",
+      "index": 3,
+      "type": "multiple-choice",
+      "next": "WEIGHT-LOSS-PREFERENCE-A-Q1",
+      "answerOptions": [
+        {
+          "text": "White",
+          "code": "PA_Q3_A1"
+        },
+        {
+          "text": "Black or African American",
+          "code": "PA_Q3_A2"
+        },
+        {
+          "text": "Asian",
+          "code": "PA_Q3_A3"
+        },
+        {
+          "text": "American Indian or Alaska Native",
+          "code": "PA_Q3_A4"
+        },
+        {
+          "text": "Native Hawaiian or other Pacific Islander",
+          "code": "PA_Q3_A5"
+        }
+      ]
+    },
+    "WEIGHT-LOSS-PREFERENCE-A-Q1": {
+      "type": "weight-loss-preference",
+      "next": "WEIGHT-LOSS-PAY-A-Q1",
+      "index": 4
+    },
+    "WEIGHT-LOSS-PAY-A-Q1": {
+      "type": "weight-loss-pay",
+      "next": "WEIGHT-LOSS-TREATMENT-A-Q1",
+      "index": 5
+    },
+    "WEIGHT-LOSS-TREATMENT-A-Q1": {
+      "type": "weight-loss-treatment",
+      "index": 6
+    }
+  }
+}

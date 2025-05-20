@@ -1,0 +1,377 @@
+{
+  "ASYNC_MH_MQ_Q12": {
+    "header": "Which of the following mental health medications have you previously taken?",
+    "description": "Select all that apply:",
+    "type": "multiple-choice",
+    "next": "ASYNC_MH_MQ_Q13",
+    "answerOptions": [
+      {
+        "text": "Abilify (Aripiprazole)",
+        "code": "ASYNC_MH_MQ_Q12_A1"
+      },
+      {
+        "text": "Bupropion (Wellbutrin)",
+        "code": "ASYNC_MH_MQ_Q12_A2"
+      },
+      {
+        "text": "Buspirone (BuSpar)",
+        "code": "ASYNC_MH_MQ_Q12_A3"
+      },
+      {
+        "text": "Caplyta (Lumateperone)",
+        "code": "ASYNC_MH_MQ_Q12_A4"
+      },
+      {
+        "text": "Citalopram (Celexa)",
+        "code": "ASYNC_MH_MQ_Q12_A5"
+      },
+      {
+        "text": "Depakote (Valproate)",
+        "code": "ASYNC_MH_MQ_Q12_A6"
+      },
+      {
+        "text": "Duloxetine (Cymbalta)",
+        "code": "ASYNC_MH_MQ_Q12_A7"
+      },
+      {
+        "text": "Escitalopram (Lexapro)",
+        "code": "ASYNC_MH_MQ_Q12_A8"
+      },
+      {
+        "text": "Fluxetine (Prozac)",
+        "code": "ASYNC_MH_MQ_Q12_A9"
+      },
+      {
+        "text": "Ketamine",
+        "code": "ASYNC_MH_MQ_Q12_A10"
+      },
+      {
+        "text": "Lamictal (Lamotrigine)",
+        "code": "ASYNC_MH_MQ_Q12_A11"
+      },
+      {
+        "text": "Latuda (Lurasidone)",
+        "code": "ASYNC_MH_MQ_Q12_A12"
+      },
+      {
+        "text": "Lithium (Lithobid)",
+        "code": "ASYNC_MH_MQ_Q12_A13"
+      },
+      {
+        "text": "Rexulti (Brexpiprazole)",
+        "code": "ASYNC_MH_MQ_Q12_A14"
+      },
+      {
+        "text": "Risperdal (Risperidone)",
+        "code": "ASYNC_MH_MQ_Q12_A15"
+      },
+      {
+        "text": "Seroquel (Quetiapine)",
+        "code": "ASYNC_MH_MQ_Q12_A16"
+      },
+      {
+        "text": "Sertraline (Zoloft)",
+        "code": "ASYNC_MH_MQ_Q12_A17"
+      },
+      {
+        "text": "Tegretol (Carbamazepine)",
+        "code": "ASYNC_MH_MQ_Q12_A18"
+      },
+      {
+        "text": "Trileptal (Oxcarbazepine)",
+        "code": "ASYNC_MH_MQ_Q12_A19"
+      },
+      {
+        "text": "Venlafaxine (Effexor)",
+        "code": "ASYNC_MH_MQ_Q12_A20"
+      },
+      {
+        "text": "Vraylar (Cariprazine)",
+        "code": "ASYNC_MH_MQ_Q12_A21"
+      },
+      {
+        "text": "Zyprexa (Olanzapine)",
+        "code": "ASYNC_MH_MQ_Q12_A22"
+      },
+      {
+        "text": "Something else",
+        "code": "ASYNC_MH_MQ_Q12_A23"
+      }
+    ]
+  },
+
+  "ASYNC_MH_MQ_Q17": {
+    "header": "Are you currently prescribed and taking a blood thinner (i.e. anticoagulant or antiplatelet) or an antiarrhythmic (i.e. flecainide)?",
+    "description": "Select all that apply:",
+    "type": "multiple-choice",
+    "next": "ASYNC_MH_MQ_Q20",
+    "answerOptions": [
+      {
+        "text": "Yes, I’m taking a blood thinner",
+        "code": "ASYNC_MH_MQ_Q13_A1",
+        "next": "ASYNC_MH_MQ_Q18"
+      },
+      {
+        "text": "Yes, I’m taking an antiarrhythmic",
+        "code": "ASYNC_MH_MQ_Q13_A2",
+        "next": "ASYNC_MH_MQ_Q19"
+      },
+      {
+        "text": "No, I’m not taking these",
+        "code": "ASYNC_MH_MQ_Q13_A3"
+      }
+    ]
+  },
+
+  "ASYNC_MH_MQ_Q18": {
+    "header": "Which blood thinner are you taking?",
+    "type": "text",
+    "next": "ASYNC_MH_MQ_Q19"
+  },
+
+  "ASYNC_MH_MQ_Q19": {
+    "header": "Which antiarrhythmic are you taking?",
+    "type": "text",
+    "next": "ASYNC_MH_MQ_Q19"
+  },
+
+  "ASYNC_MH_MQ_Q20": {
+    "header": "What other prescription medications, over-the-counter medications, or supplements do you take? List the prescription names and exact doses of any medications with prescriptions.",
+    "type": "text",
+    "next": "ASYNC_MH_MQ_Q21"
+  },
+  "ASYNC_MH_MQ_Q15": {
+    "header": "Do you have a history of any of the following medical conditions?",
+    "description": "Select all that apply:",
+    "type": "multiple-choice",
+    "next": "ASYNC_MH_MQ_Q16",
+    "answerOptions": [
+      {
+        "text": "Diabetes with peripheral neuropathy",
+        "code": "ASYNC_MH_MQ_Q15_A1"
+      },
+      {
+        "text": "Enlarged prostate (benign prostate hyperplasia)",
+        "code": "ASYNC_MH_MQ_Q15_A2"
+      },
+      {
+        "text": "Hair loss",
+        "code": "ASYNC_MH_MQ_Q15_A3"
+      },
+      {
+        "text": "High blood pressure",
+        "code": "ASYNC_MH_MQ_Q15_A4"
+      },
+      {
+        "text": "History of hyponatremia",
+        "code": "ASYNC_MH_MQ_Q15_A5"
+      },
+      {
+        "text": "Kidney failure",
+        "code": "ASYNC_MH_MQ_Q15_A6"
+      },
+      {
+        "text": "Liver disease",
+        "code": "ASYNC_MH_MQ_Q15_A7"
+      },
+      {
+        "text": "Narrow angle glaucoma",
+        "code": "ASYNC_MH_MQ_Q15_A8"
+      },
+      {
+        "text": "Premature ejaculation",
+        "code": "ASYNC_MH_MQ_Q15_A9"
+      },
+      {
+        "text": "QT prolongnation",
+        "code": "ASYNC_MH_MQ_Q15_A10"
+      },
+      {
+        "text": "Seizure disorder or epilepsy",
+        "code": "ASYNC_MH_MQ_Q15_A11"
+      },
+      {
+        "text": "Thyroid disease (diagnosed)",
+        "code": "ASYNC_MH_MQ_Q15_A12"
+      },
+      {
+        "text": "None of the above",
+        "code": "ASYNC_MH_MQ_Q15_A13"
+      }
+    ]
+  },
+  "ASYNC_MH_MQ_Q16": {
+    "header": "Do you use tobacco or smoke any nicotine products (i.e. smoking, vaping, chewing)?",
+    "type": "choice",
+    "next": "ASYNC_MH_MQ_Q17",
+    "answerOptions": [
+      {
+        "text": "Yes",
+        "code": "ASYNC_MH_MQ_Q16_A1"
+      },
+      {
+        "text": "No",
+        "code": "ASYNC_MH_MQ_Q16_A2"
+      }
+    ]
+  },
+  "ASYNC_MH_MQ_Q17": {
+    "header": "How often in the past year have you binge drank, meaning 5 or more drinks one one occasion for males and 4 or more drinks on one occasion for females?",
+    "type": "choice",
+    "next": "ASYNC_MH_MQ_Q18",
+    "answerOptions": [
+      {
+        "text": "Never",
+        "code": "ASYNC_MH_MQ_Q17_A1"
+      },
+      {
+        "text": "A few times a year",
+        "code": "ASYNC_MH_MQ_Q17_A2"
+      },
+      {
+        "text": "Once a month",
+        "code": "ASYNC_MH_MQ_Q17_A3"
+      },
+      {
+        "text": "Once a week",
+        "code": "ASYNC_MH_MQ_Q17_A4"
+      },
+      {
+        "text": "Daily or nearly every day",
+        "code": "ASYNC_MH_MQ_Q17_A5"
+      }
+    ]
+  },
+  "ASYNC_MH_MQ_Q18": {
+    "header": "Have you taken any of the following drugs in the past 6 months?",
+    "description": "Select all that apply:",
+    "type": "multiple-choice",
+    "next": "ASYNC_MH_MQ_Q19",
+    "answerOptions": [
+      {
+        "text": "Marijuana, cannabis, THC",
+        "code": "ASYNC_MH_MQ_Q18_A1"
+      },
+      {
+        "text": "Cocaine",
+        "code": "ASYNC_MH_MQ_Q18_A2"
+      },
+      {
+        "text": "Ecstasy (MDMA/molly)",
+        "code": "ASYNC_MH_MQ_Q18_A3"
+      },
+      {
+        "text": "Kratom",
+        "code": "ASYNC_MH_MQ_Q18_A4"
+      },
+      {
+        "text": "Opiates/opioids (heroin, fentanyl, OxyContin)",
+        "code": "ASYNC_MH_MQ_Q18_A5"
+      },
+      {
+        "text": "Stimulants (methamphetamines or illicit stimulants)",
+        "code": "ASYNC_MH_MQ_Q18_A6"
+      },
+      {
+        "text": "Tianeptine",
+        "code": "ASYNC_MH_MQ_Q18_A7"
+      },
+      {
+        "text": "None of the above",
+        "code": "ASYNC_MH_MQ_Q18_A8"
+      }
+    ]
+  },
+  "ASYNC_MH_MQ_Q19": {
+    "header": "Do you have any other medical conditions?",
+    "type": "choice-details",
+    "next": "ASYNC_MH_MQ_Q21",
+    "answerOptions": [
+      {
+        "text": "Yes",
+        "code": "ASYNC_MH_MQ_Q19_A1"
+      },
+      {
+        "text": "No",
+        "code": "ASYNC_MH_MQ_Q19_A2"
+      }
+    ],
+    "followUp": {
+      "showIfResponse": "ASYNC_MH_MQ_Q19_A1",
+      "code": "ASYNC_MH_MQ_Q20",
+      "type": "text",
+      "canvas_linkId": "2d01d2ee-9484-4921-8d62-b648250a90ac",
+      "input_placeholder": "Enter your other medical conditions here..."
+    }
+  },
+  "ASYNC_MH_MQ_Q21": {
+    "header": "Have you had any surgeries or hospitalizations?",
+    "type": "choice-details",
+    "next": "ASYNC_MH_MQ_Q23",
+    "answerOptions": [
+      {
+        "text": "Yes",
+        "code": "ASYNC_MH_MQ_Q21_A1"
+      },
+      {
+        "text": "No",
+        "code": "ASYNC_MH_MQ_Q21_A2"
+      }
+    ],
+    "followUp": {
+      "showIfResponse": "ASYNC_MH_MQ_Q21_A1",
+      "code": "ASYNC_MH_MQ_Q22",
+      "type": "text",
+      "canvas_linkId": "2d01d2ee-9484-4921-8d62-b648250a90ac",
+      "input_placeholder": "Details..."
+    }
+  },
+  "ASYNC_MH_MQ_Q23": {
+    "header": "Do you have any other allergies (i.e. medications, foods, etc.) that your provider should know of?",
+    "type": "choice-details",
+    "next": "ASYNC_MH_MQ_Q25",
+    "answerOptions": [
+      {
+        "text": "Yes",
+        "code": "ASYNC_MH_MQ_Q23_A1"
+      },
+      {
+        "text": "No",
+        "code": "ASYNC_MH_MQ_Q23_A2"
+      }
+    ],
+    "followUp": {
+      "showIfResponse": "ASYNC_MH_MQ_Q23_A1",
+      "code": "ASYNC_MH_MQ_Q24",
+      "type": "text",
+      "canvas_linkId": "2d01d2ee-9484-4921-8d62-b648250a90ac",
+      "input_placeholder": "Details..."
+    }
+  },
+  "ASYNC_MH_MQ_Q25": {
+    "header": "",
+    "listItems": [
+      "Based on your responses, it seems like you may be experiencing symptoms of anxiety or depression that we could help with.",
+      "People with similar symptoms have seen improvements when they take <strong>daily medication</strong>",
+      "<strong>Let’s find something that should help you feel better.</strong>"
+    ],
+    "type": "message",
+    "next": "ASYNC_MH_MQ_Q26",
+    "buttonText": "I'm ready"
+  },
+  "ASYNC_MH_MQ_Q26": {
+    "header": "Here’s how you and your provider will work together.",
+    "type": "message",
+    "next": "ASYNC_MH_MQ_Q27"
+  },
+  "ASYNC_MH_MQ_Q27": {
+    "header": "Your provider may consider a treatment like this:",
+    "type": "message",
+    "next": "ASYNC_MH_MQ_Q28"
+  },
+  "ASYNC_MH_MQ_Q28": {
+    "header": "75% of people taking prescription mental health medication reported an improvement in their mental health symptoms.",
+    "description": "Source: The Lancet",
+    "type": "message"
+  }
+}

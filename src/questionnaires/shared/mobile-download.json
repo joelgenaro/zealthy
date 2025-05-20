@@ -1,0 +1,11 @@
+{
+  "name": "mobile-download",
+  "version": "1",
+  "code": "MOBILE-DOWNLOAD",
+  "entry": "MOBILE-DOWNLOAD",
+  "questions": {
+    "MOBILE-DOWNLOAD": {
+      "type": "mobile-download"
+    }
+  }
+}

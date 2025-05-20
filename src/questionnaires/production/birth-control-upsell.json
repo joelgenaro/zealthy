@@ -1,0 +1,27 @@
+{
+  "name": "birth-control-upsell",
+  "version": "1",
+  "canvas_id": "98ecccde-2c7c-4fd1-bdad-0b512a127100",
+  "system": "http://schemas.getzealthy.canvasmedical.com/fhir/systems/internal",
+  "code": "BIRTH_C_I",
+  "entry": "BIRTH_C_I_Q1",
+  "questions": {
+    "BIRTH_C_I_Q1": {
+      "header": "Are you interested in getting birth control through Zealthy?",
+      "type": "choice",
+      "canvas_linkId": "443b6a01-72fe-4ce0-bab0-b753eee5db7b",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "BIRTH_C_I_Q1_A1",
+          "system": "http://schemas.getzealthy.canvasmedical.com/fhir/systems/internal"
+        },
+        {
+          "text": "No",
+          "code": "BIRTH_C_I_Q1_A2",
+          "system": "http://schemas.getzealthy.canvasmedical.com/fhir/systems/internal"
+        }
+      ]
+    }
+  }
+}

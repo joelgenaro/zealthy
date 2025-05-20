@@ -1,0 +1,275 @@
+{
+  "name": "phq-9",
+  "care": "anxiety or depression",
+  "version": "1",
+  "canvas_id": "c0fc8a6a-6751-4369-8962-296157f98dbd",
+  "code": "44249-1",
+  "codingSystem": "http://loinc.org",
+  "intro": {
+    "header": "Let’s get started with your free emotional health assessment.",
+    "description": "Next, you’ll answer some questions about how you’ve been feeling, which will help determine if and how Zealthy can help. This should take you 2-3 minutes to complete. Our program may include:",
+    "listItems": [
+      "Visit with psychiatric provider and, if appropriate, prescription for medication",
+      "Meds delivered to your doorstep",
+      "Support from a mental health coach"
+    ]
+  },
+  "entry": "44250-9",
+  "questions": {
+    "44250-9": {
+      "canvas_linkId": "75e297b1-6311-4b85-a2eb-957d9660f902",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Little interest or pleasure in doing things.",
+      "type": "choice",
+      "next": "44255-8",
+      "answerOptions": [
+        {
+          "text": "Not at all",
+          "code": "LA6568-5"
+        },
+        {
+          "text": "Several days",
+          "code": "LA6569-3"
+        },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44255-8": {
+      "canvas_linkId": "33e1e60f-c6da-48f3-9bfb-006bea62dc4d",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Feeling down, depressed, or hopeless.",
+      "type": "choice",
+      "next": "44259-0",
+      "answerOptions": [
+        {
+          "text": "Not at all",
+          "code": "LA6568-5"
+        },
+        {
+          "text": "Several days",
+          "code": "LA6569-3"
+        },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44259-0": {
+      "canvas_linkId": "f85e5186-92a1-4b55-bf97-864237ab210a",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Trouble falling or staying asleep, or sleeping too much.",
+      "type": "choice",
+      "next": "44254-1",
+      "answerOptions": [
+        {
+          "text": "Not at all",
+          "code": "LA6568-5"
+        },
+        {
+          "text": "Several days",
+          "code": "LA6569-3"
+        },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44254-1": {
+      "canvas_linkId": "249db141-338f-4872-bc10-ec0e40e19338",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Feeling tired or having little energy.",
+      "type": "choice",
+      "next": "44251-7",
+      "answerOptions": [
+        {
+          "text": "Not at all",
+          "code": "LA6568-5"
+        },
+        {
+          "text": "Several days",
+          "code": "LA6569-3"
+        },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44251-7": {
+      "canvas_linkId": "54085d7e-2eef-425e-94d7-dd8bacc91151",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Poor appetite or overeating.",
+      "type": "choice",
+      "next": "44258-2",
+      "answerOptions": [
+        {
+          "text": "Not at all",
+          "code": "LA6568-5"
+        },
+        {
+          "text": "Several days",
+          "code": "LA6569-3"
+        },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44258-2": {
+      "canvas_linkId": "6dfbe423-a334-4f72-9706-44f4fb18aa69",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Feeling bad about yourself - or that you are a failure or have let yourself or your family down.",
+      "type": "choice",
+      "next": "44252-5",
+      "answerOptions": [
+        {
+          "text": "Not at all",
+          "code": "LA6568-5"
+        },
+        {
+          "text": "Several days",
+          "code": "LA6569-3"
+        },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44252-5": {
+      "canvas_linkId": "f30fe2ee-e4de-4baa-aa6f-d5ddb13e6531",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Trouble concentrating on things, such as reading the newspaper or watching television.",
+      "type": "choice",
+      "next": "44253-3",
+      "answerOptions": [
+        {
+          "text": "Not at all",
+          "code": "LA6568-5"
+        },
+        {
+          "text": "Several days",
+          "code": "LA6569-3"
+        },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44253-3": {
+      "canvas_linkId": "887846f5-9147-4408-8201-4157c79c3b1a",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual.",
+      "type": "choice",
+      "next": "44260-8",
+      "answerOptions": [
+        {
+          "text": "Not at all",
+          "code": "LA6568-5"
+        },
+        {
+          "text": "Several days",
+          "code": "LA6569-3"
+        },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44260-8": {
+      "canvas_linkId": "70781800-9ed1-4da1-96f1-de6d73ffd809",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Thoughts that you would be better off dead, or of hurting yourself in some way.",
+      "type": "choice",
+      "answerOptions": [
+        {
+          "text": "Not at all",
+          "code": "LA6568-5"
+        },
+        {
+          "text": "Several days",
+          "code": "LA6569-3",
+          "next": "PHQ_9_S"
+        },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1",
+          "next": "PHQ_9_S"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9",
+          "next": "PHQ_9_S"
+        }
+      ]
+    },
+    "PHQ_9_S": {
+      "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+      "canvas_linkId": "39e03562-2583-4ca8-8f02-3b7a6f20fda1",
+      "subheader": "You indicated that you have thought about hurting yourself or that you would be better off dead.",
+      "header": "Would you describe these recent thoughts as:",
+      "type": "choice",
+      "answerOptions": [
+        {
+          "text": "A vague thought or feeling",
+          "code": "PHQ_9_S_A1",
+          "next": "S_DISCLAIMER"
+        },
+        {
+          "text": "Something I have made serious plans for",
+          "code": "PHQ_9_S_A2",
+          "next": "S_ALARM"
+        }
+      ]
+    },
+    "S_DISCLAIMER": {
+      "type": "suicide-disclaimer",
+      "header": "If you are thinking about hurting yourself, please seek help using the following resources:",
+      "buttonText": "I understand"
+    },
+    "S_ALARM": {
+      "type": "suicide-alarm",
+      "header": "If you are planning to hurt yourself, please seek immediate help with the following resources:"
+    }
+  }
+}

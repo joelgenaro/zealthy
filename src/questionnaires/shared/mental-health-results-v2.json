@@ -1,0 +1,19 @@
+{
+  "name": "mental-health-results-v2",
+  "care": "anxiety or depression",
+  "version": "1",
+  "code": "MENTAL-R-V2",
+  "entry": "MENTAL-R-V2-Q1",
+  "questions": {
+    "MENTAL-R-V2-Q1": {
+      "header": "You’re in good hands, [First Name].",
+      "listItems": [
+        "Here are your initial assessment results.",
+        "Symptoms of anxiety or depression are very common.",
+        "Based on your responses, we believe it’s likely that signing up for Zealthy Psychiatric Care and booking an appointment with a Zealthy provider to consider medication and other options will help.",
+        "Next available appointment: [Appointment]"
+      ],
+      "type": "mental-health-result"
+    }
+  }
+}

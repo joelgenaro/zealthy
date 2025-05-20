@@ -1,0 +1,16 @@
+{
+  "name": "weight-loss-full-body-photo",
+  "version": "1",
+  "code": "WEIGHT_LFBP",
+  "entry": "WEIGHT_LFBP_Q1",
+  "questions": {
+    "WEIGHT_LFBP_Q1": {
+      "header": "Upload a photo of your full body",
+      "description": "Please take a photo that shows your entire body (with clothes on) for the doctor",
+      "label": "Full body",
+      "type": "hair-loss-photo",
+      "buttonText": "Continue",
+      "index": 19
+    }
+  }
+}

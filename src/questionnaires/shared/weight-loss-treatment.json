@@ -1,0 +1,12 @@
+{
+  "name": "weight-loss-treatment",
+  "version": "1",
+  "code": "WEIGHT-LOSS-TREATMENT-A",
+  "entry": "WEIGHT-LOSS-TREATMENT-A-Q1",
+  "questions": {
+    "WEIGHT-LOSS-TREATMENT-A-Q1": {
+      "type": "weight-loss-treatment",
+      "index": 28
+    }
+  }
+}

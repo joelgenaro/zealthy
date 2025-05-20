@@ -1,0 +1,635 @@
+{
+  "name": "rosacea-treatment",
+  "version": "1",
+  "canvas_id": "cccd7cc8-207b-443d-a45d-feeaaf6d14d3",
+  "code": "ROSACEA_T",
+  "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+  "entry": "ROSACEA_T_Q1",
+  "questions": {
+    "ROSACEA_T_Q1": {
+      "header": "Have you been diagnosed with rosacea by a medical professional?",
+      "canvas_linkId": "a68b3ae3-80c6-4ba8-b470-f036621c4579",
+      "type": "choice-details",
+      "next": {
+        "if": [
+          { "===": [{ "var": "gender" }, "female"] },
+          "ROSACEA_T_Q3",
+          "ROSACEA_T_Q4"
+        ]
+      },
+      "index": 6,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ROSACEA_T_Q1_A1"
+        },
+        {
+          "text": "No",
+          "code": "ROSACEA_T_Q1_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ROSACEA_T_Q1_A1",
+        "code": "ROSACEA_T_Q2",
+        "type": "text",
+        "canvas_linkId": "5a43eb06-6992-4371-803d-49d51fe9d97f",
+        "description": "When were you diagnosed?"
+      }
+    },
+    "ROSACEA_T_Q3": {
+      "header": "Do any of the following apply to you?",
+      "description": "Select all that apply:",
+      "canvas_linkId": "062d00dc-3b25-4f79-85b9-194a3cdf3de1",
+      "type": "multiple-choice",
+      "next": "ROSACEA_T_Q4",
+      "index": 7,
+      "answerOptions": [
+        {
+          "text": "I am pregnant.",
+          "code": "ROSACEA_T_Q3_A1"
+        },
+        {
+          "text": "I am breastfeeding.",
+          "code": "ROSACEA_T_Q3_A2"
+        },
+        {
+          "text": "I had a child in the last six weeks.",
+          "code": "ROSACEA_T_Q3_A3"
+        },
+        {
+          "text": "None of the above",
+          "code": "ROSACEA_T_Q3_A4"
+        }
+      ]
+    },
+
+    "ROSACEA_T_Q4": {
+      "header": "Which parts of your body are affected?",
+      "description": "Select all that apply.",
+      "canvas_linkId": "d8364997-bc2f-457c-b51a-02d72da7a2a9",
+      "type": "multiple-choice",
+      "next": "ROSACEA_T_Q5",
+      "index": 8,
+      "answerOptions": [
+        {
+          "text": "Cheeks",
+          "code": "ROSACEA_T_Q4_A1"
+        },
+        {
+          "text": "Nose",
+          "code": "ROSACEA_T_Q4_A2"
+        },
+        {
+          "text": "Forehead",
+          "code": "ROSACEA_T_Q4_A3"
+        },
+        {
+          "text": "Chin",
+          "code": "ROSACEA_T_Q4_A4"
+        },
+        {
+          "text": "Eyes/Eyelids",
+          "code": "ROSACEA_T_Q4_A5"
+        },
+        {
+          "text": "Chest",
+          "code": "ROSACEA_T_Q4_A6"
+        },
+        {
+          "text": "On my shoulders and/or back",
+          "code": "ROSACEA_T_Q4_A7"
+        }
+      ]
+    },
+
+    "ROSACEA_T_Q5": {
+      "header": "Which of these symptoms do you experience?",
+      "description": "Select all that apply.",
+      "canvas_linkId": "467464c1-39a3-47d1-89ef-f4baeb50e3f2",
+      "type": "multiple-choice",
+      "next": {
+        "if": [
+          { "===": [{ "var": "gender" }, "female"] },
+          "ROSACEA_T_Q7",
+          "ROSACEA_T_Q9"
+        ]
+      },
+      "index": 9,
+      "answerOptions": [
+        {
+          "text": "Briefly gets red, easily flushes blushes",
+          "code": "ROSACEA_T_Q5_A1"
+        },
+        {
+          "text": "Persistent redness",
+          "code": "ROSACEA_T_Q5_A2"
+        },
+        {
+          "text": "Noticeable small blood vessels",
+          "code": "ROSACEA_T_Q5_A3"
+        },
+        {
+          "text": "Burning or stinging",
+          "code": "ROSACEA_T_Q5_A4"
+        },
+        {
+          "text": "Thickening of facial skin",
+          "code": "ROSACEA_T_Q5_A5"
+        },
+        {
+          "text": "Puffiness or swelling",
+          "code": "ROSACEA_T_Q5_A6"
+        },
+        {
+          "text": "Pimples or nodules that come and go",
+          "code": "ROSACEA_T_Q5_A7"
+        },
+        {
+          "text": "Dryness or flakiness",
+          "code": "ROSACEA_T_Q5_A8"
+        },
+        {
+          "text": "Other",
+          "code": "ROSACEA_T_Q5_A9"
+        },
+        {
+          "text": "None of the above",
+          "code": "ROSACEA_T_Q5_A10"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ROSACEA_T_Q5_A9",
+        "code": "ROSACEA_T_Q6",
+        "type": "text",
+        "canvas_linkId": "969234e4-5810-49ad-a01a-4a0b75d57e22",
+        "description": "Please specify"
+      }
+    },
+    "ROSACEA_T_Q7": {
+      "header": "Are your symptoms often worse around your menstrual cycle?",
+      "canvas_linkId": "40f0e7ca-33dd-446a-af0e-247fc940f671",
+      "type": "choice",
+      "next": "ROSACEA_T_Q8",
+      "index": 10,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ROSACEA_T_Q7_A1"
+        },
+        {
+          "text": "No",
+          "code": "ROSACEA_T_Q7_A2",
+          "next": "ROSACEA_T_Q9"
+        }
+      ]
+    },
+    "ROSACEA_T_Q8": {
+      "header": "Should we evaluate you for acne?",
+      "description": "You responded that your symptoms are worse around your menstrual cycle, but that’s not an expected symptom of rosacea. You may be experiencing acne, either alongside rosacea or by itself. You can also complete our acne assessment and our providers can evaluate you for both acne and rosacea today.",
+      "canvas_linkId": "310da833-d922-4792-9583-83e341cb35f9",
+      "type": "questionnaire-choice",
+      "index": 11,
+      "answerOptions": [
+        {
+          "text": "Evaluate me for rosacea and acne",
+          "code": "ROSACEA_T_Q8_A1"
+        },
+        {
+          "text": "Continue to be evaluate me for only rosacea",
+          "code": "ROSACEA_T_Q8_A2",
+          "next": "ROSACEA_T_Q9"
+        }
+      ]
+    },
+    "ROSACEA_T_Q9": {
+      "header": "How long have you been experiencing rosacea symptoms?",
+      "canvas_linkId": "632c568c-eddd-44a2-9fcd-e92a16a537bb",
+      "type": "choice",
+      "next": "ROSACEA_T_Q10",
+      "index": 12,
+      "answerOptions": [
+        {
+          "text": "Less than 6 months",
+          "code": "ROSACEA_T_Q9_A1"
+        },
+        {
+          "text": "6 months to 2 years",
+          "code": "ROSACEA_T_Q9_A2"
+        },
+        {
+          "text": "More than 2 years",
+          "code": "ROSACEA_T_Q9_A3"
+        }
+      ]
+    },
+
+    "ROSACEA_T_Q10": {
+      "header": "Do any of these things trigger or worsen your symptoms?",
+      "description": "Select all that apply.",
+      "canvas_linkId": "01fd2bfc-9155-4110-9604-10e256a53afa",
+      "type": "multiple-choice",
+      "next": "ROSACEA_T_Q11",
+      "index": 13,
+      "answerOptions": [
+        {
+          "text": "Alcohol",
+          "code": "ROSACEA_T_Q10_A1"
+        },
+        {
+          "text": "Chocolate",
+          "code": "ROSACEA_T_Q10_A2"
+        },
+        {
+          "text": "Exercise",
+          "code": "ROSACEA_T_Q10_A3"
+        },
+        {
+          "text": "Heat",
+          "code": "ROSACEA_T_Q10_A4"
+        },
+        {
+          "text": "Hot beverages like coffee or tea",
+          "code": "ROSACEA_T_Q10_A5"
+        },
+        {
+          "text": "Some makeup",
+          "code": "ROSACEA_T_Q10_A6"
+        },
+        {
+          "text": "Some medications",
+          "code": "ROSACEA_T_Q10_A7"
+        },
+        {
+          "text": "Some skin and hair products",
+          "code": "ROSACEA_T_Q10_A8"
+        },
+        {
+          "text": "Spicy foods",
+          "code": "ROSACEA_T_Q10_A9"
+        },
+        {
+          "text": "Sunlight",
+          "code": "ROSACEA_T_Q10_A10"
+        },
+        {
+          "text": "Tomato-based foods like pasta sauces",
+          "code": "ROSACEA_T_Q10_A11"
+        },
+        {
+          "text": "Wind and cold",
+          "code": "ROSACEA_T_Q10_A12"
+        },
+        {
+          "text": "Other",
+          "code": "ROSACEA_T_Q10_A13"
+        },
+        {
+          "text": "None of the above",
+          "code": "ROSACEA_T_Q10_A14"
+        }
+      ]
+    },
+
+    "ROSACEA_T_Q11": {
+      "header": "Have you experienced any unexplained symptoms associated with your rosacea?",
+      "type": "choice-details",
+      "canvas_linkId": "ce866d0f-c8d6-44e0-b335-dd5b7408a1dd",
+      "next": "ROSACEA_T_Q13",
+      "index": 14,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ROSACEA_T_Q11_A1"
+        },
+        {
+          "text": "No",
+          "code": "ROSACEA_T_Q11_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ROSACEA_T_Q11_A1",
+        "code": "ROSACEA_T_Q12",
+        "type": "text",
+        "canvas_linkId": "f69558d2-3b9c-44a8-ad45-09aaf89375a7",
+        "description": "Please specify"
+      }
+    },
+
+    "ROSACEA_T_Q13": {
+      "header": "Are you currently on any prescription medication for rosacea?",
+      "type": "choice-details",
+      "canvas_linkId": "b570fdc3-3d8a-49e2-9f2c-a1aa888edd66",
+      "next": "ROSACEA_T_Q15",
+      "index": 15,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ROSACEA_T_Q13_A1"
+        },
+        {
+          "text": "No",
+          "code": "ROSACEA_T_Q13_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ROSACEA_T_Q13_A1",
+        "code": "ROSACEA_T_Q14",
+        "type": "text",
+        "canvas_linkId": "34538ae6-1959-48cd-93ef-c82a5205a535",
+        "description": "Please specify"
+      }
+    },
+
+    "ROSACEA_T_Q15": {
+      "header": "Have you taken any prescription medication for rosacea in the past that you no longer use?",
+      "type": "choice-details",
+      "canvas_linkId": "e2594877-46ba-4067-a5db-f527d9f201aa",
+      "next": "ROSACEA_T_Q17",
+      "index": 16,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ROSACEA_T_Q15_A1"
+        },
+        {
+          "text": "No",
+          "code": "ROSACEA_T_Q15_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ROSACEA_T_Q15_A1",
+        "code": "ROSACEA_T_Q16",
+        "type": "text",
+        "canvas_linkId": "ecf22486-d25b-4818-b328-8f991717fdae",
+        "description": "Please specify"
+      }
+    },
+
+    "ROSACEA_T_Q17": {
+      "header": "Are you currently taking any medications and/or herbal supplements (not necessarily for rosacea)?",
+      "type": "choice-details",
+      "canvas_linkId": "f4742c7e-6b56-463a-a8d8-c69be3abbc33",
+      "next": "ROSACEA_T_Q19",
+      "index": 17,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ROSACEA_T_Q17_A1"
+        },
+        {
+          "text": "No",
+          "code": "ROSACEA_T_Q17_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ROSACEA_T_Q17_A1",
+        "code": "ROSACEA_T_Q18",
+        "type": "text",
+        "canvas_linkId": "513c4e4c-cfcb-4f17-b197-860dcfb8f5ce",
+        "description": "Please share what medication you are currently on.  If you take them for a certain condition, tell us which condition and the dose of the medication. If you do not know, that is ok.",
+        "input_placeholder": "ex. cymbalta for depression 30mg"
+      }
+    },
+    "ROSACEA_T_Q19": {
+      "header": "Do you have any drug or non-drug allergies?",
+      "type": "choice-details",
+      "canvas_linkId": "1bf0efc3-8d6d-455a-bcf6-c29b5d3f6cd2",
+      "next": "ROSACEA_T_Q21",
+      "index": 18,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ROSACEA_T_Q19_A1"
+        },
+        {
+          "text": "No",
+          "code": "ROSACEA_T_Q19_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ROSACEA_T_Q19_A1",
+        "code": "ROSACEA_T_Q20",
+        "type": "text",
+        "canvas_linkId": "908d867b-935e-4c2d-8858-5a9c8f1c8a5e",
+        "description": "Please share any additional information your Zealthy provider should know."
+      }
+    },
+
+    "ROSACEA_T_Q21": {
+      "header": "Would you be comfortable taking oral antibiotics if prescribed?",
+      "description": "Oral antibiotics are often used to treat rosacea for short term use (3 months or less), however they may increase sun sensitivity and cause stomach upset.",
+      "type": "choice",
+      "canvas_linkId": "7392f3dd-bd20-493b-b4f4-9a4f8b56b310",
+      "next": "ROSACEA_T_Q22",
+      "index": 19,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ROSACEA_T_Q21_A1"
+        },
+        {
+          "text": "No",
+          "code": "ROSACEA_T_Q21_A2"
+        }
+      ]
+    },
+
+    "ROSACEA_T_Q22": {
+      "header": "Do you have a specific medication you would like to receive?",
+      "description": "Your Zealthy medical team will take any preference you might have into consideration as it determines the best rosacea treatment for you.",
+      "type": "choice-details",
+      "canvas_linkId": "651c7aa0-5f4a-4c99-8dc4-7fefd2fc9d9b",
+      "next": "ROSACEA_T_Q23",
+      "index": 20,
+      "answerOptions": [
+        {
+          "text": "No, help me find the right treatment",
+          "code": "ROSACEA_T_Q22_A1"
+        },
+        {
+          "text": "Yes, I have a preference",
+          "code": "ROSACEA_T_Q22_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ROSACEA_T_Q22_A2",
+        "code": "ROSACEA_T_Q23",
+        "type": "text",
+        "canvas_linkId": "167bb93e-831c-4525-b7fc-cd92ead6aebe",
+        "description": "Tell us more",
+        "body": "Which medication(s) are you interested in? If you have a dosage preference, please specify that also (e.g. Tretinoin .1%)."
+      }
+    },
+
+    "ROSACEA_T_Q23": {
+      "header": "Is there anything else we should know?",
+      "type": "choice-details",
+      "canvas_linkId": "2d90e929-937c-4938-9c24-23bc9dc7bb4e",
+      "next": {
+        "if": [
+          {
+            "some": [
+              { "var": "answers.ROSACEA_T_Q4.answer" },
+              {
+                "in": [
+                  { "var": "valueCoding.display" },
+                  ["Cheeks", "Nose", "Forehead", "Chin", "Eyes/Eyelids"]
+                ]
+              }
+            ]
+          },
+          "PHOTO_FACE_1",
+          {
+            "some": [
+              { "var": "answers.ROSACEA_T_Q4.answer" },
+              {
+                "===": [{ "var": "valueCoding.display" }, "Chest"]
+              }
+            ]
+          },
+          "PHOTO_CHEST",
+          "PHOTO_BACK"
+        ]
+      },
+      "index": 21,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ROSACEA_T_Q23_A1"
+        },
+        {
+          "text": "No",
+          "code": "ROSACEA_T_Q23_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ROSACEA_T_Q23_A1",
+        "code": "ROSACEA_T_Q24",
+        "type": "text",
+        "canvas_linkId": "3c850497-74b3-4223-b8f5-9d62aceb6238",
+        "description": "What else do we need to know?"
+      }
+    },
+
+    "ROSACEA_T_Q24": {
+      "header": "How does your rosacea today compare to your worst day?",
+      "type": "choice",
+      "canvas_linkId": "a9a26a8d-50b0-4d1c-83e1-85115f96b03e",
+      "next": "COMPLETED",
+      "index": 27,
+      "answerOptions": [
+        {
+          "text": "This is about the same as my worst day",
+          "code": "ROSACEA_T_Q24_A1"
+        },
+        {
+          "text": "Worse than my usual worst day",
+          "code": "ROSACEA_T_Q24_A2"
+        },
+        {
+          "text": "Not as severe as my worst day",
+          "code": "ROSACEA_T_Q24_A3"
+        },
+        {
+          "text": "I have no visible affected areas today",
+          "code": "ROSACEA_T_Q24_A4"
+        }
+      ]
+    },
+
+    "PHOTO_FACE_1": {
+      "header": "Please provide a photo of your entire face looking directly at the camera",
+      "description": "For best results, remove make-up, be in a well-lit room or outdoors",
+      "label": "Front of face",
+      "type": "hair-loss-photo",
+      "next": "PHOTO_FACE_2",
+      "index": 22,
+      "buttonText": "Continue"
+    },
+    "PHOTO_FACE_2": {
+      "header": "Please provide a photo looking to the left.",
+      "description": "Please include your entire left cheek with forehead visible.",
+      "label": "Left side of face",
+      "type": "hair-loss-photo",
+      "next": "PHOTO_FACE_3",
+      "index": 23,
+      "buttonText": "Continue"
+    },
+    "PHOTO_FACE_3": {
+      "header": "Please provide a photo looking to the right.",
+      "description": "Please include your right cheek with forehead visible.",
+      "label": "Right side of face",
+      "type": "hair-loss-photo",
+      "next": {
+        "if": [
+          {
+            "some": [
+              { "var": "answers.ROSACEA_T_Q4.answer" },
+              {
+                "===": [{ "var": "valueCoding.display" }, "Chest"]
+              }
+            ]
+          },
+          "PHOTO_CHEST",
+          {
+            "some": [
+              { "var": "answers.ROSACEA_T_Q4.answer" },
+              {
+                "===": [
+                  { "var": "valueCoding.display" },
+                  "On my shoulders and/or back"
+                ]
+              }
+            ]
+          },
+          "PHOTO_BACK",
+          "ROSACEA_T_Q24"
+        ]
+      },
+      "index": 24,
+      "buttonText": "Continue"
+    },
+    "PHOTO_CHEST": {
+      "header": "Please provide a photo of your chest or area affected by rosacea.",
+      "description": "We only need to see the area affected by rosacea.",
+      "label": "Chest",
+      "type": "hair-loss-photo",
+      "next": {
+        "if": [
+          {
+            "some": [
+              { "var": "answers.ROSACEA_T_Q4.answer" },
+              {
+                "===": [
+                  { "var": "valueCoding.display" },
+                  "On my shoulders and/or back"
+                ]
+              }
+            ]
+          },
+          "PHOTO_BACK",
+          "ROSACEA_T_Q24"
+        ]
+      },
+      "index": 25,
+      "buttonText": "Continue"
+    },
+    "PHOTO_BACK": {
+      "header": "Please provide a photo of your back / shoulders or the area affected by rosacea.",
+      "description": "We only need to see the area affected by rosacea.",
+      "label": "Back / shoulders",
+      "type": "hair-loss-photo",
+      "next": "ROSACEA_T_Q24",
+      "index": 26,
+      "buttonText": "Continue"
+    },
+    "COMPLETED": {
+      "header": "We’re ready to provide you care!",
+      "description": "Once you provide your payment information, a licensed medical provider will review the information you shared and recommend a treatment plan, as medically appropriate.",
+      "type": "skin-treatment",
+      "subType": "Rosacea",
+      "index": 28,
+      "buttonText": "Continue with rosacea treatment"
+    }
+  }
+}

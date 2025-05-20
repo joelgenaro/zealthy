@@ -1,0 +1,20 @@
+{
+  "name": "unable-confirm-scheduled-appointment",
+  "version": "1",
+  "code": "UNABLE_CSA",
+  "entry": "UNABLE_CSA_Q1",
+  "questions": {
+    "UNABLE_CSA_Q1": {
+      "type": "message",
+      "header": "Your payment information was successfully submitted, but your appointment is no longer available!",
+      "listItems": [
+        "This happens occasionally when multiple Zealthy members are booking the same visit at the same time. But we can help get this resolved! Just reschedule with your Zealthy provider for another time or day."
+      ],
+      "next": "UNABLE_CSA_Q2",
+      "buttonText": "Reschedule visit"
+    },
+    "UNABLE_CSA_Q2": {
+      "type": "provider-schedule"
+    }
+  }
+}

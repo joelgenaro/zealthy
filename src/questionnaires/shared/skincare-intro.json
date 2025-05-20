@@ -1,0 +1,22 @@
+{
+  "name": "skincare-intro",
+  "version": "1",
+  "code": "SKINCARE_INTRO",
+  "entry": "skip",
+  "intro": {
+    "header": "Complete your consultation to get your order.",
+    "description": "By taking 5-10 minutes to answer questions about your skin, you’ll be able to get your customized prescription skincare treatment. You will:",
+    "listItems": [
+      "Share some health information and a few photos of your skin (this will only take 5-10 minutes).",
+      "A Zealthy provider will review and write a you prescription, if appropriate.",
+      "We’ll mail your medication to you and provide on-time refills.",
+      "Our medical team can follow up see how it’s working, and you can message any time with your questions."
+    ],
+    "buttonText": "Find my treatment plan"
+  },
+  "questions": {
+    "skip": {
+      "type": "skip"
+    }
+  }
+}

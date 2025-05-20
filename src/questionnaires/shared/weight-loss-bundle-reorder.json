@@ -1,0 +1,99 @@
+{
+  "name": "weight-loss-bundle-reorder",
+  "version": "1",
+  "code": "WEIGHT_L_B_REORDER",
+  "entry": "WEIGHT_L_B_REORDER_Q1",
+  "intro": {
+    "header": "In order to receive your next month’s Rx, you’ll need to answer a few questions. Your Zealthy care team will help you with your refill in 1-3 business days."
+  },
+  "questions": {
+    "WEIGHT_L_B_REORDER_Q1": {
+      "header": "What’s your current weight?",
+      "type": "weight",
+      "next": "WEIGHT_L_B_REORDER_Q2"
+    },
+    "WEIGHT_L_B_REORDER_Q2": {
+      "header": "Are you happy with your current medication?",
+      "type": "choice",
+      "next": "WEIGHT_L_B_REORDER_Q3",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_B_REORDER_Q2_A1"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_B_REORDER_Q2_A2"
+        }
+      ]
+    },
+    "WEIGHT_L_B_REORDER_Q3": {
+      "header": "Would you like to continue with the same medication at a higher dosage?",
+      "type": "choice-details",
+      "next": "WEIGHT_L_B_REORDER_Q5",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_B_REORDER_Q3_A1"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_B_REORDER_Q3_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "WEIGHT_L_B_REORDER_Q3_A2",
+        "code": "WEIGHT_L_B_REORDER_Q4",
+        "type": "text",
+        "description": "Tell us more",
+        "body": "Please tell your medical provider what you would like for your refill instead of increasing the dosage of your current medication. If you know what medication and dosage you think is appropriate for you, you may let your provider know here. You can also say “I’m not sure” if you’re not sure."
+      },
+      "followUpAlt": {
+        "showIfResponse": "WEIGHT_L_B_REORDER_Q3_A1",
+        "code": "WEIGHT_L_B_REORDER_Q4",
+        "type": "text",
+        "description": "Tell us more",
+        "body": "Please confirm your current medication and dosage."
+      }
+    },
+    "WEIGHT_L_B_REORDER_Q5": {
+      "header": "Are you currently experiencing any side effects from your weight loss medication?",
+      "type": "choice-details",
+      "next": "WEIGHT_L_B_REORDER_Q7",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "WEIGHT_L_B_REORDER_Q5_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_B_REORDER_Q5_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "WEIGHT_L_B_REORDER_Q5_A2",
+        "code": "WEIGHT_L_B_REORDER_Q6",
+        "type": "text",
+        "description": "Tell us more about your side effects",
+        "body": "We want to know what you’re experiencing so that, if appropriate, we can help you adjust your medication or dosage."
+      }
+    },
+    "WEIGHT_L_B_REORDER_Q7": {
+      "header": "Tell us anything else you’d like your provider to know when refilling your medication.",
+      "description": "Let us know if there is anything else that your Zealthy Care Team should know.",
+      "type": "text",
+      "next": "TREATMENT_OPTIONS"
+    },
+    "TREATMENT_OPTIONS": {
+      "type": "bundle-weight-loss-reorder-treatment",
+      "next": "SUBMIT"
+    },
+    "SUBMIT": {
+      "type": "submit-compound-weight-loss-refill",
+      "next": "REFILL_RESPONSES_REVIEWED"
+    },
+    "REFILL_RESPONSES_REVIEWED": {
+      "type": "refill-responses-reviewed"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "weight-loss-checkout-success",
+  "version": "1",
+  "code": "WEIGHT_LOSS_CHECKOUT_S",
+  "entry": "WEIGHT_LOSS_CHECKOUT_S_Q1",
+  "languages": {
+    "en": {
+      "questions": {
+        "WEIGHT_LOSS_CHECKOUT_S_Q1": {
+          "header": "Now that you’ve successfully paid, answer some additional required questions to start your treatment plan.",
+          "listItems": [
+            "It is important that you answer all of these questions to get started on treatment, including GLP-1s.",
+            "This may take up to 10 minutes."
+          ],
+          "type": "message",
+          "styles": {
+            "header": {
+              "textAlign": "center",
+              "marginBottom": "2rem"
+            },
+            "listItems": {
+              "textAlign": "center",
+              "gap": "1rem"
+            }
+          },
+          "index": 1
+        }
+      }
+    },
+    "esp": {
+      "questions": {
+        "WEIGHT_LOSS_CHECKOUT_S_Q1": {
+          "header": "Ahora que ha enviado el pago con éxito, continúe para completar la verificación de identidad requerida y responder algunas preguntas adicionales necesarias.",
+          "listItems": [
+            "Es importante que responda todas estas preguntas, verifique su identidad con una identificación con foto y cargue cualquier información del seguro para que su proveedor pueda revisar sus respuestas y comenzar con su plan de tratamiento.",
+            "Esto puede tomar hasta 10 minutos."
+          ],
+          "type": "message",
+          "styles": {
+            "header": {
+              "textAlign": "center",
+              "marginBottom": "2rem"
+            },
+            "listItems": {
+              "textAlign": "center",
+              "gap": "1rem"
+            }
+          },
+          "index": 1
+        }
+      }
+    }
+  }
+}

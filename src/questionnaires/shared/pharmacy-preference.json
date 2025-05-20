@@ -1,0 +1,12 @@
+{
+  "name": "pharmacy-preference",
+  "version": "1",
+  "code": "PHARMACY_P",
+  "entry": "PHARMACY_P_Q1",
+  "questions": {
+    "PHARMACY_P_Q1": {
+      "type": "pharmacy-select",
+      "index": 2
+    }
+  }
+}

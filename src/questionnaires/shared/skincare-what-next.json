@@ -1,0 +1,19 @@
+{
+  "name": "skincare-what-next",
+  "version": "1",
+  "code": "SKIN_WN",
+  "entry": "SKIN_WN_Q1",
+  "questions": {
+    "SKIN_WN_Q1": {
+      "header": "Better skin in just a few steps",
+      "type": "skincare-what-next",
+      "buttonText": "Continue",
+      "styles": {
+        "header": {
+          "background": "#B8F5CC",
+          "padding": "16px"
+        }
+      }
+    }
+  }
+}

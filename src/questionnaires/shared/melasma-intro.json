@@ -1,0 +1,22 @@
+{
+  "name": "acne-intro",
+  "version": "1",
+  "code": "ACNE_INTRO",
+  "entry": "skip",
+  "intro": {
+    "header": "Let’s find the right melasma treatment for you.",
+    "description": "This may be personalized treatment plan using hydroquinone, which is designed to treat brown or gray-brown patches.",
+    "listItems": [
+      "Share some health information and a few photos of your skin (this will only take 5-10 minutes).",
+      "A Zealthy provider will review and write a you prescription, if appropriate.",
+      "Finally, we provide doorstep delivery and on-time refills.",
+      "Our medical team can follow up see how it’s working, and you can message any time with your questions."
+    ],
+    "buttonText": "Find my treatment plan"
+  },
+  "questions": {
+    "skip": {
+      "type": "skip"
+    }
+  }
+}

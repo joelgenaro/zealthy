@@ -1,0 +1,12 @@
+{
+  "name": "weight-loss-pay",
+  "version": "1",
+  "code": "WEIGHT-LOSS-PAY-A",
+  "entry": "WEIGHT-LOSS-PAY-A-Q1",
+  "questions": {
+    "WEIGHT-LOSS-PAY-A-Q1": {
+      "type": "weight-loss-pay",
+      "index": 27
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "name": "gad-7",
+  "care": "anxiety or depression",
+  "version": "1",
+  "canvas_id": "9955dd2c-1c23-4b5d-848c-85b2bdb7df79",
+  "code": "69737-5",
+  "codingSystem": "http://loinc.org",
+  "entry": "69725-0",
+  "questions": {
+    "69725-0": {
+      "canvas_linkId": "a79bb391-ebfb-45a5-92e2-4d38a326b20e",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Feeling nervous, anxious or on edge.",
+      "type": "choice",
+      "next": "68509-9",
+      "answerOptions": [
+        { "code": "LA6568-5", "text": "Not at all" },
+        { "code": "LA6569-3", "text": "Several days" },
+        {
+          "code": "LA6570-1",
+          "text": "More than half the days"
+        },
+        {
+          "code": "LA6571-9",
+          "text": "Nearly every day"
+        }
+      ]
+    },
+    "68509-9": {
+      "canvas_linkId": "f9eb0c25-9002-4832-a78f-e8e0497bdb66",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Not being able to stop or control worrying.",
+      "type": "choice",
+      "next": "69733-4",
+      "answerOptions": [
+        { "code": "LA6568-5", "text": "Not at all" },
+        { "code": "LA6569-3", "text": "Several days" },
+        {
+          "code": "LA6570-1",
+          "text": "More than half the days"
+        },
+        {
+          "code": "LA6571-9",
+          "text": "Nearly every day"
+        }
+      ]
+    },
+    "69733-4": {
+      "canvas_linkId": "2c384b57-f879-402d-b3b5-677820447dcf",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Worrying too much about different things.",
+      "type": "choice",
+      "next": "69734-2",
+      "answerOptions": [
+        { "code": "LA6568-5", "text": "Not at all" },
+        { "code": "LA6569-3", "text": "Several days" },
+        {
+          "code": "LA6570-1",
+          "text": "More than half the days"
+        },
+        {
+          "code": "LA6571-9",
+          "text": "Nearly every day"
+        }
+      ]
+    },
+    "69734-2": {
+      "canvas_linkId": "9584c462-aaa8-474e-a00e-568516ea4717",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Trouble relaxing.",
+      "type": "choice",
+      "next": "69735-9",
+      "answerOptions": [
+        { "code": "LA6568-5", "text": "Not at all" },
+        { "code": "LA6569-3", "text": "Several days" },
+        {
+          "code": "LA6570-1",
+          "text": "More than half the days"
+        },
+        {
+          "code": "LA6571-9",
+          "text": "Nearly every day"
+        }
+      ]
+    },
+    "69735-9": {
+      "canvas_linkId": "dd211fa1-0be9-422e-ac54-4601529b3b7f",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Being so restless that it is hard to sit still.",
+      "type": "choice",
+      "next": "69689-8",
+      "answerOptions": [
+        { "code": "LA6568-5", "text": "Not at all" },
+        { "code": "LA6569-3", "text": "Several days" },
+        {
+          "code": "LA6570-1",
+          "text": "More than half the days"
+        },
+        {
+          "code": "LA6571-9",
+          "text": "Nearly every day"
+        }
+      ]
+    },
+    "69689-8": {
+      "canvas_linkId": "add19e25-7938-4485-aeb5-1d3fa8bafdd6",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Becoming easily annoyed or irritable.",
+      "type": "choice",
+      "next": "69736-7",
+      "answerOptions": [
+        { "code": "LA6568-5", "text": "Not at all" },
+        { "code": "LA6569-3", "text": "Several days" },
+        {
+          "code": "LA6570-1",
+          "text": "More than half the days"
+        },
+        {
+          "code": "LA6571-9",
+          "text": "Nearly every day"
+        }
+      ]
+    },
+    "69736-7": {
+      "canvas_linkId": "85ab5664-d174-45a3-a0d6-98734209f945",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Feeling afraid as if something awful might happen.",
+      "type": "choice",
+      "answerOptions": [
+        { "code": "LA6568-5", "text": "Not at all" },
+        { "code": "LA6569-3", "text": "Several days" },
+        {
+          "code": "LA6570-1",
+          "text": "More than half the days"
+        },
+        {
+          "code": "LA6571-9",
+          "text": "Nearly every day"
+        }
+      ]
+    }
+  }
+}

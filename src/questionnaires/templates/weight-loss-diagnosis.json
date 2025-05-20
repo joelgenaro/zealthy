@@ -1,0 +1,13 @@
+{
+  "name": "weight-loss-diagnosis",
+  "version": "1",
+  "entry": "WLD_Q1",
+  "questions": {
+    "WLD_Q1": {
+      "header": "You indicated that you have been previously diagnosed with [Diagnosis].",
+      "description": "Are you currently receiving any treatment for it? If so, what is the treatment?",
+      "type": "text",
+      "input_placeholder": "Please type your answer here. This field is required."
+    }
+  }
+}

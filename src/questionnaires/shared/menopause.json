@@ -1,0 +1,506 @@
+{
+  "name": "menopause",
+  "care": "Menopause",
+  "version": "4",
+  "code": "MENOPAUSE",
+  "codingSystem": "http://schemas.getzealthy.canvasmedical.com/fhir/systems/internal",
+  "intro": {
+    "header": "Let’s find the right treatment for you.",
+    "description": "Your menopause journey deserves to be smooth and comfortable. Get treatment that’s custom tailored for your needs from the comfort of your home. No insurance required.",
+    "listItems": [
+      "Share information about your health history (this will only take 5 minutes)",
+      "A Zealthy provider will review and write your prescription, if appropriate.",
+      "Get your menopause treatment delivered  to your door and receive on-time refills."
+    ]
+  },
+  "entry": "MENOPAUSE_Q1",
+  "questions": {
+    "MENOPAUSE_Q1": {
+      "header": "Your treatment options",
+      "description": "If not, don’t worry, your clinician will work with you to find a tailored treatment for your needs.",
+      "hideHeader": true,
+      "type": "menopause-treatment-select",
+      "index": 1,
+      "next": "MENOPAUSE_Q2"
+    },
+    "MENOPAUSE_Q2": {
+      "header": "Is there anything else you’re interested in?",
+      "type": "multiple-choice",
+      "index": 2,
+      "next": "MENOPAUSE_Q3",
+      "answerOptions": [
+        {
+          "text": "Weight Loss",
+          "code": "MENOPAUSE_Q2_A1"
+        },
+        {
+          "text": "Hair Loss",
+          "code": "MENOPAUSE_Q2_A2"
+        },
+        {
+          "text": "Skin Care",
+          "code": "MENOPAUSE_Q2_A3"
+        },
+        {
+          "text": "Mental Health",
+          "code": "MENOPAUSE_Q2_A4"
+        },
+        {
+          "text": "None of the above",
+          "code": "MENOPAUSE_Q2_A5"
+        }
+      ]
+    },
+    "MENOPAUSE_Q3": {
+      "header": "What kinds of symptoms are you experiencing?",
+      "description": "Select all that apply.",
+      "type": "multiple-choice",
+      "index": 3,
+      "answerOptions": [
+        {
+          "text": "Weight changes",
+          "code": "MENOPAUSE_Q3_A1",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Problems sleeping",
+          "code": "MENOPAUSE_Q3_A2",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Painful sex",
+          "code": "MENOPAUSE_Q3_A3",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Hot flashes",
+          "code": "MENOPAUSE_Q3_A4",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Night sweats",
+          "code": "MENOPAUSE_Q3_A5",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Fatigue",
+          "code": "MENOPAUSE_Q3_A6",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Vaginal dryness",
+          "code": "MENOPAUSE_Q3_A7",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Urinary problems",
+          "code": "MENOPAUSE_Q3_A8",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Brain fog",
+          "code": "MENOPAUSE_Q3_A9",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Mood swings",
+          "code": "MENOPAUSE_Q3_A10",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Irregular periods",
+          "code": "MENOPAUSE_Q3_A11",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Skin or hair changes",
+          "code": "MENOPAUSE_Q3_A12",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Facial hair or acne",
+          "code": "MENOPAUSE_Q3_A13",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Anxiety or depression",
+          "code": "MENOPAUSE_Q3_A14",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Racing heart",
+          "code": "MENOPAUSE_Q3_A15",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Muscle or joint pain",
+          "code": "MENOPAUSE_Q3_A16",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "Decrease in libido",
+          "code": "MENOPAUSE_Q3_A17",
+          "next": "MENOPAUSE_Q4"
+        },
+        {
+          "text": "None of the above",
+          "code": "MENOPAUSE_Q3_A18",
+          "next": "MENOPAUSE_Q6"
+        }
+      ]
+    },
+    "MENOPAUSE_Q4": {
+      "header": "How long have you been experiencing these symptoms?",
+      "type": "choice",
+      "index": 4,
+      "next": "MENOPAUSE_Q5",
+      "answerOptions": [
+        {
+          "text": "Less than 3 months",
+          "code": "MENOPAUSE_Q4_A1"
+        },
+        {
+          "text": "3-6 months",
+          "code": "MENOPAUSE_Q4_A2"
+        },
+        {
+          "text": "6-12 months",
+          "code": "MENOPAUSE_Q4_A3"
+        },
+        {
+          "text": "More than 12 months",
+          "code": "MENOPAUSE_Q4_A4"
+        }
+      ]
+    },
+    "MENOPAUSE_Q5": {
+      "header": "Please share any additional information about your symptoms with your doctor.",
+      "type": "text",
+      "input_placeholder": "Type here...",
+      "index": 5,
+      "next": "MENOPAUSE_Q6"
+    },
+    "MENOPAUSE_Q6": {
+      "header": "Which of the following best describes your menstrual cycle in the past 12 months?",
+      "type": "choice",
+      "index": 6,
+      "next": "MENOPAUSE_Q7",
+      "answerOptions": [
+        {
+          "text": "My periods are regular",
+          "code": "MENOPAUSE_Q6_A1"
+        },
+        {
+          "text": "My periods are starting to become unpredictable/irregular",
+          "code": "MENOPAUSE_Q6_A2"
+        },
+        {
+          "text": "I have not had a period in over a year",
+          "code": "MENOPAUSE_Q6_A3"
+        },
+        {
+          "text": "My menstrual cycle has been impacted by a medical procedure",
+          "code": "MENOPAUSE_Q6_A4"
+        }
+      ]
+    },
+    "MENOPAUSE_Q7": {
+      "header": "Has it been 10 years since your period?",
+      "type": "choice",
+      "index": 7,
+      "next": "MENOPAUSE_Q8",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MENOPAUSE_Q7_A1"
+        },
+        {
+          "text": "No",
+          "code": "MENOPAUSE_Q7_A2"
+        }
+      ]
+    },
+    "MENOPAUSE_Q8": {
+      "header": "Please indicate if you have or have had any of the following conditions.",
+      "description": "Select all that apply.",
+      "type": "multiple-choice",
+      "index": 8,
+      "next": "MENOPAUSE_Q9",
+      "answerOptions": [
+        {
+          "text": "Unexplained postmenopausal bleeding",
+          "code": "MENOPAUSE_Q8_A1"
+        },
+        {
+          "text": "Personal hstory of breast cancer",
+          "code": "MENOPAUSE_Q8_A2"
+        },
+        {
+          "text": "Endometrial cancer",
+          "code": "MENOPAUSE_Q8_A3"
+        },
+        {
+          "text": "High blood pressure",
+          "code": "MENOPAUSE_Q8_A4"
+        },
+        {
+          "text": "Elevated cholesterol",
+          "code": "MENOPAUSE_Q8_A5"
+        },
+        {
+          "text": "Heart attack",
+          "code": "MENOPAUSE_Q8_A6"
+        },
+        {
+          "text": "Stroke",
+          "code": "MENOPAUSE_Q8_A7"
+        },
+        {
+          "text": "Blood clots in legs or lungs",
+          "code": "MENOPAUSE_Q8_A8"
+        },
+        {
+          "text": "Genetic conditions that increase risk of clotting",
+          "code": "MENOPAUSE_Q8_A9"
+        },
+        {
+          "text": "None of the above",
+          "code": "MENOPAUSE_Q8_A10"
+        }
+      ]
+    },
+    "MENOPAUSE_Q9": {
+      "header": "What was your most recent blood pressure reading?",
+      "type": "choice",
+      "index": 9,
+      "next": "MENOPAUSE_Q10",
+      "answerOptions": [
+        {
+          "text": "I’m not sure but it was within the normal range",
+          "code": "MENOPAUSE_Q9_A1"
+        },
+        {
+          "text": "Elevated (130-139/80-89)",
+          "code": "MENOPAUSE_Q9_A2"
+        },
+        {
+          "text": "High (140-149/90-99)",
+          "code": "MENOPAUSE_Q9_A3"
+        },
+        {
+          "text": "Very High (More than 150/100)",
+          "code": "MENOPAUSE_Q9_A4"
+        }
+      ]
+    },
+    "MENOPAUSE_Q10": {
+      "header": "Have you ever had a hysterectomy?",
+      "type": "choice",
+      "index": 10,
+      "next": "MENOPAUSE_Q11",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MENOPAUSE_Q10_A1"
+        },
+        {
+          "text": "No",
+          "code": "MENOPAUSE_Q10_A2"
+        }
+      ]
+    },
+    "MENOPAUSE_Q11": {
+      "header": "When was your last mammogram?",
+      "type": "choice",
+      "index": 11,
+      "next": "MENOPAUSE_Q12",
+      "answerOptions": [
+        {
+          "text": "Within the last two years",
+          "code": "MENOPAUSE_Q11_A1"
+        },
+        {
+          "text": "It’s been more than two years",
+          "code": "MENOPAUSE_Q11_A2"
+        },
+        {
+          "text": "I have never had one",
+          "code": "MENOPAUSE_Q11_A3"
+        },
+        {
+          "text": "I have had a double hysterectomy ",
+          "code": "MENOPAUSE_Q11_A4"
+        }
+      ]
+    },
+    "MENOPAUSE_Q12": {
+      "header": "Do you currently smoke or vape products with nicotine? ",
+      "type": "choice",
+      "index": 12,
+      "next": "MENOPAUSE_Q13",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MENOPAUSE_Q12_A1"
+        },
+        {
+          "text": "No",
+          "code": "MENOPAUSE_Q12_A2"
+        }
+      ]
+    },
+    "MENOPAUSE_Q13": {
+      "header": "Are you currently using any birth control products?",
+      "type": "choice",
+      "index": 13,
+      "next": "MENOPAUSE_Q14",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MENOPAUSE_Q13_A1"
+        },
+        {
+          "text": "No",
+          "code": "MENOPAUSE_Q13_A2"
+        }
+      ]
+    },
+    "MENOPAUSE_Q14": {
+      "header": "Do you require contraception?",
+      "type": "choice",
+      "index": 14,
+      "next": "MENOPAUSE_Q15",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MENOPAUSE_Q14_A1"
+        },
+        {
+          "text": "No",
+          "code": "MENOPAUSE_Q14_A2"
+        }
+      ]
+    },
+    "MENOPAUSE_Q15": {
+      "header": "Are you currently taking any anti-depressants? ",
+      "type": "choice",
+      "index": 15,
+      "next": "MENOPAUSE_Q16",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MENOPAUSE_Q15_A1"
+        },
+        {
+          "text": "No",
+          "code": "MENOPAUSE_Q15_A2"
+        }
+      ]
+    },
+    "MENOPAUSE_Q16": {
+      "header": "Have you ever taken any menopausal hormone treatment?",
+      "type": "choice",
+      "index": 16,
+      "next": "MENOPAUSE_Q17",
+      "answerOptions": [
+        {
+          "text": "Yes, I am currently taking hormones",
+          "code": "MENOPAUSE_Q16_A1"
+        },
+        {
+          "text": "I recently stopped taking hormones (within the last 90 days)",
+          "code": "MENOPAUSE_Q16_A2"
+        },
+        {
+          "text": "I have taken hormones in the past",
+          "code": "MENOPAUSE_Q16_A3"
+        },
+        {
+          "text": "No",
+          "code": "MENOPAUSE_Q16_A4"
+        }
+      ]
+    },
+    "MENOPAUSE_Q17": {
+      "header": "Please list any prescription or over-the-counter medications and/or supplements you are taking.",
+      "type": "text",
+      "index": 17,
+      "input_placeholder": "Type here...",
+      "next": "MENOPAUSE_Q18"
+    },
+    "MENOPAUSE_Q18": {
+      "header": "Please list all current and past medical conditions.",
+      "type": "text",
+      "index": 18,
+      "input_placeholder": "Type here...",
+      "next": "MENOPAUSE_Q19"
+    },
+    "MENOPAUSE_Q19": {
+      "header": "Do you have any allergies or reactions to medications or adhesives? ",
+      "type": "choice",
+      "index": 19,
+      "next": "MENOPAUSE_Q20",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MENOPAUSE_Q19_A1"
+        },
+        {
+          "text": "No",
+          "code": "MENOPAUSE_Q19_A2"
+        }
+      ]
+    },
+    "MENOPAUSE_Q20": {
+      "header": "Please select all conditions that any close relatives have a history of having.",
+      "description": "Select all that apply.",
+      "type": "multiple-choice",
+      "index": 20,
+      "next": "MENOPAUSE_Q21",
+      "answerOptions": [
+        {
+          "text": "Blood clotting",
+          "code": "MENOPAUSE_Q20_A1"
+        },
+        {
+          "text": "Heart attacks",
+          "code": "MENOPAUSE_Q20_A2"
+        },
+        {
+          "text": "Strokes",
+          "code": "MENOPAUSE_Q20_A3"
+        },
+        {
+          "text": "BRCA 1 / 2 diagnosis",
+          "code": "MENOPAUSE_Q20_A4"
+        },
+        {
+          "text": "Breast cancer",
+          "code": "MENOPAUSE_Q20_A5"
+        },
+        {
+          "text": "Endometrial cancer",
+          "code": "MENOPAUSE_Q20_A6"
+        },
+        {
+          "text": "Ovarian cancer",
+          "code": "MENOPAUSE_Q20_A7"
+        },
+        {
+          "text": "Osteoporosis",
+          "code": "MENOPAUSE_Q20_A8"
+        },
+        {
+          "text": "None of the above",
+          "code": "MENOPAUSE_Q20_A9"
+        }
+      ]
+    },
+    "MENOPAUSE_Q21": {
+      "header": "Is there anything you would like to share with your doctor?",
+      "type": "text",
+      "input_placeholder": "Type here...",
+      "index": 21
+    }
+  }
+}

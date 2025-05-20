@@ -1,0 +1,133 @@
+{
+  "name": "weight-loss-refill",
+  "version": "1",
+  "canvas_id": "e98434a8-f5d9-4ac1-8195-f98f19254fcc",
+  "code": "WEIGHT_L_REFILL",
+  "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+  "entry": "WEIGHT_L_REFILL_Q1",
+  "intro": {
+    "header": "Let’s help you with your refill. Just answer a few questions and your Zealthy care team will help with your refill in 1-3 business days."
+  },
+  "questions": {
+    "WEIGHT_L_REFILL_Q1": {
+      "header": "What’s your current weight?",
+      "type": "weight",
+      "canvas_linkId": "eae7cb3a-1bd4-4b42-9632-a1732748697d",
+      "next": "WEIGHT_L_REFILL_Q1_A"
+    },
+    "WEIGHT_L_REFILL_Q1_A": {
+      "header": "You can order semaglutide or tirzepatide instead of continuing your request to refill your brand name medication.",
+      "listItems": [
+        "If you’d like to have semaglutide or tirzepatide shipped to you instead, select the “Order semaglutide or tirzepatide instead” button below. One benefit of ordering is that you will be able to get your Rx shipped to your door quickly and do not risk not getting your medication due to shortages.",
+        "Alternatively, by selecting Continue, you’ll be able to continue to submit your prescription request and your Rx will be sent to the pharmacy of your choice if your provider determines it to be clinically appropriate."
+      ],
+      "type": "choice",
+      "next": "WEIGHT_L_REFILL_Q2",
+      "answerOptions": [
+        {
+          "text": "Continue",
+          "code": "WEIGHT_L_REFILL_Q1_A_A1",
+          "color": {
+            "text": "#FFF",
+            "background": "#00531B"
+          }
+        },
+        {
+          "text": "Order semaglutide or tirzepatide instead",
+          "code": "WEIGHT_L_REFILL_Q1_A_A2",
+          "path": "/patient-portal/weight-loss-treatment/compound",
+          "color": {
+            "text": "#1B1B1B",
+            "background": "#F0F0F0"
+          }
+        }
+      ]
+    },
+    "WEIGHT_L_REFILL_Q2": {
+      "header": "Are you happy with your current medication and dosage?",
+      "canvas_linkId": "089465a3-4394-461e-a0fa-cb309768697d",
+      "type": "choice",
+      "next": "WEIGHT_L_REFILL_Q3",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_REFILL_Q2_A1"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_REFILL_Q2_A2"
+        }
+      ]
+    },
+    "WEIGHT_L_REFILL_Q3": {
+      "header": "Would you like to continue with the same medication and dosage you’re currently on?",
+      "canvas_linkId": "8605f20e-614c-4132-b349-3a6206d25e1b",
+      "type": "choice-details",
+      "next": "WEIGHT_L_REFILL_Q5",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_REFILL_Q3_A1"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_REFILL_Q3_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "WEIGHT_L_REFILL_Q3_A2",
+        "code": "WEIGHT_L_REFILL_Q4",
+        "type": "text",
+        "canvas_linkId": "68c88778-d9ea-48f8-89bd-603a48d80ed2",
+        "description": "Tell us more",
+        "body": "Please confirm your current medication & dosage and tell us why you are interested in changing medication or dosage. What medication and dosage would you prefer?"
+      },
+      "followUpAlt": {
+        "showIfResponse": "WEIGHT_L_REFILL_Q3_A1",
+        "code": "WEIGHT_L_REFILL_Q4",
+        "type": "text",
+        "canvas_linkId": "68c88778-d9ea-48f8-89bd-603a48d80ed2",
+        "description": "Tell us more",
+        "body": "Please confirm your current medication and dosage."
+      }
+    },
+    "WEIGHT_L_REFILL_Q5": {
+      "header": "Are you currently experiencing any side effects from your weight loss medication?",
+      "canvas_linkId": "c1a458e5-1a13-41cd-89c3-763cf42dc546",
+      "type": "choice-details",
+      "next": "WEIGHT_L_REFILL_Q7",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "WEIGHT_L_REFILL_Q5_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_REFILL_Q5_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "WEIGHT_L_REFILL_Q5_A2",
+        "code": "WEIGHT_L_REFILL_Q6",
+        "type": "text",
+        "canvas_linkId": "6349eeb2-28cc-421a-9c7c-c4dd0dbb6da6",
+        "description": "Tell us more about your side effects",
+        "body": "We want to know what you’re experiencing so that, if appropriate, we can help you adjust your medication or dosage."
+      }
+    },
+    "WEIGHT_L_REFILL_Q7": {
+      "header": "Tell us anything else you’d like your provider to know when refilling your medication.",
+      "description": "Let us know if there is anything else that your Zealthy Care Team should know.",
+      "canvas_linkId": "7d94ad97-ced7-4427-ab64-ab99a4d4c3d8",
+      "type": "text",
+      "next": "SUBMIT"
+    },
+    "SUBMIT": {
+      "type": "submit-weight-loss-refill",
+      "next": "REFILL_RESPONSES_REVIEWED"
+    },
+    "REFILL_RESPONSES_REVIEWED": {
+      "type": "refill-responses-reviewed"
+    }
+  }
+}

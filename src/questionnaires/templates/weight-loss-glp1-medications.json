@@ -1,0 +1,296 @@
+{
+  "name": "weight-loss-glp1-medications",
+  "version": "1",
+  "entry": "WL_GLP_1_Q1",
+  "questions": {
+    "WL_GLP_1_Q1": {
+      "header": "What was the most recent dose of [medication name] you previously took?",
+      "description": "Round to the nearest dosage if your most recent dosage was in between two dosages.",
+      "type": "choice",
+      "next": "WL_GLP_1_Q2",
+      "answerOptions": {
+        "if": [
+          { "===": [{ "var": "recentMed" }, "Wegovy (Semaglutide)"] },
+          [
+            {
+              "text": "0.25 mg per week (1 mg per month)",
+              "code": "WL_GLP_1_WEGOVY_A1"
+            },
+            {
+              "text": "0.5 mg per week (2 mg per month)",
+              "code": "WL_GLP_1_WEGOVY_A2"
+            },
+            {
+              "text": "1 mg per week (4 mg per month)",
+              "code": "WL_GLP_1_WEGOVY_A3"
+            },
+            {
+              "text": "1.7 mg per week (6.8 mg per month)",
+              "code": "WL_GLP_1_WEGOVY_A4"
+            },
+            {
+              "text": "2.4 mg per week (9.6 mg per month)",
+              "code": "WL_GLP_1_WEGOVY_A5"
+            }
+          ],
+          {
+            "===": [{ "var": "recentMed" }, "Ozempic (Semaglutide)"]
+          },
+          [
+            {
+              "text": "0.25 mg per week (1 mg per month)",
+              "code": "WL_GLP_1_OZEMPIC_A1"
+            },
+            {
+              "text": "0.5 mg per week (2 mg per month)",
+              "code": "WL_GLP_1_OZEMPIC_A2"
+            },
+            {
+              "text": "1 mg per week (4 mg per month)",
+              "code": "WL_GLP_1_OZEMPIC_A3"
+            },
+            {
+              "text": "2 mg per week (8 mg per month)",
+              "code": "WL_GLP_1_OZEMPIC_A4"
+            }
+          ],
+          {
+            "===": [{ "var": "recentMed" }, "Rybelsus (Semaglutide)"]
+          },
+          [
+            {
+              "text": "3 mg per day (21 mg per week)",
+              "code": "WL_GLP_1_RYBELSUS_A1"
+            },
+            {
+              "text": "7 mg per day (49 mg per week)",
+              "code": "WL_GLP_1_RYBELSUS_A2"
+            },
+            {
+              "text": "14 mg per day (98 mg per week)",
+              "code": "WL_GLP_1_RYBELSUS_A3"
+            },
+            {
+              "text": "Other",
+              "code": "WL_GLP_1_RYBELSUS_A4"
+            }
+          ],
+          {
+            "===": [{ "var": "recentMed" }, "Mounjaro (Tirzepatide)"]
+          },
+          [
+            {
+              "text": "2.5 mg per week (10 mg per month)",
+              "code": "WL_GLP_1_MOUNJARO_A1"
+            },
+            {
+              "text": "5 mg per week (20 mg per month)",
+              "code": "WL_GLP_1_MOUNJARO_A2"
+            },
+            {
+              "text": "7.5 mg per week (30 mg per month)",
+              "code": "WL_GLP_1_MOUNJARO_A3"
+            },
+            {
+              "text": "10 mg per week (40 mg per month)",
+              "code": "WL_GLP_1_MOUNJARO_A4"
+            },
+            {
+              "text": "12.5 mg per week (50 mg per month)",
+              "code": "WL_GLP_1_MOUNJARO_A5"
+            }
+          ],
+          {
+            "===": [{ "var": "recentMed" }, "Zepbound (Tirzepatide)"]
+          },
+          [
+            {
+              "text": "2.5 mg per week (10 mg per month)",
+              "code": "WL_GLP_1_ZEPBOUND_A1"
+            },
+            {
+              "text": "5 mg per week (20 mg per month)",
+              "code": "WL_GLP_1_ZEPBOUND_A2"
+            },
+            {
+              "text": "7.5 mg per week (30 mg per month)",
+              "code": "WL_GLP_1_ZEPBOUND_A3"
+            },
+            {
+              "text": "10 mg per week (40 mg per month)",
+              "code": "WL_GLP_1_ZEPBOUND_A4"
+            },
+            {
+              "text": "12.5 mg per week (50 mg per month)",
+              "code": "WL_GLP_1_ZEPBOUND_A5"
+            }
+          ],
+          {
+            "===": [{ "var": "recentMed" }, "Saxenda (Liraglutide)"]
+          },
+          [
+            {
+              "text": "0.6 mg per day (4.2 mg per week)",
+              "code": "WL_GLP_1_SAXENDA_A1"
+            },
+            {
+              "text": "1.2 mg per day (8.4 mg per week)",
+              "code": "WL_GLP_1_SAXENDA_A2"
+            },
+            {
+              "text": "1.8 mg per day (12.6 mg per week)",
+              "code": "WL_GLP_1_SAXENDA_A3"
+            },
+            {
+              "text": "2.4 mg per day (16.8 mg per week)",
+              "code": "WL_GLP_1_SAXENDA_A4"
+            },
+            {
+              "text": "3.0 mg per day (21 mg per week)",
+              "code": "WL_GLP_1_SAXENDA_A5"
+            }
+          ],
+          {
+            "===": [{ "var": "recentMed" }, "Victoza (Liraglutide)"]
+          },
+          [
+            {
+              "text": "0.6 mg per day (4.2 mg per week)",
+              "code": "WL_GLP_1_VICTOZA_A1"
+            },
+            {
+              "text": "1.2 mg per day (8.4 mg per week)",
+              "code": "WL_GLP_1_VICTOZA_A2"
+            },
+            {
+              "text": "1.8 mg per day (12.6 mg per week)",
+              "code": "WL_GLP_1_VICTOZA_A3"
+            },
+            {
+              "text": "2.4 mg per day (16.8 mg per week)",
+              "code": "WL_GLP_1_VICTOZA_A4"
+            },
+            {
+              "text": "3.0 mg per day (21 mg per week)",
+              "code": "WL_GLP_1_VICTOZA_A5"
+            }
+          ],
+          {
+            "===": [{ "var": "recentMed" }, "Trulicity (Dulaglutide)"]
+          },
+          [
+            {
+              "text": "0.75 mg per week (3 mg per month)",
+              "code": "WL_GLP_1_TRULICITY_A1"
+            },
+            {
+              "text": "1.5 mg per week (6 mg per month)",
+              "code": "WL_GLP_1_TRULICITY_A2"
+            },
+            {
+              "text": "3 mg per week (12 mg per month)",
+              "code": "WL_GLP_1_TRULICITY_A3"
+            },
+            {
+              "text": "4.5 mg per week (18 mg per month)",
+              "code": "WL_GLP_1_TRULICITY_A4"
+            }
+          ],
+          { "===": [{ "var": "recentMed" }, "Compound Semaglutide"] },
+          [
+            {
+              "text": "0.25 mg per week (1 mg per month)",
+              "code": "WL_GLP_1_SEMAGLUTIDE_A1"
+            },
+            {
+              "text": "0.5 mg per week (2 mg per month)",
+              "code": "WL_GLP_1_SEMAGLUTIDE_A2"
+            },
+            {
+              "text": "1 mg per week (4 mg per month)",
+              "code": "WL_GLP_1_SEMAGLUTIDE_A3"
+            },
+            {
+              "text": "1.7 mg per week (6.8 mg per month)",
+              "code": "WL_GLP_1_SEMAGLUTIDE_A4"
+            },
+            {
+              "text": "2.4 mg per week (9.6 mg per month)",
+              "code": "WL_GLP_1_SEMAGLUTIDE_A5"
+            }
+          ],
+          { "===": [{ "var": "recentMed" }, "Compound Tirzepatide"] },
+          [
+            {
+              "text": "2.5 mg per week (10 mg per month)",
+              "code": "WL_GLP_1_TIRZEPATIDE_A1"
+            },
+            {
+              "text": "5 mg per week (20 mg per month)",
+              "code": "WL_GLP_1_TIRZEPATIDE_A2"
+            },
+            {
+              "text": "7.5 mg per week (30 mg per month)",
+              "code": "WL_GLP_1_TIRZEPATIDE_A3"
+            },
+            {
+              "text": "10 mg per week (40 mg per month)",
+              "code": "WL_GLP_1_TIRZEPATIDE_A4"
+            },
+            {
+              "text": "12.5 mg per week (50 mg per month)",
+              "code": "WL_GLP_1_TIRZEPATIDE_A5"
+            }
+          ],
+          [
+            {
+              "text": "Other",
+              "code": "WL_GLP_1_OTHER_A1"
+            }
+          ]
+        ]
+      }
+    },
+    "WL_GLP_1_Q2": {
+      "header": "When did you inject your last dose of [medication name]?",
+      "type": "choice",
+      "answerOptions": {
+        "if": [
+          { "===": [{ "var": "variant6988" }, "Variation-1"] },
+          [
+            {
+              "text": "Within the past month",
+              "code": "WL_GLP_2_A1"
+            },
+            {
+              "text": "Within the past 1-2 months",
+              "code": "WL_GLP_2_A2"
+            },
+            {
+              "text": "Within the past 2-3 months",
+              "code": "WL_GLP_2_A3"
+            },
+            {
+              "text": "3 or more months ago",
+              "code": "WL_GLP_2_A4"
+            }
+          ],
+          [
+            {
+              "text": "Within the past month",
+              "code": "WL_GLP_2_A1"
+            },
+            {
+              "text": "Within the past 1-3 months",
+              "code": "WL_GLP_2_A2"
+            },
+            {
+              "text": "3 or more months ago",
+              "code": "WL_GLP_2_A3"
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

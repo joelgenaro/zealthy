@@ -1,0 +1,470 @@
+{
+  "name": "pre-workout",
+  "care": "Preworkout",
+  "version": "1",
+  "canvas_id": "0a9406d3-7b4b-4484-aff0-951b4d27cfe2",
+  "code": "PRE_W_Q",
+
+  "entry": "PRE_W_Q1",
+  "questions": {
+    "PRE_W_Q1": {
+      "header": "Performance Protocol",
+      "details": "Blood Flow comes in a convenient, orally disintegrating tablet that stimulates your body’s natural blood flow. Perform better in the bedroom, office, and the gym with our potent fast-acting and long-lasting formula.",
+      "type": "performance-protocol",
+      "next": "PRE_W_Q2"
+    },
+    "PRE_W_Q2": {
+      "banner": "Performance Protocol",
+      "header": "How strong are your erections?",
+      "type": "choice",
+      "next": "PRE_W_Q5",
+      "answerOptions": [
+        {
+          "text": "Extremely weak",
+          "code": "PRE_W_Q2_A1"
+        },
+        {
+          "text": "Weak",
+          "code": "PRE_W_Q2_A2"
+        },
+        {
+          "text": "Neither weak nor strong",
+          "code": "PRE_W_Q2_A3"
+        },
+        {
+          "text": "Strong",
+          "code": "PRE_W_Q2_A4"
+        },
+        {
+          "text": "Extremely strong",
+          "code": "PRE_W_Q2_A5"
+        }
+      ]
+    },
+    "PRE_W_Q5": {
+      "banner": "Performance Protocol",
+      "header": "How would you rate your energy level?",
+      "type": "choice",
+      "next": "PRE_W_Q6",
+      "answerOptions": [
+        {
+          "text": "Terrible",
+          "code": "PRE_W_Q5_A1"
+        },
+        {
+          "text": "Poor",
+          "code": "PRE_W_Q5_A2"
+        },
+        {
+          "text": "Average",
+          "code": "PRE_W_Q5_A3"
+        },
+        {
+          "text": "Good",
+          "code": "PRE_W_Q5_A4"
+        },
+        {
+          "text": "Excellent",
+          "code": "PRE_W_Q5_A5"
+        }
+      ]
+    },
+    "PRE_W_Q6": {
+      "banner": "Performance Protocol",
+      "header": "How would you rate your muscular strength and endurance?",
+      "type": "choice",
+      "next": "PRE_W_Q9",
+      "answerOptions": [
+        {
+          "text": "Terrible",
+          "code": "PRE_W_Q6_A1"
+        },
+        {
+          "text": "Poor",
+          "code": "PRE_W_Q6_A2"
+        },
+        {
+          "text": "Average",
+          "code": "PRE_W_Q6_A3"
+        },
+        {
+          "text": "Good",
+          "code": "PRE_W_Q6_A4"
+        },
+        {
+          "text": "Excellent",
+          "code": "PRE_W_Q6_A5"
+        }
+      ]
+    },
+    "PRE_W_Q9": {
+      "banner": "Performance Protocol",
+      "header": "How would you rate your sex drive (libido)?",
+      "type": "choice",
+      "next": "PRE_W_Q10",
+      "answerOptions": [
+        {
+          "text": "Terrible",
+          "code": "PRE_W_Q9_A1"
+        },
+        {
+          "text": "Poor",
+          "code": "PRE_W_Q9_A2"
+        },
+        {
+          "text": "Average",
+          "code": "PRE_W_Q9_A3"
+        },
+        {
+          "text": "Good",
+          "code": "PRE_W_Q9_A4"
+        },
+        {
+          "text": "Excellent",
+          "code": "PRE_W_Q9_A5"
+        }
+      ]
+    },
+    "PRE_W_Q10": {
+      "banner": "Performance Protocol",
+      "header": "Have you noticed your desire to have sex is noticably lower than it has been in the past?",
+      "type": "choice",
+      "next": "PRE_W_Q15",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PRE_W_Q10_A1"
+        },
+        {
+          "text": "No",
+          "code": "PRE_W_Q10_A2"
+        }
+      ]
+    },
+    "PRE_W_Q15": {
+      "banner": "Performance Protocol",
+      "header": "Have you used ED medication before?",
+      "type": "choice",
+      "next": "PRE_W_Q16",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PRE_W_Q15_A1",
+          "next": "PRE_W_Q15_FLW_1"
+        },
+        {
+          "text": "No",
+          "code": "PRE_W_Q15_A2"
+        }
+      ]
+    },
+    "PRE_W_Q15_FLW_1": {
+      "banner": "Performance Protocol",
+      "header": "Which of the following ED treatments have you used before?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "PRE_WORKOUT_PREVIOUS_MEDS_DETAILS",
+      "answerOptions": [
+        {
+          "text": "Sildenafil (Viagra)",
+          "code": "PRE_W_Q15_FLW_A1"
+        },
+        {
+          "text": "Tadalafil (Cialis)",
+          "code": "PRE_W_Q15_FLW_A2"
+        },
+        {
+          "text": "Vardenafil (Levitra)",
+          "code": "PRE_W_Q15_FLW_A3"
+        },
+        {
+          "text": "Avanafil (Stendra)",
+          "code": "PRE_W_Q15_FLW_A4"
+        },
+        {
+          "text": "Other",
+          "code": "PRE_W_Q15_FLW_A5"
+        }
+      ]
+    },
+    "PRE_W_Q16": {
+      "banner": "Performance Protocol",
+      "header": "Do you have any allergies?",
+      "description": "Include any allergies to food, dyes, prescriptions, or over-the-counter medications (e.g. antibiotics, allergy medications), herbs, vitamins, supplements, or anything else.",
+      "type": "choice-details",
+      "next": "PRE_W_Q17",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PRE_W_Q16_A1"
+        },
+        {
+          "text": "No",
+          "code": "PRE_W_Q16_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "PRE_W_Q16_A1",
+        "code": "PRE_W_Q16_A",
+        "type": "text",
+        "input_placeholder": "Tell us more..."
+      }
+    },
+    "PRE_W_Q17": {
+      "banner": "Performance Protocol",
+      "header": "Have you had any surgeries or hospitalizations in the past six months?",
+
+      "type": "choice-details",
+      "next": "PRE_W_Q18",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "PRE_W_Q17_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "PRE_W_Q17_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "PRE_W_Q17_A2",
+        "code": "PRE_W_Q17_A",
+        "type": "text",
+        "input_placeholder": "Tell us more..."
+      }
+    },
+    "PRE_W_Q18": {
+      "banner": "Performance Protocol",
+      "header": "Are you experiencing any of the following cardiovascular symptoms?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "PRE_W_Q19",
+      "answerOptions": [
+        {
+          "text": "Chest pain when climbing 2 flights of stairs or walking 4 blocks",
+          "code": "PRE_W_Q18_A1"
+        },
+        {
+          "text": "Chest pain with sexual activity",
+          "code": "PRE_W_Q18_A2"
+        },
+        {
+          "text": "Chest pain at rest",
+          "code": "PRE_W_Q18_A3"
+        },
+        {
+          "text": "Unexplained fainting or dizziness",
+          "code": "PRE_W_Q18_A4"
+        },
+        {
+          "text": "Abnormal heart beats or rhythms",
+          "code": "PRE_W_Q18_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "PRE_W_Q18_A6"
+        }
+      ]
+    },
+    "PRE_W_Q19": {
+      "banner": "Performance Protocol",
+      "header": "Do you have or have you previously been diagnosed with any of the following?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "PRE_W_Q20",
+      "answerOptions": [
+        {
+          "text": "Diabetes",
+          "code": "PRE_W_Q19_A1"
+        },
+        {
+          "text": "Prostate conditions",
+          "code": "PRE_W_Q19_A2"
+        },
+        {
+          "text": "Kidney diseases or conditions",
+          "code": "PRE_W_Q19_A3"
+        },
+        {
+          "text": "Liver, stomach, or other gastrointestinal conditions",
+          "code": "PRE_W_Q19_A4"
+        },
+        {
+          "text": "Nerve, spinal cord, or brain disorders",
+          "code": "PRE_W_Q19_A5"
+        },
+        {
+          "text": "Eye conditions or diseases",
+          "code": "PRE_W_Q19_A6"
+        },
+        {
+          "text": "Blood conditions or diseases",
+          "code": "PRE_W_Q19_A7"
+        },
+        {
+          "text": "Heart conditions or diseases",
+          "code": "PRE_W_Q19_A8"
+        },
+        {
+          "text": "History of heart attack or stroke within the last 6 months",
+          "code": "PRE_W_Q19_A9"
+        },
+        {
+          "text": "Vascular conditions affecting arteries or veins",
+          "code": "PRE_W_Q19_A10"
+        },
+        {
+          "text": "Penis conditions other than ED",
+          "code": "PRE_W_Q19_A11"
+        },
+        {
+          "text": "Low blood pressure",
+          "code": "PRE_W_Q19_A12"
+        },
+
+        {
+          "text": "High blood pressure",
+          "code": "PRE_W_Q19_A13"
+        },
+        {
+          "text": "Other chronic medical conditions",
+          "code": "PRE_W_Q19_A14"
+        },
+        {
+          "text": "None of the above",
+          "code": "PRE_W_Q19_A15"
+        }
+      ]
+    },
+    "PRE_W_Q20": {
+      "banner": "Performance Protocol",
+      "header": "Do you regularly take any other medications, vitamins, or supplements?",
+      "description": "Be sure to select ‘Yes’ if you take prescription medication for any other chronic medical conditions, sexual enhancement, erectile dysfunction.",
+      "type": "choice-details",
+      "next": "PRE_W_Q21",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PRE_W_Q20_A1"
+        },
+        {
+          "text": "No",
+          "code": "PRE_W_Q20_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "PRE_W_Q20_A1",
+        "code": "PRE_W_Q20_A",
+        "type": "text",
+        "input_placeholder": "Please tell us what medications, vitamins, or supplements you currently take below..."
+      }
+    },
+    "PRE_W_Q21": {
+      "banner": "Performance Protocol",
+      "header": "In the last 3 months, have you experienced fainting, almost fainting, severe headaches, blurry or double vision, or recurrent nosebleeds?",
+      "type": "choice",
+      "next": "PRE_W_Q23",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PRE_W_Q21_A1"
+        },
+        {
+          "text": "No",
+          "code": "PRE_W_Q21_A2"
+        }
+      ]
+    },
+    "PRE_W_Q23": {
+      "banner": "Performance Protocol",
+      "header": "Have you smoked, ingested, or used any of the following within the past 6 months?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "PRE_W_Q24",
+      "answerOptions": [
+        {
+          "text": "Cigarettes",
+          "code": "PRE_W_Q23_A1"
+        },
+        {
+          "text": "Poppers or rush (Amyl Nitrate or Butyl Nitrate)",
+          "code": "PRE_W_Q23_A2"
+        },
+        {
+          "text": "Cocaine",
+          "code": "PRE_W_Q23_A3"
+        },
+        {
+          "text": "Methamphetamine (crystal meth)",
+          "code": "PRE_W_Q23_A4"
+        },
+        {
+          "text": "Other",
+          "code": "PRE_W_Q23_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "PRE_W_Q23_A6"
+        }
+      ]
+    },
+    "PRE_W_Q24": {
+      "banner": "Performance Protocol",
+      "header": "Good news! Your pharmaceuticals are in stock!",
+      "description": "Our clinical protocols use customs doses of specific, specialty compounded drugs, which are only available at a limited set of compounding pharmacies in the U.S.",
+      "type": "message",
+      "next": "PRE_WORKOUT_TREATMENT_OPTIONS"
+    },
+    "PRE_WORKOUT_TREATMENT_OPTIONS": {
+      "banner": "Performance Protocol",
+      "header": "Choose your plan",
+      "description": "Our clinical protocols use customs doses of specific, specialty compounded drugs, which are only available at a limited set of compounding pharmacies in the U.S.",
+      "type": "pre-workout-treatment-select",
+      "hideFooter": true,
+      "answerOptions": [
+        {
+          "text": "Starter pack ($3.33/dose)",
+          "code": "TREATMENT_OPTIONS_Q1_A1"
+        },
+        {
+          "text": "Get stronger pumps ($5/dose)",
+          "code": "TREATMENT_OPTIONS_Q1_A2"
+        },
+        {
+          "text": "Maximize muscle production ($7/dose)",
+          "code": "TREATMENT_OPTIONS_Q1_A2"
+        }
+      ],
+      "buttonText": "Continue"
+    },
+    "PRE_WORKOUT_BLOOD_PRESSURE": {
+      "header": "What was your last blood pressure reading?",
+      "description": "This number is typically written as systolic/diastolic, for example: 139/82.",
+      "type": "pre-workout-blood-pressure",
+      "hideFooter": true,
+      "next": "PRE_W_Q23",
+      "canvas_linkId": "20a591d8-ff0d-46c3-97e6-c5a54ba0c9aa",
+      "answerOptions": [
+        {
+          "text": "I don't know",
+          "code": "PRE_WORKOUT_BLOOD_PRESSURE_A1",
+          "next": "PRE_WORKOUT_DISCLAIMER_BLOOD_PRESSURE"
+        }
+      ]
+    },
+
+    "PRE_WORKOUT_DISCLAIMER_BLOOD_PRESSURE": {
+      "header": "We’ll need a blood pressure reading.",
+      "description": "Go ahead and complete your health assessment, but your prescription won’t be processed until you tell us your blood pressure numbers. You can have your blood pressure checked at most pharmacies or use a home blood pressure cuff. If you aren’t sure when you last had it taken, call your doctor’s office and ask if it was within the last year and what the numbers were. After you submit your request, we will send you a message reminding you to tell us your blood pressure.",
+      "type": "message",
+      "buttonText": "I understand",
+      "next": "PRE_W_Q23"
+    },
+    "PRE_WORKOUT_PREVIOUS_MEDS_DETAILS": {
+      "type": "iterative",
+      "dependency": "PRE_W_Q15_FLW_1",
+      "template": "pre-workout-previous-meds",
+      "next": "PRE_W_Q16"
+    }
+  }
+}

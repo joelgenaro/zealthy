@@ -1,0 +1,78 @@
+{
+  "name": "async-mental-health-current-meds",
+  "version": "1",
+  "entry": "ASYNC_MH_CMT_Q1",
+  "questions": {
+    "ASYNC_MH_CMT_Q1": {
+      "header": "What dose of [medication name] are you currently taking?",
+      "subheader": "Please include your daily dosage (i.e. the total amount of medication you take on a daily basis)",
+      "type": "async-mental-health-dosages",
+      "next": "ASYNC_MH_CMT_Q2"
+    },
+    "ASYNC_MH_CMT_Q2": {
+      "header": "Would you like to continue taking [medication name]?",
+      "type": "multiple-choice",
+      "answerOptions": [
+        {
+          "text": "Yes, my symptoms have improved",
+          "code": "ASYNC_MH_CMT_Q2_A1"
+        },
+        {
+          "text": "No, my symptoms have not improved",
+          "code": "ASYNC_MH_CMT_Q2_A2"
+        },
+        {
+          "text": "No, I’m experiencing side effects",
+          "code": "ASYNC_MH_CMT_Q2_A3",
+          "next": "ASYNC_MH_CMT_Q3"
+        }
+      ]
+    },
+    "ASYNC_MH_CMT_Q3": {
+      "header": "What side effects have you experienced while taking [medication name]?",
+      "type": "multiple-choice",
+      "answerOptions": [
+        {
+          "text": "New onset suicidal ideation",
+          "code": "ASYNC_MH_CMT_Q3_A1"
+        },
+        {
+          "text": "Worsened anxiety or depression symptoms",
+          "code": "ASYNC_MH_CMT_Q3_A2"
+        },
+        {
+          "text": "Insomnia",
+          "code": "ASYNC_MH_CMT_Q3_A3"
+        },
+        {
+          "text": "Sedation (increased sleepiness)",
+          "code": "ASYNC_MH_CMT_Q3_A4"
+        },
+        {
+          "text": "GI distress (nausea/diarrhea/constipation)",
+          "code": "ASYNC_MH_CMT_Q3_A5"
+        },
+        {
+          "text": "Sexual side effects (anorgasmia, decreased libido)",
+          "code": "ASYNC_MH_CMT_Q3_A6"
+        },
+        {
+          "text": "Headaches",
+          "code": "ASYNC_MH_CMT_Q3_A7"
+        },
+        {
+          "text": "Dizziness",
+          "code": "ASYNC_MH_CMT_Q3_A8"
+        },
+        {
+          "text": "Nervousness, agitation, or restlessness",
+          "code": "ASYNC_MH_CMT_Q3_A9"
+        },
+        {
+          "text": "Weight gain",
+          "code": "ASYNC_MH_CMT_Q3_A10"
+        }
+      ]
+    }
+  }
+}

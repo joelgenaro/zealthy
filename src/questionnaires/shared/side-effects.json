@@ -1,0 +1,114 @@
+{
+  "name": "side-effects",
+  "version": "1",
+  "code": "SIDE_EFFECTS",
+  "entry": "SIDE_EFFECTS_Q1",
+  "questions": {
+    "SIDE_EFFECTS_Q1": {
+      "header": "What side effects are you experiencing?",
+      "type": "choice-details",
+      "buttonText": "Continue",
+      "next": "SIDE_EFFECTS_Q3",
+      "answerOptions": [
+        {
+          "text": "Injection site reaction",
+          "code": "SIDE_EFFECTS_Q1_A1",
+          "next": "SIDE_EFFECTS_Q2"
+        },
+        {
+          "text": "Nausea",
+          "code": "SIDE_EFFECTS_Q1_A2"
+        },
+        {
+          "text": "Constipation",
+          "code": "SIDE_EFFECTS_Q1_A3"
+        },
+        {
+          "text": "Diarrhea",
+          "code": "SIDE_EFFECTS_Q1_A4"
+        },
+        {
+          "text": "Lack of appetite",
+          "code": "SIDE_EFFECTS_Q1_A5"
+        },
+        {
+          "text": "Other",
+          "code": "SIDE_EFFECTS_Q1_A6"
+        }
+      ]
+    },
+    "SIDE_EFFECTS_Q2": {
+      "header": "Where is the injection site reaction?",
+      "type": "choice-details",
+      "next": "SIDE_EFFECTS_Q3",
+      "answerOptions": [
+        {
+          "text": "Arm",
+          "code": "SIDE_EFFECTS_Q2_A1"
+        },
+        {
+          "text": "Thigh",
+          "code": "SIDE_EFFECTS_Q2_A2"
+        },
+        {
+          "text": "Stomach",
+          "code": "SIDE_EFFECTS_Q2_A3"
+        }
+      ]
+    },
+    "SIDE_EFFECTS_Q3": {
+      "header": "On a scale from 1-5, how uncomfortable is it?",
+      "type": "choice-details",
+      "next": "SIDE_EFFECTS_Q4",
+      "answerOptions": [
+        {
+          "text": "5 - extremely uncomfortable",
+          "code": "SIDE_EFFECTS_Q3_A1"
+        },
+        {
+          "text": "4 - painful",
+          "code": "SIDE_EFFECTS_Q3_A2"
+        },
+        {
+          "text": "3 - uncomfortable",
+          "code": "SIDE_EFFECTS_Q3_A3"
+        },
+        {
+          "text": "2 - fairly uncomfortable",
+          "code": "SIDE_EFFECTS_Q3_A4"
+        },
+        {
+          "text": "1 - slightly uncomfortable",
+          "code": "SIDE_EFFECTS_Q3_A5"
+        }
+      ]
+    },
+    "SIDE_EFFECTS_Q4": {
+      "header": "Do you want to notify your Zealthy provider?",
+      "type": "choice-details",
+      "next": "SIDE_EFFECTS_Q5",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "SIDE_EFFECTS_Q4_A1"
+        },
+        {
+          "text": "No",
+          "code": "SIDE_EFFECTS_Q4_A2"
+        }
+      ]
+    },
+    "SIDE_EFFECTS_Q5": {
+      "header": "Any additional details you would like your provider to be aware about?",
+      "type": "text",
+      "next": "SIDE_EFFECTS_Q6",
+      "input_placeholder": "Type here..."
+    },
+    "SIDE_EFFECTS_Q6": {
+      "header": "We’ve notified your provider. If you would like to message them directly then select the button below",
+      "type": "side-effects",
+      "buttonText": "Message my provider",
+      "path": "/messages"
+    }
+  }
+}

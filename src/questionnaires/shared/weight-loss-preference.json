@@ -1,0 +1,12 @@
+{
+  "name": "weight-loss-preference",
+  "version": "1",
+  "code": "WEIGHT-LOSS-PREFERENCE-A",
+  "entry": "WEIGHT-LOSS-PREFERENCE-A-Q1",
+  "questions": {
+    "WEIGHT-LOSS-PREFERENCE-A-Q1": {
+      "type": "weight-loss-preference",
+      "index": 26
+    }
+  }
+}

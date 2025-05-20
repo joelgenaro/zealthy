@@ -1,0 +1,302 @@
+{
+  "name": "weight-loss-coaching-esp",
+  "care": "weight loss",
+  "version": "1",
+  "entry": {
+    "if": [
+      { "===": [{ "var": "potentialInsurance" }, "Semaglutide Bundled"] },
+      "WEIGHT-COACHING-Q2",
+      { "===": [{ "var": "potentialInsurance" }, "Tirzepatide Bundled"] },
+      "WEIGHT-COACHING-Q2",
+      "WEIGHT-COACHING-Q1A"
+    ]
+  },
+  "questions": {
+    "WEIGHT-COACHING-Q1A": {
+      "header": {
+        "if": [
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicare Access Florida"]
+          },
+          "¿Tienes Medicare Florida?",
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicaid Access Florida"]
+          },
+          "¿Tienes Medicaid Florida?",
+          "¿Tienes seguro del gobierno?"
+        ]
+      },
+      "next": {
+        "if": [
+          {
+            "and": [{ "===": [{ "var": "variant4022" }, "Variation-1"] }]
+          },
+          "WEIGHT-COACHING-Q2"
+        ]
+      },
+      "type": "weight-loss-eligibility",
+      "index": 13,
+      "listItems": {
+        "if": [
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicare Access Florida"]
+          },
+          [
+            "Para inscribirse en Z-Plan de Zealthy, debe ser miembro de Medicare. Esto significa que tiene seguro del gobierno."
+          ],
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicaid Access Florida"]
+          },
+          [
+            "Para inscribirse en Z-Plan de Zealthy, debe ser miembro de Medicaid. Esto significa que tiene seguro del gobierno."
+          ],
+          [
+            "El programa de pérdida de peso de Zealthy no está disponible para miembros de programas de seguro gubernamental como Medicare, Medicaid o Tricare.",
+            "Si tienes seguro comercial o patrocinado por el empleador, o si no tienes seguro, puedes continuar registrándote y podrás obtener un plan de tratamiento para la pérdida de peso que puede incluir medicamentos GLP-1 como Ozempic, Zepbound, Mounjaro, Wegovy, Semaglutida o Tirzepatida."
+          ]
+        ]
+      },
+      "buttonText": "Continue"
+    },
+    "WEIGHT-COACHING-INSURANCE-CA": {
+      "header": "¿Qué tipo de seguro de salud tienes actualmente?",
+      "type": "choice",
+      "next": "WEIGHT-COACHING-Q2",
+      "index": 14,
+      "answerOptions": [
+        {
+          "text": "Seguro del empleador o seguro comercial",
+          "code": "WEIGHT-COACHING-INSURANCE-CA_A1"
+        },
+        {
+          "text": "Seguro Kaiser",
+          "code": "WEIGHT-COACHING-INSURANCE-CA_A2",
+          "next": "WEIGHT-COACHING-INSURANCE-CA-2"
+        },
+        {
+          "text": "Sin seguro",
+          "code": "WEIGHT-COACHING-INSURANCE-CA_A3"
+        },
+        {
+          "text": "Otro",
+          "code": "WEIGHT-COACHING-INSURANCE-CA_A4"
+        }
+      ]
+    },
+    "WEIGHT-COACHING-INSURANCE-NOT_CA": {
+      "header": "¿Qué tipo de seguro de salud tienes actualmente?",
+      "type": "choice",
+      "next": "WEIGHT-COACHING-Q2",
+      "index": 14,
+      "answerOptions": [
+        {
+          "text": "Seguro del empleador o seguro comercial",
+          "code": "WEIGHT-COACHING-INSURANCE-CA_A1"
+        },
+        {
+          "text": "Sin seguro",
+          "code": "WEIGHT-COACHING-INSURANCE-CA_A3"
+        },
+        {
+          "text": "Otro",
+          "code": "WEIGHT-COACHING-INSURANCE-CA_A4"
+        }
+      ]
+    },
+    "WEIGHT-COACHING-INSURANCE-CA-2": {
+      "type": "message",
+      "header": "Aviso para miembros de Kaiser",
+      "next": "WEIGHT-COACHING-Q2",
+      "index": 14,
+      "listItems": [
+        "Como miembro de Kaiser, es posible que su medicamento no esté cubierto. El medicamento GLP-1 sin seguro generalmente cuesta alrededor de $1,000/mes.",
+        "Como miembro de Zealthy, aún tendrá acceso a semaglutida (ingrediente activo en Wegovy y Ozempic) o tirzepatida (ingrediente activo en Mounjaro) por tan solo $151/mes si es elegible para medicamentos GLP-1, pero es poco probable que Kaiser cubra su medicamento incluso con el proceso simplificado de cobertura de seguro de Zealthy.",
+        "También recomendamos a los miembros de Kaiser que se unen a Zealthy que, si tienen seguro adicional, suban su seguro que no sea de Kaiser después de registrarse para que podamos ayudarles a obtener cobertura para su medicamento GLP-1 (si se receta)."
+      ],
+      "buttonText": "Entiendo"
+    },
+    "WEIGHT-COACHING-Q2": {
+      "header": {
+        "if": [
+          {
+            "===": [{ "var": "potentialInsurance" }, "Semaglutide Bundled"]
+          },
+          "Los medicamentos GLP-1 como la semaglutida compuesta son esenciales para un programa efectivo de pérdida de peso.",
+          {
+            "===": [{ "var": "potentialInsurance" }, "Tirzepatide Bundled"]
+          },
+          "Los medicamentos GLP-1 como la tirzepatida compuesta son esenciales para un programa efectivo de pérdida de peso.",
+          "Los medicamentos GLP-1 como Wegovy, Zepbound o Ozempic son esenciales para un programa de pérdida de peso efectivo."
+        ]
+      },
+      "type": "message",
+      "next": "WEIGHT-COACHING-Q3",
+      "index": 15,
+      "buttonText": "Dime más"
+    },
+    "WEIGHT-COACHING-Q3": {
+      "header": {
+        "if": [
+          {
+            "or": [
+              {
+                "===": [{ "var": "variant5777" }, "Variation-2"]
+              },
+              { "===": [{ "var": "variant5777" }, "Variation-3"] }
+            ]
+          },
+          "Su plan de prescripción personalizado",
+          "El programa de pérdida de peso de Zealthy incluye:"
+        ]
+      },
+      "unorderedList": {
+        "if": [
+          { "===": [{ "var": "variant5751" }, "Variation-1"] },
+          [
+            "Programar y realizar una visita por video o teléfono con un proveedor de Zealthy para revisar la solicitud de GLP-1; prescripción si es médicamente apropiado",
+            "Asistencia para obtener la cobertura de sus medicamentos por el seguro (que pueden costar más de $1,000/mes en otros lugares); medicación asequible sin seguro ya que el seguro no siempre aprueba los GLP-1",
+            "Mensajería ilimitada con un coach que puede ayudarte a crear un plan personalizado",
+            "Seguimiento de tu progreso y metas de pérdida de peso"
+          ],
+          {
+            "===": [{ "var": "potentialInsurance" }, "Semaglutide Bundled"]
+          },
+          [
+            "Revisión de la solicitud por parte del proveedor y toda la atención clínica asociada con una prescripción de semaglutida (este es el principal ingrediente activo en Wegovy y Ozempic)",
+            "Suministro mensual de semaglutida incluido en tu plan y enviado a tu puerta gratuitamente (si es recetado)",
+            "Ajustes de dosis si es médicamente apropiado con el tiempo sin aumentar los costos mensuales",
+            "Mensajería ilimitada con un coach que puede ayudarte a crear un plan personalizado para seguir tu progreso y metas de pérdida de peso"
+          ],
+          {
+            "===": [{ "var": "potentialInsurance" }, "Tirzepatide Bundled"]
+          },
+          [
+            "Revisión de la solicitud por parte del proveedor y toda la atención clínica asociada con una prescripción de Tirzepatida (este es el principal ingrediente activo en Mounjaro)",
+            "Suministro mensual de Tirzepatida incluido en tu plan y enviado a tu puerta gratuitamente (si es recetado)",
+            "Ajustes de dosis si es médicamente apropiado con el tiempo sin aumentar los costos mensuales",
+            "Mensajería ilimitada con un coach que puede ayudarte a crear un plan personalizado para seguir tu progreso y metas de pérdida de peso"
+          ],
+          {
+            "===": [{ "var": "potentialInsurance" }, "Weight Loss Sync"]
+          },
+          [
+            "Programar y realizar una visita por video o teléfono con un proveedor de Zealthy para revisar la solicitud de GLP-1; prescripción si es médicamente apropiado",
+            "Asistencia para obtener la cobertura de sus medicamentos por el seguro (que pueden costar más de $1,000/mes en otros lugares); medicación GLP-1 asequible sin seguro",
+            "Mensajería ilimitada con un coach que puede ayudarte a crear un plan personalizado",
+            "Seguimiento de tu progreso y metas de pérdida de peso"
+          ],
+          [
+            "Revisión de la solicitud por parte del proveedor para GLP-1 o medicamentos similares y prescripción si es médicamente apropiado",
+            "Asistencia para obtener la cobertura de sus medicamentos por el seguro (que pueden costar más de $1,000/mes en otros lugares); medicación asequible sin seguro",
+            "Mensajería ilimitada con un coach que puede ayudarte a crear un plan personalizado",
+            "Seguimiento de tu progreso y metas de pérdida de peso"
+          ]
+        ]
+      },
+      "type": "add-weight-coaching",
+      "next": {
+        "if": [{ "===": [{ "var": "variant" }, "4438"] }, "", "RESULTS"]
+      },
+      "index": 16
+    },
+    "RESULTS": {
+      "type": "analyze-weight-loss-results",
+      "hideFooter": true,
+      "hideHeader": true,
+      "index": 17
+    },
+    "WEIGHT-GOVERNMENT-INSURANCE": {
+      "header": "¿Qué tipo de seguro del gobierno tienes?",
+      "type": "weight-government-insurance",
+      "index": 18
+    },
+    "WEIGHT-COACHING-Q4": {
+      "header": "Los medicamentos GLP-1 como Wegovy u Ozempic son esenciales para un programa efectivo de pérdida de peso.",
+      "type": "message",
+      "next": {
+        "if": [
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicare Access Florida"]
+          },
+          "WEIGHT-COACHING-Q5-MEDICARE-FLORIDA",
+          "WEIGHT-COACHING-Q5-MEDICAID-FLORIDA"
+        ]
+      },
+      "index": 19,
+      "buttonText": "Dime más"
+    },
+    "WEIGHT-COACHING-Q5-MEDICARE-FLORIDA": {
+      "header": "Los miembros de Medicare Florida son elegibles para Z-Plan de Zealthy que incluye:",
+      "unorderedList": [
+        "Acceso a programar citas con médicos o profesionales médicos que pueden considerar su solicitud de GLP-1 o medicamentos similares y proporcionar una receta si es médicamente apropiado",
+        "Asistencia con opciones de medicamentos asequibles de bolsillo (solo para opciones explícitamente no cubiertas por Medicare)",
+        "Mensajería ilimitada con un coach que puede ayudarte a crear un plan personalizado",
+        "Seguimiento de tu progreso y metas de pérdida de peso",
+        "La membresía Z-Plan es hasta un 40% menos costosa que otros planes comparables"
+      ],
+      "next": "WEIGHT-PROVIDER_SCHEDULE",
+      "type": "add-weight-coaching-access"
+    },
+    "WEIGHT-COACHING-Q5-MEDICAID-FLORIDA": {
+      "header": "Los miembros de Medicaid Florida son elegibles para Z-Plan de Zealthy que incluye:",
+      "unorderedList": [
+        "Acceso a programar citas con médicos o profesionales médicos que pueden considerar su solicitud de GLP-1 o medicamentos similares y proporcionar una receta si es médicamente apropiado",
+        "Asistencia con opciones de medicamentos asequibles de bolsillo (solo para opciones explícitamente no cubiertas por Medicaid)",
+        "Mensajería ilimitada con un coach que puede ayudarte a crear un plan personalizado",
+        "Seguimiento de tu progreso y metas de pérdida de peso",
+        "La membresía Z-Plan es hasta un 40% menos costosa que otros planes comparables"
+      ],
+      "next": "WEIGHT-PROVIDER_SCHEDULE",
+      "type": "add-weight-coaching-access"
+    },
+    "WEIGHT-PROVIDER_SCHEDULE": {
+      "next": "WEIGHT-COACHING-SCHEDULE",
+      "header": "A continuación, programarás tu visita con un proveedor de Zealthy.",
+      "description": {
+        "if": [
+          {
+            "===": [{ "var": "potentialInsurance" }, "Weight Loss Sync"]
+          },
+          "Podrás discutir opciones de pérdida de peso con tu proveedor, incluyendo medicamentos GLP-1. Tu visita está incluida en los $39 que pagas por tu primer mes del programa de pérdida de peso de Zealthy.",
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicaid Access Florida"]
+          },
+          "Podrás discutir opciones de pérdida de peso con tu proveedor, incluyendo medicamentos GLP-1. Tu visita debería estar cubierta por tu plan de Medicaid Florida. El acceso a la programación con tu proveedor es parte de tu programa de membresía Z-Plan de Zealthy, que actualmente tiene un descuento de $40.",
+          "Podrás discutir opciones de pérdida de peso con tu proveedor, incluyendo medicamentos GLP-1. Tu visita debería estar cubierta por tu plan de Medicare Florida. El acceso a la programación con tu proveedor es parte de tu programa de membresía Z-Plan de Zealthy, que actualmente tiene un descuento de $40."
+        ]
+      },
+      "type": "weight-provider-schedule"
+    },
+    "WEIGHT-COACHING-SCHEDULE": {
+      "next": "WEIGHT-COACHING-Q6",
+      "type": "primary-care-provider-schedule"
+    },
+    "WEIGHT-COACHING-Q6": {
+      "header": "Para inscribirte en Z-Plan de Zealthy, debes firmar nuestros términos de servicio.",
+      "type": "message",
+      "next": "WEIGHT-COACHING-AGREEMENT"
+    },
+    "WEIGHT-COACHING-AGREEMENT": {
+      "header": "A continuación, verás los términos de servicio de la membresía Z-Plan de Zealthy. Para inscribirte, debes firmar este acuerdo a continuación, que será contrafirmado por un proveedor de Bruno Health o un agente de ese proveedor.",
+      "type": "weight-coaching-agreement"
+    },
+    "WEIGHT-COACHING-INELIGIBLE": {
+      "header": "Como beneficiario de seguro del gobierno, no puedes inscribirte en el programa de pérdida de peso de Zealthy.",
+      "listItems": [
+        "Debido a las regulaciones, si tienes seguro del gobierno, no puedes inscribirte en el programa de pérdida de peso de Zealthy.",
+        "Si tu estado de seguro cambia en cualquier momento y ya no eres beneficiario de seguro del gobierno, puedes inscribirte o enviarnos un correo electrónico a support@getzealthy.com y podemos ayudarte."
+      ],
+      "type": "weight-loss-ineligible"
+    },
+    "WEIGHT-COACHING-INELIGIBLE-MEDICARE-FLORIDA": {
+      "header": "Debido a que no eres miembro de Medicare de Florida, no eres elegible para Z-Plan de Zealthy en este momento",
+      "description": "Actualmente, Z-Plan, el Programa de Acceso Único de Zealthy, solo está disponible para miembros de Medicare de Florida. Esto NO incluye a los miembros de HMO.",
+      "type": "alarm"
+    },
+    "WEIGHT-COACHING-INELIGIBLE-MEDICAID-FLORIDA": {
+      "header": "Debido a que no eres miembro de Medicaid de Florida, no eres elegible para Z-Plan de Zealthy en este momento",
+      "description": "Actualmente, Z-Plan, el Programa de Acceso Único de Zealthy, solo está disponible para miembros de Medicaid de Florida. Esto NO incluye a los miembros de HMO.",
+      "type": "alarm"
+    }
+  }
+}

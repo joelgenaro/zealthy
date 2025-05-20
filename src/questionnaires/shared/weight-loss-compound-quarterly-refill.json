@@ -1,0 +1,94 @@
+{
+  "name": "weight-loss-compound-quarterly-refill",
+  "version": "1",
+  "code": "WEIGHT_L_C_REFILL",
+  "entry": "WEIGHT_L_C_REFILL_Q1",
+  "intro": {
+    "header": "Let’s help you with your updated dosage. Just answer a few questions and your Zealthy care team will help re-evaluate your future dosage instructions in 1-3 business days."
+  },
+  "questions": {
+    "WEIGHT_L_C_REFILL_Q1": {
+      "header": "What’s your current weight?",
+      "type": "weight",
+      "next": "WEIGHT_L_C_REFILL_Q2"
+    },
+    "WEIGHT_L_C_REFILL_Q2": {
+      "header": "Are you happy with your current medication?",
+      "type": "choice",
+      "next": "WEIGHT_L_C_REFILL_Q3",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_C_REFILL_Q2_A1"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_C_REFILL_Q2_A2"
+        }
+      ]
+    },
+    "WEIGHT_L_C_REFILL_Q3": {
+      "header": "Would you like to continue with the same medication at a higher dosage? Most patients will increase their dosage at this point.",
+      "type": "choice-details",
+      "next": "WEIGHT_L_C_REFILL_Q5",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_C_REFILL_Q3_A1"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_C_REFILL_Q3_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "WEIGHT_L_C_REFILL_Q3_A2",
+        "code": "WEIGHT_L_C_REFILL_Q4",
+        "type": "text",
+        "description": "Tell us more",
+        "body": "Please confirm your current medication & dosage and tell us why you are interested in changing medication or dosage. What medication and dosage would you prefer?"
+      },
+      "followUpAlt": {
+        "showIfResponse": "WEIGHT_L_C_REFILL_Q3_A1",
+        "code": "WEIGHT_L_C_REFILL_Q4",
+        "type": "text",
+        "description": "Tell us more",
+        "body": "Please confirm your current medication and dosage."
+      }
+    },
+    "WEIGHT_L_C_REFILL_Q5": {
+      "header": "Are you currently experiencing any side effects from your weight loss medication?",
+      "type": "choice-details",
+      "next": "WEIGHT_L_C_REFILL_Q7",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "WEIGHT_L_C_REFILL_Q5_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_C_REFILL_Q5_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "WEIGHT_L_C_REFILL_Q5_A2",
+        "code": "WEIGHT_L_C_REFILL_Q6",
+        "type": "text",
+        "description": "Tell us more about your side effects",
+        "body": "We want to know what you’re experiencing so that, if appropriate, we can help you adjust your medication or dosage."
+      }
+    },
+    "WEIGHT_L_C_REFILL_Q7": {
+      "header": "Tell us anything else you’d like your provider to know when updating dosage instructions for your medication.",
+      "description": "Let us know if there is anything else that your Zealthy Care Team should know.",
+      "type": "text",
+      "next": "TREATMENT_OPTIONS"
+    },
+    "TREATMENT_OPTIONS": {
+      "type": "compound-weight-loss-refill-treatment"
+    },
+    "SUBMIT": {
+      "type": "submit-compound-weight-loss-refill"
+    }
+  }
+}

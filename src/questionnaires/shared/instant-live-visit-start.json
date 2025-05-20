@@ -1,0 +1,13 @@
+{
+  "name": "instant-live-visit-start",
+  "version": "1",
+  "code": "ILV-START",
+  "entry": "ILV-START-Q1",
+  "questions": {
+    "ILV-START-Q1": {
+      "header": "You’re now in the waiting room to see a Zealthy provider!",
+      "description": "While waiting for Zealthy to match you with a provider for your visit, you can verify your ID and answer some required clinical questions.",
+      "type": "ilv-start"
+    }
+  }
+}

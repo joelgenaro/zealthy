@@ -1,0 +1,38 @@
+// These are ordered by priority, so once all the possible queue types are found, it would go to Lead Provider/Provider (QA) first if that exists, and if that group isn't a possible queue type, then Provider, etc.
+export const messageKeywords = {
+  'Lead Provider': [
+    'symptom',
+    'effect',
+    'warning',
+    'complication',
+    'modify medication',
+  ],
+  Provider: [
+    'dose',
+    'medication',
+    'prescription',
+    'refill',
+    'rx',
+    'med',
+    'pill',
+    'tablet',
+    'capsule',
+    'dosage',
+    'frequency',
+    'mg',
+    'doctor',
+  ],
+  'Order Support': ['broken', 'missing', 'damaged', 'delay', 'not delivered'],
+  'Coordinator (PAs)': [
+    'pa',
+    'insurance',
+    'prior authorization',
+    'prior auth',
+    'pre-auth',
+    'coverage',
+    'approval',
+    'claims',
+    'deductible',
+    'co-pay',
+  ],
+};

@@ -1,0 +1,80 @@
+{
+  "name": "non-glp1-meds",
+  "version": "1",
+  "canvas_id": "5cc22541-c669-4718-b828-a9c0007c167c",
+  "care": "Weight loss",
+  "codingSystem": "http://schemas.getzealthy.canvasmedical.com/fhir/systems/internal",
+  "entry": "NON_GLP1_Q1",
+  "intro": {
+    "header": "Your provider needs you to answer a few additional questions in order to move forward with your weight loss Rx.",
+    "type": "message",
+    "next": "NON_GLP1_Q1"
+  },
+  "questions": {
+    "NON_GLP1_Q1": {
+      "canvas_linkId": "fc685ef9-086c-4930-9296-de13932de0ac",
+      "header": "Do you consume more than 6 alcoholic drinks per week?",
+      "type": "choice",
+      "next": "NON_GLP1_Q2",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "NON_GLP1_Q1_A1",
+          "next": "DISQUALIFY_MEDS"
+        },
+        {
+          "text": "No",
+          "code": "NON_GLP1_Q1_A2"
+        }
+      ]
+    },
+    "NON_GLP1_Q2": {
+      "canvas_linkId": "c4c8708b-6fba-40e9-b443-a2b870144019",
+      "header": "What’s your resting heart rate?",
+      "description": "This helps Zealthy understand the best treatment options for you. If you don’t have a recent measurement, please follow the simple steps below:",
+      "listItems": [
+        "Place your index finger (next to your thumb) and middle finger on the side of your neck. They should go in the groove under your jaw and next to your windpipe.",
+        "Press firmly until you feel a pulse. If you can’t feel it, move your fingers around slightly and increase pressure until you do.",
+        "Count the pulses for 30 seconds (using a clock or stopwatch).",
+        "Double the number of pulses you counted to get your heart rate."
+      ],
+      "type": "number",
+      "next": "NON_GLP1_Q3",
+      "input_placeholder": "Resting heart rate (beats per minute)"
+    },
+    "NON_GLP1_Q3": {
+      "canvas_linkId": "11879992-f0d0-4d54-88ca-031de1b7f134",
+      "header": "What was your most recent blood pressure reading?",
+      "type": "choice",
+      "next": "NON_GLP1_Q4",
+      "answerOptions": [
+        {
+          "text": "I’m not sure but it was within the normal range",
+          "code": "NON_GLP1_Q3_A1"
+        },
+        {
+          "text": "Elevated (130-139/80-89)",
+          "code": "NON_GLP1_Q3_A2"
+        },
+        {
+          "text": "High (140-149/90-99)",
+          "code": "NON_GLP1_Q3_A3"
+        },
+        {
+          "text": "Very High (More than 150/100)",
+          "code": "NON_GLP1_Q3_A4"
+        }
+      ]
+    },
+    "NON_GLP1_Q4": {
+      "header": "Thank you for sharing this with us! ",
+      "description": "Your provider will reply in your messages and let you know if they are moving forward with your medication, which will be included in your membership if prescribed.",
+      "type": "non-glp1-final"
+    },
+    "DISQUALIFY_MEDS": {
+      "header": "So that you know! ",
+      "description": "If you consume more than 6 alcohol drinks per week, you may not be eligible for some medications such as Naltraxone / Bupropion.",
+      "type": "alarm"
+    }
+  }
+}

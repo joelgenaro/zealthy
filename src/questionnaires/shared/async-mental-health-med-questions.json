@@ -1,0 +1,410 @@
+{
+  "name": "async-mental-health-med-questions",
+  "version": "1",
+  "canvas_id": "6a1e3ddf-91c3-40c9-a16a-9fbcfc851dac",
+  "code": "ASYNC_MH_MQ",
+  "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+  "entry": "ASYNC_MH_MQ_Q10",
+  "questions": {
+    "ASYNC_MH_MQ_Q10": {
+      "header": "Is there a specific medication you’d like to ask your provider about?",
+      "description": "Your provider will always take your preferences into consideration when creating your treatment plan.",
+      "type": "choice",
+      "next": "ASYNC_MH_MQ_Q11",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ASYNC_MH_MQ_Q10_A1"
+        },
+        {
+          "text": "No",
+          "code": "ASYNC_MH_MQ_Q10_A2",
+          "next": "ASYNC_MH_MQ_Q12"
+        }
+      ]
+    },
+
+    "ASYNC_MH_MQ_Q11": {
+      "header": "Which medication are you interested in most?",
+      "description": "Your provider can prescribe any of the following, if it is clinically appropriate for you.",
+      "type": "choice",
+      "next": "ASYNC_MH_MQ_Q12",
+      "answerOptions": [
+        {
+          "text": "Bupropion (Wellbutrin)",
+          "code": "ASYNC_MH_MQ_Q11_A1"
+        },
+        {
+          "text": "Buspirone (BuSpar)",
+          "code": "ASYNC_MH_MQ_Q11_A2"
+        },
+        {
+          "text": "Citalopram (Celexa)",
+          "code": "ASYNC_MH_MQ_Q11_A3"
+        },
+        {
+          "text": "Duloxetine (Cymbalta)",
+          "code": "ASYNC_MH_MQ_Q11_A4"
+        },
+        {
+          "text": "Escitalopram (Lexapro)",
+          "code": "ASYNC_MH_MQ_Q11_A5"
+        },
+        {
+          "text": "Fluoxetine (Prozac)",
+          "code": "ASYNC_MH_MQ_Q11_A6"
+        },
+        {
+          "text": "Hydroxyzine",
+          "code": "ASYNC_MH_MQ_Q11_A7"
+        },
+        {
+          "text": "Propranolol",
+          "code": "ASYNC_MH_MQ_Q11_A8"
+        },
+        {
+          "text": "Sertraline (Zoloft)",
+          "code": "ASYNC_MH_MQ_Q11_A9"
+        },
+        {
+          "text": "Trazodone",
+          "code": "ASYNC_MH_MQ_Q11_A10"
+        },
+
+        {
+          "text": "Venlafaxine (Effexor)",
+          "code": "ASYNC_MH_MQ_Q11_A11"
+        },
+        {
+          "text": "Something else",
+          "code": "ASYNC_MH_MQ_Q11_A12"
+        }
+      ]
+    },
+
+    "ASYNC_MH_MQ_Q12": {
+      "header": "Is this your first time taking mental health medications?",
+      "type": "choice",
+      "next": "ASYNC_MH_MQ_Q13",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ASYNC_MH_MQ_Q12_A1",
+          "next": "ASYNC_MH_MQ_Q32"
+        },
+        {
+          "text": "No",
+          "code": "ASYNC_MH_MQ_Q12_A2"
+        }
+      ]
+    },
+    "ASYNC_MH_MQ_Q13": {
+      "header": "Are you currently taking any mental health medications?",
+      "type": "choice",
+      "next": "ASYNC_MH_MQ_Q14",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ASYNC_MH_MQ_Q13_A1"
+        },
+        {
+          "text": "No",
+          "code": "ASYNC_MH_MQ_Q13_A2",
+          "next": "ASYNC_MH_MQ_Q15"
+        }
+      ]
+    },
+
+    "ASYNC_MH_MQ_Q14": {
+      "header": "Which of the following mental health medications or supplements are you currently taking?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "CURRENT_MEDS_DETAILS",
+      "answerOptions": [
+        {
+          "text": "Abilify (Aripiprazole)",
+          "code": "ASYNC_MH_MQ_Q14_A1"
+        },
+        {
+          "text": "Adderall",
+          "code": "ASYNC_MH_MQ_Q14_A2"
+        },
+        {
+          "text": "Bupropion (Wellbutrin)",
+          "code": "ASYNC_MH_MQ_Q14_A3"
+        },
+        {
+          "text": "Buspirone (BuSpar)",
+          "code": "ASYNC_MH_MQ_Q14_A4"
+        },
+        {
+          "text": "Caplyta (Lumateperone)",
+          "code": "ASYNC_MH_MQ_Q14_A5"
+        },
+        {
+          "text": "Citalopram (Celexa)",
+          "code": "ASYNC_MH_MQ_Q14_A6"
+        },
+        {
+          "text": "Depakote (Valproate)",
+          "code": "ASYNC_MH_MQ_Q14_A7"
+        },
+        {
+          "text": "Duloxetine (Cymbalta)",
+          "code": "ASYNC_MH_MQ_Q14_A8"
+        },
+
+        {
+          "text": "Escitalopram (Lexapro)",
+          "code": "ASYNC_MH_MQ_Q14_A9"
+        },
+        {
+          "text": "Fluoxetine (Prozac)",
+          "code": "ASYNC_MH_MQ_Q14_A10"
+        },
+        {
+          "text": "Ketamine",
+          "code": "ASYNC_MH_MQ_Q14_A11"
+        },
+        {
+          "text": "Lamictal (Lamotrigine)",
+          "code": "ASYNC_MH_MQ_Q14_A12"
+        },
+        {
+          "text": "Latuda (Lurasidone)",
+          "code": "ASYNC_MH_MQ_Q14_A13"
+        },
+        {
+          "text": "Lithium (Lithobid)",
+          "code": "ASYNC_MH_MQ_Q14_A14"
+        },
+        {
+          "text": "Rexulti (Brexpiprazole)",
+          "code": "ASYNC_MH_MQ_Q14_A15"
+        },
+        {
+          "text": "Risperdal (Risperidone)",
+          "code": "ASYNC_MH_MQ_Q14_A16"
+        },
+        {
+          "text": "Seroquel (Quetiapine)",
+          "code": "ASYNC_MH_MQ_Q14_A17"
+        },
+
+        {
+          "text": "Sertraline (Zoloft)",
+          "code": "ASYNC_MH_MQ_Q14_A18"
+        },
+        {
+          "text": "Tegretol (Carbamazepine)",
+          "code": "ASYNC_MH_MQ_Q14_A19"
+        },
+        {
+          "text": "Trileptal (Oxcarbazepine)",
+          "code": "ASYNC_MH_MQ_Q14_A20"
+        },
+        {
+          "text": "Venlafaxine (Effexor)",
+          "code": "ASYNC_MH_MQ_Q14_A21"
+        },
+        {
+          "text": "Vraylar (Cariprazine)",
+          "code": "ASYNC_MH_MQ_Q14_A23"
+        },
+        {
+          "text": "Zyprexa (Olanzapine)",
+          "code": "ASYNC_MH_MQ_Q14_A24"
+        },
+
+        {
+          "text": "None of the above",
+          "code": "ASYNC_MH_MQ_Q14_A25",
+          "next": "ASYNC_MH_MQ_Q15"
+        }
+      ]
+    },
+
+    "CURRENT_MEDS_DETAILS": {
+      "type": "iterative",
+      "dependency": "ASYNC_MH_MQ_Q14",
+      "template": "async-mental-health-current-meds",
+      "next": "ASYNC_MH_MQ_Q32"
+    },
+
+    "ASYNC_MH_MQ_Q15": {
+      "header": "Have you previously tried anxiety or depression treatment with medication?",
+
+      "type": "choice",
+      "next": "ASYNC_MH_MQ_Q16",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ASYNC_MH_MQ_Q15_A1"
+        },
+        {
+          "text": "No",
+          "code": "ASYNC_MH_MQ_Q15_A2",
+          "next": "ASYNC_MH_MQ_Q32"
+        }
+      ]
+    },
+    "ASYNC_MH_MQ_Q16": {
+      "header": "Which of the following mental health medications have you previously taken?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "PREVIOUS_MEDS_DETAILS",
+      "answerOptions": [
+        {
+          "text": "Abilify (Aripiprazole)",
+          "code": "ASYNC_MH_MQ_Q16_A1"
+        },
+        {
+          "text": "Adderall",
+          "code": "ASYNC_MH_MQ_Q16_A2"
+        },
+        {
+          "text": "Bupropion (Wellbutrin)",
+          "code": "ASYNC_MH_MQ_Q16_A3"
+        },
+        {
+          "text": "Buspirone (BuSpar)",
+          "code": "ASYNC_MH_MQ_Q16_A4"
+        },
+        {
+          "text": "Caplyta (Lumateperone)",
+          "code": "ASYNC_MH_MQ_Q16_A5"
+        },
+        {
+          "text": "Citalopram (Celexa)",
+          "code": "ASYNC_MH_MQ_Q16_A6"
+        },
+        {
+          "text": "Depakote (Valproate)",
+          "code": "ASYNC_MH_MQ_Q16_A7"
+        },
+        {
+          "text": "Duloxetine (Cymbalta)",
+          "code": "ASYNC_MH_MQ_Q16_A8"
+        },
+
+        {
+          "text": "Escitalopram (Lexapro)",
+          "code": "ASYNC_MH_MQ_Q16_A9"
+        },
+        {
+          "text": "Fluoxetine (Prozac)",
+          "code": "ASYNC_MH_MQ_Q16_A10"
+        },
+        {
+          "text": "Ketamine",
+          "code": "ASYNC_MH_MQ_Q16_A11"
+        },
+        {
+          "text": "Lamictal (Lamotrigine)",
+          "code": "ASYNC_MH_MQ_Q16_A12"
+        },
+        {
+          "text": "Latuda (Lurasidone)",
+          "code": "ASYNC_MH_MQ_Q16_A13"
+        },
+        {
+          "text": "Lithium (Lithobid)",
+          "code": "ASYNC_MH_MQ_Q16_A14"
+        },
+        {
+          "text": "Rexulti (Brexpiprazole)",
+          "code": "ASYNC_MH_MQ_Q16_A15"
+        },
+        {
+          "text": "Risperdal (Risperidone)",
+          "code": "ASYNC_MH_MQ_Q16_A16"
+        },
+        {
+          "text": "Seroquel (Quetiapine)",
+          "code": "ASYNC_MH_MQ_Q16_A17"
+        },
+
+        {
+          "text": "Sertraline (Zoloft)",
+          "code": "ASYNC_MH_MQ_Q16_A18"
+        },
+        {
+          "text": "Tegretol (Carbamazepine)",
+          "code": "ASYNC_MH_MQ_Q16_A19"
+        },
+        {
+          "text": "Trileptal (Oxcarbazepine)",
+          "code": "ASYNC_MH_MQ_Q16_A20"
+        },
+        {
+          "text": "Venlafaxine (Effexor)",
+          "code": "ASYNC_MH_MQ_Q16_A21"
+        },
+        {
+          "text": "Vraylar (Cariprazine)",
+          "code": "ASYNC_MH_MQ_Q16_A23"
+        },
+        {
+          "text": "Zyprexa (Olanzapine)",
+          "code": "ASYNC_MH_MQ_Q16_A24"
+        },
+
+        {
+          "text": "None of the above",
+          "code": "ASYNC_MH_MQ_Q16_A25",
+          "next": "ASYNC_MH_MQ_Q32"
+        }
+      ]
+    },
+
+    "PREVIOUS_MEDS_DETAILS": {
+      "type": "iterative",
+      "dependency": "ASYNC_MH_MQ_Q16",
+      "template": "async-mental-health-previous-meds",
+      "next": "ASYNC_MH_MQ_Q32"
+    },
+
+    "ASYNC_MH_MQ_Q32": {
+      "header": "",
+      "listItems": [
+        "Based on your responses, it seems like you may be experiencing symptoms of anxiety or depression that we could help with.",
+        "People with similar symptoms have seen improvements when they take daily medication",
+        "Let’s find something that should help you feel better."
+      ],
+      "type": "message",
+      "next": "ASYNC_MH_MQ_Q33",
+      "buttonText": "I'm ready"
+    },
+
+    "ASYNC_MH_MQ_Q33": {
+      "header": "Here’s how you and your provider will work together.",
+      "type": "working-together",
+      "next": "ASYNC_MH_MQ_Q34"
+    },
+
+    "ASYNC_MH_MQ_Q34": {
+      "header": "Your provider may consider a treatment like this:",
+      "type": "async-mental-health-treatment",
+      "next": "ASYNC_MH_MQ_Q35"
+    },
+
+    "ASYNC_MH_MQ_Q35": {
+      "header": "75% of people taking prescription mental health medication reported an improvement in their mental health symptoms.",
+      "description": "Source: The Lancet",
+      "type": "message"
+    },
+
+    "S_DISCLAIMER_1": {
+      "type": "suicide-disclaimer",
+      "header": "If you are thinking about hurting yourself, please seek help using the following resources:",
+      "next": "ASYNC_MH_MQ_Q6",
+      "buttonText": "I understand"
+    },
+    "S_DISCLAIMER_2": {
+      "type": "suicide-disclaimer",
+      "header": "If you are thinking about hurting yourself, please seek help using the following resources:",
+      "next": "ASYNC_MH_MQ_Q7",
+      "buttonText": "I understand"
+    }
+  }
+}

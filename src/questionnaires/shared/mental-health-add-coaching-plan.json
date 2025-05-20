@@ -1,0 +1,22 @@
+{
+  "name": "mental-health-add-coaching-plan",
+  "care": "anxiety or depression",
+  "version": "1",
+  "entry": "MENTAL-ADD-CP-Q1",
+  "questions": {
+    "MENTAL-ADD-CP-Q1": {
+      "header": "Would you like to be matched with a mental health coach for 1:1 sessions?",
+      "type": "message",
+      "next": "MENTAL-ADD-CP-Q2",
+      "buttonText": "Tell me more"
+    },
+    "MENTAL-ADD-CP-Q2": {
+      "header": "Achieve long-term results.",
+      "listItems": [
+        "Research consistently shows that behavioral interventions, such as 1:1 coaching, produce better long-term outcomes than medication alone.",
+        "For a limited time, we are offering your first month of coaching for just $49. After your first month, coaching is just $99/month, with no additional fees or co-pays. You can request another coach if it’s not the right fit or opt out anytime."
+      ],
+      "type": "add-mental-coaching"
+    }
+  }
+}

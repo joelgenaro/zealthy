@@ -1,0 +1,13 @@
+{
+  "name": "weight-loss-diagnosis-esp",
+  "version": "1",
+  "entry": "WLD_Q1",
+  "questions": {
+    "WLD_Q1": {
+      "header": "Usted indicó que ha sido previamente diagnosticado con [Diagnosis].",
+      "description": "¿Está recibiendo actualmente algún tratamiento para esto? Si es así, ¿cuál es el tratamiento?",
+      "type": "text",
+      "input_placeholder": "Por favor, escriba su respuesta aquí. Este campo es obligatorio."
+    }
+  }
+}

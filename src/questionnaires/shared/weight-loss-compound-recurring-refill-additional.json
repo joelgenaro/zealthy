@@ -1,0 +1,141 @@
+{
+  "name": "weight-loss-compound-refill-recurring-additional",
+  "version": "1",
+  "code": "WEIGHT_L_C_REFILL",
+  "entry": "WEIGHT_L_RECURRING_INTRO",
+  "questions": {
+    "WEIGHT_L_RECURRING_INTRO": {
+      "type": "recurring-intro",
+      "next": "WEIGHT_L_C_REFILL_Q1"
+    },
+    "WEIGHT_L_C_REFILL_Q1": {
+      "header": "What’s your current weight?",
+      "type": "weight",
+      "next": "WEIGHT_L_C_REFILL_Q2"
+    },
+    "WEIGHT_L_C_REFILL_Q2": {
+      "header": "Are you happy with your current medication?",
+      "type": "choice",
+      "next": "WEIGHT_L_C_REFILL_Q5",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_C_REFILL_Q2_A1"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_C_REFILL_Q2_A2"
+        }
+      ]
+    },
+    "WEIGHT_L_C_REFILL_Q5": {
+      "header": "Are you currently experiencing any side effects from your weight loss medication?",
+      "type": "choice-details",
+      "next": "WEIGHT_L_C_REFILL_Q11",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "WEIGHT_L_C_REFILL_Q5_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_C_REFILL_Q5_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "WEIGHT_L_C_REFILL_Q5_A2",
+        "code": "WEIGHT_L_C_REFILL_Q6",
+        "type": "text",
+        "description": "Tell us more about your side effects",
+        "body": "We want to know what you’re experiencing so that, if appropriate, we can help you adjust your medication or dosage."
+      }
+    },
+    "WEIGHT_L_C_REFILL_Q11": {
+      "header": "Are you currently taking any of the medications below?",
+      "canvas_linkId": "2ea0161d-61bb-4511-889a-87e29f5ec62d",
+      "next": "WEIGHT_L_C_REFILL_Q12",
+      "type": "multiple-choice",
+      "answerOptions": [
+        {
+          "text": "Insulin",
+          "code": "WEIGHT_L_Q11_A1"
+        },
+        {
+          "text": "Sulfonylureas",
+          "code": "WEIGHT_L_Q11_A2"
+        },
+        {
+          "text": "Opioid pain medication",
+          "code": "WEIGHT_L_Q11_A3"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_Q11_A4"
+        }
+      ]
+    },
+    "WEIGHT_L_C_REFILL_Q12": {
+      "header": "What’s your resting heart rate?",
+      "canvas_linkId": "fce1feb4-f367-46e4-a57b-c3ed2f35e303",
+      "description": "This helps Zealthy understand the best treatment options for you. If you don’t have a recent measurement, please follow the simple steps below:",
+      "listItems": [
+        "Place your index finger (next to your thumb) and middle finger on the side of your neck. They should go in the groove under your jaw and next to your windpipe.",
+        "Press firmly until you feel a pulse. If you can’t feel it, move your fingers around slightly and increase pressure until you do.",
+        "Count the pulses for 30 seconds (using a clock or stopwatch).",
+        "Double the number of pulses you counted to get your heart rate."
+      ],
+      "type": "number",
+      "next": {
+        "if": [
+          {
+            "and": [
+              {
+                "!!": [{ "var": "heart_rate" }, true]
+              },
+              {
+                "or": [
+                  { "<": [{ "var": "heart_rate" }, 55] },
+                  { ">": [{ "var": "heart_rate" }, 100] }
+                ]
+              }
+            ]
+          },
+          "ATTENTION_HEART_RATE",
+          "WEIGHT_LOSS_MEDICAL_HISTORY_Q1"
+        ]
+      },
+      "input_placeholder": "Resting heart rate (beats per minute)",
+      "allowToSkip": true
+    },
+    "WEIGHT_LOSS_MEDICAL_HISTORY_Q1": {
+      "header": "Do you currently have any other medical conditions besides those that you have already shared with us?",
+      "canvas_linkId": "2916632f-1da5-4c97-8f16-1782f64262c2",
+      "type": "text",
+      "next": "WEIGHT_L_C_REFILL_Q13"
+    },
+    "WEIGHT_L_C_REFILL_Q13": {
+      "header": "Do you currently take any medications or supplements?",
+      "canvas_linkId": "98d2b195-c5c3-4cb2-b3ab-14ffb0492cd1",
+      "type": "text",
+      "next": "WEIGHT_L_C_REFILL_Q14",
+      "input_placeholder": "Describe what you've tried"
+    },
+    "WEIGHT_L_C_REFILL_Q14": {
+      "header": "Tell us anything else you’d like your provider to know when refilling your medication.",
+      "description": "Let us know if there is anything else that your Zealthy Care Team should know.",
+      "type": "text",
+      "next": "RECURRING_TREATMENT_OPTIONS"
+    },
+    "RECURRING_TREATMENT_OPTIONS": {
+      "type": "compound-weight-loss-refill-recurring-treatment"
+    },
+    "ATTENTION_HEART_RATE": {
+      "header": "Are you sure that you entered your heart rate correctly?",
+      "listItems": [
+        "Most healthy adults have a heart rate between 55 and 100. You indicated that your heart rate is [123].",
+        "If you think this may have been entered in error, go back and re-enter your heart rate."
+      ],
+      "type": "message"
+    }
+  }
+}

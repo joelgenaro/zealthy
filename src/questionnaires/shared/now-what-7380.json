@@ -1,0 +1,12 @@
+{
+  "name": "now-what-7380",
+  "version": "1",
+  "code": "NOW-WHAT-A",
+  "entry": "NOW-WHAT-A-Q1",
+  "questions": {
+    "NOW-WHAT-A-Q1": {
+      "type": "now-what",
+      "index": 28
+    }
+  }
+}

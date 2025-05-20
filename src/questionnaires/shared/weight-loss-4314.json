@@ -1,0 +1,611 @@
+{
+  "name": "weight-loss-v2",
+  "care": "weight loss",
+  "version": "2",
+  "code": "WEIGHT_L",
+  "intro": {
+    "if": [
+      { "===": [{ "var": "variant7743" }, "Variation-1"] },
+      {
+        "header": "Let’s find the safest, most effective weight loss treatment for you.",
+        "listItems": [
+          "Doctor-prescribed GLP-1 medication, including semaglutide or tirzepatide",
+          "Lose 15-20% of your body weight on average",
+          "Holistic curriculum and ongoing expert support"
+        ]
+      },
+      { "===": [{ "var": "potentialInsurance" }, "Semaglutide Bundled"] },
+      {
+        "header": "When sourced from the right pharmacies, compound Semaglutide is one of the safest, most effective weight loss treatments.",
+        "listItems": [
+          "Doctor-prescribed Semaglutide shipped to your door",
+          "Lose 15-20% of your body weight on average*",
+          "Holistic curriculum and ongoing expert support"
+        ],
+        "footnote": "* People using Ozempic® and Wegovy®, medications with the active ingredient semaglutide, lost 15% of their body weight on average in clinical studies."
+      },
+      { "===": [{ "var": "potentialInsurance" }, "Tirzepatide Bundled"] },
+      {
+        "header": "When sourced from the right pharmacies, compound Tirzepatide is one of the safest, most effective weight loss treatments.",
+        "listItems": [
+          "Doctor-prescribed Tirzepatide shipped to your door",
+          "Lose 20% of your body weight on average*",
+          "Holistic curriculum and ongoing expert support"
+        ],
+        "footnote": "* People using Mounjaro® and Zepbound™, medications with the active ingredient tirzepatide, lost 20% of their body weight on average in clinical studies."
+      },
+      { "===": [{ "var": "variant" }, "Victoza"] },
+      {
+        "header": "Let’s find the safest, most effective weight loss treatment for you.",
+        "listItems": [
+          "Doctor-prescribed GLP-1 medication, including Victoza, semaglutide",
+          "Lose 15-20% of your body weight on average",
+          "Personalized 1:1 coaching",
+          "Holistic curriculum and ongoing expert support"
+        ]
+      },
+      { "===": [{ "var": "variant" }, "Saxenda"] },
+      {
+        "header": "Let’s find the safest, most effective weight loss treatment for you.",
+        "listItems": [
+          "Doctor-prescribed GLP-1 medication, including Saxenda, semaglutide",
+          "Lose 15-20% of your body weight on average",
+          "Personalized 1:1 coaching",
+          "Holistic curriculum and ongoing expert support"
+        ]
+      },
+      {
+        "header": "Let’s find the safest, most effective weight loss treatment for you.",
+        "listItems": [
+          "Doctor-prescribed GLP-1 medication, including semaglutide or tirzepatide",
+          "Lose 15-20% of your body weight on average",
+          "Personalized 1:1 coaching",
+          "Holistic curriculum and ongoing expert support"
+        ]
+      }
+    ]
+  },
+  "next": {
+    "if": [
+      {
+        "and": [
+          { ">=": [{ "var": "BMI" }, 27] },
+          {
+            "<": [{ "var": "BMI" }, 30]
+          }
+        ]
+      },
+      "DISQUALIFY_GLP1_Q2",
+      "WEIGHT_L_Q4"
+    ]
+  },
+
+  "entry": {
+    "if": [
+      { "===": [{ "var": "variant7743" }, "Variation-1"] },
+      "WEIGHT-COACHING-Q1B",
+      "WEIGHT_L_Q1"
+    ]
+  },
+  "questions": {
+    "WEIGHT_L_Q1": {
+      "header": "What’s your current height and weight?",
+      "hideHeader": true,
+      "type": "height-weight",
+      "index": 2,
+      "next": {
+        "if": [
+          { "===": [{ "var": "gender" }, "female"] },
+          "WEIGHT_L_Q2",
+          "WEIGHT_L_Q3"
+        ]
+      }
+    },
+    "WEIGHT_L_Q2": {
+      "header": "Are you currently pregnant or breastfeeding?",
+      "type": "choice",
+      "next": {
+        "if": [
+          { "===": [{ "var": "variant7743" }, "Variation-1"] },
+          "WEIGHT_L_Q3",
+          { "===": [{ "var": "variant6792" }, "Variation-2"] },
+          "INSURANCE_PLAN",
+          "WEIGHT_L_Q3"
+        ]
+      },
+      "index": 3,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_Q2_A1",
+          "next": "DISQUALIFY_PREGNANCY"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_Q2_A2"
+        }
+      ]
+    },
+    "WEIGHT_L_Q3": {
+      "header": "Have you ever been diagnosed with any of the following?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_Q4",
+      "index": 4,
+      "answerOptions": [
+        {
+          "text": "High cholesterol",
+          "code": "WEIGHT_L_Q3_A1"
+        },
+        {
+          "text": "Fatty liver disease",
+          "code": "WEIGHT_L_Q3_A2"
+        },
+        {
+          "text": "Prediabetes",
+          "code": "WEIGHT_L_Q3_A3"
+        },
+        {
+          "text": "High blood pressure",
+          "code": "WEIGHT_L_Q3_A4"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_Q3_A5",
+          "next": {
+            "if": [
+              {
+                "and": [
+                  { ">=": [{ "var": "BMI" }, 27] },
+                  {
+                    "<": [{ "var": "BMI" }, 30]
+                  }
+                ]
+              },
+              "DISQUALIFY_GLP1_Q2",
+              "WEIGHT_L_Q4"
+            ]
+          }
+        }
+      ]
+    },
+    "DISQUALIFY_GLP1_Q2": {
+      "type": "disqualify-glp1",
+      "next": "WEIGHT_L_Q4"
+    },
+    "WEIGHT_L_Q4": {
+      "header": "What is your weight loss goal?",
+      "type": "choice",
+      "next": {
+        "if": [
+          {
+            "===": [{ "var": "weightLossFlow" }, "ro"]
+          },
+          "WEIGHT_L_Q6",
+          "WEIGHT_L_Q5"
+        ]
+      },
+      "index": 5,
+      "answerOptions": [
+        {
+          "text": "Lose 1-20 lbs for good",
+          "code": "WEIGHT_L_Q4_A1"
+        },
+        {
+          "text": "Lose 21-50 lbs for good",
+          "code": "WEIGHT_L_Q4_A2"
+        },
+        {
+          "text": "Lose over 50 lbs for good",
+          "code": "WEIGHT_L_Q4_A3"
+        },
+        {
+          "text": "Maintain my weight and get fit",
+          "code": "WEIGHT_L_Q4_A4"
+        },
+        {
+          "text": "Haven’t decided",
+          "code": "WEIGHT_L_Q4_A5"
+        }
+      ]
+    },
+
+    "WEIGHT_L_Q5": {
+      "header": "What goals are you looking to accomplish?",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_Q6",
+      "index": 6,
+      "answerOptions": [
+        {
+          "text": "Lose weight",
+          "code": "WEIGHT_L_Q5_A1"
+        },
+        {
+          "text": "Improve general health",
+          "code": "WEIGHT_L_Q5_A2"
+        },
+        {
+          "text": "Look better",
+          "code": "WEIGHT_L_Q5_A3"
+        },
+        {
+          "text": "Improve confidence",
+          "code": "WEIGHT_L_Q5_A4"
+        },
+        {
+          "text": "Increase energy",
+          "code": "WEIGHT_L_Q5_A5"
+        },
+        {
+          "text": "Better sex",
+          "code": "WEIGHT_L_Q5_A6"
+        }
+      ]
+    },
+    "WEIGHT_L_Q6": {
+      "header": "Which of the following do you have trouble with?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_Q8",
+      "index": 7,
+      "canvas_linkId": "96373192-84d2-40c5-873b-7e45dbf0bbb6",
+      "answerOptions": [
+        {
+          "text": "Appetite",
+          "code": "WEIGHT_L_Q6_A1"
+        },
+        {
+          "text": "Cravings",
+          "code": "WEIGHT_L_Q6_A2"
+        },
+        {
+          "text": "Not enough exercise",
+          "code": "WEIGHT_L_Q6_A3"
+        },
+        {
+          "text": "Slow metabolism",
+          "code": "WEIGHT_L_Q6_A4"
+        },
+        {
+          "text": "Stress eating",
+          "code": "WEIGHT_L_Q6_A5"
+        },
+        {
+          "text": "Late night eating",
+          "code": "WEIGHT_L_Q6_A6"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_Q6_A7"
+        }
+      ]
+    },
+    "WEIGHT_L_Q8": {
+      "header": "Which of the following have you tried in the past?",
+      "description": "Select all that you’ve tried.",
+      "next": {
+        "if": [
+          {
+            "and": [
+              {
+                "===": [{ "var": "variant4022" }, "Variation-1"]
+              },
+              { "!==": [{ "var": "region" }, "CA"] }
+            ]
+          },
+          "WEIGHT-COACHING-INSURANCE-NOT_CA",
+          "WEIGHT-COACHING-Q2"
+        ]
+      },
+      "type": "multiple-choice",
+      "index": 8,
+      "answerOptions": [
+        {
+          "text": "Keto or low carb",
+          "code": "WEIGHT_L_Q6_A1"
+        },
+        {
+          "text": "Plant-based",
+          "code": "WEIGHT_L_Q6_A2"
+        },
+        {
+          "text": "Macro or calorie counting",
+          "code": "WEIGHT_L_Q6_A3"
+        },
+        {
+          "text": "Weight Watchers",
+          "code": "WEIGHT_L_Q6_A4"
+        },
+        {
+          "text": "Noom",
+          "code": "WEIGHT_L_Q6_A5"
+        },
+        {
+          "text": "Calibrate",
+          "code": "WEIGHT_L_Q6_A6"
+        },
+        {
+          "text": "Found",
+          "code": "WEIGHT_L_Q6_A7"
+        },
+        {
+          "text": "Alpha",
+          "code": "WEIGHT_L_Q6_A8"
+        },
+        {
+          "text": "Push Health",
+          "code": "WEIGHT_L_Q6_A9"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_Q6_A10"
+        }
+      ]
+    },
+    "WEIGHT-COACHING-Q1A": {
+      "header": {
+        "if": [
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicare Access Florida"]
+          },
+          "Do you have Medicare Florida?",
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicaid Access Florida"]
+          },
+          "Do you have Medicaid Florida?",
+          "Do you have government insurance?"
+        ]
+      },
+      "next": {
+        "if": [
+          {
+            "and": [
+              {
+                "===": [{ "var": "variant4022" }, "Variation-1"]
+              },
+              { "!==": [{ "var": "region" }, "CA"] }
+            ]
+          },
+          "WEIGHT-COACHING-INSURANCE-NOT_CA",
+          "WEIGHT-COACHING-Q2"
+        ]
+      },
+      "type": "weight-loss-eligibility",
+      "index": 9,
+      "listItems": {
+        "if": [
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicare Access Florida"]
+          },
+          [
+            "To sign up for Z-Plan by Zealthy, you must be a Medicare member. This means you have government insurance."
+          ],
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicaid Access Florida"]
+          },
+          [
+            "To sign up for Z-Plan by Zealthy, you must be a Medicaid member. This means you have government insurance."
+          ],
+          {
+            "===": [{ "var": "siteName" }, "Z-Plan"]
+          },
+          [
+            "Z-Plan’s weight loss program is not available to members of government insurance programs such as Medicare, Medicaid, or Tricare.",
+            "If you have commercial or employer-sponsored insurance or if you are uninsured, you may continue signing up and will be able to get a weight loss treatment plan which may include GLP-1 medication such as Ozempic, Zepbound, Mounjaro, Wegovy, Semaglutide, or Tirzepatide."
+          ],
+          {
+            "===": [{ "var": "siteName" }, "FitRx"]
+          },
+          [
+            "FitRx’s weight loss program is not available to members of government insurance programs such as Medicare, Medicaid, or Tricare.",
+            "If you have commercial or employer-sponsored insurance or if you are uninsured, you may continue signing up and will be able to get a weight loss treatment plan which may include GLP-1 medication such as Ozempic, Zepbound, Mounjaro, Wegovy, Semaglutide, or Tirzepatide."
+          ],
+          [
+            "Zealthy’s weight loss program is not available to members of government insurance programs such as Medicare, Medicaid, or Tricare.",
+            "If you have commercial or employer-sponsored insurance or if you are uninsured, you may continue signing up and will be able to get a weight loss treatment plan which may include GLP-1 medication such as Ozempic, Zepbound, Mounjaro, Wegovy, Semaglutide, or Tirzepatide."
+          ]
+        ]
+      },
+      "buttonText": "Continue"
+    },
+    "WEIGHT-COACHING-Q1B": {
+      "header": "Do you plan to use insurance?",
+      "next": {
+        "if": [
+          { "===": [{ "var": "variant7743" }, "Variation-1"] },
+          "WEIGHT_L_Q1",
+          {
+            "and": [
+              {
+                "===": [{ "var": "variant4022" }, "Variation-1"]
+              },
+              { "!==": [{ "var": "region" }, "CA"] }
+            ]
+          },
+          "WEIGHT-COACHING-INSURANCE-NOT_CA",
+          "WEIGHT_L_Q1"
+        ]
+      },
+      "type": "weight-loss-eligibility",
+      "index": 2,
+      "listItems": {
+        "if": [
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicare Access Florida"]
+          },
+          [
+            "To sign up for Z-Plan by Zealthy, you must be a Medicare member. This means you have government insurance."
+          ],
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicaid Access Florida"]
+          },
+          [
+            "To sign up for Z-Plan by Zealthy, you must be a Medicaid member. This means you have government insurance."
+          ],
+          [
+            "Zealthy’s weight loss program is not available to members of government insurance programs such as Medicare, Medicaid, or Tricare.",
+            "If you have commercial or employer-sponsored insurance or if you are uninsured, you may continue signing up and will be able to get a weight loss treatment plan which may include GLP-1 medication such as Ozempic, Zepbound, Mounjaro, Wegovy, Semaglutide, or Tirzepatide."
+          ]
+        ]
+      },
+      "buttonText": "Continue"
+    },
+
+    "WEIGHT-COACHING-Q2": {
+      "header": {
+        "if": [
+          { "===": [{ "var": "variant" }, "Victoza"] },
+          "GLP-1 medication such as Victoza, Ozempic or Mounjaro is essential to an effective weight loss program.",
+          { "===": [{ "var": "variant" }, "Saxenda"] },
+          "GLP-1 medication such as Saxenda, Wegovy, or Zepbound is essential to an effective weight loss program.",
+          "GLP-1 medication such as Wegovy, Zepbound, or Ozempic is essential to an effective weight loss program."
+        ]
+      },
+      "type": "message",
+      "next": {
+        "if": [
+          {
+            "or": [
+              {
+                "===": [{ "var": "variant5777" }, "Variation-2"]
+              },
+              { "===": [{ "var": "variant5777" }, "Variation-3"] }
+            ]
+          },
+          "WEIGHT_L_Q9",
+          "WEIGHT-COACHING-Q3"
+        ]
+      },
+      "index": 10,
+      "buttonText": "Tell me more"
+    },
+    "WEIGHT-COACHING-Q3": {
+      "header": {
+        "if": [
+          { "===": [{ "var": "variant5777" }, "Variation-2"] },
+          "Your customized prescription plan",
+          { "===": [{ "var": "siteName" }, "Z-Plan"] },
+          "Z-Plan’s weight loss program includes:",
+          { "===": [{ "var": "siteName" }, "FitRx"] },
+          "FitRx’s weight loss program includes:",
+          "Zealthy’s weight loss program includes:"
+        ]
+      },
+      "unorderedList": {
+        "if": [
+          { "===": [{ "var": "variant5751" }, "Variation-1"] },
+          [
+            "Schedule and hold video or phone visit with Zealthy provider to review request for GLP-1s; prescription if medically appropriate",
+            "Assistance with getting your medications covered by insurance (which can cost over $1,000/month elsewhere); affordable medication without insurance since insurance does not always approve GLP-1’s",
+            "Unlimited messaging with a coach who can help you build a customized plan",
+            "Tracking your weight loss progress and goals"
+          ],
+          {
+            "===": [{ "var": "potentialInsurance" }, "Weight Loss Sync"]
+          },
+          [
+            "Schedule and hold video or phone visit with Zealthy provider to review request for GLP-1s; prescription if medically appropriate",
+            "Assistance with getting your medications covered by insurance (which can cost over $1,000/month elsewhere); affordable GLP-1 medication without insurance",
+            "Unlimited messaging with a coach who can help you build a customized plan",
+            "Tracking your weight loss progress and goals"
+          ],
+          [
+            "Provider review of request for GLP-1s or similar medications and prescription if medically appropriate",
+            "Assistance with getting your medications covered by insurance (which can cost over $1,000/month elsewhere); affordable medication without insurance",
+            "Unlimited messaging with a coach who can help you build a customized plan",
+            "Tracking your weight loss progress and goals"
+          ]
+        ]
+      },
+      "type": "add-weight-coaching",
+      "next": {
+        "if": [
+          {
+            "===": [{ "var": "weightLossFlow" }, "ro"]
+          },
+          "WEIGHT_L_Q9",
+          "RESULTS"
+        ]
+      },
+      "index": 11
+    },
+    "RESULTS": {
+      "type": "analyze-weight-loss-results",
+      "hideFooter": true,
+      "hideHeader": true,
+      "index": 12,
+      "next": {
+        "if": [
+          {
+            "or": [
+              {
+                "===": [{ "var": "variant5777" }, "Variation-2"]
+              },
+              { "===": [{ "var": "variant5777" }, "Variation-3"] }
+            ]
+          },
+          "DELIVERY-ADDRESS",
+          "WEIGHT_L_Q9"
+        ]
+      }
+    },
+    "WEIGHT_L_Q9": {
+      "header": "Your customized prescription plan",
+      "description": {
+        "if": [
+          { "===": [{ "var": "siteName" }, "Z-Plan"] },
+          "Reach your goals with Z-Plan’s Weight Loss program. Led by doctors that will develop a personalized plan that includes medication and support.",
+          { "===": [{ "var": "siteName" }, "FitRx"] },
+          "Reach your goals with FitRx’s Weight Loss program. Led by doctors that will develop a personalized plan that includes medication and support.",
+          "Reach your goals with Zealthy’s Weight Loss program. Led by doctors that will develop a personalized plan that includes medication and support."
+        ]
+      },
+      "type": "non-bundled-plan",
+      "index": 13,
+      "next": {
+        "if": [
+          {
+            "or": [
+              {
+                "===": [{ "var": "variant5777" }, "Variation-2"]
+              },
+              { "===": [{ "var": "variant5777" }, "Variation-3"] }
+            ]
+          },
+          "RESULTS",
+          "DELIVERY-ADDRESS"
+        ]
+      }
+    },
+    "DELIVERY-ADDRESS": {
+      "type": "delivery-address",
+      "index": 14
+    },
+    "DISQUALIFY_PREGNANCY": {
+      "header": "We’re sorry!",
+      "description": "Unfortunately, Zealthy can’t safely prescribe weight loss medication if you are currently pregnant, trying to get pregnant, and/or breastfeeding.",
+      "type": "alarm",
+      "buttonText": "Get healthy with Zealthy today"
+    },
+    "INSURANCE_PLAN": {
+      "header": "Do you plan to use insurance?",
+      "hideHeader": true,
+      "type": "insurance-plan",
+      "index": 3
+    },
+    "BUNDLED_PREFERENCE": {
+      "header": "Would you prefer to receive Semaglutide (active ingredient in Wegovy) or Tirzepatide (active ingredient in Zepbound)?",
+      "hideHeader": true,
+      "type": "bundled-choice",
+      "index": 4
+    },
+    "DISQUALIFY_BMI": {
+      "header": "We're sorry!",
+      "type": "disqualify"
+    },
+    "WEIGHT-LOSS-TREATMENT-B": {
+      "type": "weight-loss-treatment",
+      "index": 3
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "app.getzealthy.com",
+  "short_name": "Zealthy",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.zealthy.mobileapp"
+    }
+  ],
+  "icons": [
+    {
+      "src": "ic_launcher_round.webp",
+      "sizes": "144x144",
+      "type": "image/webp"
+    }
+  ]
+}

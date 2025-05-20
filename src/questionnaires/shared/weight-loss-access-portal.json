@@ -1,0 +1,41 @@
+{
+  "name": "weight-loss-access-portal",
+  "version": "1",
+  "code": "WLA_P",
+  "entry": "WLA_P_INTRO",
+  "questions": {
+    "WLA_P_INTRO": {
+      "type": "message",
+      "header": "Your Zealthy Care Team has refunded you for your Zealthy Weight Loss first month and believes you are eligible for our Weight Loss Access program, which is just $39 for your first month for a limited time.",
+      "listItems": [
+        "If you sign up, you can talk to a Zealthy provider about getting a GLP-1 medication for your weight loss.",
+        "Zealthy’s weight loss access program is $79/month and does not cover your visits with a provider, which should be covered by your Medicare plan. For a limited time, the first month of access is only $39.",
+        "The weight loss access program does not include anything that is covered by Medicare."
+      ],
+      "next": "WLA_P_INTRO_2",
+      "buttonText": "Continue"
+    },
+    "WLA_P_INTRO_2": {
+      "type": "message",
+      "header": "Next, you’ll schedule your visit with a Zealthy provider.",
+      "description": "You’ll be able to discuss weight loss options with your provider, including GLP-1 medication. Your visit should be covered by your Medicare Florida plan. Access to scheduling with your provider is part of your Zealthy Weight Loss Access program membership, which is currently discounted by $40 for your first month.",
+      "next": "WLA_P_SCHEDULE",
+      "buttonText": "Continue"
+    },
+    "WLA_P_SCHEDULE": {
+      "type": "primary-care-provider-schedule",
+      "next": "WLA_P_TOS"
+    },
+    "WLA_P_TOS": {
+      "type": "message",
+      "header": "To finish signing up for your Weight Loss Access Membership, you must sign  our terms of service.",
+      "description": "Select continue to view and sign the terms of service to schedule your visit and sign up for lasting weight loss.",
+      "buttonText": "Continue",
+      "next": "WLA_P_TOS_2"
+    },
+    "WLA_P_TOS_2": {
+      "type": "weight-coaching-agreement",
+      "header": "See below for the Weight Loss Access Membership terms of service. To sign up, you must sign this agreement below, which will be counter-signed by a Bruno Health provider or an agent of that provider."
+    }
+  }
+}

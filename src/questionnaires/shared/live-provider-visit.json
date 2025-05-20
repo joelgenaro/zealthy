@@ -1,0 +1,12 @@
+{
+  "name": "live-provider-visit",
+  "version": "1",
+  "code": "LIVE_PV",
+  "entry": "LIVE_PV_Q1",
+  "questions": {
+    "LIVE_PV_Q1": {
+      "header": "Let’s make sure you can get your request for weight loss medication submitted",
+      "type": "live-provider-visit"
+    }
+  }
+}

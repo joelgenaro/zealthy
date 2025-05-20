@@ -1,0 +1,11 @@
+{
+  "name": "weight-loss-prior-auth",
+  "version": "1",
+  "code": "WEIGHT-LOSS-PRIOR-AUTH-A",
+  "entry": "WEIGHT-LOSS-PRIOR-AUTH-A-Q1",
+  "questions": {
+    "WEIGHT-LOSS-PRIOR-AUTH-A-Q1": {
+      "type": "weight-loss-prior-auth"
+    }
+  }
+}

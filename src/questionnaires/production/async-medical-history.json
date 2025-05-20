@@ -1,0 +1,36 @@
+{
+  "name": "async-medical-history",
+  "version": "1",
+  "canvas_id": "d12060f3-a057-4616-87c3-f8cb38a75526",
+  "code": "MEDICAL_H",
+  "codingSystem": "http://schemas.getzealthy.canvasmedical.com/fhir/systems/internal",
+  "entry": "MEDICAL_H_Q1",
+  "questions": {
+    "MEDICAL_H_Q1": {
+      "canvas_linkId": "32f87410-3dea-4b14-9ded-07f5e69c2ddc",
+      "header": "Tell us more about your medical history.",
+      "label": "Current conditions",
+      "type": "medical-history",
+      "subType": "medical_conditions",
+      "next": "MEDICAL_H_Q2",
+      "checkboxText": "I don’t have any conditions"
+    },
+    "MEDICAL_H_Q2": {
+      "canvas_linkId": "c258a44d-bc2e-41fe-b859-ce789f6cc060",
+      "header": "Tell us more about your medical history.",
+      "label": "Current food and medication allergies",
+      "type": "medical-history",
+      "subType": "allergies",
+      "next": "MEDICAL_H_Q3",
+      "checkboxText": "I don’t have any allergies"
+    },
+    "MEDICAL_H_Q3": {
+      "canvas_linkId": "d5a3db60-49d4-4117-8bab-6cbef83c7dc6",
+      "header": "Tell us more about your medical history.",
+      "label": "Current medications, vitamins and supplements",
+      "type": "medical-history",
+      "subType": "current_medications",
+      "checkboxText": "I don’t take any medications, vitamins, or supplements"
+    }
+  }
+}

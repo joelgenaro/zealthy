@@ -1,0 +1,27 @@
+{
+  "name": "weight-loss-checkout-success-esp",
+  "version": "1",
+  "code": "WEIGHT_LOSS_CHECKOUT_S",
+  "entry": "WEIGHT_LOSS_CHECKOUT_S_Q1",
+  "questions": {
+    "WEIGHT_LOSS_CHECKOUT_S_Q1": {
+      "header": "Ahora que ha completado el pago con éxito, continúe para completar la verificación de identidad requerida y responder algunas preguntas adicionales obligatorias.",
+      "listItems": [
+        "Es importante que responda todas estas preguntas, verifique su identidad utilizando una identificación con foto y cargue cualquier información del seguro para que su proveedor pueda revisar sus respuestas y comenzar con su plan de tratamiento.",
+        "Esto puede tomar hasta 10 minutos."
+      ],
+      "type": "message",
+      "styles": {
+        "header": {
+          "textAlign": "center",
+          "marginBottom": "2rem"
+        },
+        "listItems": {
+          "textAlign": "center",
+          "gap": "1rem"
+        }
+      },
+      "index": 1
+    }
+  }
+}

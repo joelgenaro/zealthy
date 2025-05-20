@@ -1,0 +1,33 @@
+{
+  "name": "menopause-refill",
+  "care": "Menopause",
+  "version": "4",
+  "code": "MENOPAUSE-REFILL",
+  "intro": {
+    "header": "Let’s help you with your refill. Just answer a few questions and your Zealthy care team will help with your refill in 1-3 business days."
+  },
+  "entry": "MENOPAUSE_REFILL_Q1",
+  "questions": {
+    "MENOPAUSE_REFILL_Q1": {
+      "header": "Would you like to continue with the same medication?",
+      "type": "choice-details",
+      "next": "MENOPAUSE_REFILL_Q2",
+      "answerOptions": [
+        {
+          "code": "MENOPAUSE_REFILL_Q1_A1",
+          "text": "YES"
+        },
+        {
+          "code": "MENOPAUSE_REFILL_Q1_A2",
+          "text": "NO"
+        }
+      ]
+    },
+    "MENOPAUSE_REFILL_Q2": {
+      "header": "Your treatment options",
+      "description": "If not, don’t worry, your clinician will work with you to find a tailored treatment for your needs.",
+      "hideHeader": true,
+      "type": "menopause-treatment-select"
+    }
+  }
+}

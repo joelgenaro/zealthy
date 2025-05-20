@@ -1,0 +1,144 @@
+{
+  "name": "skin-type",
+  "version": "1",
+  "code": "SKIN_T",
+  "entry": "SKIN_T_Q1",
+  "questions": {
+    "SKIN_T_Q1": {
+      "header": "How often do you experience breakouts?",
+      "description": "This can help your provider understand the cause of your acne or rosacea.",
+      "type": "choice",
+      "next": "SKIN_T_Q2",
+      "index": 1,
+      "answerOptions": [
+        {
+          "text": "Daily",
+          "code": "SKIN_T_Q1_A1"
+        },
+        {
+          "text": "Weekly",
+          "code": "SKIN_T_Q1_A2"
+        },
+        {
+          "text": "Monthly",
+          "code": "SKIN_T_Q1_A3"
+        },
+        {
+          "text": "Rarely",
+          "code": "SKIN_T_Q1_A4"
+        }
+      ]
+    },
+    "SKIN_T_Q2": {
+      "header": "Does your face flush and turn red easily?",
+      "description": "Flushing typically makes your skin feel warm and read. It can happen after drinking alcohol or hot beverages, or being exposed to heat or the sun.",
+      "type": "choice",
+      "next": {
+        "if": [
+          {
+            "some": [
+              { "var": "answers.SKIN_T_SELECT.answer" },
+              {
+                "===": [{ "var": "valueCoding.display" }, "Face"]
+              }
+            ]
+          },
+          "SKIN_T_Q3",
+          "SKIN_T_Q4"
+        ]
+      },
+      "index": 2,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "SKIN_T_Q2_A1"
+        },
+        {
+          "text": "No",
+          "code": "SKIN_T_Q2_A2"
+        },
+        {
+          "text": "I'm not sure",
+          "code": "SKIN_T_Q2_A3"
+        }
+      ]
+    },
+    "SKIN_T_Q3": {
+      "header": "Where do you typically experience breakouts?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "SKIN_T_Q4",
+      "index": 3,
+      "answerOptions": [
+        {
+          "text": "Cheeks",
+          "code": "SKIN_T_Q3_A1"
+        },
+        {
+          "text": "Chin",
+          "code": "SKIN_T_Q3_A2"
+        },
+        {
+          "text": "Jawline",
+          "code": "SKIN_T_Q3_A3"
+        },
+        {
+          "text": "Neck",
+          "code": "SKIN_T_Q3_A4"
+        }
+      ]
+    },
+    "SKIN_T_Q4": {
+      "header": "What are your goals for treatment?",
+      "description": "Select all that apply.",
+      "type": "multiple-choice",
+      "next": "SKIN_T_Q5",
+      "index": 4,
+      "answerOptions": [
+        {
+          "text": "Smooth skin",
+          "code": "SKIN_T_Q4_A1"
+        },
+        {
+          "text": "Even skin tone",
+          "code": "SKIN_T_Q4_A2"
+        },
+        {
+          "text": "Reduced scarring",
+          "code": "SKIN_T_Q4_A3"
+        },
+        {
+          "text": "Reduced dark spots/hyperpigmentation",
+          "code": "SKIN_T_Q4_A4"
+        },
+        {
+          "text": "Prevention of fine lines",
+          "code": "SKIN_T_Q4_A5"
+        }
+      ]
+    },
+    "SKIN_T_Q5": {
+      "header": "How often do you apply sunscreen (SPF 15 or higher)?",
+      "type": "choice",
+      "index": 5,
+      "answerOptions": [
+        {
+          "text": "Daily",
+          "code": "SKIN_T_Q5_A1"
+        },
+        {
+          "text": "Most of the time",
+          "code": "SKIN_T_Q5_A2"
+        },
+        {
+          "text": "Sometimes or rarely",
+          "code": "SKIN_T_Q5_A3"
+        },
+        {
+          "text": "Never",
+          "code": "SKIN_T_Q5_A4"
+        }
+      ]
+    }
+  }
+}

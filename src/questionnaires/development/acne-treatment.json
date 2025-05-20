@@ -1,0 +1,678 @@
+{
+  "name": "acne-treatment",
+  "version": "1",
+  "canvas_id": "02b8b529-8e01-4049-9925-f8dd50fa2385",
+  "code": "ACNE_T",
+  "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+  "entry": {
+    "if": [
+      { "===": [{ "var": "gender" }, "female"] },
+      "ACNE_T_Q1",
+      "ACNE_T_Q13"
+    ]
+  },
+  "questions": {
+    "ACNE_T_Q1": {
+      "header": "Do any of the following apply to you?",
+      "description": "Select all that apply:",
+      "canvas_linkId": "e1d9943a-7155-4fcc-8304-7e8f4ceea62b",
+      "type": "multiple-choice",
+      "next": "ACNE_T_Q13",
+      "answerOptions": [
+        {
+          "text": "I am pregnant.",
+          "code": "ACNE_T_Q1_A1"
+        },
+        {
+          "text": "I am breastfeeding.",
+          "code": "ACNE_T_Q1_A2"
+        },
+        {
+          "text": "I had a child in the last six weeks.",
+          "code": "ACNE_T_Q1_A3"
+        },
+        {
+          "text": "None of the above",
+          "code": "ACNE_T_Q1_A4"
+        }
+      ]
+    },
+    "ACNE_T_Q13": {
+      "header": "Do you use any over-the-counter acne medication that contain these ingredients?",
+      "description": "Select all that apply:",
+      "canvas_linkId": "a5409ff9-33e1-46bd-ac7d-ec9c2b8c3856",
+      "type": "multiple-choice",
+      "next": "ACNE_T_Q13_2",
+      "answerOptions": [
+        {
+          "text": "Benzoyl Peroxide",
+          "code": "ACNE_T_Q13_A1"
+        },
+        {
+          "text": "Salicylic Acid",
+          "code": "ACNE_T_Q13_A2"
+        },
+        {
+          "text": "Sulfur",
+          "code": "ACNE_T_Q13_A3"
+        },
+        {
+          "text": "Glycolic Acid",
+          "code": "ACNE_T_Q13_A4"
+        },
+        {
+          "text": "Lactic Acid",
+          "code": "ACNE_T_Q13_A5"
+        },
+        {
+          "text": "Azelaic Acid",
+          "code": "ACNE_T_Q13_A6"
+        },
+        {
+          "text": "Adapalene",
+          "code": "ACNE_T_Q13_A7"
+        },
+        {
+          "text": "Other",
+          "code": "ACNE_T_Q13_A8"
+        },
+        {
+          "text": "None of the above",
+          "code": "ACNE_T_Q13_A9"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ACNE_T_Q13_A8",
+        "code": "ACNE_T_Q13_1",
+        "type": "text",
+        "canvas_linkId": "353447b5-c6e3-487b-896e-d6244e714db0",
+        "description": "Please share what acne medication you are currently on as well as how well it works and how often you are taking it. If you have side effects, please share that also."
+      }
+    },
+
+    "ACNE_T_Q13_2": {
+      "header": "Please select any oral medications you have tried to treat your skin.",
+      "description": "Knowing your current and past treatments will help your provider recommend the best treatments for you.",
+      "type": "multiple-choice",
+      "next": "ACNE_T_Q15",
+      "answerOptions": [
+        {
+          "text": "Doxycycline",
+          "code": "ACNE_T_Q13_2_A1"
+        },
+        {
+          "text": "Minoxycline",
+          "code": "ACNE_T_Q13_2_A2"
+        },
+        {
+          "text": "Spironolactone",
+          "code": "ACNE_T_Q13_2_A3"
+        },
+        {
+          "text": "Isotretinoin (Accutane)",
+          "code": "ACNE_T_Q13_2_A4"
+        },
+        {
+          "text": "Other",
+          "code": "ACNE_T_Q13_2_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "ACNE_T_Q13_2_A6"
+        }
+      ]
+    },
+
+    "ACNE_T_Q9": {
+      "header": "Are you currently on any prescription medications for acne?",
+      "canvas_linkId": "37115b8a-35c4-4665-932f-eb0afd3fda06",
+      "type": "choice-details",
+      "next": {
+        "if": [
+          {
+            "and": [
+              { "===": [{ "var": "gender" }, "female"] },
+              {
+                "all": [
+                  { "var": "answers.ACNE_T_Q1.answer" },
+                  {
+                    "===": [
+                      { "var": "valueCoding.display" },
+                      "None of the above"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "ACNE_T_Q19",
+          {
+            "some": [
+              { "var": "answers.ACNE_T_Q7.answer" },
+              {
+                "===": [{ "var": "valueCoding.display" }, "Chest"]
+              }
+            ]
+          },
+          "PHOTO_CHEST",
+          {
+            "some": [
+              { "var": "answers.ACNE_T_Q7.answer" },
+              {
+                "===": [
+                  { "var": "valueCoding.display" },
+                  "On my shoulders and/or back"
+                ]
+              }
+            ]
+          },
+          "PHOTO_BACK",
+          ""
+        ]
+      },
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ACNE_T_Q9_A1"
+        },
+        {
+          "text": "No",
+          "code": "ACNE_T_Q9_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ACNE_T_Q9_A1",
+        "code": "ACNE_T_Q10",
+        "type": "text",
+        "canvas_linkId": "353447b5-c6e3-487b-896e-d6244e714db0",
+        "description": "Please share what acne medication you are currently on as well as how well it works and how often you are taking it. If you have side effects, please share that also."
+      }
+    },
+
+    "ACNE_T_Q15": {
+      "header": "Are you currently taking any medications and/or herbal supplements (not necessarily for acne)?",
+      "canvas_linkId": "a08e3d60-9451-49e2-9419-214d331af9f0",
+      "type": "choice-details",
+      "next": "ACNE_T_Q36",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ACNE_T_Q15_A1"
+        },
+        {
+          "text": "No",
+          "code": "ACNE_T_Q15_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ACNE_T_Q15_A1",
+        "code": "ACNE_T_Q16",
+        "type": "text",
+        "canvas_linkId": "3c9a5c5d-32f3-41f1-8b92-852a03e1b694",
+        "description": "Please share what medication you are currently on.  If you take them for a certain condition, tell us which condition and the dose of the medication. If you do not know, it won’t be a problem."
+      }
+    },
+
+    "ACNE_T_Q36": {
+      "header": "Do you have any drug or non-drug allergies?",
+      "type": "choice-details",
+      "canvas_linkId": "ad3bd2aa-54ad-44eb-94b4-96cc77c5c2e3",
+      "next": "ACNE_T_Q28",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ACNE_T_Q36_A1"
+        },
+        {
+          "text": "No",
+          "code": "ACNE_T_Q36_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ACNE_T_Q36_A1",
+        "code": "ACNE_T_Q37",
+        "type": "text",
+        "canvas_linkId": "fbfdd5e1-6fb8-48c5-9455-943f2001f268",
+        "description": "Tell us more",
+        "body": "Please tell us what allergies you have."
+      }
+    },
+
+    "ACNE_T_Q19": {
+      "header": "Are you currently on birth control?",
+      "type": "choice",
+      "canvas_linkId": "b3bfcd38-47ab-4e1c-a551-7f0c1ca7468c",
+      "next": "ACNE_T_Q23",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ACNE_T_Q19_A1",
+          "next": "ACNE_T_Q20"
+        },
+        {
+          "text": "No",
+          "code": "ACNE_T_Q19_A2"
+        }
+      ]
+    },
+    "ACNE_T_Q20": {
+      "header": "Which type of birth control do you use?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "canvas_linkId": "f9d998de-4541-4937-8a71-5e0e09d109b5",
+      "next": "ACNE_T_Q21",
+      "answerOptions": [
+        {
+          "text": "The pill, ring, or patch",
+          "code": "ACNE_T_Q20_A1"
+        },
+        {
+          "text": "An IUD",
+          "code": "ACNE_T_Q20_A2"
+        },
+        {
+          "text": "Tubal litigation or other permanent contraception",
+          "code": "ACNE_T_Q20_A3"
+        },
+        {
+          "text": "Condoms",
+          "code": "ACNE_T_Q20_A4"
+        },
+        {
+          "text": "The shot (Depo-Provera) or implant",
+          "code": "ACNE_T_Q20_A5"
+        }
+      ]
+    },
+    "ACNE_T_Q21": {
+      "header": "How long have you been using this birth control?",
+      "type": "choice",
+      "canvas_linkId": "d936162d-19d0-4d16-843c-9d2c12e83899",
+      "next": "ACNE_T_Q22",
+      "answerOptions": [
+        {
+          "text": "3 months or more",
+          "code": "ACNE_T_Q21_A1"
+        },
+        {
+          "text": "Less than 3 months",
+          "code": "ACNE_T_Q21_A2"
+        }
+      ]
+    },
+    "ACNE_T_Q22": {
+      "header": "How has your birth control affected your acne?",
+      "type": "choice",
+      "canvas_linkId": "6fd00b20-955a-4a17-a394-f067c0350665",
+      "next": "BIRTH_CONTROL_Q",
+      "answerOptions": [
+        {
+          "text": "It has improved my acne",
+          "code": "ACNE_T_Q22_A1"
+        },
+        {
+          "text": "It has made my acne worse",
+          "code": "ACNE_T_Q22_A2"
+        },
+        {
+          "text": "I haven’t seen a difference",
+          "code": "ACNE_T_Q22_A3"
+        }
+      ]
+    },
+    "ACNE_T_Q23": {
+      "header": "Have you ever had high blood pressure?",
+      "type": "choice",
+      "canvas_linkId": "b7c38ad0-69e0-4ace-8293-6f8745edebfe",
+      "next": "ACNE_T_Q24",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ACNE_T_Q23_A1"
+        },
+        {
+          "text": "No",
+          "code": "ACNE_T_Q23_A2"
+        }
+      ]
+    },
+    "ACNE_T_Q24": {
+      "header": "Have you had your blood pressure measured in the last year?",
+      "description": "It’s important to provide a recent reading as it can affect what types of medications are safe for you.",
+      "type": "choice",
+      "canvas_linkId": "02f3e8c7-6252-4290-974a-c458d9437db9",
+      "next": "ACNE_T_Q25",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ACNE_T_Q24_A1"
+        },
+        {
+          "text": "No",
+          "code": "ACNE_T_Q24_A2",
+          "next": "DISCLAIMER_BLOOD_PRESSURE"
+        }
+      ]
+    },
+    "ACNE_T_Q25": {
+      "header": "What was your most recent blood pressure reading?",
+      "canvas_linkId": "e7a1e755-3f7a-4d3e-8896-8029bd5146be",
+      "type": "choice",
+      "next": "ACNE_T_Q26",
+      "answerOptions": [
+        {
+          "text": "I’m not sure but it was within the normal range",
+          "code": "ACNE_T_Q25_A1"
+        },
+        {
+          "text": "Normal (Less than 129/80)",
+          "code": "ACNE_T_Q25_A2"
+        },
+        {
+          "text": "Elevated (130-139/80-89)",
+          "code": "ACNE_T_Q25_A3"
+        },
+        {
+          "text": "High (140-149/90-99)",
+          "code": "ACNE_T_Q25_A4"
+        },
+        {
+          "text": "Very High (More than 150/100)",
+          "code": "ACNE_T_Q25_A5"
+        },
+        {
+          "text": "No blood pressure reading in the last year",
+          "code": "ACNE_T_Q25_A6",
+          "next": "DISCLAIMER_BLOOD_PRESSURE"
+        }
+      ]
+    },
+    "ACNE_T_Q26": {
+      "header": "Are you currently taking any medications and/or herbal supplements?",
+      "canvas_linkId": "b3b37d1c-75a6-4bc4-bce2-015a7e39e095",
+      "type": "multiple-choice",
+      "next": "ACNE_T_Q27",
+      "answerOptions": [
+        {
+          "text": "Accutane",
+          "code": "ACNE_T_Q26_A1"
+        },
+        {
+          "text": "HIV treatment",
+          "code": "ACNE_T_Q26_A2"
+        },
+        {
+          "text": "Tuberculosis medication",
+          "code": "ACNE_T_Q26_A3"
+        },
+        {
+          "text": "Oral fungal medication",
+          "code": "ACNE_T_Q26_A4"
+        },
+        {
+          "text": "Seizure medication",
+          "code": "ACNE_T_Q26_A5"
+        },
+        {
+          "text": "Phenytoin",
+          "code": "ACNE_T_Q26_A6"
+        },
+        {
+          "text": "Oxcarbazepine",
+          "code": "ACNE_T_Q26_A7"
+        },
+        {
+          "text": "Carbamazepine",
+          "code": "ACNE_T_Q26_A8"
+        },
+        {
+          "text": "Barbiturates",
+          "code": "ACNE_T_Q26_A9"
+        },
+        {
+          "text": "Primidone",
+          "code": "ACNE_T_Q26_A10"
+        },
+        {
+          "text": "Topiramate",
+          "code": "ACNE_T_Q26_A11"
+        },
+        {
+          "text": "Lamotrigine",
+          "code": "ACNE_T_Q26_A12"
+        },
+        {
+          "text": "None of the above",
+          "code": "ACNE_T_Q26_A13"
+        }
+      ]
+    },
+    "ACNE_T_Q27": {
+      "header": "Do you have or have you had any of the following conditions?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "canvas_linkId": "8f334fdb-324c-4af6-adac-3705a46e8191",
+      "next": "ACNE_T_Q31",
+      "answerOptions": [
+        {
+          "text": "Stroke or heart attack",
+          "code": "ACNE_T_Q27_A1"
+        },
+        {
+          "text": "Migraines",
+          "code": "ACNE_T_Q27_A2"
+        },
+        {
+          "text": "Liver conditions",
+          "code": "ACNE_T_Q27_A3"
+        },
+        {
+          "text": "Cancer",
+          "code": "ACNE_T_Q27_A4"
+        },
+        {
+          "text": "Gall bladder conditions",
+          "code": "ACNE_T_Q27_A5"
+        },
+        {
+          "text": "Diabetes",
+          "code": "ACNE_T_Q27_A6"
+        },
+        {
+          "text": "None of the above",
+          "code": "ACNE_T_Q27_A7"
+        }
+      ]
+    },
+
+    "ACNE_T_Q31": {
+      "header": "Will you be using birth control to skip your periods?",
+      "type": "choice",
+      "canvas_linkId": "4e8ec1c2-57ae-42dd-8260-87227293b7eb",
+      "next": "ACNE_T_Q32",
+      "answerOptions": [
+        {
+          "text": "Yes, I want to skip my periods.",
+          "code": "ACNE_T_Q31_A1"
+        },
+        {
+          "text": "No, I want to have my period every month.",
+          "code": "ACNE_T_Q31_A2"
+        }
+      ]
+    },
+
+    "ACNE_T_Q32": {
+      "header": "You have answered all of our birth control questions.",
+      "description": "If birth control is not included in your acne treatment plan, you can also request birth control for contraception, and you would not be charged an additional fee for the provider’s time. Would you like us to prescribe birth control even if it’s not indicated for treating your acne?",
+      "type": "choice",
+      "canvas_linkId": "79420a80-5ebc-4730-82cf-9b81785779f9",
+      "next": "ACNE_T_Q33_0",
+      "answerOptions": [
+        {
+          "text": "Yes, I’d like birth control even if it’ not part of my acne treatment",
+          "code": "ACNE_T_Q32_A1"
+        },
+        {
+          "text": "No, I’m only interested in birth control if it is a part of my acne treatment",
+          "code": "ACNE_T_Q32_A2"
+        }
+      ]
+    },
+
+    "ACNE_T_Q33_0": {
+      "header": "Are you open to taking oral medications (i.e. pills) if your provider recommends them?",
+      "description": "Oral medications are often used to help kickstart treatment or target the hormonal causes of breakouts for better results.",
+      "next": "ACNE_T_Q28",
+      "type": "choice",
+      "answerOptions": [
+        {
+          "text": "Yes, if appropriate",
+          "code": "ACNE_T_Q33_0_A1"
+        },
+        {
+          "text": "No",
+          "code": "ACNE_T_Q33_0_A2"
+        },
+        {
+          "text": "Not sure",
+          "code": "ACNE_T_Q33_0_A3"
+        }
+      ]
+    },
+
+    "ACNE_T_Q33": {
+      "header": "Do you have a specific medication you would like to receive?",
+      "description": "Your Zealthy medical team will take any preference you might have into consideration as it determines the best acne treatment for you.",
+      "type": "choice-details",
+      "canvas_linkId": "651c7aa0-5f4a-4c99-8dc4-7fefd2fc9d9b",
+      "next": "ACNE_T_Q39",
+      "answerOptions": [
+        {
+          "text": "No, help me find the right treatment",
+          "code": "ACNE_T_Q33_A1"
+        },
+        {
+          "text": "Yes, I have a preference",
+          "code": "ACNE_T_Q33_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ACNE_T_Q33_A2",
+        "code": "ACNE_T_Q34",
+        "type": "text",
+        "canvas_linkId": "167bb93e-831c-4525-b7fc-cd92ead6aebe",
+        "description": "Tell us more",
+        "body": "Which medication(s) are you interested in? If you have a dosage preference, please specify that also (e.g. Tretinoin .1%)."
+      }
+    },
+
+    "ACNE_T_Q39": {
+      "header": "Is there anything else your provider should know?",
+      "description": "You should let your provider know about any other important information, questions, comments, or concerns.",
+      "type": "text",
+      "next": "ACNE_T_Q9",
+      "input_placeholder": "Type your answer here..."
+    },
+
+    "PHOTO_FACE_1": {
+      "header": "Please provide a photo of your face.",
+      "description": "For best results, remove make-up, be in a well-lit room or outdoors. We only need to see the area affected by acne.",
+      "label": "Front of face",
+      "type": "hair-loss-photo",
+      "next": "PHOTO_FACE_2",
+      "buttonText": "Continue"
+    },
+    "PHOTO_FACE_2": {
+      "header": "Please provide a photo looking to the left.",
+      "description": "Please include your entire left cheek with forehead visible.",
+      "label": "Left side of face",
+      "type": "hair-loss-photo",
+      "next": "PHOTO_FACE_3",
+      "buttonText": "Continue"
+    },
+    "PHOTO_FACE_3": {
+      "header": "Please provide a photo looking to the right.",
+      "description": "Please include your right cheek with forehead visible.",
+      "label": "Right side of face",
+      "type": "hair-loss-photo",
+      "next": {
+        "if": [
+          {
+            "some": [
+              { "var": "answers.ACNE_T_Q7.answer" },
+              {
+                "===": [{ "var": "valueCoding.display" }, "Chest"]
+              }
+            ]
+          },
+          "PHOTO_CHEST",
+          {
+            "some": [
+              { "var": "answers.ACNE_T_Q7.answer" },
+              {
+                "===": [
+                  { "var": "valueCoding.display" },
+                  "On my shoulders and/or back"
+                ]
+              }
+            ]
+          },
+          "PHOTO_BACK",
+          ""
+        ]
+      },
+      "buttonText": "Continue"
+    },
+    "PHOTO_CHEST": {
+      "header": "Please provide a photo of your chest or area affected by acne.",
+      "description": "We only need to see the area affected by acne.",
+      "label": "Chest",
+      "type": "hair-loss-photo",
+      "next": {
+        "if": [
+          {
+            "some": [
+              { "var": "answers.ACNE_T_Q7.answer" },
+              {
+                "===": [
+                  { "var": "valueCoding.display" },
+                  "On my shoulders and/or back"
+                ]
+              }
+            ]
+          },
+          "PHOTO_BACK",
+          "ACNE_T_Q38"
+        ]
+      },
+      "buttonText": "Continue"
+    },
+    "PHOTO_BACK": {
+      "header": "Please provide a photo of your back / shoulders or the area affected by acne.",
+      "description": "We only need to see the area affected by acne.",
+      "label": "Back / shoulders",
+      "type": "hair-loss-photo",
+      "buttonText": "Continue"
+    },
+    "DISQUALIFY_PREGNANCY": {
+      "header": "We’re sorry!",
+      "description": "Unfortunately, Zealthy can’t safely prescribe birth control if you are pregnant, breastfeeding, and/or had a child in the last six weeks. But don’t worry; we’re here to help with all your healthcare needs from the comfort of your home. So speak to a primary care specialist within minutes and get healthy with Zealthy today.",
+      "type": "message",
+      "buttonText": "Get healthy with Zealthy today"
+    },
+    "DISCLAIMER_BLOOD_PRESSURE": {
+      "header": "We’ll need a blood pressure reading.",
+      "description": "Go ahead and complete your health assessment, but your prescription won’t be processed until you tell us your blood pressure numbers. You can have your blood pressure checked at most pharmacies or use a home blood pressure cuff. If you aren’t sure when you last had it taken, call your doctor’s office and ask if it was within the last year and what the numbers were. After you submit your request, we will send you a message reminding you to tell us your blood pressure.",
+      "type": "message",
+      "buttonText": "I understand",
+      "next": "ACNE_T_Q27"
+    },
+    "BIRTH_CONTROL_Q": {
+      "header": "Birth control questions",
+      "description": "Some types of hormonal birth control are very effective at treating acne. We are now going to ask you a few things that will help your Zealthy provider determine whether birth control should be part of your acne treatment plan. (Don’t worry, you aren’t committing to going on birth control — just answer these questions so that you may have the option.)",
+      "type": "message",
+      "next": "ACNE_T_Q23"
+    }
+  }
+}

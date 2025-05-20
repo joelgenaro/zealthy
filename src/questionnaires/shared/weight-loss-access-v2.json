@@ -1,0 +1,117 @@
+{
+  "name": "weight-loss-access-v2",
+  "version": "1",
+  "code": "WL_ACCESS_V2",
+  "entry": "HEIGHT_WEIGHT",
+  "intro": {
+    "header": "Now that you’ve signed up, answer some questions to confirm you’re eligible. If you are not, you will receive a full refund for your $39.",
+    "description": "Zealthy’s Weight Loss acccess program offers:",
+    "listItems": [
+      "Doctor-prescribed GLP-1 medication",
+      "Lose 15-20% of your body weight on average",
+      "Personalized 1:1 coaching",
+      "Holistic curriculum and ongoing expert support"
+    ]
+  },
+  "questions": {
+    "HEIGHT_WEIGHT": {
+      "header": "What’s your current height and weight?",
+      "type": "height-weight",
+      "hideHeader": true,
+      "next": "MEDICARE"
+    },
+    "DISQUALIFY_BMI_2": {
+      "header": "We’re sorry!",
+      "type": "disqualify",
+      "listItems": [
+        "Your BMI does not meet the requirements to be eligible for GLP-1 medications.",
+        "If you entered your weight or height inaccurately, you may select back to enter them accurately.",
+        "If you already entered your height and weight correctly, you should email support@getzealthy.com or call 415-287-3301 to cancel and refund your account."
+      ]
+    },
+    "MEDICARE": {
+      "header": "Do you have Medicare?",
+      "description": "To sign up for Zealthy’s Weight Loss Access Membership plan, you must be a Medicare member. This means you have government insurance.",
+      "type": "choice",
+      "next": "GLP1",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MEDICARE_A1"
+        },
+        {
+          "text": "No",
+          "code": "MEDICARE_A2",
+          "next": "DISQUALIFY_MEDICARE"
+        }
+      ]
+    },
+    "DISQUALIFY_MEDICARE": {
+      "header": "If you are not a Medicare member, email us for a refund and consider signing up for our comprehensive weight loss program.",
+      "type": "disqualify",
+      "description": "Email support@getzealthy.com or call 415-287-3301 to get a refund and make sure your account is cancelled if you are not a Medicare member."
+    },
+    "GLP1": {
+      "header": "GLP-1 medication such as Wegovy or Ozempic is essential to an effective weight loss program.",
+      "description": "Everyone reacts differently, but Zealthy’s weight loss program predicts you’ll lose 15% of your body weight.",
+      "type": "message",
+      "next": "MEMBERSHIP_DETAILS",
+      "buttonText": "Tell me more"
+    },
+    "MEMBERSHIP_DETAILS": {
+      "header": "Medicare Florida members are eligible for the Weight Loss Access Membership including:",
+      "type": "message",
+      "next": "WEIGHT_LOSS_TERMS",
+      "unorderedList": [
+        "Access to scheduling with doctors or medical professionals who can consider your request for GLP-1s or similar medications and provide a prescription if medically appropriate",
+        "Assistance with affordable out of pocket medication options (only for options explicitly not covered by Medicare)",
+        "Unlimited messaging with a coach who can help you build customized plan",
+        "Tracking your weight loss progress and goals"
+      ],
+      "disclaimers": [
+        "Zealthy’s weight loss access program is $79/month and does not cover your visits with a provider, which should be covered by your Medicare plan. For a limited time, the first month of access is only $39.",
+        "The weight loss access program does not include anything that is covered by Medicare."
+      ]
+    },
+    "WEIGHT_LOSS_TERMS": {
+      "header": "To ensure that you’re able to get care, you’ll need to sign our terms of service.",
+      "disclaimers": [
+        "You must sign the agreement on the next page to continue to complete your visit and achieve lasting weight loss."
+      ],
+      "next": "WEIGHT_LOSS_AGREEMENT"
+    },
+    "WEIGHT_LOSS_AGREEMENT": {
+      "header": "See below for the Weight Loss Access Membership terms of service. To sign up, you must sign this agreement below, which will be counter-signed by a Bruno Health provider or an agent of that provider.",
+      "type": "weight-coaching-agreement",
+      "next": "NEXT_Q"
+    },
+    "NEXT_Q": {
+      "type": "message",
+      "header": "Next, you’ll answer a few more questions, add your insurance information, and verify your identity.",
+      "listItems": [
+        "This is important to complete because it will be used by your Zealthy medical provider. Be sure to have your ID and insurance card as you proceed.",
+        "These questions will take about 5 minutes to answer."
+      ],
+      "next": "LABS"
+    },
+    "LABS": {
+      "type": "lab-or-blood-tests",
+      "next": "PHARMACY"
+    },
+    "PHARMACY": {
+      "type": "pharmacy-select",
+      "next": "INSURANCE"
+    },
+    "INSURANCE": {
+      "type": "insurance-information",
+      "next": "VERIFY_IDENTITY"
+    },
+    "VERIFY_IDENTITY": {
+      "type": "identity-verification",
+      "next": "RESPONSES-REVIEWED"
+    },
+    "RESPONSES-REVIEWED": {
+      "type": "responses-reviewed"
+    }
+  }
+}

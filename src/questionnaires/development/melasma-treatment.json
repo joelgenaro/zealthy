@@ -1,0 +1,547 @@
+{
+  "name": "melasma-treatment",
+  "version": "1",
+  "canvas_id": "495f0743-d8d0-41dc-9bc9-3e1b1aeb44d1",
+  "code": "MELASMA_T",
+  "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+  "entry": "MELASMA_T_Q1",
+  "questions": {
+    "MELASMA_T_Q1": {
+      "header": "Do you have any of the following conditions?",
+      "description": "Select all that apply.",
+      "canvas_linkId": "4ec5cdd8-c99e-4074-9b7b-f82cbe28baac",
+      "type": "multiple-choice",
+      "next": {
+        "if": [
+          { "===": [{ "var": "gender" }, "female"] },
+          "MELASMA_T_Q2",
+          "MELASMA_T_Q3"
+        ]
+      },
+      "index": 6,
+      "answerOptions": [
+        {
+          "text": "Facial Eczema",
+          "code": "MELASMA_T_Q1_A1"
+        },
+        {
+          "text": "Rosacea",
+          "code": "MELASMA_T_Q1_A2"
+        },
+        {
+          "text": "Perioral/periorfacial dermatitis",
+          "code": "MELASMA_T_Q1_A3"
+        },
+        {
+          "text": "Acne",
+          "code": "MELASMA_T_Q1_A4"
+        },
+        {
+          "text": "Melasma",
+          "code": "MELASMA_T_Q1_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "MELASMA_T_Q1_A6"
+        }
+      ]
+    },
+
+    "MELASMA_T_Q2": {
+      "header": "Do any of the following apply to you?",
+      "description": "Select all that apply:",
+      "canvas_linkId": "ad672664-c2f5-468a-bc70-4b7391c344e8",
+      "type": "multiple-choice",
+      "next": "MELASMA_T_Q3",
+      "index": 7,
+      "answerOptions": [
+        {
+          "text": "I am pregnant.",
+          "code": "MELASMA_T_Q2_A1"
+        },
+        {
+          "text": "I am breastfeeding.",
+          "code": "MELASMA_T_Q2_A2"
+        },
+        {
+          "text": "I had a child in the last six weeks.",
+          "code": "MELASMA_T_Q2_A3"
+        },
+        {
+          "text": "None of the above",
+          "code": "MELASMA_T_Q2_A4"
+        }
+      ]
+    },
+
+    "MELASMA_T_Q3": {
+      "header": "Have you ever used hydroquinone for your melasma?",
+      "canvas_linkId": "2a6ee963-82c8-472f-b46b-a84dd57f7555",
+      "type": "choice",
+      "next": "MELASMA_T_Q4",
+      "index": 8,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MELASMA_T_Q3_A1"
+        },
+        {
+          "text": "No",
+          "code": "MELASMA_T_Q3_A2",
+          "next": "MELASMA_T_Q7"
+        }
+      ]
+    },
+
+    "MELASMA_T_Q4": {
+      "header": "How long ago did you complete your last course of hydroquinone?",
+      "canvas_linkId": "f9da4f5c-9d84-4e3e-bcfc-3404f0155470",
+      "type": "choice",
+      "next": "MELASMA_T_Q5",
+      "index": 9,
+      "answerOptions": [
+        {
+          "text": "Currently taking",
+          "code": "MELASMA_T_Q4_A1"
+        },
+        {
+          "text": "Less than 3 months ago",
+          "code": "MELASMA_T_Q4_A2"
+        },
+        {
+          "text": "Over 3 months ago",
+          "code": "MELASMA_T_Q4_A3"
+        }
+      ]
+    },
+    "MELASMA_T_Q5": {
+      "header": "Did you experience any side effects on hydroquinone?",
+      "canvas_linkId": "8aafa902-31f0-4b1b-b023-a43e332d1c22",
+      "type": "choice",
+      "next": "MELASMA_T_Q6",
+      "index": 10,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MELASMA_T_Q5_A1"
+        },
+        {
+          "text": "No",
+          "code": "MELASMA_T_Q5_A2",
+          "next": "MELASMA_T_Q7"
+        }
+      ]
+    },
+    "MELASMA_T_Q6": {
+      "header": "What side effects did you experience with hydroquinone?",
+      "description": "Select all that apply.",
+      "canvas_linkId": "0012d14e-0d18-4320-89f2-3e00fdd8b53d",
+      "type": "multiple-choice",
+      "next": "MELASMA_T_Q7",
+      "index": 11,
+      "answerOptions": [
+        {
+          "text": "Skin got darker (where medication applied)",
+          "code": "MELASMA_T_Q6_A1"
+        },
+        {
+          "text": "Skin got abnormally lighter",
+          "code": "MELASMA_T_Q6_A2"
+        },
+        {
+          "text": "Skin got irritated or red",
+          "code": "MELASMA_T_Q6_A3"
+        },
+        {
+          "text": "Other side effects",
+          "code": "MELASMA_T_Q6_A4"
+        }
+      ]
+    },
+    "MELASMA_T_Q7": {
+      "header": "Are you currently using any of the following prescription medications for your skin?",
+      "description": "Select all that apply.",
+      "canvas_linkId": "456f57ae-d8b0-4338-a675-ef87d8ff193c",
+      "type": "multiple-choice",
+      "next": "MELASMA_T_Q8",
+      "index": 12,
+      "answerOptions": [
+        {
+          "text": "Adapalene 0.1% (Differin)",
+          "code": "MELASMA_T_Q7_A1"
+        },
+        {
+          "text": "Adapalene 0.3% (Diferin)",
+          "code": "MELASMA_T_Q7_A2"
+        },
+        {
+          "text": "Adapalene/Benzoyl Peroxide 0.1% (Epiduo)",
+          "code": "MELASMA_T_Q7_A3"
+        },
+        {
+          "text": "Adapalene/Benxoyl Peroxide 0.3% (Epiduo Forte)",
+          "code": "MELASMA_T_Q7_A4"
+        },
+        {
+          "text": "Azelaic acid 15% (Finacea)",
+          "code": "MELASMA_T_Q7_A5"
+        },
+        {
+          "text": "Azelaic acid 20% (Azelex)",
+          "code": "MELASMA_T_Q7_A6"
+        },
+        {
+          "text": "Tazarotene 0.045% (Arazio)",
+          "code": "MELASMA_T_Q7_A7"
+        },
+        {
+          "text": "Tazarotene 0.05% (Tazorac)",
+          "code": "MELASMA_T_Q7_A8"
+        },
+        {
+          "text": "Tazarotene 0.1% (Avage, Tazorac, Fabior)",
+          "code": "MELASMA_T_Q7_A9"
+        },
+        {
+          "text": "Tretinoin 0.01% (Retin-A)",
+          "code": "MELASMA_T_Q7_A10"
+        },
+        {
+          "text": "Tretinoin 0.04% (Retin-A Micro)",
+          "code": "MELASMA_T_Q7_A11"
+        },
+        {
+          "text": "Tretinoin 0.05% (Retin-A, Athralin, Althreno)",
+          "code": "MELASMA_T_Q7_A12"
+        },
+        {
+          "text": "Tretinoin 0.08% (Retin-A Micro)",
+          "code": "MELASMA_T_Q7_A13"
+        },
+        {
+          "text": "Tretinoin 0.1% (Retin-A Micro)",
+          "code": "MELASMA_T_Q7_A14"
+        },
+        {
+          "text": "Trifarotene 0.005% (Aklief)",
+          "code": "MELASMA_T_Q7_A15"
+        },
+        {
+          "text": "Other topical retinoid",
+          "code": "MELASMA_T_Q7_A16"
+        },
+        {
+          "text": "None of the above",
+          "code": "MELASMA_T_Q7_A17",
+          "next": "MELASMA_T_Q9"
+        }
+      ]
+    },
+
+    "MELASMA_T_Q8": {
+      "description": "Please share with your Zealthy provider more about which prescription medications you are currently on for your skin as well as how well they work and how often you are taking them. If you have side effects, please share that also.",
+      "canvas_linkId": "208a3310-decb-40c0-9a8d-a281e88dc37a",
+      "type": "text",
+      "next": "MELASMA_T_Q9",
+      "index": 13
+    },
+
+    "MELASMA_T_Q9": {
+      "header": "Have you used any of the following prescription medications for your skin?",
+      "description": "Select all that apply.",
+      "type": "multiple-choice",
+      "canvas_linkId": "aa4b09e4-e462-47ca-940a-08df36a920a8",
+      "next": "MELASMA_T_Q10",
+      "index": 14,
+      "answerOptions": [
+        {
+          "text": "Adapalene 0.1% (Differin)",
+          "code": "MELASMA_T_Q9_A1"
+        },
+        {
+          "text": "Adapalene 0.3% (Diferin)",
+          "code": "MELASMA_T_Q9_A2"
+        },
+        {
+          "text": "Adapalene/Benzoyl Peroxide 0.1% (Epiduo)",
+          "code": "MELASMA_T_Q9_A3"
+        },
+        {
+          "text": "Adapalene/Benxoyl Peroxide 0.3% (Epiduo Forte)",
+          "code": "MELASMA_T_Q9_A4"
+        },
+        {
+          "text": "Azelaic acid 15% (Finacea)",
+          "code": "MELASMA_T_Q9_A5"
+        },
+        {
+          "text": "Azelaic acid 20% (Azelex)",
+          "code": "MELASMA_T_Q9_A6"
+        },
+        {
+          "text": "Tazarotene 0.045% (Arazio)",
+          "code": "MELASMA_T_Q9_A7"
+        },
+        {
+          "text": "Tazarotene 0.05% (Tazorac)",
+          "code": "MELASMA_T_Q9_A8"
+        },
+        {
+          "text": "Tazarotene 0.1% (Avage, Tazorac, Fabior)",
+          "code": "MELASMA_T_Q9_A9"
+        },
+        {
+          "text": "Tretinoin 0.01% (Retin-A)",
+          "code": "MELASMA_T_Q9_A10"
+        },
+        {
+          "text": "Tretinoin 0.04% (Retin-A Micro)",
+          "code": "MELASMA_T_Q9_A11"
+        },
+        {
+          "text": "Tretinoin 0.05% (Retin-A, Athralin, Althreno)",
+          "code": "MELASMA_T_Q9_A12"
+        },
+        {
+          "text": "Tretinoin 0.08% (Retin-A Micro)",
+          "code": "MELASMA_T_Q9_A13"
+        },
+        {
+          "text": "Tretinoin 0.1% (Retin-A Micro)",
+          "code": "MELASMA_T_Q9_A14"
+        },
+        {
+          "text": "Trifarotene 0.005% (Aklief)",
+          "code": "MELASMA_T_Q9_A15"
+        },
+        {
+          "text": "Other topical retinoid",
+          "code": "MELASMA_T_Q9_A16"
+        },
+        {
+          "text": "None of the above",
+          "code": "MELASMA_T_Q9_A17",
+          "next": "MELASMA_T_Q11"
+        }
+      ]
+    },
+
+    "MELASMA_T_Q10": {
+      "description": "Please share with your Zealthy provider more about which prescription medications you are currently on for your skin as well as how well they work and how often you are taking them. If you have side effects, please share that also.",
+      "canvas_linkId": "78b0e6a2-0aa4-4cb7-af78-e08d08acf150",
+      "type": "text",
+      "next": "MELASMA_T_Q11",
+      "index": 15
+    },
+
+    "MELASMA_T_Q11": {
+      "header": "For your skin, do you use any over-the-counter or prescription medications or products (serums, toners, lotions, creams)?",
+      "type": "choice-details",
+      "canvas_linkId": "33a42e4a-5c32-4fbc-89df-4ad2dc4cd504",
+      "next": "MELASMA_T_Q13",
+      "index": 16,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MELASMA_T_Q11_A1"
+        },
+        {
+          "text": "No",
+          "code": "MELASMA_T_Q11_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "MELASMA_T_Q11_A1",
+        "code": "MELASMA_T_Q12",
+        "type": "text",
+        "canvas_linkId": "86e2990f-fcd3-4ce5-822b-c880d7bd269c",
+        "description": "Please specify"
+      }
+    },
+
+    "MELASMA_T_Q13": {
+      "header": "Are you currently taking any over-the-counter or prescription medications and/or herbal supplements? Include anything you might be taking.",
+      "type": "choice-details",
+      "canvas_linkId": "bac5d311-87d4-4a2b-8349-a028cdbb12d8",
+      "next": "MELASMA_T_Q15",
+      "index": 17,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MELASMA_T_Q13_A1"
+        },
+        {
+          "text": "No",
+          "code": "MELASMA_T_Q13_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "MELASMA_T_Q13_A1",
+        "code": "MELASMA_T_Q14",
+        "type": "text",
+        "canvas_linkId": "17135400-ebd2-49d8-be21-8d74ea75c378",
+        "description": "Please specify"
+      }
+    },
+    "MELASMA_T_Q15": {
+      "header": "Do you have any drug allergies?",
+      "type": "choice-details",
+      "canvas_linkId": "8e4ac434-93c3-47f0-bec9-a429ae681d54",
+      "next": "MELASMA_T_Q17",
+      "index": 18,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MELASMA_T_Q15_A1"
+        },
+        {
+          "text": "No",
+          "code": "MELASMA_T_Q15_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "MELASMA_T_Q15_A1",
+        "code": "MELASMA_T_Q16",
+        "type": "text",
+        "canvas_linkId": "eba74381-10cb-4f46-8973-460896ebe8bd",
+        "description": "Please tell us which medication(s) you are allergic to and briefly describe your allergic reaction."
+      }
+    },
+
+    "MELASMA_T_Q17": {
+      "header": "Do you have any non-drug allergies?",
+      "type": "choice-details",
+      "canvas_linkId": "ee573e46-53a9-4826-9caa-315212e4f4aa",
+      "next": "MELASMA_T_Q19",
+      "index": 19,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MELASMA_T_Q17_A1"
+        },
+        {
+          "text": "No",
+          "code": "MELASMA_T_Q17_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "MELASMA_T_Q17_A1",
+        "code": "MELASMA_T_Q18",
+        "type": "text",
+        "canvas_linkId": "25162431-4205-4994-b3f9-2290bbb534eb",
+        "description": "Tell us which non-drug allergies you have, and briefly describe your allergic reaction.",
+        "body": "Relevant non-drug substances may include: peanuts, soy, latex, shellfish, adhesive and tapes, disinfectants, (e.g. iodine, hexachlorophene/phisohex)"
+      }
+    },
+
+    "MELASMA_T_Q19": {
+      "header": "Is there anything else we should know about your medical history?",
+      "type": "choice-details",
+      "canvas_linkId": "1f20a269-da4d-4d18-ba85-38658c088088",
+      "next": "MELASMA_T_Q21",
+      "index": 20,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MELASMA_T_Q19_A1"
+        },
+        {
+          "text": "No",
+          "code": "MELASMA_T_Q19_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "MELASMA_T_Q19_A1",
+        "code": "MELASMA_T_Q20",
+        "type": "text",
+        "canvas_linkId": "4a2fad68-1e5d-4fbe-9701-17210ccfd75d",
+        "description": "Tell us more",
+        "body": "Please tell us what concerns or questions you have for the medical team."
+      }
+    },
+
+    "MELASMA_T_Q21": {
+      "header": "Do you have any preferences for your melasma (aka dark spots) treatment?",
+      "description": "Note the medical provider will consider your preference, but will prescribe what is most clinically appropriate.",
+      "type": "choice-details",
+      "canvas_linkId": "aa89ffcf-989a-4cdd-8eac-4647dff37a9f",
+      "next": "PHOTO_FACE_1",
+      "index": 21,
+      "answerOptions": [
+        {
+          "text": "Hydroquinone",
+          "code": "MELASMA_T_Q21_A1"
+        },
+        {
+          "text": "Azelaic Acid",
+          "code": "MELASMA_T_Q21_A2"
+        },
+        {
+          "text": "Tretinoin",
+          "code": "MELASMA_T_Q21_A3"
+        },
+        {
+          "text": "What the provider thinks is best",
+          "code": "MELASMA_T_Q21_A4"
+        },
+        {
+          "text": "Other",
+          "code": "MELASMA_T_Q21_A5"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "MELASMA_T_Q21_A5",
+        "code": "MELASMA_T_Q22",
+        "type": "text",
+        "canvas_linkId": "e86545c7-3ccd-488c-9ee2-b9884e50937d",
+        "description": "Please specify"
+      }
+    },
+    "PHOTO_FACE_1": {
+      "header": "Please provide a photo of your entire face looking directly at the camera",
+      "description": "For best results, remove make-up, be in a well-lit room or outdoors",
+      "label": "Front of face",
+      "type": "hair-loss-photo",
+      "next": "PHOTO_FACE_2",
+      "index": 22,
+      "buttonText": "Continue"
+    },
+    "PHOTO_FACE_2": {
+      "header": "Please provide a photo looking to the left.",
+      "description": "Please include your entire left cheek with forehead visible.",
+      "label": "Left side of face",
+      "type": "hair-loss-photo",
+      "next": "PHOTO_FACE_3",
+      "index": 23,
+      "buttonText": "Continue"
+    },
+    "PHOTO_FACE_3": {
+      "header": "Please provide a photo looking to the right.",
+      "description": "Please include your right cheek with forehead visible.",
+      "label": "Right side of face",
+      "type": "hair-loss-photo",
+      "next": "DISCLOSURE",
+      "index": 24,
+      "buttonText": "Continue"
+    },
+    "DISCLOSURE": {
+      "header": "Before we continue, please note:",
+      "type": "message",
+      "listItems": [
+        "The Zealthy medical team does not screen for skin cancer. If you have any new or changing skin lesions, please seek in-person evaluation by a local medical provider.",
+        "Skin symptoms that should be evaluated by an in-person provider include but are not limited to lesions or moles that change in shape, size, color, or texture, symptoms include itching, pain, bleeding, or oozing, and sores or pimples that do not heal within 3-4 weeks."
+      ],
+      "next": "COMPLETED",
+      "index": 25,
+      "buttonText": "Continue with melasma treatment"
+    },
+    "COMPLETED": {
+      "header": "We’re ready to provide you care!",
+      "description": "Once you provide your payment information, a licensed medical provider will review the information you shared and recommend a treatment plan, as medically appropriate.",
+      "type": "skin-treatment",
+      "subType": "Melasma",
+      "buttonText": "Continue with melasma treatment",
+      "index": 26
+    }
+  }
+}

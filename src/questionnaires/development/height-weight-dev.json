@@ -1,0 +1,16 @@
+{
+  "name": "height-weight",
+  "version": "1",
+  "canvas_id": "5b99d26e-9d8a-4140-90d8-6fb42c0f0768",
+  "code": "HEIGHT_W",
+  "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+  "entry": "HEIGHT_W_Q1",
+  "questions": {
+    "HEIGHT_W_Q1": {
+      "header": "What’s your current height and weight?",
+      "type": "height-weight",
+      "hideHeader": true,
+      "canvas_linkId": "f7654c78-7093-499a-ab51-71fe6b63fdb1"
+    }
+  }
+}

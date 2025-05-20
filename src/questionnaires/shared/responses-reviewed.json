@@ -1,0 +1,11 @@
+{
+  "name": "responses-reviewed",
+  "version": "1",
+  "code": "RESPONSES-REVIEWED-A",
+  "entry": "RESPONSES-REVIEWED-A-Q1",
+  "questions": {
+    "RESPONSES-REVIEWED-A-Q1": {
+      "type": "responses-reviewed"
+    }
+  }
+}

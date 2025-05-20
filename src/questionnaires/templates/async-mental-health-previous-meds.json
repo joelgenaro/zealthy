@@ -1,0 +1,84 @@
+{
+  "name": "async-mental-health-previous-meds",
+  "version": "1",
+  "entry": "ASYNC_MH_PMT_Q1",
+  "questions": {
+    "ASYNC_MH_PMT_Q1": {
+      "header": "Why are you no longer taking [medication name]?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "ASYNC_MH_PMT_Q3",
+      "answerOptions": [
+        {
+          "text": "It helped my symptoms and I didn’t need medication anymore",
+          "code": "ASYNC_MH_PMT_Q1_A1"
+        },
+        {
+          "text": "It didn’t help my symptoms",
+          "code": "ASYNC_MH_PMT_Q1_A2"
+        },
+        {
+          "text": "I started having troubling side effects",
+          "code": "ASYNC_MH_PMT_Q1_A3",
+          "next": "ASYNC_MH_PMT_Q2"
+        },
+        {
+          "text": "I stopped taking it for another reason",
+          "code": "ASYNC_MH_PMT_Q1_A4"
+        }
+      ]
+    },
+
+    "ASYNC_MH_PMT_Q2": {
+      "header": "What side effects of [medication name] did you experience?",
+      "type": "multiple-choice",
+      "next": "ASYNC_MH_PMT_Q3",
+      "answerOptions": [
+        {
+          "text": "New onset suicidal ideation",
+          "code": "ASYNC_MH_PMT_Q2_A1"
+        },
+        {
+          "text": "Worsened anxiety or depression symptoms",
+          "code": "ASYNC_MH_PMT_Q2_A2"
+        },
+        {
+          "text": "Insomnia",
+          "code": "ASYNC_MH_PMT_Q2_A3"
+        },
+        {
+          "text": "Sedation (increased sleepiness)",
+          "code": "ASYNC_MH_PMT_Q2_A4"
+        },
+        {
+          "text": "GI distress (nausea/diarrhea/constipation)",
+          "code": "ASYNC_MH_PMT_Q2_A5"
+        },
+        {
+          "text": "Sexual side effects (anorgasmia, decreased libido)",
+          "code": "ASYNC_MH_PMT_Q2_A6"
+        },
+        {
+          "text": "Headaches",
+          "code": "ASYNC_MH_PMT_Q2_A7"
+        },
+        {
+          "text": "Dizziness",
+          "code": "ASYNC_MH_PMT_Q2_A8"
+        },
+        {
+          "text": "Nervousness, agitation, or restlessness",
+          "code": "ASYNC_MH_PMT_Q2_A9"
+        },
+        {
+          "text": "Weight gain",
+          "code": "ASYNC_MH_PMT_Q2_A10"
+        }
+      ]
+    },
+    "ASYNC_MH_PMT_Q3": {
+      "header": "Please tell us the daily dosage of [medication name] that you were taking.",
+      "type": "async-mental-health-dosages"
+    }
+  }
+}

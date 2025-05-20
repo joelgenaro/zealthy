@@ -1,0 +1,11 @@
+{
+  "name": "instant-live-visit-end",
+  "version": "1",
+  "code": "ILV-END",
+  "entry": "ILV-END-Q1",
+  "questions": {
+    "ILV-END-Q1": {
+      "type": "ilv-end"
+    }
+  }
+}

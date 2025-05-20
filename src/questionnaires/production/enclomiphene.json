@@ -1,0 +1,714 @@
+{
+  "name": "enclomiphene",
+  "care": "enclomiphene",
+  "version": "1",
+  "code": "ENCLOMIPHENE_T",
+  "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+  "entry": "ENCLOMIPHENE_Q1",
+  "questions": {
+    "ENCLOMIPHENE_Q1": {
+      "header": "How would you rate your energy level?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q2",
+      "index": 1,
+      "answerOptions": [
+        {
+          "text": "Terrible",
+          "code": "ENCLOMIPHENE_Q1_A1"
+        },
+        {
+          "text": "Poor",
+          "code": "ENCLOMIPHENE_Q1_A2"
+        },
+        {
+          "text": "Average",
+          "code": "ENCLOMIPHENE_Q1_A3"
+        },
+        {
+          "text": "Good",
+          "code": "ENCLOMIPHENE_Q1_A4"
+        },
+        {
+          "text": "Excellent",
+          "code": "ENCLOMIPHENE_Q1_A5"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q2": {
+      "header": "How would you rate your muscle strength/endurance?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q3",
+      "index": 2,
+      "answerOptions": [
+        {
+          "text": "Terrible",
+          "code": "ENCLOMIPHENE_Q2_A1"
+        },
+        {
+          "text": "Poor",
+          "code": "ENCLOMIPHENE_Q2_A2"
+        },
+        {
+          "text": "Average",
+          "code": "ENCLOMIPHENE_Q2_A3"
+        },
+        {
+          "text": "Good",
+          "code": "ENCLOMIPHENE_Q2_A4"
+        },
+        {
+          "text": "Excellent",
+          "code": "ENCLOMIPHENE_Q2_A5"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q3": {
+      "header": "How would you rate your enjoyment of life?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q4",
+      "index": 3,
+      "answerOptions": [
+        {
+          "text": "Terrible",
+          "code": "ENCLOMIPHENE_Q3_A1"
+        },
+        {
+          "text": "Poor",
+          "code": "ENCLOMIPHENE_Q3_A2"
+        },
+        {
+          "text": "Average",
+          "code": "ENCLOMIPHENE_Q3_A3"
+        },
+        {
+          "text": "Good",
+          "code": "ENCLOMIPHENE_Q3_A4"
+        },
+        {
+          "text": "Excellent",
+          "code": "ENCLOMIPHENE_Q3_A5"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q4": {
+      "header": "How would you rate your happiness level?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q5",
+      "index": 4,
+      "answerOptions": [
+        {
+          "text": "Terrible",
+          "code": "ENCLOMIPHENE_Q4_A1"
+        },
+        {
+          "text": "Poor",
+          "code": "ENCLOMIPHENE_Q4_A2"
+        },
+        {
+          "text": "Average",
+          "code": "ENCLOMIPHENE_Q4_A3"
+        },
+        {
+          "text": "Good",
+          "code": "ENCLOMIPHENE_Q4_A4"
+        },
+        {
+          "text": "Excellent",
+          "code": "ENCLOMIPHENE_Q4_A5"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q5": {
+      "header": "How would you rate your libido (sex drive)?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q6",
+      "index": 5,
+      "answerOptions": [
+        {
+          "text": "Terrible",
+          "code": "ENCLOMIPHENE_Q5_A1"
+        },
+        {
+          "text": "Poor",
+          "code": "ENCLOMIPHENE_Q5_A2"
+        },
+        {
+          "text": "Average",
+          "code": "ENCLOMIPHENE_Q5_A3"
+        },
+        {
+          "text": "Good",
+          "code": "ENCLOMIPHENE_Q5_A4"
+        },
+        {
+          "text": "Excellent",
+          "code": "ENCLOMIPHENE_Q5_A5"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q6": {
+      "header": "How strong are your erections?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q7",
+      "index": 6,
+      "answerOptions": [
+        {
+          "text": "Terrible",
+          "code": "ENCLOMIPHENE_Q6_A1"
+        },
+        {
+          "text": "Poor",
+          "code": "ENCLOMIPHENE_Q6_A2"
+        },
+        {
+          "text": "Average",
+          "code": "ENCLOMIPHENE_Q6_A3"
+        },
+        {
+          "text": "Good",
+          "code": "ENCLOMIPHENE_Q6_A4"
+        },
+        {
+          "text": "Excellent",
+          "code": "ENCLOMIPHENE_Q6_A5"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q7": {
+      "header": "How would you rate your work performance over the last 4 weeks?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q9",
+      "index": 7,
+      "answerOptions": [
+        {
+          "text": "Terrible",
+          "code": "ENCLOMIPHENE_Q7_A1"
+        },
+        {
+          "text": "Poor",
+          "code": "ENCLOMIPHENE_Q7_A2"
+        },
+        {
+          "text": "Average",
+          "code": "ENCLOMIPHENE_Q7_A3"
+        },
+        {
+          "text": "Good",
+          "code": "ENCLOMIPHENE_Q7_A4"
+        },
+        {
+          "text": "Excellent",
+          "code": "ENCLOMIPHENE_Q7_A5"
+        }
+      ]
+    },
+
+    "ENCLOMIPHENE_Q9": {
+      "header": "How would you rate your sports ability over the last few weeks?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q11",
+      "index": 8,
+      "answerOptions": [
+        {
+          "text": "Terrible",
+          "code": "ENCLOMIPHENE_Q9_A1"
+        },
+        {
+          "text": "Poor",
+          "code": "ENCLOMIPHENE_Q9_A2"
+        },
+        {
+          "text": "Average",
+          "code": "ENCLOMIPHENE_Q9_A3"
+        },
+        {
+          "text": "Good",
+          "code": "ENCLOMIPHENE_Q9_A4"
+        },
+        {
+          "text": "Excellent",
+          "code": "ENCLOMIPHENE_Q9_A5"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q11": {
+      "header": "How many hours do you sleep per night on average?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q12",
+      "index": 9,
+      "answerOptions": [
+        {
+          "text": "0-2 hours",
+          "code": "ENCLOMIPHENE_Q11_A1"
+        },
+        {
+          "text": "3-4 hours",
+          "code": "ENCLOMIPHENE_Q11_A2"
+        },
+        {
+          "text": "5-6 hours",
+          "code": "ENCLOMIPHENE_Q11_A3"
+        },
+        {
+          "text": "7-8 hours",
+          "code": "ENCLOMIPHENE_Q11_A4"
+        },
+        {
+          "text": "8+ hours",
+          "code": "ENCLOMIPHENE_Q11_A5"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q12": {
+      "header": "How many hours of moderate to vigorous physical activity do you do per week?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q13",
+      "index": 10,
+      "answerOptions": [
+        {
+          "text": "0-2 hours",
+          "code": "ENCLOMIPHENE_Q12_A1"
+        },
+        {
+          "text": "3-4 hours",
+          "code": "ENCLOMIPHENE_Q12_A2"
+        },
+        {
+          "text": "5-6 hours",
+          "code": "ENCLOMIPHENE_Q12_A3"
+        },
+        {
+          "text": "7-8 hours",
+          "code": "ENCLOMIPHENE_Q12_A4"
+        },
+        {
+          "text": "8+ hours",
+          "code": "ENCLOMIPHENE_Q12_A5"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q13": {
+      "header": "How’s the quality of your diet/nutrition?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q14",
+      "index": 11,
+      "answerOptions": [
+        {
+          "text": "Terrible",
+          "code": "ENCLOMIPHENE_Q13_A1"
+        },
+        {
+          "text": "Poor",
+          "code": "ENCLOMIPHENE_Q13_A2"
+        },
+        {
+          "text": "Average",
+          "code": "ENCLOMIPHENE_Q13_A3"
+        },
+        {
+          "text": "Good",
+          "code": "ENCLOMIPHENE_Q13_A4"
+        },
+        {
+          "text": "Excellent",
+          "code": "ENCLOMIPHENE_Q13_A5"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q14": {
+      "header": "How would you rate your ability to maintain focus?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q15",
+      "index": 12,
+      "answerOptions": [
+        {
+          "text": "Terrible",
+          "code": "ENCLOMIPHENE_Q14_A1"
+        },
+        {
+          "text": "Poor",
+          "code": "ENCLOMIPHENE_Q14_A2"
+        },
+        {
+          "text": "Average",
+          "code": "ENCLOMIPHENE_Q14_A3"
+        },
+        {
+          "text": "Good",
+          "code": "ENCLOMIPHENE_Q14_A4"
+        },
+        {
+          "text": "Excellent",
+          "code": "ENCLOMIPHENE_Q14_A5"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q15": {
+      "header": "How would you rate the quality of your relationships?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q16",
+      "index": 13,
+      "answerOptions": [
+        {
+          "text": "Terrible",
+          "code": "ENCLOMIPHENE_Q15_A1"
+        },
+        {
+          "text": "Poor",
+          "code": "ENCLOMIPHENE_Q15_A2"
+        },
+        {
+          "text": "Average",
+          "code": "ENCLOMIPHENE_Q15_A3"
+        },
+        {
+          "text": "Good",
+          "code": "ENCLOMIPHENE_Q15_A4"
+        },
+        {
+          "text": "Excellent",
+          "code": "ENCLOMIPHENE_Q15_A5"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q16": {
+      "header": "In the past 2 weeks, how many days have you felt nervous, anxious, or on edge?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q17",
+      "index": 14,
+      "answerOptions": [
+        {
+          "text": "None",
+          "code": "ENCLOMIPHENE_Q16_A1"
+        },
+        {
+          "text": "Several days",
+          "code": "ENCLOMIPHENE_Q16_A2"
+        },
+        {
+          "text": "More than half of the days",
+          "code": "ENCLOMIPHENE_16_A3"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "ENCLOMIPHENE_Q16_A4"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q17": {
+      "header": "In the past 2 weeks, how many days have you felt worried?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q18",
+      "index": 15,
+      "answerOptions": [
+        {
+          "text": "None",
+          "code": "ENCLOMIPHENE_Q17_A1"
+        },
+        {
+          "text": "Several days",
+          "code": "ENCLOMIPHENE_Q17_A2"
+        },
+        {
+          "text": "More than half of the days",
+          "code": "ENCLOMIPHENE_Q17_A3"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "ENCLOMIPHENE_Q17_A4"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q18": {
+      "header": "In the past 2 weeks, how many days have you felt depressed or hopeless?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q19",
+      "index": 16,
+      "answerOptions": [
+        {
+          "text": "None",
+          "code": "ENCLOMIPHENE_Q18_A1"
+        },
+        {
+          "text": "Several days",
+          "code": "ENCLOMIPHENE_Q18_A2"
+        },
+        {
+          "text": "More than half of the days",
+          "code": "ENCLOMIPHENE_Q18_A3"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "ENCLOMIPHENE_Q18_A4"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q19": {
+      "header": "In the past 2 weeks, how many days have you had little interest or pleasure in doing things?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q20",
+      "index": 17,
+      "answerOptions": [
+        {
+          "text": "None",
+          "code": "ENCLOMIPHENE_Q19_A1"
+        },
+        {
+          "text": "Several days",
+          "code": "ENCLOMIPHENE_Q19_A2"
+        },
+        {
+          "text": "More than half of the days",
+          "code": "ENCLOMIPHENE_Q19_A3"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "ENCLOMIPHENE_Q19_A4"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q20": {
+      "header": "Do you have any allergies?",
+      "description": "",
+      "type": "choice-details",
+      "next": "ENCLOMIPHENE_Q21",
+      "index": 18,
+      "answerOptions": [
+        {
+          "text": "Clomid/Clomiphene Citrate/Enclomiphene Citrate",
+          "code": "ENCLOMIPHENE_Q20_A1"
+        },
+        {
+          "text": "Vitamin D",
+          "code": "ENCLOMIPHENE_Q20_A2"
+        },
+        {
+          "text": "Vitamin K",
+          "code": "ENCLOMIPHENE_Q20_A3"
+        },
+        {
+          "text": "Not that I am aware of",
+          "code": "ENCLOMIPHENE_Q20_A4"
+        },
+        {
+          "text": "Other (please list)",
+          "code": "ENCLOMIPHENE_Q20_A5"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ENCLOMIPHENE_Q20_A5",
+        "code": "ENCLOMIPHENE_Q20A",
+        "type": "text",
+        "description": "Please list all other allergies here"
+      }
+    },
+    "ENCLOMIPHENE_Q21": {
+      "header": "Do you take any medications, vitamins, or supplements daily?",
+      "description": "",
+      "type": "choice",
+      "next": "ENCLOMIPHENE_Q22",
+      "index": 19,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ENCLOMIPHENE_Q21_A1"
+        },
+        {
+          "text": "No",
+          "code": "ENCLOMIPHENE_Q21_A2"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q22": {
+      "header": "Select the conditions that you currently have or have been diagnosed with:",
+      "description": "",
+      "type": "multiple-choice",
+      "next": "ENCLOMIPHENE_Q23",
+      "index": 20,
+      "answerOptions": [
+        {
+          "text": "Prostate cancer",
+          "code": "ENCLOMIPHENE_Q22_A1",
+          "next": "DISQUALIFY_HEALTH_HISTORY"
+        },
+        {
+          "text": "Pituitary Adenoma/Hyperprolactinemia",
+          "code": "ENCLOMIPHENE_Q22_A2",
+          "next": "DISQUALIFY_HEALTH_HISTORY"
+        },
+        {
+          "text": "Male Pattern Baldness/Receding Hairline",
+          "code": "ENCLOMIPHENE_Q22_A3"
+        },
+        {
+          "text": "Enlarged Prostate/Benign Prostatic Hyperplasia (BPH)",
+          "code": "ENCLOMIPHENE_Q22_A4"
+        },
+        {
+          "text": "Polycythemia",
+          "code": "ENCLOMIPHENE_Q22_A5",
+          "next": "DISQUALIFY_HEALTH_HISTORY"
+        },
+        {
+          "text": "Obstructive Sleep Apnea",
+          "code": "ENCLOMIPHENE_Q22_A6"
+        },
+        {
+          "text": "Adult Acne",
+          "code": "ENCLOMIPHENE_Q22_A7"
+        },
+        {
+          "text": "None of the above",
+          "code": "ENCLOMIPHENE_Q22_A8"
+        }
+      ]
+    },
+    "ENCLOMIPHENE_Q23": {
+      "header": "Select the conditions that your immediate family currently have or have been diagnosed with:",
+      "description": "",
+      "type": "multiple-choice",
+      "index": 21,
+      "next": {
+        "if": [
+          {
+            "some": [
+              { "var": "answers.ENCLOMIPHENE_Q22.answer" },
+              {
+                "in": [
+                  { "var": "valueCoding.display" },
+                  [
+                    "Prostate cancer",
+                    "Pituitary Adenoma/Hyperprolactinemia",
+                    "Polycythemia"
+                  ]
+                ]
+              }
+            ]
+          },
+          "COMPLETED",
+          "PRE_QUALIFIED"
+        ]
+      },
+      "answerOptions": [
+        {
+          "text": "Prostate cancer",
+          "code": "ENCLOMIPHENE_Q23_A1"
+        },
+        {
+          "text": "Pituitary Adenoma/Hyperprolactinemia",
+          "code": "ENCLOMIPHENE_Q23_A2"
+        },
+        {
+          "text": "Male Pattern Baldness/Receding Hairline",
+          "code": "ENCLOMIPHENE_Q23_A3"
+        },
+        {
+          "text": "Enlarged Prostate/Benign Prostatic Hyperplasia (BPH)",
+          "code": "ENCLOMIPHENE_Q23_A4"
+        },
+        {
+          "text": "Polycythemia",
+          "code": "ENCLOMIPHENE_Q23_A5"
+        },
+        {
+          "text": "Obstructive Sleep Apnea",
+          "code": "ENCLOMIPHENE_Q23_A6"
+        },
+        {
+          "text": "Adult Acne",
+          "code": "ENCLOMIPHENE_Q23_A7"
+        },
+        {
+          "text": "None of the above",
+          "code": "ENCLOMIPHENE_Q23_A8"
+        }
+      ]
+    },
+    "PRE_QUALIFIED": {
+      "header": "You have pre-qualified!",
+      "listItems": [
+        "Based on your responses, it seems that you will be eligible for Zealthy Enclomiphene.",
+        "Next, you’ll tell us where to ship your product and what plan is best for you.",
+        "Your baseline blood work will then be sent to your provider for final approval for Zealthy Enclomiphene.",
+        "Most men who pre-qualify, like you, are approved, but you will be refunded if you aren’t."
+      ],
+      "next": "COMPLETED",
+      "type": "message",
+      "index": 22
+    },
+    "COMPLETED": {
+      "header": "Good news! Your pharmaceuticals are in stock!",
+      "description": "Our clinical protocols use customs doses of specific, specialty compounded drugs, which are only available at a limited set of compounding pharmacies in the U.S",
+      "type": "message",
+      "next": "TREATMENT_OPTIONS_Q1",
+      "index": 23
+    },
+    "TREATMENT_OPTIONS_Q1": {
+      "header": "Choose your plan",
+      "description": "Our clinical protocols use customs doses of specific, specialty compounded drugs, which are only available at a limited set of compounding pharmacies in the U.S.",
+      "type": "enclomiphene-treatment-select",
+      "next": "AT_HOME_LAB",
+      "index": 24,
+      "answerOptions": [
+        {
+          "text": "Yearly plan",
+          "code": "TREATMENT_OPTIONS_Q1_A1"
+        },
+        {
+          "text": "Quarterly plan",
+          "code": "TREATMENT_OPTIONS_Q1_A2"
+        },
+        {
+          "text": "Monthly plan",
+          "code": "TREATMENT_OPTIONS_Q1_A3"
+        }
+      ],
+      "buttonText": "Continue"
+    },
+    "AT_HOME_LAB": {
+      "header": "At-Home Lab Kit",
+      "description": "Lab testing is required in months 1 and 2 to test hormone levels at baseline and follow up",
+      "type": "at-home-lab",
+      "index": 25,
+      "answerOptions": [
+        {
+          "text": "At-home lab kit",
+          "code": "AT_HOME_LAB_A1"
+        },
+        {
+          "text": "Use my own lab kit",
+          "code": "AT_HOME_LAB_A2",
+          "next": "MY_LAB_KIT"
+        }
+      ],
+      "buttonText": "Continue"
+    },
+    "MY_LAB_KIT": {
+      "label": "Lab work",
+      "type": "lab-or-blood-tests",
+      "index": 25
+    },
+    "DISQUALIFY_HEALTH_HISTORY": {
+      "header": "We’re sorry!",
+      "description": "Unfortunately, Zealthy can’t safely prescribe enclomiphene to people with your medical history.",
+      "type": "alarm"
+    }
+  }
+}

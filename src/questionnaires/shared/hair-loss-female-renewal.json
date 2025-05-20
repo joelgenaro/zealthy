@@ -1,0 +1,176 @@
+{
+  "name": "hair-loss-female-prescription-renewal",
+  "care": "hair loss",
+  "version": "1",
+  "canvas_id": "0a9406d3-7b4b-4484-aff0-951b4d27cfe2",
+  "code": "HAIR_L_RENEWAL",
+  "intro": {
+    "header": "Let’s help you with your prescription renewal. Just answer a few questions and your Zealthy care team will help with your prescription renewal in 1-3 business days."
+  },
+  "entry": "HAIR_L_RENEWAL_Q1",
+  "questions": {
+    "HAIR_L_RENEWAL_Q1": {
+      "header": "Are you happy with the results of your hair loss treatment?",
+      "type": "choice-details",
+      "next": "HAIR_L_RENEWAL_Q2",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HAIR_L_RENEWAL_Q1_A1"
+        },
+        {
+          "text": "No",
+          "code": "HAIR_L_RENEWAL_Q1_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "HAIR_L_RENEWAL_Q1_A2",
+        "code": "HAIR_L_RENEWAL_Q1_A3",
+        "type": "text",
+        "description": "How would you like it to be improved?"
+      }
+    },
+    "HAIR_L_RENEWAL_Q2": {
+      "header": "Did you start any new medications since your last consultation with Zealthy?",
+      "type": "choice-details",
+      "index": 10,
+      "next": "HAIR_L_RENEWAL_Q3",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "HAIR_L_RENEWAL_Q2_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "HAIR_L_RENEWAL_Q2_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "HAIR_L_RENEWAL_Q2_A2",
+        "code": "HAIR_L_RENEWAL_Q2_T1",
+        "type": "text",
+        "description": "Please list the medication(s) that you are currently taking.",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "HAIR_L_RENEWAL_Q3": {
+      "header": "Have you been diagnosed with any new medical conditions since your last consultation with Zealthy?",
+      "type": "choice-details",
+      "index": 10,
+      "next": "HAIR_L_RENEWAL_Q4",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "HAIR_L_RENEWAL_Q3_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "HAIR_L_RENEWAL_Q3_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "HAIR_L_RENEWAL_Q3_A2",
+        "code": "HAIR_L_RENEWAL_Q3_T1",
+        "type": "text",
+        "description": "Please list the condition(s)",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "HAIR_L_RENEWAL_Q4": {
+      "canvas_linkId": "52006353-75c7-4be1-9380-b1a6ad417506",
+      "header": "Have you had a hysterectomy or are you postmenopausal?",
+      "type": "choice",
+      "next": "HAIR_L_RENEWAL_Q5",
+      "answerOptions": [
+        {
+          "text": "No, neither of these apply to me",
+          "code": "HAIR_L_RENEWAL_Q4_A1"
+        },
+        {
+          "text": "Yes, I had a hysterectomy and/or removal of both ovaries",
+          "code": "HAIR_L_RENEWAL_Q4_A2"
+        },
+        {
+          "text": "Yes, I am postmenopausal (no period in 12 months)",
+          "code": "HAIR_L_RENEWAL_Q4_A3"
+        }
+      ]
+    },
+    "HAIR_L_RENEWAL_Q5": {
+      "canvas_linkId": "5646e931-7924-472a-ac3d-127fb08f50d1",
+      "header": "Are you experiencing any of these symptoms on your scalp?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "HAIR_L_RENEWAL_Q6",
+      "answerOptions": [
+        {
+          "text": "Dry scalp",
+          "code": "HAIR_L_RENEWAL_Q5_A1"
+        },
+        {
+          "text": "Oily scalp",
+          "code": "HAIR_L_RENEWAL_Q5_A2"
+        },
+        {
+          "text": "Smooth bald spots with complete hair loss",
+          "code": "HAIR_L_RENEWAL_Q5_A3"
+        },
+        {
+          "text": "Redness and crusting around hair follicles",
+          "code": "HAIR_L_RENEWAL_Q5_A4"
+        },
+        {
+          "text": "None of the above",
+          "code": "HAIR_L_RENEWAL_Q5_A5"
+        }
+      ]
+    },
+    "HAIR_L_RENEWAL_Q6": {
+      "header": "Did you try any other hair loss medication or supplements along with the medication that was prescribed to you by us?",
+      "type": "choice-details",
+      "next": "HAIR_L_RENEWAL_Q7",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HAIR_L_RENEWAL_Q6_A1"
+        },
+        {
+          "text": "No",
+          "code": "HAIR_L_RENEWAL_Q6_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "HAIR_L_RENEWAL_Q6_A1",
+        "code": "HAIR_L_RENEWAL_Q6_Q3",
+        "type": "text",
+        "description": "Please list the medication(s) that you tried."
+      }
+    },
+    "HAIR_L_RENEWAL_Q7": {
+      "header": "Is there anything else you would like your provider to know today?",
+      "type": "choice-details",
+      "next": "HAIR_L_RENEWAL_Q8",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "HAIR_L_RENEWAL_Q8_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "HAIR_L_RENEWAL_Q8_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "HAIR_L_RENEWAL_Q8_A2",
+        "code": "HAIR_L_RENEWAL_Q8_T1",
+        "type": "text",
+        "description": "Please explain."
+      }
+    },
+    "HAIR_L_RENEWAL_Q8": {
+      "header": "What happens next.",
+      "description": "You’re almost done; your Zealthy provider will review your responses prior to writing your prescriptio renewal for hair loss, if medically appropriate.",
+      "type": "async-what-happens-next-v2"
+    }
+  }
+}

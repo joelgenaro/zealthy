@@ -1,0 +1,322 @@
+{
+  "name": "weight-loss-post-oral-semaglutide-bundled",
+  "care": "weight loss",
+  "version": "1",
+  "canvas_id": "7b56cc15-ff8b-4baa-b6e2-8a02738c4c21",
+  "code": "WEIGHT_L_POST",
+  "codingSystem": "http://schemas.getzealthy.canvasmedical.com/fhir/systems/internal",
+  "entry": "WEIGHT_L_POST_Q1",
+  "questions": {
+    "WEIGHT_L_POST_Q1": {
+      "header": "Do you have any allergies?",
+      "description": "Include any allergies to food dyes, prescription or over-the-counter medicines (e.g. antibiotics, allergy medications), herbs, vitamins, supplements, or anything else?",
+      "type": "choice-details",
+      "next": "WEIGHT_L_POST_Q3",
+      "index": 2,
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "WEIGHT_L_POST_Q1_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_POST_Q1_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "WEIGHT_L_POST_Q1_A2",
+        "code": "WEIGHT_L_POST_Q2",
+        "type": "text",
+        "input_placeholder": "Please list all allergies:"
+      }
+    },
+    "WEIGHT_L_POST_Q3": {
+      "header": "Do you have any medical condition(s), a history of prior surgeries, or anything else you want to tell your doctor?",
+      "type": "choice-details",
+      "next": "WEIGHT_L_POST_Q5",
+      "index": 3,
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "WEIGHT_L_POST_Q3_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_POST_Q3_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "WEIGHT_L_POST_Q3_A2",
+        "code": "WEIGHT_L_POST_Q4",
+        "type": "text",
+        "input_placeholder": "Please list out any medical condition(s), prior, surgeries or anything you want to tell your provider:"
+      }
+    },
+
+    "WEIGHT_L_POST_Q5": {
+      "header": "Did you currently have, or have you ever been diagnosed with, any of the following conditions?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_POST_Q6",
+      "index": 4,
+      "answerOptions": [
+        {
+          "text": "Hypertension (High blood pressure)",
+          "code": "WEIGHT_L_POST_Q5_A1"
+        },
+        {
+          "text": "Laparoscopic adjustable gastric band (Lap-band)",
+          "code": "WEIGHT_L_POST_Q5_A2"
+        },
+        {
+          "text": "Hyperlipidemia (high cholesterol)",
+          "code": "WEIGHT_L_POST_Q5_A3"
+        },
+        {
+          "text": "Hypertriglyceridemia (high triglycerides)",
+          "code": "WEIGHT_L_POST_Q5_A4"
+        },
+        {
+          "text": "Gallstones or aother gallbladder disease",
+          "code": "WEIGHT_L_POST_Q5_A5"
+        },
+        {
+          "text": "Liver disease or conditions that affect the liver",
+          "code": "WEIGHT_L_POST_Q5_A6"
+        },
+        {
+          "text": "Heart disease or conditions that affect the heart",
+          "code": "WEIGHT_L_POST_Q5_A7"
+        },
+        {
+          "text": "Metabolic Syndrome",
+          "code": "WEIGHT_L_POST_Q5_A8"
+        },
+        {
+          "text": "Chronic Kidney Disease Stage 3 or greater",
+          "code": "WEIGHT_L_POST_Q5_A9"
+        },
+        {
+          "text": "Syndrome of inappropriate antidiuretic hormone",
+          "code": "WEIGHT_L_POST_Q5_A10"
+        },
+        {
+          "text": "Hypothyroidism, Hyperthyroidism, or Thyroid Issues",
+          "code": "WEIGHT_L_POST_Q5_A11"
+        },
+        {
+          "text": "Pancreatitis",
+          "code": "WEIGHT_L_POST_Q5_A12"
+        },
+        {
+          "text": "Type 1 Diabetes",
+          "code": "WEIGHT_L_POST_Q5_A13"
+        },
+        {
+          "text": "Type 2 Diabetes",
+          "code": "WEIGHT_L_POST_Q5_A14"
+        },
+        {
+          "text": "Prediabetes, Gestational Diabetes",
+          "code": "WEIGHT_L_POST_Q5_A15"
+        },
+        {
+          "text": "Gastroparesis or delayed gastric emptying",
+          "code": "WEIGHT_L_POST_Q5_A16"
+        },
+        {
+          "text": "Other",
+          "code": "WEIGHT_L_POST_Q5_A17"
+        },
+        {
+          "text": "No, I have not been diagnosed with any of these conditions",
+          "code": "WEIGHT_L_POST_Q5_A18"
+        }
+      ]
+    },
+
+    "SURGERY_DETAILS": {
+      "index": 5,
+      "header": "What year did your weight loss surgery or surgeries occurred? Tell us about any complications with your weight loss surgery or surgeries.",
+      "type": "text",
+      "next": "WEIGHT_L_POST_Q4",
+      "input_placeholder": "Please tell us the year when your weight loss surgery or surgeries occurred. Include any complications."
+    },
+
+    "WEIGHT_L_POST_Q6": {
+      "index": 6,
+      "header": "Are you currently undergoing treatment for an eating disorder, experienced symptoms of an eating disorder within the past 90 days or been diagnosed with any of the following eating disorders within the past 90 days?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_POST_Q7",
+      "answerOptions": [
+        {
+          "text": "Anorexia Nervosa",
+          "code": "WEIGHT_L_POST_Q6_A1"
+        },
+        {
+          "text": "Bulimia Nervosa",
+          "code": "WEIGHT_L_POST_Q6_A2"
+        },
+        {
+          "text": "Binge Eating Disorder",
+          "code": "WEIGHT_L_POST_Q6_A3"
+        },
+        {
+          "text": "Night Eating Disorder",
+          "code": "WEIGHT_L_POST_Q6_A4"
+        },
+        {
+          "text": "Other",
+          "code": "WEIGHT_L_POST_Q6_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_POST_Q6_A6"
+        }
+      ]
+    },
+    "WEIGHT_L_POST_Q7": {
+      "index": 7,
+      "header": "Have you been diagnosed with, or do you suffer from, any of the following?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_POST_Q8",
+      "answerOptions": [
+        {
+          "text": "Depression or bipolar disorder",
+          "code": "WEIGHT_L_POST_Q7_A1"
+        },
+        {
+          "text": "Alcohol abuse disorder or substance abuse",
+          "code": "WEIGHT_L_POST_Q7_A2"
+        },
+        {
+          "text": "History of suicidal ideation or suicide attempts",
+          "code": "WEIGHT_L_POST_Q7_A3"
+        },
+        {
+          "text": "An anxiety disorder, or panic disorder",
+          "code": "WEIGHT_L_POST_Q7_A4"
+        },
+        {
+          "text": "Other psychiatric or physiological conditions",
+          "code": "WEIGHT_L_POST_Q7_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_POST_Q7_A6"
+        }
+      ]
+    },
+
+    "WEIGHT_L_POST_Q8": {
+      "index": 8,
+      "header": "Do you have a personal or family history of medullary thyroid cancer?",
+      "type": "choice",
+      "next": "WEIGHT_L_POST_Q9",
+      "answerOptions": [
+        {
+          "text": "I do NOT have a personal or family history of medullary thyroid cancer",
+          "code": "WEIGHT_L_POST_Q8_A1"
+        },
+        {
+          "text": "Yes, I have a personal history of medullary thyroid cancer",
+          "code": "WEIGHT_L_POST_Q8_A2"
+        },
+        {
+          "text": "Yes, I have a family member who has a history of medullary thyroid cancer",
+          "code": "WEIGHT_L_POST_Q8_A3"
+        },
+        {
+          "text": "Yes, I have a personal and family history of thyroid cancer",
+          "code": "WEIGHT_L_POST_Q8_A4"
+        }
+      ]
+    },
+
+    "WEIGHT_L_POST_Q9": {
+      "index": 9,
+      "header": "Do you have a personal history of Multiple Endocrine Neoplasia syndrome type 2 (MEN2)?",
+      "type": "choice",
+      "next": "WEIGHT_L_POST_Q10",
+      "answerOptions": [
+        {
+          "text": "I do NOT have a personal history of Multiple Endocrine Neoplasia syndrome type 2 (MEN2)",
+          "code": "WEIGHT_L_POST_Q9_A1"
+        },
+        {
+          "text": "Yes, I do have a personal history of Multiple Endocrine Neoplasia syndrome type 2 (MEN2)",
+          "code": "WEIGHT_L_POST_Q9_A2"
+        }
+      ]
+    },
+
+    "WEIGHT_L_POST_Q10": {
+      "index": 10,
+      "header": "In the last two weeks, have you been bothered by any of the following?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_POST_Q11",
+      "answerOptions": [
+        {
+          "text": "Little interest or pleasure in doing things",
+          "code": "WEIGHT_L_POST_Q10_A1"
+        },
+        {
+          "text": "Feeling down, depressed, or hopeless",
+          "code": "WEIGHT_L_POST_Q10_A2"
+        },
+        {
+          "text": "Feeling nervous, anxious, or on edge",
+          "code": "WEIGHT_L_POST_Q10_A3"
+        },
+        {
+          "text": "Worrying too much about different things",
+          "code": "WEIGHT_L_POST_Q10_A4"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_POST_Q10_A5"
+        }
+      ]
+    },
+
+    "WEIGHT_L_POST_Q11": {
+      "index": 11,
+      "header": "Do you take any of the following medications?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "answerOptions": [
+        {
+          "text": "Sulfonylureas such as glipizide",
+          "code": "WEIGHT_L_POST_Q11_A1"
+        },
+        {
+          "text": "Meglitinides such as repaglinide or nateglinide",
+          "code": "WEIGHT_L_POST_Q11_A2"
+        },
+        {
+          "text": "Insulin",
+          "code": "WEIGHT_L_POST_Q11_A3"
+        },
+        {
+          "text": "Diuretics such as bumetantide or furosemide",
+          "code": "WEIGHT_L_POST_Q11_A4"
+        },
+        {
+          "text": "Selective Seroronin Reuptake Inhibior",
+          "code": "WEIGHT_L_POST_Q11_A5"
+        },
+        {
+          "text": "Monoamine Oxidase Inhibitor such as phenezine",
+          "code": "WEIGHT_L_POST_Q11_A6"
+        },
+        {
+          "text": "None of these",
+          "code": "WEIGHT_L_POST_Q11_A7"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "blood-pressure",
+  "version": "1",
+  "canvas_id": "be03dc73-c090-4b10-99d6-cb3e9047c31e",
+  "code": "BLOOD_P",
+  "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+  "entry": "BLOOD_P_Q1",
+  "questions": {
+    "BLOOD_P_Q1": {
+      "header": "Have you had your blood pressure checked in the last 12 months?",
+      "type": "choice",
+      "canvas_linkId": "5d76b87f-ce73-43a5-a917-9743da95aee7",
+      "next": "BLOOD_P_Q2",
+      "answerOptions": [
+        {
+          "code": "BLOOD_P_Q1_A1",
+          "text": "Yes"
+        },
+        {
+          "code": "BLOOD_P_Q1_A2",
+          "text": "No",
+          "next": "BLOOD_PRESSURE_DISCLAIMER"
+        }
+      ]
+    },
+    "BLOOD_P_Q2": {
+      "header": "What was your last blood pressure reading?",
+      "description": "This number is typically written as systolic/diastolic, for example: 139/82.",
+      "type": "blood-pressure",
+      "canvas_linkId": "371797c0-f637-4675-b53d-566d576aa560",
+      "answerOptions": [
+        {
+          "text": "I don't remember",
+          "next": "BLOOD_PRESSURE_DISCLAIMER"
+        }
+      ]
+    },
+    "BLOOD_PRESSURE_DISCLAIMER": {
+      "type": "message",
+      "header": "We’ll need a recent blood pressure reading.",
+      "description": "Go ahead and finish your online health assessment, but your prescription won’t be processed until you tell us your blood pressure numbers. You can check your blood pressure at most pharmacies or use a home blood cuff. If you aren’t sure when you last had it taken, call your doctor’s office and ask if it was within six months, and if so, request your numbers.",
+      "buttonText": "Got it"
+    }
+  }
+}

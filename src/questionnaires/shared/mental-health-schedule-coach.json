@@ -1,0 +1,13 @@
+{
+  "name": "mental-health-schedule-coach",
+  "version": "1",
+  "code": "MENTAL-SCH-C",
+  "entry": "MENTAL-SCH-C-Q1",
+  "questions": {
+    "MENTAL-SCH-C-Q1": {
+      "header": "You have successfully signed up for coaching! Select your coach & schedule your first 1:1 video session.",
+      "type": "mental-health-coach-schedule",
+      "allowToSkip": true
+    }
+  }
+}

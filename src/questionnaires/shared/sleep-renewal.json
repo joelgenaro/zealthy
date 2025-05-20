@@ -1,0 +1,297 @@
+{
+  "name": "sleep-prescription-renewal",
+  "care": "sleep",
+  "version": "4",
+  "code": "SLEEP_RENEWAL",
+  "intro": {
+    "header": "Let’s help you with your prescription renewal. Just answer a few questions and your Zealthy care team will help with your prescription renewal in 1-3 business days."
+  },
+  "entry": "SLEEP_RENEWAL_Q1",
+  "questions": {
+    "SLEEP_RENEWAL_Q1": {
+      "header": "Are you happy with the results of your insomnia treatment?",
+      "type": "choice-details",
+      "index": 6,
+      "next": "SLEEP_RENEWAL_Q2",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "SLEEP_RENEWAL_Q1_A1"
+        },
+        {
+          "text": "No",
+          "code": "SLEEP_RENEWAL_Q1_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "SLEEP_RENEWAL_Q1_A2",
+        "code": "SLEEP_RENEWAL_Q1_T1",
+        "type": "text",
+        "description": "How would you like it to be improved?",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "SLEEP_RENEWAL_Q2": {
+      "header": "On an average night, how much sleep do you get?",
+      "type": "choice",
+      "index": 6,
+      "next": "SLEEP_RENEWAL_Q3",
+      "answerOptions": [
+        {
+          "text": "5 hours or less",
+          "code": "SLEEP_RENEWAL_Q1_A1"
+        },
+        {
+          "text": "6 hours",
+          "code": "SLEEP_RENEWAL_Q1_A2"
+        },
+        {
+          "text": "7 hours",
+          "code": "SLEEP_RENEWAL_Q1_A3"
+        },
+        {
+          "text": "8 hours or more",
+          "code": "SLEEP_RENEWAL_Q1_A4"
+        }
+      ]
+    },
+    "SLEEP_RENEWAL_Q3": {
+      "header": "In the last 3 months, have you had trouble sleeping for 3 days or more a week?",
+      "type": "choice",
+      "index": 9,
+      "next": "SLEEP_RENEWAL_Q4",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "SLEEP_RENEWAL_Q3_A1"
+        },
+        {
+          "text": "No",
+          "code": "SLEEP_RENEWAL_Q3_A2"
+        }
+      ]
+    },
+    "SLEEP_RENEWAL_Q4": {
+      "header": "Over the last 2 weeks, how often have you felt down, depressed, or hopeless?",
+      "type": "choice",
+      "index": 12,
+      "next": "SLEEP_RENEWAL_Q5",
+      "answerOptions": [
+        {
+          "text": "Not at all",
+          "code": "SLEEP_RENEWAL_Q4_A1"
+        },
+        {
+          "text": "Several days",
+          "code": "SLEEP_RENEWAL_Q4_A2"
+        },
+        {
+          "text": "More than half of the days",
+          "code": "SLEEP_RENEWAL_Q4_A3"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "SLEEP_RENEWAL_Q4_A4"
+        }
+      ]
+    },
+    "SLEEP_RENEWAL_Q5": {
+      "header": "Over the last 2 weeks, how often have you had little interest or pleasure in doing things?",
+      "type": "choice",
+      "index": 13,
+      "next": "SLEEP_RENEWAL_Q6",
+      "answerOptions": [
+        {
+          "text": "Not at all",
+          "code": "SLEEP_RENEWAL_Q5_A1"
+        },
+        {
+          "text": "Several days",
+          "code": "SLEEP_RENEWAL_Q5_A2"
+        },
+        {
+          "text": "More than half of the days",
+          "code": "SLEEP_RENEWAL_Q5_A3"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "SLEEP_RENEWAL_Q5_A4"
+        }
+      ]
+    },
+    "SLEEP_RENEWAL_Q6": {
+      "header": "Does physical pain or discomfort contribute to your insomnia?",
+      "type": "choice-details",
+      "index": 10,
+      "next": "SLEEP_RENEWAL_Q7",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "SLEEP_RENEWAL_Q6_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "SLEEP_RENEWAL_Q6_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "SLEEP_RENEWAL_Q6_A2",
+        "code": "SLEEP_RENEWAL_Q6_T1",
+        "type": "text",
+        "description": "Please provide more details:",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "SLEEP_RENEWAL_Q7": {
+      "header": "Did you start any new medications since your last consultation with Zealthy?",
+      "type": "choice-details",
+      "index": 10,
+      "next": "SLEEP_RENEWAL_Q8",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "SLEEP_RENEWAL_Q7_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "SLEEP_RENEWAL_Q7_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "SLEEP_RENEWAL_Q7_A2",
+        "code": "SLEEP_RENEWAL_Q6_T1",
+        "type": "text",
+        "description": "Please list the medication(s) that you are currently taking.",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "SLEEP_RENEWAL_Q8": {
+      "header": "Have you been diagnosed with any new medical conditions since your last consultation with Zealthy?",
+      "type": "choice-details",
+      "index": 10,
+      "next": "SLEEP_RENEWAL_Q9",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "SLEEP_RENEWAL_Q8_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "SLEEP_RENEWAL_Q8_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "SLEEP_RENEWAL_Q8_A2",
+        "code": "SLEEP_RENEWAL_Q8_T1",
+        "type": "text",
+        "description": "Please list the condition(s)",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "SLEEP_RENEWAL_Q9": {
+      "header": "In the past year, how many times have you used an illicit drug?",
+      "type": "choice",
+      "index": 16,
+      "next": "SLEEP_RENEWAL_Q10",
+      "answerOptions": [
+        {
+          "text": "None",
+          "code": "SLEEP_RENEWAL_Q9_A1"
+        },
+        {
+          "text": "1-2 times",
+          "code": "SLEEP_RENEWAL_Q9_A2"
+        },
+        {
+          "text": "3-5 times",
+          "code": "SLEEP_RENEWAL_Q9_A3"
+        },
+        {
+          "text": "6-10 times",
+          "code": "SLEEP_RENEWAL_Q9_A4"
+        },
+        {
+          "text": "11+ times",
+          "code": "SLEEP_RENEWAL_Q9_A5"
+        }
+      ]
+    },
+    "SLEEP_RENEWAL_Q10": {
+      "header": "In the past year, how many times have you had five or more drinks in a day?",
+      "type": "choice",
+      "index": 17,
+      "next": "SLEEP_RENEWAL_Q11",
+      "answerOptions": [
+        {
+          "text": "None",
+          "code": "SLEEP_RENEWAL_Q10_A1"
+        },
+        {
+          "text": "1-2 times",
+          "code": "SLEEP_RENEWAL_Q10_A2"
+        },
+        {
+          "text": "3-5 times",
+          "code": "SLEEP_RENEWAL_Q10_A3"
+        },
+        {
+          "text": "6-10 times",
+          "code": "SLEEP_RENEWAL_Q10_A4"
+        },
+        {
+          "text": "11+ times",
+          "code": "SLEEP_RENEWAL_Q10_A5"
+        }
+      ]
+    },
+    "SLEEP_RENEWAL_Q11": {
+      "header": "Does your job involve operating heavy machinery or the transport of others?",
+      "type": "choice-details",
+      "index": 14,
+      "next": "SLEEP_RENEWAL_Q12",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "SLEEP_RENEWAL_Q11_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "SLEEP_RENEWAL_Q11_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "SLEEP_RENEWAL_Q11_A2",
+        "code": "SLEEP_RENEWAL_Q11_T1",
+        "type": "text",
+        "description": "Please tell us more.",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "SLEEP_RENEWAL_Q12": {
+      "header": "Is there anything else you would like your provider to know today?",
+      "type": "choice-details",
+      "next": "SLEEP_RENEWAL_Q13",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "SLEEP_RENEWAL_Q12_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "SLEEP_RENEWAL_Q12_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "SLEEP_RENEWAL_Q12_A2",
+        "code": "SLEEP_RENEWAL_Q12_T1",
+        "type": "text",
+        "description": "Please explain."
+      }
+    },
+    "SLEEP_RENEWAL_Q13": {
+      "header": "What happens next.",
+      "description": "You’re almost done; your Zealthy provider will review your responses prior to writing your prescription, if medically appropriate.",
+      "type": "async-what-happens-next-v2"
+    }
+  }
+}

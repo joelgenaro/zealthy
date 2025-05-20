@@ -1,0 +1,32 @@
+{
+  "name": "full-body-photo",
+  "version": "1",
+  "code": "FBP",
+  "entry": "FBP_Q1",
+  "languages": {
+    "en": {
+      "questions": {
+        "FBP_Q1": {
+          "header": "Upload a photo of your full body",
+          "description": "Please take a photo that shows your entire body (with clothes on) for the doctor",
+          "label": "Full body",
+          "type": "hair-loss-photo",
+          "buttonText": "Continue",
+          "index": 3
+        }
+      }
+    },
+    "esp": {
+      "questions": {
+        "FBP_Q1": {
+          "header": "Sube una foto de tu cuerpo completo",
+          "description": "Por favor, toma una foto que muestre tu cuerpo entero (con ropa) para el médico",
+          "label": "Cuerpo completo",
+          "type": "hair-loss-photo",
+          "buttonText": "Continuar",
+          "index": 30
+        }
+      }
+    }
+  }
+}

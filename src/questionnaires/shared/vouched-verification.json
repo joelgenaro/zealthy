@@ -1,0 +1,21 @@
+{
+  "name": "vouched-verification",
+  "version": "1",
+  "code": "V_IDENTITY",
+  "entry": "V_IDENTITY_Q1",
+  "questions": {
+    "V_IDENTITY_Q1": {
+      "header": "What is your delivery address?",
+      "description": "If your provider approves your prescription request, your medication will be sent to your doorstep. Your order will be shipped in discreet packaging that never references Zealthy, pharmacies, or your prescription.",
+      "type": "crosscheck-verification"
+    },
+    "V_IDENTITY_Q2": {
+      "header": "Enter the last 4 digits of your social security.",
+      "description": "This will enable us to verify your identity, which is required by telemedicine law.",
+      "type": "ssn-verification"
+    },
+    "V_IDENTITY_Q3": {
+      "type": "photo-identification"
+    }
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "name": "weight-loss-v2",
+  "care": "weight loss",
+  "version": "2",
+  "code": "WEIGHT_L",
+  "intro": {
+    "if": [
+      { "===": [{ "var": "potentialInsurance" }, "Semaglutide Bundled"] },
+      {
+        "header": "When sourced from the right pharmacies, compound Semaglutide is one of the safest, most effective weight loss treatments.",
+        "listItems": [
+          "Doctor-prescribed Semaglutide shipped to your door",
+          "Lose 15-20% of your body weight on average*",
+          "Holistic curriculum and ongoing expert support"
+        ],
+        "footnote": "* People using Ozempic® and Wegovy®, medications with the active ingredient semaglutide, lost 15% of their body weight on average in clinical studies."
+      },
+      { "===": [{ "var": "potentialInsurance" }, "Tirzepatide Bundled"] },
+      {
+        "header": "When sourced from the right pharmacies, compound Tirzepatide is one of the safest, most effective weight loss treatments.",
+        "listItems": [
+          "Doctor-prescribed Tirzepatide shipped to your door",
+          "Lose 20% of your body weight on average*",
+          "Holistic curriculum and ongoing expert support"
+        ],
+        "footnote": "* People using Mounjaro® and Zepbound™, medications with the active ingredient tirzepatide, lost 20% of their body weight on average in clinical studies."
+      },
+      {
+        "header": "Let’s find the safest, most effective weight loss treatment for you.",
+        "listItems": [
+          "Doctor-prescribed GLP-1 medication, including semaglutide or tirzepatide",
+          "Lose 15-20% of your body weight on average",
+          "Personalized 1:1 coaching",
+          "Holistic curriculum and ongoing expert support"
+        ]
+      }
+    ]
+  },
+  "entry": "WEIGHT_L_Q1",
+  "questions": {
+    "WEIGHT_L_Q1": {
+      "header": "What’s your current height and weight?",
+      "hideHeader": true,
+      "type": "height-weight",
+      "index": 3,
+      "next": {
+        "if": [
+          { "===": [{ "var": "gender" }, "female"] },
+          "WEIGHT_L_Q2",
+          "WEIGHT_L_Q3"
+        ]
+      }
+    },
+    "WEIGHT_L_Q2": {
+      "header": "Are you currently pregnant or breastfeeding?",
+      "type": "choice",
+      "next": "WEIGHT_L_Q3",
+      "index": 4,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_Q2_A1",
+          "next": "DISQUALIFY_PREGNANCY"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_Q2_A2"
+        }
+      ]
+    },
+    "WEIGHT_L_Q3": {
+      "header": "Have you ever been diagnosed with any of the following?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_Q4",
+      "index": 5,
+      "answerOptions": [
+        {
+          "text": "High cholesterol",
+          "code": "WEIGHT_L_Q3_A1"
+        },
+        {
+          "text": "Fatty liver disease",
+          "code": "WEIGHT_L_Q3_A2"
+        },
+        {
+          "text": "Prediabetes",
+          "code": "WEIGHT_L_Q3_A3"
+        },
+        {
+          "text": "High blood pressure",
+          "code": "WEIGHT_L_Q3_A4"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_Q3_A5",
+          "next": {
+            "if": [
+              {
+                "and": [
+                  { ">=": [{ "var": "BMI" }, 27] },
+                  {
+                    "<": [{ "var": "BMI" }, 30]
+                  }
+                ]
+              },
+              "DISQUALIFY_GLP1_Q2",
+              "WEIGHT_L_Q4"
+            ]
+          }
+        }
+      ]
+    },
+    "DISQUALIFY_GLP1_Q2": {
+      "type": "disqualify-glp1",
+      "next": "WEIGHT_L_Q4"
+    },
+    "WEIGHT_L_Q4": {
+      "header": "What is your weight loss goal?",
+      "type": "choice",
+      "next": "WEIGHT_L_Q5",
+      "index": 6,
+      "answerOptions": [
+        {
+          "text": "Lose 1-20 lbs for good",
+          "code": "WEIGHT_L_Q4_A1"
+        },
+        {
+          "text": "Lose 21-50 lbs for good",
+          "code": "WEIGHT_L_Q4_A2"
+        },
+        {
+          "text": "Lose over 50 lbs for good",
+          "code": "WEIGHT_L_Q4_A3"
+        },
+        {
+          "text": "Maintain my weight and get fit",
+          "code": "WEIGHT_L_Q4_A4"
+        },
+        {
+          "text": "Haven’t decided",
+          "code": "WEIGHT_L_Q4_A5"
+        }
+      ]
+    },
+    "WEIGHT_L_Q5": {
+      "header": "What goals are you looking to accomplish?",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_Q6",
+      "index": 7,
+      "answerOptions": [
+        {
+          "text": "Lose weight",
+          "code": "WEIGHT_L_Q5_A1"
+        },
+        {
+          "text": "Improve general health",
+          "code": "WEIGHT_L_Q5_A2"
+        },
+        {
+          "text": "Look better",
+          "code": "WEIGHT_L_Q5_A3"
+        },
+        {
+          "text": "Improve confidence",
+          "code": "WEIGHT_L_Q5_A4"
+        },
+        {
+          "text": "Increase energy",
+          "code": "WEIGHT_L_Q5_A5"
+        },
+        {
+          "text": "Better sex",
+          "code": "WEIGHT_L_Q5_A6"
+        }
+      ]
+    },
+    "WEIGHT_L_Q6": {
+      "header": "Which of the following have you tried in the past?",
+      "description": "Select all that you’ve tried.",
+      "next": "WEIGHT_L_Q7",
+      "type": "multiple-choice",
+      "index": 8,
+      "answerOptions": [
+        {
+          "text": "Keto or low carb",
+          "code": "WEIGHT_L_Q6_A1"
+        },
+        {
+          "text": "Plant-based",
+          "code": "WEIGHT_L_Q6_A2"
+        },
+        {
+          "text": "Macro or calorie counting",
+          "code": "WEIGHT_L_Q6_A3"
+        },
+        {
+          "text": "Weight Watchers",
+          "code": "WEIGHT_L_Q6_A4"
+        },
+        {
+          "text": "Noom",
+          "code": "WEIGHT_L_Q6_A5"
+        },
+        {
+          "text": "Calibrate",
+          "code": "WEIGHT_L_Q6_A6"
+        },
+        {
+          "text": "Found",
+          "code": "WEIGHT_L_Q6_A7"
+        },
+        {
+          "text": "Alpha",
+          "code": "WEIGHT_L_Q6_A8"
+        },
+        {
+          "text": "Push Health",
+          "code": "WEIGHT_L_Q6_A9"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_Q6_A10"
+        }
+      ]
+    },
+    "WEIGHT_L_Q7": {
+      "header": "Your customized prescription plan",
+      "description": "Reach your goals with Zealthy’s Weight Loss program. Led by doctors that will develop a personalized plan that includes medication and support.",
+      "type": "non-bundled-plan",
+      "next": "DELIVERY-ADDRESS",
+      "index": 9
+    },
+    "DELIVERY-ADDRESS": {
+      "type": "delivery-address",
+      "next": "WEIGHT_LOSS_BOR-Q1",
+      "index": 10
+    },
+    "WEIGHT_LOSS_BOR-Q1": {
+      "type": "weight-loss-bill-of-rights",
+      "index": 11
+    },
+    "DISQUALIFY_PREGNANCY": {
+      "header": "We’re sorry!",
+      "description": "Unfortunately, Zealthy can’t safely prescribe weight loss medication if you are currently pregnant, trying to get pregnant, and/or breastfeeding.",
+      "type": "alarm",
+      "buttonText": "Get healthy with Zealthy today"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "primary-care",
+  "version": "1",
+  "code": "PRIMARY_C",
+  "entry": "PRIMARY_C_Q1",
+  "questions": {
+    "PRIMARY_C_Q1": {
+      "header": "Please schedule your remote visit.",
+      "type": "primary-care-provider-schedule"
+    }
+  }
+}

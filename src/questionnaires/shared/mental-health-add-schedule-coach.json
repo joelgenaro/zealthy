@@ -1,0 +1,472 @@
+{
+  "name": "mental-health-add-schedule-coach",
+  "version": "1",
+  "code": "MENTAL_ADD_SCH_C",
+  "entry": "MENTAL_ADD_SCH_C_Q1",
+  "canvas_id": "e131b254-943f-43ca-9aee-b3a2d6060756",
+  "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+  "questions": {
+    "MENTAL_ADD_SCH_C_Q1": {
+      "header": "Zealthy mental health coaches are well trained to supplement your psychiatric care.",
+      "listItems": [
+        "We can match you to a coach, who will work directly with your provider to ensure that any appropriately prescribed medication is supplemented by the right emotional support.",
+        "You will be able to hold monthly 45-minute sessions with your coach and message them between sessions in your Zealthy portal."
+      ],
+      "type": "amh-message-effect",
+      "next": "MENTAL_ADD_SCH_C_Q2",
+      "buttonText": "Tell me more"
+    },
+    "MENTAL_ADD_SCH_C_Q2": {
+      "header": "9/10 members report that they benefitted from working with a Zealthy mental health coach.",
+      "description": "At Zealthy, we know that healing really happens through compassionate and ongoing support.",
+      "type": "mental-health-zealthy-program",
+      "next": "MENTAL_ADD_SCH_C_Q3"
+    },
+    "MENTAL_ADD_SCH_C_Q3": {
+      "header": "Achieve long-term results.",
+      "listItems": [
+        "Research consistently shows that behavioral interventions, such as 1:1 coaching, produce better long-term outcomes than medication alone.",
+        "For a limited time, we are offering your first month of coaching for just $49. After your first month, coaching is just $99/month, with no additional fees or co-pays. You can request another coach if it’s not the right fit or opt out anytime."
+      ],
+      "type": "add-mental-coaching",
+      "allowToSkip": true
+    },
+    "MENTAL_C_INTRO": {
+      "header": "Select your coach & schedule your first 1:1 video session.",
+      "description": "Zealthy works hard to match you with a mental health coach who can understand and empathize with you.",
+      "type": "message",
+      "next": "MENTAL_C_Q1"
+    },
+    "MENTAL_C_Q1": {
+      "header": "What is your gender identity?",
+      "canvas_linkId": "fa83eafe-e71d-4c77-8901-4dfa004b11c9",
+      "type": "choice",
+      "next": "MENTAL_C_Q2",
+      "subheaderBold": "Help us find the right coach for you.",
+      "subheader": "Please answer a few questions about yourself. Your answers will help us match you to the best Zealthy coach for you, and will also give your coach a starting point to get to know you.",
+      "answerOptions": [
+        { "text": "Woman", "code": "MENTAL_C_Q1_A1" },
+        { "text": "Man", "code": "MENTAL_C_Q1_A2" },
+        {
+          "text": "Non-binary",
+          "code": "MENTAL_C_Q1_A3"
+        },
+        {
+          "text": "Transfeminine",
+          "code": "MENTAL_C_Q1_A4"
+        },
+        {
+          "text": "Transmasculine",
+          "code": "MENTAL_C_Q1_A5"
+        },
+        { "text": "Agender", "code": "MENTAL_C_Q1_A6" },
+        {
+          "text": "Prefer not to say",
+          "code": "MENTAL_C_Q1_A7"
+        },
+        {
+          "text": "I don't know",
+          "code": "MENTAL_C_Q1_A8"
+        },
+        { "text": "Other", "code": "MENTAL_C_Q1_A9" }
+      ]
+    },
+    "MENTAL_C_Q2": {
+      "header": "How do you identify?",
+      "canvas_linkId": "c2266a2a-9638-4d77-afcc-049c17339809",
+      "type": "choice",
+      "next": "MENTAL_C_Q3",
+      "subheaderBold": "Help us find the right coach for you.",
+      "subheader": "Please answer a few questions about yourself. Your answers will help us match you to the best Zealthy coach for you, and will also give your coach a starting point to get to know you.",
+      "answerOptions": [
+        {
+          "text": "Straight",
+          "code": "MENTAL_C_Q2_A1"
+        },
+        { "text": "Gay", "code": "MENTAL_C_Q2_A2" },
+        { "text": "Lesbian", "code": "MENTAL_C_Q2_A3" },
+        {
+          "text": "Bi or pan",
+          "code": "MENTAL_C_Q2_A4"
+        },
+        {
+          "text": "Prefer not to say",
+          "code": "MENTAL_C_Q2_A5"
+        },
+        {
+          "text": "I don't know",
+          "code": "MENTAL_C_Q2_A6"
+        },
+        { "text": "Other", "code": "MENTAL_C_Q2_A7" }
+      ]
+    },
+    "MENTAL_C_Q3": {
+      "header": "What is your relationship status?",
+      "canvas_linkId": "b0050578-7d7f-4653-bc18-b0d938891671",
+      "type": "choice",
+      "next": "MENTAL_C_Q4",
+      "subheaderBold": "Help us find the right coach for you.",
+      "subheader": "Please answer a few questions about yourself. Your answers will help us match you to the best Zealthy coach for you, and will also give your coach a starting point to get to know you.",
+      "answerOptions": [
+        { "text": "Single", "code": "MENTAL_C_Q3_A1" },
+        {
+          "text": "In a relationship",
+          "code": "MENTAL_C_Q3_A2"
+        },
+        { "text": "Married", "code": "MENTAL_C_Q3_A3" },
+        {
+          "text": "Divorced",
+          "code": "MENTAL_C_Q3_A4"
+        },
+        { "text": "Widowed", "code": "MENTAL_C_Q3_A5" },
+        { "text": "Other", "code": "MENTAL_C_Q3_A6" }
+      ]
+    },
+    "MENTAL_C_Q4": {
+      "header": "Do you consider yourself to be religious?",
+      "canvas_linkId": "b0cb65c5-4cba-424e-8b52-183569c36248",
+      "type": "choice",
+      "next": "MENTAL_C_Q5",
+      "subheaderBold": "Help us find the right coach for you.",
+      "subheader": "Please answer a few questions about yourself. Your answers will help us match you to the best Zealthy coach for you, and will also give your coach a starting point to get to know you.",
+      "answerOptions": [
+        { "text": "Yes", "code": "MENTAL_C_Q4_A1" },
+        { "text": "No", "code": "MENTAL_C_Q4_A2" }
+      ]
+    },
+    "MENTAL_C_Q5": {
+      "header": "Have you done therapy or coaching before?",
+      "canvas_linkId": "55571c2e-e1e6-4e65-9e39-870ab9235769",
+      "type": "choice",
+      "next": "MENTAL_C_Q6",
+      "subheaderBold": "Help us find the right coach for you.",
+      "subheader": "Please answer a few questions about yourself. Your answers will help us match you to the best Zealthy coach for you, and will also give your coach a starting point to get to know you.",
+      "answerOptions": [
+        { "text": "Yes", "code": "MENTAL_C_Q5_A1" },
+        { "text": "No", "code": "MENTAL_C_Q5_A2" }
+      ]
+    },
+    "MENTAL_C_Q6": {
+      "header": "What are your expectations from your coach?",
+      "canvas_linkId": "a4cb99e5-90a1-4cdf-9394-ee795ae2ed0f",
+      "type": "multiple-choice",
+      "next": "MENTAL_C_Q7",
+      "subheaderBold": "Help us find the right coach for you.",
+      "subheader": "Please answer a few questions about yourself. Your answers will help us match you to the best Zealthy coach for you, and will also give your coach a starting point to get to know you.",
+      "answerOptions": [
+        {
+          "text": "Listening",
+          "code": "MENTAL_C_Q6_A1"
+        },
+        {
+          "text": "Exploring my past",
+          "code": "MENTAL_C_Q6_A2"
+        },
+        {
+          "text": "Teaching me new skills",
+          "code": "MENTAL_C_Q6_A3"
+        },
+        {
+          "text": "Challenging my beliefs",
+          "code": "MENTAL_C_Q6_A4"
+        },
+        {
+          "text": "Assigning me homework",
+          "code": "MENTAL_C_Q6_A5"
+        },
+        {
+          "text": "Guiding me to set goals",
+          "code": "MENTAL_C_Q6_A6"
+        },
+        {
+          "text": "Proactively checking in on me",
+          "code": "MENTAL_C_Q6_A7"
+        },
+        { "text": "Other", "code": "MENTAL_C_Q6_A8" },
+        {
+          "text": "I don't know",
+          "code": "MENTAL_C_Q6_A9"
+        }
+      ]
+    },
+    "MENTAL_C_Q7": {
+      "header": "Do you currently experience anxiety, panic attacks, or any phobias?",
+      "canvas_linkId": "8abb1887-b0a3-45f7-8964-6f1d542fa7d1",
+      "type": "choice",
+      "next": "MENTAL_C_Q8",
+      "subheaderBold": "Help us find the right coach for you.",
+      "subheader": "Please answer a few questions about yourself. Your answers will help us match you to the best Zealthy coach for you, and will also give your coach a starting point to get to know you.",
+      "answerOptions": [
+        { "text": "Yes", "code": "MENTAL_C_Q7_A1" },
+        { "text": "No", "code": "MENTAL_C_Q7_A2" }
+      ]
+    },
+    "MENTAL_C_Q8": {
+      "header": "How do you prefer to communicate with your coach?",
+      "canvas_linkId": "e67e396f-6c6c-4f41-b60f-d66ca24895af",
+      "type": "choice",
+      "next": "MENTAL_C_Q9",
+      "subheaderBold": "Help us find the right coach for you.",
+      "subheader": "Please answer a few questions about yourself. Your answers will help us match you to the best Zealthy coach for you, and will also give your coach a starting point to get to know you.",
+      "answerOptions": [
+        {
+          "text": "Mostly via messaging",
+          "code": "MENTAL_C_Q8_A1"
+        },
+        {
+          "text": "Mostly via phone or video sessions",
+          "code": "MENTAL_C_Q8_A2"
+        },
+        {
+          "text": "Not sure yet (decide later)",
+          "code": "MENTAL_C_Q8_A3"
+        }
+      ]
+    },
+    "MENTAL_C_Q9": {
+      "header": "Are there any specific preferences for your coach?",
+      "canvas_linkId": "e757b84e-c7af-4049-bcef-3327c01dcf76",
+      "type": "choice",
+      "next": "MENTAL_C_Q10",
+      "subheaderBold": "Help us find the right coach for you.",
+      "subheader": "Please answer a few questions about yourself. Your answers will help us match you to the best Zealthy coach for you, and will also give your coach a starting point to get to know you.",
+      "answerOptions": [
+        {
+          "text": "Male coach",
+          "code": "MENTAL_C_Q9_A1"
+        },
+        {
+          "text": "Female coach",
+          "code": "MENTAL_C_Q9_A2"
+        },
+        {
+          "text": "Christian-based coaching",
+          "code": "MENTAL_C_Q9_A3"
+        },
+        {
+          "text": "Coaching from the LGBTQ+ community",
+          "code": "MENTAL_C_Q9_A4"
+        },
+        {
+          "text": "Older coach (45+)",
+          "code": "MENTAL_C_Q9_A5"
+        },
+        {
+          "text": "Non-religious coach",
+          "code": "MENTAL_C_Q9_A6"
+        },
+        {
+          "text": "Coach of color",
+          "code": "MENTAL_C_Q9_A7"
+        }
+      ]
+    },
+    "MENTAL_C_Q10": {
+      "header": "Please mark all that apply.",
+      "canvas_linkId": "7b942168-6f34-4dcb-b0ed-47edc2eff3a3",
+      "type": "multiple-choice",
+      "next": "MENTAL_C_Q11",
+      "subheaderBold": "Help us find the right coach for you.",
+      "subheader": "Please answer a few questions about yourself. Your answers will help us match you to the best Zealthy coach for you, and will also give your coach a starting point to get to know you.",
+      "answerOptions": [
+        {
+          "text": "I'm a student",
+          "code": "MENTAL_C_Q10_A1"
+        },
+        {
+          "text": "I'm a veteran",
+          "code": "MENTAL_C_Q10_A2"
+        },
+        {
+          "text": "I'm disabled",
+          "code": "MENTAL_C_Q10_A3"
+        },
+        {
+          "text": "I'm unemployed",
+          "code": "MENTAL_C_Q10_A4"
+        },
+        {
+          "text": "I'm employed but my income is low",
+          "code": "MENTAL_C_Q10_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "MENTAL_C_Q10_A6"
+        }
+      ]
+    },
+    "MENTAL_C_Q11": {
+      "header": "I prefer a coach with experience in...",
+      "canvas_linkId": "205c387d-fe2f-4f5b-9dac-023f0dcbe323",
+      "type": "multiple-choice",
+      "next": "MENTAL_C_Q12",
+      "subheaderBold": "Help us find the right coach for you.",
+      "subheader": "Please answer a few questions about yourself. Your answers will help us match you to the best Zealthy coach for you, and will also give your coach a starting point to get to know you.",
+      "answerOptions": [
+        {
+          "text": "Depression",
+          "code": "MENTAL_C_Q11_A1"
+        },
+        {
+          "text": "Stress and anxiety",
+          "code": "MENTAL_C_Q11_A2"
+        },
+        {
+          "text": "Coping with addictions",
+          "code": "MENTAL_C_Q11_A3"
+        },
+        {
+          "text": "LGBTQ+ related issues",
+          "code": "MENTAL_C_Q11_A4"
+        },
+        {
+          "text": "Relationship issues",
+          "code": "MENTAL_C_Q11_A5"
+        },
+        {
+          "text": "Family conflicts",
+          "code": "MENTAL_C_Q11_A6"
+        },
+        {
+          "text": "Trauma and abuse",
+          "code": "MENTAL_C_Q11_A7"
+        },
+        {
+          "text": "Coping with grief and loss",
+          "code": "MENTAL_C_Q11_A8"
+        },
+        {
+          "text": "Eating disorders",
+          "code": "MENTAL_C_Q11_A9"
+        },
+        {
+          "text": "Sleeping disorders",
+          "code": "MENTAL_C_Q11_A10"
+        },
+        {
+          "text": "Parenting issues",
+          "code": "MENTAL_C_Q11_A11"
+        },
+        {
+          "text": "Motivation, self esteem and confidence",
+          "code": "MENTAL_C_Q11_A12"
+        },
+        {
+          "text": "Anger management",
+          "code": "MENTAL_C_Q11_A13"
+        },
+        {
+          "text": "Career difficulties",
+          "code": "MENTAL_C_Q11_A14"
+        },
+        {
+          "text": "Bipolar disorder",
+          "code": "MENTAL_C_Q11_A15"
+        },
+        {
+          "text": "Coping with life changes",
+          "code": "MENTAL_C_Q11_A16"
+        },
+        {
+          "text": "Executive and professional coaching",
+          "code": "MENTAL_C_Q11_A17"
+        },
+        {
+          "text": "Compassion fatigue",
+          "code": "MENTAL_C_Q11_A18"
+        },
+        {
+          "text": "Concentration, memory and focus (ADHD)",
+          "code": "MENTAL_C_Q11_A19"
+        }
+      ]
+    },
+    "MENTAL_C_Q12": {
+      "header": "I prefer a coach with experience in...",
+      "canvas_linkId": "c332dcf0-0eb3-4983-a3f8-a1fcd8c1b8e7",
+      "type": "multiple-choice",
+      "next": "MENTAL_C_Q13",
+      "subheaderBold": "Help us find the right coach for you.",
+      "subheader": "Please answer a few questions about yourself. Your answers will help us match you to the best Zealthy coach for you, and will also give your coach a starting point to get to know you.",
+      "answerOptions": [
+        {
+          "text": "Communication Problems",
+          "code": "MENTAL_C_Q12_A1"
+        },
+        {
+          "text": "Life Purpose",
+          "code": "MENTAL_C_Q12_A2"
+        },
+        {
+          "text": "Isolation/Loneliness",
+          "code": "MENTAL_C_Q12_A3"
+        },
+        {
+          "text": "Self-love",
+          "code": "MENTAL_C_Q12_A4"
+        },
+        {
+          "text": "Social Anxiety and Phobia",
+          "code": "MENTAL_C_Q12_A5"
+        },
+        {
+          "text": "Guilt and Shame",
+          "code": "MENTAL_C_Q12_A6"
+        },
+        {
+          "text": "Post-traumatic Stress",
+          "code": "MENTAL_C_Q12_A7"
+        },
+        {
+          "text": "Panic Disorder and Panic Attacks",
+          "code": "MENTAL_C_Q12_A8"
+        },
+        {
+          "text": "Control Issues",
+          "code": "MENTAL_C_Q12_A9"
+        },
+        {
+          "text": "Forgiveness",
+          "code": "MENTAL_C_Q12_A10"
+        },
+        {
+          "text": "Caregiver Issues and Stress",
+          "code": "MENTAL_C_Q12_A11"
+        },
+        {
+          "text": "Pregnancy and Childbirth",
+          "code": "MENTAL_C_Q12_A12"
+        },
+        {
+          "text": "Divorce and Separation",
+          "code": "MENTAL_C_Q12_A13"
+        }
+      ]
+    },
+    "MENTAL_C_Q13": {
+      "header": "What brings you here?",
+      "canvas_linkId": "a2cac0b9-6e7f-49a8-a57b-573ce25ce668",
+      "type": "text",
+      "input_placeholder": "What else would you like to share?",
+      "next": "MENTAL_ADD_SCH_C_Q5",
+      "subheaderBold": "Help us find the right coach for you.",
+      "subheader": "Please answer a few questions about yourself. Your answers will help us match you to the best Zealthy coach for you, and will also give your coach a starting point to get to know you."
+    },
+    "MENTAL_ADD_SCH_C_Q5": {
+      "header": "Select your coach & schedule your first 1:1 video session.",
+      "subheader": "Based on your responses, we have suggested a coach or coaches who may be a strong fit for you.",
+      "listItems": [
+        "You can schedule your first session with a coach here, which you will be able to hold monthly thereafter.",
+        "They will ensure you are getting holistic care, including medication and behavioral change personalized to you.",
+        "You can message your coach at any time on the Zealthy portal."
+      ],
+      "type": "mental-health-coach-schedule",
+      "allowToSkip": true,
+      "next": "MENTAL_ADD_SCH_C_Q4"
+    },
+    "MENTAL_ADD_SCH_C_Q4": {
+      "header": "",
+      "type": "mental-health-addon-payment"
+    }
+  }
+}

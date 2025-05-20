@@ -1,0 +1,14 @@
+{
+  "name": "mental-health-followup-results",
+  "care": "anxiety or depression",
+  "version": "1",
+  "code": "MENTAL-R",
+  "entry": "MENTAL-R-Q1",
+  "questions": {
+    "MENTAL-R-Q1": {
+      "header": "Thank you for working hard on yourself with your Zealthy Care Team recently.",
+      "type": "mental-health-result",
+      "buttonText": "Continue"
+    }
+  }
+}

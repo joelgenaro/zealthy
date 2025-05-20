@@ -1,0 +1,86 @@
+{
+  "name": "general-intake",
+  "version": "1",
+  "canvas_id": "d12060f3-a057-4616-87c3-f8cb38a75526",
+  "code": "INTAKE",
+  "codingSystem": "http://schemas.getzealthy.canvasmedical.com/fhir/systems/internal",
+  "entry": "intro",
+  "questions": {
+    "intro": {
+      "header": "Next, we have some additional medical questions to ask you.",
+      "description": "This will take 5 minutes. Your responses will help your provider offer you the most complete, high-quality care possible.",
+      "type": "message",
+      "next": "INTAKE_Q1"
+    },
+    "INTAKE_Q1": {
+      "canvas_linkId": "32f87410-3dea-4b14-9ded-07f5e69c2ddc",
+      "header": "Tell us more about your medical history.",
+      "label": "Current conditions",
+      "type": "medical-history",
+      "subType": "medical_conditions",
+      "next": "INTAKE_Q2",
+      "checkboxText": "I don’t have any conditions"
+    },
+    "INTAKE_Q2": {
+      "canvas_linkId": "c258a44d-bc2e-41fe-b859-ce789f6cc060",
+      "header": "Tell us more about your medical history.",
+      "label": "Current food and medication allergies",
+      "type": "medical-history",
+      "subType": "allergies",
+      "next": "INTAKE_Q3",
+      "checkboxText": "I don’t have any allergies"
+    },
+    "INTAKE_Q3": {
+      "canvas_linkId": "d5a3db60-49d4-4117-8bab-6cbef83c7dc6",
+      "header": "Tell us more about your medical history.",
+      "label": "Current medications, vitamins and supplements",
+      "type": "medical-history",
+      "subType": "current_medications",
+      "next": "INTAKE_Q4",
+      "checkboxText": "I don’t take any medications, vitamins, or supplements"
+    },
+    "INTAKE_Q4": {
+      "canvas_linkId": "3d21a829-4106-46fc-bbbd-2b42c4e04e56",
+      "header": "Do you have any of the following symptoms/conditions?",
+      "description": "Please select all that apply:",
+      "type": "multiple-choice",
+      "answerOptions": [
+        {
+          "text": "Fever above 102 degrees Fahrenheit",
+          "code": "INTAKE_Q4_A1",
+          "next": "IN_PERSON_CARE_DISCLAIMER"
+        },
+        {
+          "text": "Shortness of breath, history of asthma or COPD",
+          "code": "INTAKE_Q4_A2",
+          "next": "IN_PERSON_CARE_DISCLAIMER"
+        },
+        {
+          "text": "Severe chest or stomach pain",
+          "code": "INTAKE_Q4_A3",
+          "next": "IN_PERSON_CARE_DISCLAIMER"
+        },
+        {
+          "text": "Dehydration",
+          "code": "INTAKE_Q4_A4",
+          "next": "IN_PERSON_CARE_DISCLAIMER"
+        },
+        {
+          "text": "None of the above",
+          "code": "INTAKE_Q4_A5",
+          "next": "TRANSITION"
+        }
+      ]
+    },
+    "TRANSITION": {
+      "header": "You’re only steps away from getting the finest, most convenient medical care!",
+      "description": "Reminder to grab a copy of your photo ID now, as we’ll ask you to verify your identity to wrap up in a couple of minutes.",
+      "type": "message"
+    },
+    "IN_PERSON_CARE_DISCLAIMER": {
+      "header": "We recommend you seek in-person medical care.",
+      "description": "Most fevers will resolve in a few days, but we recommend seeing a medical provider in a primary care office or urgent care clinic.",
+      "type": "message"
+    }
+  }
+}

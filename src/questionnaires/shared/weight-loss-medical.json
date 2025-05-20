@@ -1,0 +1,62 @@
+{
+  "name": "weight-loss-medical",
+  "version": "1",
+  "code": "WEIGHT-LOSS-MEDICAL-A",
+  "entry": "WEIGHT-LOSS-MEDICAL-A-Q1",
+  "questions": {
+    "WEIGHT-LOSS-MEDICAL-A-Q1": {
+      "type": "weight-loss-medical",
+      "next": {
+        "if": [
+          { "!": [{ "var": "answers.WEIGHT_L_Q6" }, true] },
+          "",
+          {
+            "all": [
+              { "var": "answers.WEIGHT_L_Q6.answer" },
+              {
+                "===": [{ "var": "valueCoding.display" }, "None of the above"]
+              }
+            ]
+          },
+          "",
+          "DIAGNOSIS_DETAILS"
+        ]
+      },
+      "index": 5
+    },
+    "DIAGNOSIS_DETAILS": {
+      "type": "iterative",
+      "dependency": "WEIGHT_L_Q6",
+      "template": "weight-loss-diagnosis",
+      "next": {
+        "if": [
+          {
+            "and": [
+              { "!!": [{ "var": "answers.WEIGHT_L_Q7" }, true] },
+              {
+                "all": [
+                  { "var": "answers.WEIGHT_L_Q7.answer" },
+                  {
+                    "===": [
+                      { "var": "valueCoding.display" },
+                      "None of the above"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "DIAGNOSIS_DETAILS_2"
+        ]
+      },
+      "index": 6
+    },
+
+    "DIAGNOSIS_DETAILS_2": {
+      "type": "iterative",
+      "dependency": "WEIGHT_L_Q7",
+      "template": "weight-loss-diagnosis",
+      "index": 7
+    }
+  }
+}

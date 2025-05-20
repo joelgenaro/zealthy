@@ -1,0 +1,88 @@
+{
+  "name": "weight-loss-continue",
+  "version": "1",
+  "code": "WEIGHT_L_CONTINUE",
+  "entry": "INSURANCE-INFORMATION-A-Q1",
+  "questions": {
+    "INSURANCE-INFORMATION-A-Q1": {
+      "type": "insurance-information",
+      "index": 1,
+      "next": "PHARMACY_P_Q1"
+    },
+    "PHARMACY_P_Q1": {
+      "type": "pharmacy-select",
+      "index": 2,
+      "next": "LAB-OR-BLOOD-TESTS-A-Q1"
+    },
+    "LAB-OR-BLOOD-TESTS-A-Q1": {
+      "type": "lab-or-blood-tests",
+      "next": {
+        "if": [
+          { "===": [{ "var": "region" }, "FL"] },
+          "WEIGHT_LOSS_BOR-Q1",
+          "WEIGHT_L_CONTINUE_Q1"
+        ]
+      },
+      "index": 3
+    },
+    "WEIGHT_LOSS_BOR-Q1": {
+      "type": "weight-loss-bill-of-rights",
+      "next": "WEIGHT_L_CONTINUE_Q1",
+      "index": 4
+    },
+    "WEIGHT_L_CONTINUE_Q1": {
+      "header": "What race do you identify with?",
+      "description": "You may select all that apply. At times, our providers will use this for clinical decisions.",
+      "index": 5,
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_CONTINUE_Q2",
+      "answerOptions": [
+        {
+          "text": "White",
+          "code": "WEIGHT_L_POST_Q17_A1"
+        },
+        {
+          "text": "Black or African American",
+          "code": "WEIGHT_L_POST_Q17_A2"
+        },
+        {
+          "text": "Asian",
+          "code": "WEIGHT_L_POST_Q17_A3"
+        },
+        {
+          "text": "American Indian or Alaska Native",
+          "code": "WEIGHT_L_POST_Q17_A4"
+        },
+        {
+          "text": "Native Hawaiian or other Pacific Islander",
+          "code": "WEIGHT_L_POST_Q17_A5"
+        }
+      ]
+    },
+    "WEIGHT_L_CONTINUE_Q2": {
+      "header": "Please describe your weight loss journey.",
+      "description": "How long have you struggled with weight? Are there particular life events or triggers for your weight gain?",
+      "type": "text",
+      "index": 6,
+      "next": "WEIGHT-LOSS-PREFERENCE-A-Q1",
+      "input_placeholder": "Share your story"
+    },
+    "WEIGHT-LOSS-PREFERENCE-A-Q1": {
+      "type": "weight-loss-preference",
+      "next": "WEIGHT-LOSS-PAY-A-Q1",
+      "index": 7
+    },
+    "WEIGHT-LOSS-PAY-A-Q1": {
+      "type": "weight-loss-pay",
+      "next": "WEIGHT-LOSS-TREATMENT-A",
+      "index": 8
+    },
+    "WEIGHT-LOSS-TREATMENT-A": {
+      "type": "weight-loss-treatment",
+      "index": 9
+    },
+    "RESPONSES-REVIEWED-A-Q1": {
+      "type": "responses-reviewed"
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "name": "phq-9",
+  "care": "anxiety or depression",
+  "version": "1",
+  "canvas_id": "72d7a50b-68a6-4c8a-bf8a-45e5174673fd",
+  "code": "44249-1",
+  "codingSystem": "http://loinc.org",
+  "intro": {
+    "header": "It's time for your anxiety or depression check-in.",
+    "description": "We listen. We care. We are committed to supporting your health care journey. Please proceed to Zealthy’s research-backed anxiety or depression check-in and help us help you stay on track with your health goals.",
+    "buttonText": "Complete check-in now"
+  },
+  "entry": "44250-9",
+  "questions": {
+    "44250-9": {
+      "canvas_linkId": "de480462-2b8c-470d-aa72-2857e6ffa945",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Little interest or pleasure in doing things.",
+      "type": "choice",
+      "next": "44255-8",
+      "answerOptions": [
+        { "text": "Not at all", "code": "LA6568-5" },
+        { "text": "Several days", "code": "LA6569-3" },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44255-8": {
+      "canvas_linkId": "48845cd9-0613-4f6b-b479-1642c2320b17",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Feeling down, depressed, or hopeless.",
+      "type": "choice",
+      "next": "44259-0",
+      "answerOptions": [
+        { "text": "Not at all", "code": "LA6568-5" },
+        { "text": "Several days", "code": "LA6569-3" },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44259-0": {
+      "canvas_linkId": "a4d0ff27-3a04-43ca-90de-98e2cd761495",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Trouble falling or staying asleep, or sleeping too much.",
+      "type": "choice",
+      "next": "44254-1",
+      "answerOptions": [
+        { "text": "Not at all", "code": "LA6568-5" },
+        { "text": "Several days", "code": "LA6569-3" },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44254-1": {
+      "canvas_linkId": "81274d4e-ffa2-44ed-bef9-8457babf334d",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Feeling tired or having little energy.",
+      "type": "choice",
+      "next": "44251-7",
+      "answerOptions": [
+        { "text": "Not at all", "code": "LA6568-5" },
+        { "text": "Several days", "code": "LA6569-3" },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44251-7": {
+      "canvas_linkId": "c3666fda-6946-4a92-89cc-a1b8478e2e1f",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Poor appetite or overeating.",
+      "type": "choice",
+      "next": "44258-2",
+      "answerOptions": [
+        { "text": "Not at all", "code": "LA6568-5" },
+        { "text": "Several days", "code": "LA6569-3" },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44258-2": {
+      "canvas_linkId": "decf388b-8f89-4a53-88d2-eaac6dcef195",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Feeling bad about yourself - or that you are a failure or have let yourself or your family down.",
+      "type": "choice",
+      "next": "44252-5",
+      "answerOptions": [
+        { "text": "Not at all", "code": "LA6568-5" },
+        { "text": "Several days", "code": "LA6569-3" },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44252-5": {
+      "canvas_linkId": "a34c0918-2628-4894-b231-09f00d548e02",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Trouble concentrating on things, such as reading the newspaper or watching television.",
+      "type": "choice",
+      "next": "44253-3",
+      "answerOptions": [
+        { "text": "Not at all", "code": "LA6568-5" },
+        { "text": "Several days", "code": "LA6569-3" },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44253-3": {
+      "canvas_linkId": "68849908-4709-455f-a0bc-d6341b1a0bb0",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual.",
+      "type": "choice",
+      "next": "44260-8",
+      "answerOptions": [
+        { "text": "Not at all", "code": "LA6568-5" },
+        { "text": "Several days", "code": "LA6569-3" },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9"
+        }
+      ]
+    },
+    "44260-8": {
+      "canvas_linkId": "c86cf85c-15fd-46cb-b2ec-5d20f095170d",
+      "subheader": "Over the past 2 weeks, how often have you experienced the following?",
+      "header": "Thoughts that you would be better off dead, or of hurting yourself in some way.",
+      "type": "choice",
+      "answerOptions": [
+        { "text": "Not at all", "code": "LA6568-5" },
+        {
+          "text": "Several days",
+          "code": "LA6569-3",
+          "next": "PHQ_9_S"
+        },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1",
+          "next": "PHQ_9_S"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9",
+          "next": "PHQ_9_S"
+        }
+      ]
+    },
+    "PHQ_9_S": {
+      "codingSystem": "http://schemas.getzealthy.canvasmedical.com/fhir/systems/internal",
+      "canvas_linkId": "247e9a2d-c6cc-4e0d-930c-86d8555d60dd",
+      "subheader": "You indicated that you have thought about hurting yourself or that you would be better off dead.",
+      "header": "Would you describe these recent thoughts as:",
+      "type": "choice",
+      "answerOptions": [
+        {
+          "text": "A vague thought or feeling",
+          "code": "PHQ_9_S_A1",
+          "next": "S_DISCLAIMER"
+        },
+        {
+          "text": "Something I have made serious plans for",
+          "code": "PHQ_9_S_A2",
+          "next": "S_ALARM"
+        }
+      ]
+    },
+    "S_DISCLAIMER": {
+      "type": "suicide-disclaimer",
+      "header": "If you are thinking about hurting yourself, please seek help using the following resources:",
+      "buttonText": "I understand"
+    },
+    "S_ALARM": {
+      "type": "suicide-alarm",
+      "header": "If you are planning to hurt yourself, please seek immediate help with the following resources:"
+    }
+  }
+}

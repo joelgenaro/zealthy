@@ -1,0 +1,13 @@
+{
+  "name": "weight-loss-schedule-coach",
+  "version": "1",
+  "code": "WEIGHT-SCH-C",
+  "entry": "WEIGHT-SCH-C-Q1",
+  "questions": {
+    "WEIGHT-SCH-C-Q1": {
+      "header": "Select your coach & schedule your first 1:1 video session.",
+      "type": "weight-loss-coach-schedule",
+      "allowToSkip": true
+    }
+  }
+}

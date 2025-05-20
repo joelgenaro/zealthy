@@ -1,0 +1,475 @@
+{
+  "name": "birth-control",
+  "version": "1",
+  "canvas_id": "6302072c-e18c-4bb5-a9a6-2354ad09d6f9",
+  "code": "BIRTH_C",
+  "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+  "intro": {
+    "header": "Let’s find the right birth control for you.",
+    "description": "Birth control is a basic need, but access to it isn’t always easy. Get birth control online through Zealthy, all from the comfort of your home. No insurance required.",
+    "listItems": [
+      "Share information about your health history (this will only take 5 minutes).",
+      "A Zealthy provider will review and write your prescription, if appropriate.",
+      "Get birth control delivered to your door and receive on-time refills."
+    ],
+    "buttonText": "Find my birth control"
+  },
+  "entry": "BIRTH_C_Q1",
+  "questions": {
+    "BIRTH_C_Q1": {
+      "header": "Have you ever used birth control?",
+      "description": "Select all that apply:",
+      "canvas_linkId": "56d74bc9-043d-4957-b803-52d5e7f47570",
+      "type": "multiple-choice",
+      "next": "BIRTH_C_Q2",
+      "answerOptions": [
+        {
+          "text": "Pill",
+          "code": "BIRTH_C_Q1_A1"
+        },
+        {
+          "text": "Patch",
+          "code": "BIRTH_C_Q1_A2"
+        },
+        {
+          "text": "Ring",
+          "code": "BIRTH_C_Q1_A3"
+        },
+        {
+          "text": "None of the above",
+          "code": "BIRTH_C_Q1_A4"
+        }
+      ]
+    },
+    "BIRTH_C_Q2": {
+      "header": "Were you happy with the birth control(s) you used previously?",
+      "canvas_linkId": "73068f8c-fc9a-4467-964c-d733d775c270",
+      "type": "choice-details",
+      "next": "BIRTH_C_Q5",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "BIRTH_C_Q2_A1"
+        },
+        {
+          "text": "No",
+          "code": "BIRTH_C_Q2_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "BIRTH_C_Q2_A1",
+        "code": "BIRTH_C_Q3",
+        "type": "text",
+        "canvas_linkId": "38ad604f-8153-4fd0-8484-2093bba91579",
+        "description": "What brand of birth control did you use?"
+      }
+    },
+    "BIRTH_C_Q5": {
+      "header": "Do any of the following apply to you?",
+      "description": "Select all that apply:",
+      "canvas_linkId": "a2863e75-7239-4d0a-8f7d-970817b35326",
+      "type": "multiple-choice",
+      "next": "BIRTH_C_Q6",
+      "answerOptions": [
+        {
+          "text": "I am pregnant",
+          "code": "BIRTH_C_Q5_A1",
+          "next": "DISQUALIFY_PREGNANCY"
+        },
+        {
+          "text": "I am breastfeeding",
+          "code": "BIRTH_C_Q5_A2",
+          "next": "DISQUALIFY_PREGNANCY"
+        },
+        {
+          "text": "I had a child in the last 6 months",
+          "code": "BIRTH_C_Q5_A3",
+          "next": "DISQUALIFY_PREGNANCY"
+        },
+        {
+          "text": "None of the above",
+          "code": "BIRTH_C_Q5_A4"
+        }
+      ]
+    },
+    "BIRTH_C_Q6": {
+      "header": "How many cigarettes do you smoke per day?",
+      "canvas_linkId": "b896a148-0b34-4b4e-9216-840d5718516e",
+      "type": "choice",
+      "next": "BIRTH_C_Q7-1",
+      "answerOptions": [
+        {
+          "text": "None at all",
+          "code": "BIRTH_C_Q6_A1"
+        },
+        {
+          "text": "1-15",
+          "code": "BIRTH_C_Q6_A2"
+        },
+        {
+          "text": "15+",
+          "code": "BIRTH_C_Q6_A3"
+        }
+      ]
+    },
+    "BIRTH_C_Q7": {
+      "header": "Have you had your blood pressure measured in the last year?",
+      "description": "It’s important to provide a recent reading as it can affect what types of medications are safe for you.",
+      "canvas_linkId": "",
+      "type": "choice",
+      "next": "BIRTH_C_Q7-1",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "BIRTH_C_Q7_A1"
+        },
+        {
+          "text": "No",
+          "code": "BIRTH_C_Q7_A2",
+          "next": "DISCLAIMER_BLOOD_PRESSURE"
+        }
+      ]
+    },
+    "BIRTH_C_Q7-1": {
+      "header": "What was your most recent blood pressure reading?",
+      "canvas_linkId": "f5f3d355-ccba-4d03-8e88-3d443f01e84c",
+      "type": "choice",
+      "next": "BIRTH_C_Q8",
+      "answerOptions": [
+        {
+          "text": "I’m not sure but it was within the normal range",
+          "code": "BIRTH_C_Q7-1_A1"
+        },
+        {
+          "text": "Elevated (130-139/80-89)",
+          "code": "BIRTH_C_Q7-1_A3"
+        },
+        {
+          "text": "High (140-149/90-99)",
+          "code": "BIRTH_C_Q7-1_A4"
+        },
+        {
+          "text": "Very High (More than 150/100)",
+          "code": "BIRTH_C_Q7-1_A5",
+          "next": "BIRTH_C_Q7-2"
+        }
+      ]
+    },
+    "BIRTH_C_Q7-2": {
+      "header": "Are you on any blood pressure medications?",
+      "type": "choice-details",
+      "next": "BIRTH_C_Q8",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "BIRTH_C_Q7-2_A1"
+        },
+        {
+          "text": "No",
+          "code": "BIRTH_C_Q7-2_A2",
+          "next": "DISQUALIFY_HEALTH_HISTORY"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "BIRTH_C_Q7-2_A1",
+        "code": "BIRTH_C_Q7-2A",
+        "type": "text",
+        "description": "Please list medications"
+      }
+    },
+    "BIRTH_C_Q8": {
+      "header": "Do you have or have you had any of the following conditions?",
+      "description": "Select all that apply:",
+      "canvas_linkId": "10c8651c-6a0d-4ccd-b221-1ebc25b0158d",
+      "type": "multiple-choice",
+      "next": "BIRTH_C_Q9",
+      "answerOptions": [
+        {
+          "text": "Stroke or heart attack",
+          "code": "BIRTH_C_Q8_A1"
+        },
+        {
+          "text": "Migraines",
+          "code": "BIRTH_C_Q8_A2",
+          "next": {
+            "if": [
+              {
+                "===": [{ "var": "variant8284" }, "Variation-1"]
+              },
+              "MIGRAINE_AURA_CHECK",
+              null
+            ]
+          }
+        },
+        {
+          "text": "Liver conditions",
+          "code": "BIRTH_C_Q8_A3"
+        },
+        {
+          "text": "Cancer",
+          "code": "BIRTH_C_Q8_A4"
+        },
+        {
+          "text": "Gall bladder conditions",
+          "code": "BIRTH_C_Q8_A5"
+        },
+        {
+          "text": "Diabetes",
+          "code": "BIRTH_C_Q8_A6"
+        },
+        {
+          "text": "None of the above",
+          "code": "BIRTH_C_Q8_A7"
+        }
+      ]
+    },
+    "BIRTH_C_Q9": {
+      "header": "Have you had any of these conditions linked to blood clots?",
+      "description": "Select all that apply:",
+      "canvas_linkId": "fe67f2cc-0166-4710-a5a4-8e304f34ca75",
+      "type": "multiple-choice",
+      "next": "BIRTH_C_Q9-1",
+      "answerOptions": [
+        {
+          "text": "Blood clot(s)",
+          "code": "BIRTH_C_Q9_A1",
+          "next": "DISQUALIFY_HEALTH_HISTORY"
+        },
+        {
+          "text": "Blood clotting disorder",
+          "code": "BIRTH_C_Q9_A2"
+        },
+        {
+          "text": "Prolonged bed rest",
+          "code": "BIRTH_C_Q9_A3"
+        },
+        {
+          "text": "Unable to move a limb",
+          "code": "BIRTH_C_Q9_A4"
+        },
+        {
+          "text": "None of the above",
+          "code": "BIRTH_C_Q9_A5"
+        }
+      ]
+    },
+    "BIRTH_C_Q9-1": {
+      "header": "Do you have any other medical conditions?",
+      "canvas_linkId": "",
+      "type": "choice-details",
+      "next": "BIRTH_C_Q9-2",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "BIRTH_C_Q9-1_A1"
+        },
+        {
+          "text": "No",
+          "code": "BIRTH_C_Q9-1_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "BIRTH_C_Q9-1_A1",
+        "code": "BIRTH_C_Q9-1A",
+        "type": "text",
+        "canvas_linkId": "",
+        "description": "Please list your diagnosed medical conditions."
+      }
+    },
+    "BIRTH_C_Q9-2": {
+      "header": "Do you have any drug allergies?",
+      "canvas_linkId": "",
+      "type": "choice-details",
+      "next": "BIRTH_C_Q10",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "BIRTH_C_Q9-2_A1"
+        },
+        {
+          "text": "No",
+          "code": "BIRTH_C_Q9-2_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "BIRTH_C_Q9-2_A1",
+        "code": "BIRTH_C_Q9-2A",
+        "type": "text",
+        "canvas_linkId": "",
+        "description": "Please list your drug allergies below."
+      }
+    },
+    "BIRTH_C_Q10": {
+      "header": "Will you be using birth control to skip your periods?",
+      "canvas_linkId": "86a01932-e0cd-4f0a-9d9f-405d29e68d81",
+      "type": "choice",
+      "next": "BIRTH_C_Q11",
+      "answerOptions": [
+        {
+          "text": "Yes, I want to skip my periods",
+          "code": "BIRTH_C_Q10_A1"
+        },
+        {
+          "text": "No, I want to have my period every month",
+          "code": "BIRTH_C_Q10_A2"
+        }
+      ]
+    },
+    "BIRTH_C_Q11": {
+      "header": "Tell us any medications and/or herbal supplements you are currently taking besides birth control medication. If there are none, you can say none.",
+      "canvas_linkId": "",
+      "type": "text",
+      "next": "BIRTH_C_Q12"
+    },
+    "BIRTH_C_Q12": {
+      "header": "Have you had negative reactions to birth control?",
+      "canvas_linkId": "69bdabe8-6c9a-487c-aed8-53a992d3a818",
+      "type": "choice-details",
+      "next": {
+        "if": [
+          {
+            "===": [{ "var": "birthControlVariation" }, "V1-old-flow"]
+          },
+          "BIRTH_C_Q14",
+          "BIRTH_C_Q16"
+        ]
+      },
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "BIRTH_C_Q12_A1"
+        },
+        {
+          "text": "No",
+          "code": "BIRTH_C_Q12_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "BIRTH_C_Q12_A1",
+        "code": "BIRTH_C_Q13",
+        "type": "text",
+        "canvas_linkId": "2d01d2ee-9484-4921-8d62-b648250a90ac",
+        "description": "Please share what brand of birth control caused the adverse reaction and describe what you experienced."
+      }
+    },
+    "BIRTH_C_Q14": {
+      "header": "Almost done.",
+      "description": "If our medical team has all the information needed from your health consultation, they will immediately select your birth control. We are available to answer any questions you have.",
+      "canvas_linkId": "bfcabf1a-985d-4fd0-b053-70f8c879375a",
+      "type": "choice-details",
+      "next": "BIRTH_C_Q16",
+      "answerOptions": [
+        {
+          "text": "That works for me",
+          "code": "BIRTH_C_Q14_A1"
+        },
+        {
+          "text": "I have a preference about my birth control.",
+          "code": "BIRTH_C_Q14_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "BIRTH_C_Q14_A2",
+        "code": "BIRTH_C_Q15",
+        "type": "text",
+        "canvas_linkId": "bc15b70f-ecef-452f-a44c-8874a046964f",
+        "description": "Tell us more",
+        "detail": "Please tell us the medication you are looking for and why."
+      }
+    },
+    "BIRTH_C_Q16": {
+      "header": "Add emergency contraception for as little as $30!",
+      "description": "Levonorgestrel is an emergency contraception pill that may be useful to have on hand as a backup to regular birth control.",
+      "canvas_linkId": "09e0ef5c-ccaa-4777-bbd9-0c0e79f0fb2f",
+      "type": "emergency-contraception",
+      "next": {
+        "if": [
+          {
+            "===": [{ "var": "birthControlVariation" }, "V1-old-flow"]
+          },
+          "BIRTH_C_Q17",
+          "BIRTH_C_Q17-A"
+        ]
+      },
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "BIRTH_C_Q16_A1"
+        },
+        {
+          "text": "No",
+          "code": "BIRTH_C_Q16_A2"
+        }
+      ]
+    },
+    "BIRTH_C_Q17": {
+      "header": "We’re ready to provide you with birth control.",
+      "description": "How often would you like to receive your birth control? Pricing refers to generic pills. Pay as little as $15/month without insurance.",
+      "canvas_linkId": "c47e9757-e1f6-49da-a380-c7890dc7f1ed",
+      "type": "birth-control-treatment-select",
+      "answerOptions": [
+        {
+          "text": "3 packs every 3 months",
+          "code": "BIRTH_C_Q17_A1"
+        },
+        {
+          "text": "6 packs every 6 months",
+          "code": "BIRTH_C_Q17_A2"
+        }
+      ],
+
+      "buttonText": "Continue with birth control",
+      "footer": {
+        "description": "Price refers to generic pills.",
+        "detail": "If your Zealthy provider determines that branded pills are better, price may vary."
+      }
+    },
+    "BIRTH_C_Q17-A": {
+      "header": "Please specify what your preferred birth control medication and quantity is:",
+      "type": "birth-control-treatment-select-v2",
+      "hideHeader": true
+    },
+    "MIGRAINE_AURA_CHECK": {
+      "header": "How would you describe your migraines?",
+      "canvas_linkId": "c47e9757-e1f6-49da-a380-c7890dc7f1ed",
+      "type": "choice",
+      "next": "BIRTH_C_Q9",
+      "answerOptions": [
+        {
+          "text": "With aura",
+          "code": "MIGRAINE_AURA_CHECK_A1",
+          "next": "DISQUALIFY_MIGRAINE_AURA"
+        },
+        {
+          "text": "Without aura",
+          "code": "MIGRAINE_AURA_CHECK_A2",
+          "next": "BIRTH_C_Q9"
+        }
+      ]
+    },
+    "DISQUALIFY_MIGRAINE_AURA": {
+      "header": "We’re sorry!",
+      "description": "Unfortunately, Zealthy can’t safely prescribe birth control if you experience migraines with aura.",
+      "type": "alarm",
+      "buttonText": "Get healthy with Zealthy today"
+    },
+    "DISQUALIFY_PREGNANCY": {
+      "header": "We’re sorry!",
+      "description": "Unfortunately, Zealthy can’t safely prescribe birth control if you are pregnant, breastfeeding, and/or had a child in the last six weeks.",
+      "type": "alarm",
+      "buttonText": "Get healthy with Zealthy today"
+    },
+    "DISCLAIMER_BLOOD_PRESSURE": {
+      "header": "We’ll need a blood pressure reading.",
+      "description": "Go ahead and complete your health assessment, but your prescription won’t be processed until you tell us your blood pressure numbers. You can have your blood pressure checked at most pharmacies or use a home blood pressure cuff. If you aren’t sure when you last had it taken, call your doctor’s office and ask if it was within the last year and what the numbers were. After you submit your request, we will send you a message reminding you to tell us your blood pressure.",
+      "type": "message",
+      "buttonText": "I understand",
+      "next": "BIRTH_C_Q8"
+    },
+    "DISQUALIFY_HEALTH_HISTORY": {
+      "header": "We’re sorry!",
+      "description": "Unfortunately, based on your previous response, it appears that birth control at Zealthy may not be a clinically appropriate option for you. ",
+      "type": "alarm"
+    }
+  }
+}

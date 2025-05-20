@@ -1,0 +1,271 @@
+{
+  "name": "weight-loss-bundled",
+  "care": "weight loss",
+  "version": "1",
+  "canvas_id": "153fb75a-cea8-482d-a028-ed6ce5cebcc4",
+  "code": "WEIGHT_L",
+  "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+  "entry": "WEIGHT_L_Q1",
+  "questions": {
+    "WEIGHT_L_Q1": {
+      "header": "What’s your current height and weight?",
+      "hideHeader": true,
+      "type": "height-weight",
+      "canvas_linkId": "279a41fc-3407-454f-849b-655f61f1a70d",
+      "index": 3,
+      "next": {
+        "if": [
+          { "===": [{ "var": "gender" }, "female"] },
+          "WEIGHT_L_Q2",
+          {
+            "===": [
+              { "var": "potentialInsurance" },
+              "Semaglutide Bundled Oral Pills"
+            ]
+          },
+          "CONGRATULATION",
+          "WEIGHT_L_Q3"
+        ]
+      }
+    },
+    "WEIGHT_L_Q2": {
+      "header": "Are you currently pregnant or breastfeeding?",
+      "canvas_linkId": "a1138294-9677-4230-b4bf-8d126e28e0de",
+      "type": "choice",
+      "index": 6,
+      "next": {
+        "if": [
+          {
+            "===": [
+              { "var": "potentialInsurance" },
+              "Semaglutide Bundled Oral Pills"
+            ]
+          },
+          "CONGRATULATION",
+          "WEIGHT_L_Q3"
+        ]
+      },
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_Q2_A1",
+          "next": "DISQUALIFY_PREGNANCY"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_Q2_A2"
+        }
+      ]
+    },
+    "WEIGHT_L_Q3": {
+      "canvas_linkId": "0d9ca9df-3652-4415-a6cc-44dfa5c641a0",
+      "header": "Have you ever been diagnosed with any of the following?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_Q4",
+      "answerOptions": [
+        {
+          "text": "Type 1 diabetes",
+          "code": "WEIGHT_L_Q3_A1"
+        },
+        {
+          "text": "Pancreatitis",
+          "code": "WEIGHT_L_Q3_A2"
+        },
+        {
+          "text": "Gastroparesis",
+          "code": "WEIGHT_L_Q3_A3"
+        },
+        {
+          "text": "Seizures",
+          "code": "WEIGHT_L_Q3_A4"
+        },
+        {
+          "text": "Glaucoma",
+          "code": "WEIGHT_L_Q3_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_Q3_A6"
+        }
+      ]
+    },
+    "WEIGHT_L_Q4": {
+      "header": "¿Cuál es tu objetivo de pérdida de peso?",
+      "type": "choice",
+      "next": "WEIGHT_L_Q5",
+      "answerOptions": [
+        {
+          "text": "Perder 1-20 libras para siempre",
+          "code": "WEIGHT_L_Q4_A1"
+        },
+        {
+          "text": "Perder 21-50 libras para siempre",
+          "code": "WEIGHT_L_Q4_A2"
+        },
+        {
+          "text": "Perder más de 50 libras para siempre",
+          "code": "WEIGHT_L_Q4_A3"
+        },
+        {
+          "text": "Mantener mi peso y ponerme en forma",
+          "code": "WEIGHT_L_Q4_A4"
+        },
+        {
+          "text": "No he decidido",
+          "code": "WEIGHT_L_Q4_A5"
+        }
+      ]
+    },
+    "WEIGHT_L_Q5": {
+      "header": "¿Qué objetivos estás buscando lograr?",
+      "description": "Selecciona todas las que apliquen:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_Q6",
+      "canvas_linkId": "87bc52d5-f0d8-4ca3-968c-a173d1c4cfbf",
+      "answerOptions": [
+        {
+          "text": "Perder peso",
+          "code": "WEIGHT_L_Q5_A1"
+        },
+        {
+          "text": "Mejorar la salud general",
+          "code": "WEIGHT_L_Q5_A2"
+        },
+        {
+          "text": "Verse mejor",
+          "code": "WEIGHT_L_Q5_A3"
+        },
+        {
+          "text": "Mejorar la confianza",
+          "code": "WEIGHT_L_Q5_A4"
+        },
+        {
+          "text": "Aumentar la energía",
+          "code": "WEIGHT_L_Q5_A5"
+        },
+        {
+          "text": "Mejorar la vida sexual",
+          "code": "WEIGHT_L_Q5_A6"
+        }
+      ]
+    },
+    "WEIGHT_L_Q6": {
+      "header": "Which of the following have you tried in the past?",
+      "canvas_linkId": "a0409aeb-f814-42ef-b94c-6d8d5691bc11",
+      "description": "Select all that you’ve tried.",
+      "next": {
+        "if": [
+          {
+            "===": [{ "var": "potentialInsurance" }, "Semaglutide Bundled"]
+          },
+          "RESULTS",
+          "WEIGHT_L_Q7"
+        ]
+      },
+      "type": "multiple-choice",
+      "answerOptions": [
+        {
+          "text": "Keto or low carb",
+          "code": "WEIGHT_L_Q6_A1"
+        },
+        {
+          "text": "Plant-based",
+          "code": "WEIGHT_L_Q6_A2"
+        },
+        {
+          "text": "Macro or calorie counting",
+          "code": "WEIGHT_L_Q6_A3"
+        },
+        {
+          "text": "Weight Watchers",
+          "code": "WEIGHT_L_Q6_A4"
+        },
+        {
+          "text": "Noom",
+          "code": "WEIGHT_L_Q6_A5"
+        },
+        {
+          "text": "Calibrate",
+          "code": "WEIGHT_L_Q6_A6"
+        },
+        {
+          "text": "Found",
+          "code": "WEIGHT_L_Q6_A7"
+        },
+        {
+          "text": "Alpha",
+          "code": "WEIGHT_L_Q6_A8"
+        },
+        {
+          "text": "Push Health",
+          "code": "WEIGHT_L_Q6_A9"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_Q6_A10"
+        }
+      ]
+    },
+
+    "RESULTS": {
+      "type": "analyze-weight-loss-results",
+      "hideFooter": true,
+      "hideHeader": true,
+      "next": "WEIGHT_L_Q7"
+    },
+
+    "WEIGHT_L_Q7": {
+      "canvas_linkId": "576e8d8a-3f6b-46d6-b61c-64a2d24d17f1",
+      "header": "Your customized prescription plan",
+      "description": "Reach your goals with Zealthy’s [medication] medical program. Led by doctors that will develop a personalized plan that includes medication and support.",
+      "type": "bundled-plan",
+      "next": "DELIVERY-ADDRESS"
+    },
+    "ATTENTION_HEART_RATE": {
+      "header": "Are you sure that you entered your heart rate correctly?",
+      "listItems": [
+        "Most healthy adults have a heart rate between 55 and 100. You indicated that your heart rate is [123].",
+        "If you think this may have been entered in error, go back and re-enter your heart rate."
+      ],
+      "type": "message"
+    },
+    "DISQUALIFY_BMI": {
+      "index": 15,
+      "header": "We’re sorry!",
+      "type": "disqualify"
+    },
+    "ATTENTION_GLP1": {
+      "type": "message",
+      "header": "Since your BMI is between 27 and 30, you most likely won’t be eligible for GLP-1 medication if you have not been diagnosed with one or more of the conditions below.",
+      "description": "This is because GLP-1 medications are only FDA approved for people with BMI above 30 and those between 27 and 30 with at least one of the pre-existing conditions on the preceding screen.",
+      "next": "WEIGHT_L_Q8",
+      "buttonText": "I understand"
+    },
+    "DISQUALIFY_PREGNANCY": {
+      "index": 15,
+      "header": "We’re sorry!",
+      "description": "Unfortunately, Zealthy can’t safely prescribe weight loss medication if you are currently pregnant, trying to get pregnant, and/or breastfeeding.",
+      "type": "alarm",
+      "buttonText": "Get healthy with Zealthy today"
+    },
+    "CONGRATULATION": {
+      "index": 9,
+      "header": "Congratulations!",
+      "description": "Based on your selection you have chosen the oral semaglutide GLP-1 subscription plan. Based on your request, this will be billed and shipped monthly. Note you must complete a check-in visit with your doctor before your next refill.",
+      "type": "oral-semaglutide-plan",
+      "buttonText": "Next",
+      "next": "DELIVERY-ADDRESS",
+      "required": false
+    },
+    "DELIVERY-ADDRESS": {
+      "index": 12,
+      "type": "delivery-address",
+      "next": "WEIGHT_LOSS_BOR-Q1"
+    },
+    "WEIGHT_LOSS_BOR-Q1": {
+      "index": 15,
+      "type": "weight-loss-bill-of-rights"
+    }
+  }
+}

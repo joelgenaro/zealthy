@@ -1,0 +1,23 @@
+{
+  "name": "wl-insurance-option",
+  "version": "1",
+  "code": "WL_INSURANCE_OPTION",
+  "entry": "WL_INSURANCE_OPTION-Q1",
+  "questions": {
+    "WL_INSURANCE_OPTION-Q1": {
+      "header": "Do you plan to use insurance?",
+      "type": "choice-details",
+      "index": 3,
+      "answerOptions": [
+        {
+          "text": "I do not plan to use insurance",
+          "code": "WL_INSURANCE_OPTION-Q1_A1"
+        },
+        {
+          "text": "I plan on using insurance",
+          "code": "WL_INSURANCE_OPTION-Q1_A2"
+        }
+      ]
+    }
+  }
+}

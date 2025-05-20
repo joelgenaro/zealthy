@@ -1,0 +1,124 @@
+{
+  "name": "pre-workout-pre-signup",
+  "care": "Preworkout",
+  "version": "1",
+  "canvas_id": "0a9406d3-7b4b-4484-aff0-951b4d27cfe2",
+  "code": "PW_Q",
+
+  "entry": "PW_Q0",
+  "questions": {
+    "PW_Q0": {
+      "banner": "Performance Protocol",
+      "header": "Good news! Your pharmaceuticals are in stock!",
+      "description": "Our clinical protocols use customs doses of specific, specialty compounded drugs, which are only available at a limited set of compounding pharmacies in the U.S.",
+      "type": "message",
+      "next": "PW_Q1"
+    },
+    "PW_Q1": {
+      "header": "What was your sex assigned at birth?",
+      "type": "choice",
+      "next": "PW_Q2",
+      "answerOptions": [
+        {
+          "text": "Male",
+          "code": "PW_Q1_A1"
+        },
+        {
+          "text": "Female",
+          "code": "PW_Q1_A2"
+        }
+      ]
+    },
+    "PW_Q2": {
+      "header": "How often do you have trouble getting or keeping an erection during sex?",
+      "type": "choice",
+      "next": "PW_Q3",
+      "answerOptions": [
+        {
+          "text": "Always",
+          "code": "PW_Q2_A1"
+        },
+        {
+          "text": "More than half the time",
+          "code": "PW_Q2_A2"
+        },
+        {
+          "text": "Sometimes",
+          "code": "PW_Q2_A3"
+        },
+        {
+          "text": "Rarely",
+          "code": "PW_Q2_A4"
+        },
+        {
+          "text": "Never",
+          "code": "PW_Q2_A5"
+        }
+      ]
+    },
+    "PW_Q3": {
+      "header": "How would you describe your erectile dysfunction?",
+      "type": "choice",
+      "next": "PW_Q4",
+      "answerOptions": [
+        {
+          "text": "Difficulty achieving erections",
+          "code": "PW_Q3_A1"
+        },
+        {
+          "text": "Difficulty maintaining erections",
+          "code": "PW_Q3_A2"
+        },
+        {
+          "text": "Both",
+          "code": "PW_Q3_A3"
+        },
+        {
+          "text": "Neither",
+          "code": "PW_Q3_A4"
+        }
+      ]
+    },
+    "PW_Q4": {
+      "header": "When did your erectile dysfunction start?",
+      "type": "choice",
+      "next": "PW_Q5",
+      "answerOptions": [
+        {
+          "text": "Suddenly (over a few months)",
+          "code": "PW_Q4_A1"
+        },
+        {
+          "text": "Gradually worsened over time (over several years)",
+          "code": "PW_Q4_A2"
+        },
+        {
+          "text": "I do not have ED/does not apply to me",
+          "code": "PW_Q4_A3"
+        }
+      ]
+    },
+    "PW_Q5": {
+      "header": "What can Zealthy help you with today?",
+      "type": "questionnaire-choice",
+      "answerOptions": [
+        {
+          "text": "Stronger erections",
+          "code": "PW_Q5_A1"
+        },
+        {
+          "text": "More sexual satisfaction",
+          "code": "PW_Q5_A2"
+        },
+        {
+          "text": "Less muscular fatigue; better pumps",
+          "code": "PW_Q5_A3"
+        },
+        {
+          "text": "Improved memory, attention, and cognition",
+          "code": "PW_Q5_A4"
+        }
+      ]
+    }
+  }
+}

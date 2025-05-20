@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.zealthy.mobileapp",
+      "sha256_cert_fingerprints": [
+        "84:A4:58:22:4F:45:F0:E5:A3:22:32:8F:71:6C:CF:6D:FC:D2:34:8D:67:23:6F:EA:8C:BD:E4:93:F8:73:24:22"
+      ]
+    }
+  }
+]

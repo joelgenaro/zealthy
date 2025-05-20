@@ -1,0 +1,496 @@
+{
+  "name": "hair-loss",
+  "care": "hair loss",
+  "version": "1",
+  "canvas_id": "6e5d0c2d-9227-46ae-9ed8-21767325d0ff",
+  "code": "HAIR_L",
+  "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+  "intro": {
+    "header": "Find a hair loss treatment plan through Zealthy.",
+    "listItems": [
+      "Regrow hair in as little as 3 to 6 months",
+      "FDA-approved options for every head of hair",
+      "100% online process, including automatic refills",
+      "Direct shipping at no extra cost"
+    ]
+  },
+  "entry": "HAIR_L_Q1",
+  "questions": {
+    "HAIR_L_Q1": {
+      "header": "Where are you experiencing hair loss?",
+      "type": "image-choice",
+      "canvas_linkId": "5dff01ef-3fcb-450f-ab47-90a605396ff3",
+      "next": "HAIR_L_Q2",
+      "answerOptions": [
+        {
+          "text": "Along the hairline",
+          "code": "HAIR_L_Q1_A1",
+          "image": "/images/Hair-Loss-Icon-1.png"
+        },
+        {
+          "text": "At the crown",
+          "code": "HAIR_L_Q1_A2",
+          "image": "/images/Hair-Loss-Icon-2.png"
+        },
+        {
+          "text": "All over",
+          "code": "HAIR_L_Q1_A3",
+          "image": "/images/Hair-Loss-Icon-3.png"
+        }
+      ]
+    },
+    "HAIR_L_Q2": {
+      "header": "How much hair have you lost?",
+      "type": "image-choice",
+      "canvas_linkId": "11e82b37-54a3-4fb7-936c-244bed3743ae",
+      "next": "HAIR_L_Q3",
+      "answerOptions": [
+        {
+          "text": "A little",
+          "code": "HAIR_L_Q2_A1",
+          "image": "/images/Hair-Loss-Lost-1.png"
+        },
+        {
+          "text": "Some",
+          "code": "HAIR_L_Q2_A2",
+          "image": "/images/Hair-Loss-Lost-2.png"
+        },
+        {
+          "text": "A lot",
+          "code": "HAIR_L_Q2_A3",
+          "image": "/images/Hair-Loss-Lost-3.png"
+        }
+      ]
+    },
+    "HAIR_L_Q3": {
+      "header": "Have you tried hair loss treatments before?",
+      "type": "choice",
+      "canvas_linkId": "e07fc97b-61e2-4488-b7bb-ee8d09ab821b",
+      "next": "HAIR_L_Q4",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HAIR_L_Q3_A1"
+        },
+        {
+          "text": "No",
+          "code": "HAIR_L_Q3_A2",
+          "next": "HAIR_L_Q6"
+        }
+      ]
+    },
+    "HAIR_L_Q4": {
+      "canvas_linkId": "b8292b38-6e2e-417a-b375-7770cdc65c93",
+      "header": "What treatment(s) have you tried?",
+      "type": "multiple-choice",
+      "next": "HAIR_L_Q5",
+      "answerOptions": [
+        {
+          "text": "Oral Prescription",
+          "code": "HAIR_L_Q4_A1"
+        },
+        {
+          "text": "Minoxidil",
+          "code": "HAIR_L_Q4_A2"
+        },
+        {
+          "text": "Hair loss shampoo",
+          "code": "HAIR_L_Q4_A3"
+        },
+        {
+          "text": "Supplements",
+          "code": "HAIR_L_Q4_A4"
+        },
+        {
+          "text": "Other",
+          "code": "HAIR_L_Q4_A5"
+        }
+      ]
+    },
+    "HAIR_L_Q5": {
+      "canvas_linkId": "4bf91421-0f92-4ad4-8183-2c823693f0eb",
+      "header": "How did you react to the treatment(s)?",
+      "type": "choice",
+      "next": "HAIR_L_Q6",
+      "answerOptions": [
+        {
+          "text": "I saw some results",
+          "code": "HAIR_L_Q5_A1"
+        },
+        {
+          "text": "I didn't see results",
+          "code": "HAIR_L_Q5_A2"
+        },
+        {
+          "text": "I didn’t react well",
+          "code": "HAIR_L_Q5_A3"
+        }
+      ]
+    },
+    "HAIR_L_Q6": {
+      "canvas_linkId": "3c9779be-6eaa-4319-927f-9bc03db6469b",
+      "header": "What results are you looking for?",
+      "type": "choice",
+      "next": "HAIR_L_Q7",
+      "answerOptions": [
+        {
+          "text": "Reducing future hair loss",
+          "code": "HAIR_L_Q6_A1"
+        },
+        {
+          "text": "Hair regrowth",
+          "code": "HAIR_L_Q6_A2"
+        },
+        {
+          "text": "Both",
+          "code": "HAIR_L_Q6_A3"
+        }
+      ]
+    },
+    "HAIR_L_Q7": {
+      "canvas_linkId": "a7483f46-fbdf-4e2b-b5cb-a340ad3f9282",
+      "header": "Are you taking any of the following medications?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "HAIR_L_Q8",
+      "answerOptions": [
+        {
+          "text": "Topical Finasteride",
+          "code": "HAIR_L_Q7_A1"
+        },
+        {
+          "text": "Oral Finasteride 1 mg (Propecia)",
+          "code": "HAIR_L_Q7_A2"
+        },
+        {
+          "text": "Oral Finasteride 5 mg (Proscar)",
+          "code": "HAIR_L_Q7_A3"
+        },
+        {
+          "text": "Dutasteride (Avodart)",
+          "code": "HAIR_L_Q7_A4"
+        },
+        {
+          "text": "None of the above",
+          "code": "HAIR_L_Q7_A5"
+        }
+      ]
+    },
+    "HAIR_L_Q8": {
+      "canvas_linkId": "d5e72879-7e7e-44b0-b7ea-284bce9786f7",
+      "header": "Do you have any of the following medical conditions?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "HAIR_L_Q9",
+      "answerOptions": [
+        {
+          "text": "Lupus or discoid lupus",
+          "code": "HAIR_L_Q8_A1"
+        },
+        {
+          "text": "Thyroid problems",
+          "code": "HAIR_L_Q8_A3"
+        },
+        {
+          "text": "None of the above",
+          "code": "HAIR_L_Q8_A4"
+        }
+      ]
+    },
+    "HAIR_L_Q9": {
+      "canvas_linkId": "622ba221-e0fb-4d4d-a311-3df7e77933b6",
+      "header": "Have you ever been diagnosed with liver problems?",
+      "type": "choice",
+      "next": "HAIR_L_Q10",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HAIR_L_Q9_A1"
+        },
+        {
+          "text": "No",
+          "code": "HAIR_L_Q9_A2"
+        }
+      ]
+    },
+    "HAIR_L_Q10": {
+      "canvas_linkId": "bbae6d06-46dc-4138-8662-9e8c07b09af6",
+      "header": "Have you ever been diagnosed with prostate cancer?",
+      "type": "choice",
+      "next": "HAIR_L_Q11",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HAIR_L_Q10_A1"
+        },
+        {
+          "text": "No",
+          "code": "HAIR_L_Q10_A2"
+        }
+      ]
+    },
+    "HAIR_L_Q11": {
+      "canvas_linkId": "41ceb6b2-20cb-493a-9f73-2e9a166dd3ba",
+      "header": "Are you experiencing any of these symptoms on your scalp?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "HAIR_L_Q12",
+      "answerOptions": [
+        {
+          "text": "Burning or pain",
+          "code": "HAIR_L_Q11_A1"
+        },
+        {
+          "text": "Patches of rough, scaly skin or scarring",
+          "code": "HAIR_L_Q11_A2"
+        },
+        {
+          "text": "Pustules or crusting",
+          "code": "HAIR_L_Q11_A3"
+        },
+        {
+          "text": "None of the above",
+          "code": "HAIR_L_Q11_A4"
+        }
+      ]
+    },
+    "HAIR_L_Q12": {
+      "canvas_linkId": "bc882d09-c826-4422-baf2-e468524638de",
+      "header": "Are you experiencing any symptoms of sexual dysfunction?",
+      "type": "choice",
+      "next": "HAIR_L_Q13",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HAIR_L_Q12_A1"
+        },
+        {
+          "text": "No",
+          "code": "HAIR_L_Q12_A2",
+          "next": "HAIR_L_Q14"
+        }
+      ]
+    },
+    "HAIR_L_Q13": {
+      "canvas_linkId": "61ae1074-0186-47f3-b7d5-f7993d6a39ed",
+      "header": "What symptom(s) of sexual dysfunction are you experiencing?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "HAIR_L_Q14",
+      "answerOptions": [
+        {
+          "text": "Low sex drive",
+          "code": "HAIR_L_Q13_A1"
+        },
+        {
+          "text": "Premature ejaculation",
+          "code": "HAIR_L_Q13_A2"
+        },
+        {
+          "text": "Trouble getting or maintaining an erection",
+          "code": "HAIR_L_Q13_A3"
+        },
+        {
+          "text": "Other",
+          "code": "HAIR_L_Q13_A4"
+        }
+      ]
+    },
+    "HAIR_L_Q14": {
+      "canvas_linkId": "7bfde86e-77b7-40f0-87a7-cbe531d887de",
+      "header": "Do you have or have you had any mental health conditions?",
+      "type": "choice",
+      "next": "HAIR_L_Q15",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HAIR_L_Q14_A1"
+        },
+        {
+          "text": "No",
+          "code": "HAIR_L_Q14_A2"
+        }
+      ]
+    },
+    "HAIR_L_Q15": {
+      "canvas_linkId": "47e53a2b-d475-4f66-a0c2-108adb7c3a6c",
+      "header": "Have you ever used topical Minoxidil to treat your hair loss?",
+      "type": "choice",
+      "next": "HAIR_L_Q16",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HAIR_L_Q15_A1"
+        },
+        {
+          "text": "No",
+          "code": "HAIR_L_Q15_A2",
+          "next": "MED_INTRO"
+        }
+      ]
+    },
+    "HAIR_L_Q16": {
+      "canvas_linkId": "945dfa75-56c0-41cf-b56c-232b6a819eef",
+      "header": "After starting topical Minoxidil, did you experience any of the following reactions for more than 4 weeks?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "MED_INTRO",
+      "answerOptions": [
+        {
+          "text": "Redness",
+          "code": "HAIR_L_Q16_A1"
+        },
+        {
+          "text": "Pain",
+          "code": "HAIR_L_Q16_A2"
+        },
+        {
+          "text": "Swelling",
+          "code": "HAIR_L_Q16_A3"
+        },
+        {
+          "text": "Rash",
+          "code": "HAIR_L_Q16_A4"
+        },
+        {
+          "text": "Irritation",
+          "code": "HAIR_L_Q16_A5"
+        },
+        {
+          "text": "Itching",
+          "code": "HAIR_L_Q16_A6"
+        },
+        {
+          "text": "None of the above",
+          "code": "HAIR_L_Q16_A7"
+        }
+      ]
+    },
+    "MED_INTRO": {
+      "type": "message",
+      "header": "Next, answer a few medical questions and verify your identity so that we can get you your treatment plan delivered discreetly.",
+      "next": "MED_1"
+    },
+    "MED_1": {
+      "header": "Do you take any other medications?",
+      "type": "choice-details",
+      "next": "MED_2",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MED_1_A1"
+        },
+        {
+          "text": "No",
+          "code": "MED_1_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "MED_1_A1",
+        "code": "MED_1A",
+        "type": "text",
+        "description": "Please list the medication(s) that you are currently taking."
+      }
+    },
+    "MED_2": {
+      "header": "Do you have any drug allergies?",
+      "type": "choice-details",
+      "next": "MED_3",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MED_2_A1"
+        },
+        {
+          "text": "No",
+          "code": "MED_2_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "MED_2_A1",
+        "code": "MED_2A",
+        "type": "text",
+        "description": "Please list your drug allergies below."
+      }
+    },
+    "MED_3": {
+      "header": "Do you have any medical conditions or history of prior surgeries?",
+      "type": "choice-details",
+      "next": "PHOTOS_TRANSITION",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MED_3_A1"
+        },
+        {
+          "text": "No",
+          "code": "MED_3_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "MED_3_A1",
+        "code": "MED_3A",
+        "type": "text",
+        "description": "Please tell us about the medical conditions or surgeries you have had."
+      }
+    },
+    "PHOTOS_TRANSITION": {
+      "header": "Just one step left before confirming your hair loss treatment.",
+      "description": "All we need now are photos of your hair. After which, we’ll suggest the best treatment plan for you.",
+      "type": "message",
+      "next": "PHOTOS"
+    },
+    "PHOTOS": {
+      "header": "Take or upload a photo of the front of your hairline.",
+      "description": "To assess your hair loss, your Zealthy provider will need you to take a couple of pictures. We’ll start with a photo of the front of your hairline.",
+      "label": "Front of your hairline",
+      "type": "hair-loss-photo",
+      "buttonText": "Confirm photo",
+      "next": "PHOTOS_TWO"
+    },
+    "PHOTOS_TWO": {
+      "header": "Take or upload a photo of the top/back of your head.",
+      "description": "To assess your hair loss, your Zealthy provider will need you to take a couple of pictures. Now that we have a photo of the front of your hairline, go ahead and take a photo of the top/back of your head.",
+      "type": "hair-loss-photo",
+      "label": "Top/back of your head",
+      "buttonText": "Confirm photo",
+      "next": "TREATMENT_OPTIONS"
+    },
+    "TREATMENT_OPTIONS": {
+      "header": "Recommended for you",
+      "description": "Based on your responses, it seems that you’re eligible for hair loss treatment at Zealthy. Your recommended treatment will prevent hair loss and hair thinning and promote hair regrowth.",
+      "type": "hair-loss-treatment-select",
+      "footer": {
+        "description": "Price refers to generic pills.",
+        "detail": "If your Zealthy provider determines that branded pills are better, price may vary."
+      },
+      "answerOptions": [
+        {
+          "text": "Finasteride & Minoxidil Spray",
+          "code": "TREATMENT_OPTIONS-Q1-A1"
+        },
+        {
+          "text": "Oral Minoxidil",
+          "code": "TREATMENT_OPTIONS-Q1-A2",
+          "next": "TREATMENT_ADD_ON"
+        },
+        {
+          "text": "Oral Finasteride",
+          "code": "TREATMENT_OPTIONS-Q1-A3",
+          "next": "TREATMENT_ADD_ON"
+        },
+        {
+          "text": "Topical Minoxidil",
+          "code": "TREATMENT_OPTIONS-Q1-A4",
+          "next": "TREATMENT_ADD_ON"
+        }
+      ]
+    },
+    "TREATMENT_ADD_ON": {
+      "header": "We have a recommended pairing to maximize the fullness of your hair.",
+      "description": "Studies have shown that combination minoxidil and finasteride may be more effective than either alone.",
+      "type": "hair-loss-treatment-add-on",
+      "allowToSkip": true
+    }
+  }
+}

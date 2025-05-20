@@ -1,0 +1,163 @@
+{
+  "name": "weight-loss-4758",
+  "care": "weight loss",
+  "version": "3",
+  "code": "WEIGHT_L",
+  "intro": {
+    "if": [
+      { "===": [{ "var": "potentialInsurance" }, "Semaglutide Bundled"] },
+      {
+        "header": "When sourced from the right pharmacies, compound Semaglutide is one of the safest, most effective weight loss treatments.",
+        "listItems": [
+          "Doctor-prescribed Semaglutide shipped to your door",
+          "Lose 15-20% of your body weight on average*",
+          "Holistic curriculum and ongoing expert support"
+        ],
+        "footnote": "* People using Ozempic® and Wegovy®, medications with the active ingredient semaglutide, lost 15% of their body weight on average in clinical studies."
+      },
+      { "===": [{ "var": "potentialInsurance" }, "Tirzepatide Bundled"] },
+      {
+        "header": "When sourced from the right pharmacies, compound Tirzepatide is one of the safest, most effective weight loss treatments.",
+        "listItems": [
+          "Doctor-prescribed Tirzepatide shipped to your door",
+          "Lose 20% of your body weight on average*",
+          "Holistic curriculum and ongoing expert support"
+        ],
+        "footnote": "* People using Mounjaro® and Zepbound™, medications with the active ingredient tirzepatide, lost 20% of their body weight on average in clinical studies."
+      },
+      {
+        "header": "Let’s find the safest, most effective weight loss treatment for you.",
+        "listItems": [
+          "Doctor-prescribed GLP-1 medication, including semaglutide or tirzepatide",
+          "Lose 15-20% of your body weight on average",
+          "Personalized 1:1 coaching",
+          "Holistic curriculum and ongoing expert support"
+        ]
+      }
+    ]
+  },
+  "entry": "WEIGHT_L_Q1",
+  "questions": {
+    "WEIGHT_L_Q1": {
+      "header": "What’s your current height and weight?",
+      "type": "height-weight",
+      "hideHeader": true,
+      "next": "WEIGHT_L_Q2",
+      "index": 1
+    },
+    "WEIGHT_L_Q2": {
+      "header": "What's your dream weight?⚖️",
+      "hideHeader": true,
+      "type": "weight-goal",
+      "next": "WEIGHT_L_Q3",
+      "index": 2
+    },
+    "WEIGHT_L_Q3": {
+      "type": "weight-graph",
+      "next": "WEIGHT_L_Q4",
+      "index": 3
+    },
+    "WEIGHT_L_Q4": {
+      "header": "What's you health insurance coverage like?🩺",
+      "type": "choice",
+      "next": "WEIGHT_L_Q5",
+      "index": 4,
+      "answerOptions": [
+        {
+          "text": "Employer/Commercial",
+          "subText": "e.g. Aetna, Blue Cross Blue Shield, etc.",
+          "code": "WEIGHT_L_Q4_A1"
+        },
+        {
+          "text": "Commercial Insurance through Government Exchange",
+          "subText": "e.g. Affordable Care Act, Obamacare",
+          "code": "WEIGHT_L_Q4_A2"
+        },
+        {
+          "text": "Government",
+          "subText": "e.g. Medicare, Medicaid, Tricare, etc.",
+          "code": "WEIGHT_L_Q4_A3",
+          "next": "WEIGHT-COACHING-INELIGIBLE"
+        },
+        {
+          "text": "Kaiser",
+          "code": "WEIGHT_L_Q4_A4",
+          "next": "WEIGHT-COACHING-INELIGIBLE"
+        },
+        {
+          "text": "Uninsured",
+          "code": "WEIGHT_L_Q4_A5"
+        }
+      ]
+    },
+    "WEIGHT_L_Q5": {
+      "header": "What's driving you weight loss journey?🚀",
+      "type": "choice",
+      "next": "WEIGHT_L_Q6",
+      "index": 5,
+      "answerOptions": [
+        {
+          "text": "Be healthier and reduce my health risks",
+          "code": "WEIGHT_L_Q5_A1"
+        },
+        {
+          "text": "Improve my physical appearance",
+          "code": "WEIGHT_L_Q5_A2"
+        },
+        {
+          "text": "Feel better in general",
+          "code": "WEIGHT_L_Q5_A3"
+        },
+        {
+          "text": "Other",
+          "code": "WEIGHT_L_Q5_A4"
+        }
+      ]
+    },
+    "WEIGHT_L_Q6": {
+      "header": "How well do you know GLP-1s?🤔",
+      "type": "choice",
+      "next": "GLP1_EXPLANATION",
+      "index": 6,
+      "answerOptions": [
+        {
+          "text": "I don’t know anything",
+          "code": "WEIGHT_L_Q6_A1",
+          "next": "GLP1_EXPLANATION"
+        },
+        {
+          "text": "I’ve heard of them",
+          "code": "WEIGHT_L_Q6_A2",
+          "next": "GLP1_EXPLANATION"
+        },
+        {
+          "text": "I’m an expert",
+          "code": "WEIGHT_L_Q6_A3",
+          "next": "GLP1_EXPLANATION"
+        }
+      ]
+    },
+    "GLP1_EXPLANATION": {
+      "type": "glp1-explanation",
+      "next": "DELIVERY-A-Q1",
+      "index": 7
+    },
+    "DELIVERY-A-Q1": {
+      "type": "delivery-address",
+      "next": "PRICING_OPTIONS",
+      "index": 8
+    },
+    "PRICING_OPTIONS": {
+      "type": "pricing-options",
+      "index": 9
+    },
+    "WEIGHT-COACHING-INELIGIBLE": {
+      "header": "As a government insurance beneficiary, you cannot sign up for the weight loss program at Zealthy.",
+      "listItems": [
+        "Due to regulations, if you have government insurance, you cannot sign up for the weight loss program at Zealthy.",
+        "If your insurance status changes at any time and you are no longer a government insurance beneficiary, you may sign up or email us at support@getzealthy.com and we can help."
+      ],
+      "type": "weight-loss-ineligible"
+    }
+  }
+}

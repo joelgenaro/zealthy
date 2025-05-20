@@ -1,0 +1,15 @@
+{
+  "name": "skincare-checkout-success",
+  "version": "1",
+  "code": "CHECKOUT_S",
+  "entry": "CHECKOUT_S_Q1",
+  "questions": {
+    "CHECKOUT_S_Q1": {
+      "header": "[First Name], welcome to your consultation",
+      "description": "You'll answer questions about your skin and medical history so your provider can create a personalized treatment plan for you.",
+      "type": "message",
+      "buttonText": "Next",
+      "index": 1
+    }
+  }
+}

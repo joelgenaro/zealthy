@@ -1,0 +1,56 @@
+{
+  "name": "bipolar-and-mania-screener",
+  "version": "1",
+  "code": "ASRM",
+  "codingSystem": "https://www.psychiatry.org/File%20Library/Psychiatrists/Practice/DSM/APA_DSM5_Level-2-Mania-Adult.pdf",
+  "entry": "BMS_NOTE",
+  "questions": {
+    "BMS_NOTE": {
+      "header": "Your provider needs you to answer a few more questions",
+      "description": "You’re almost finished! To provide a diagnosis and customized Rx treatment plan, your provider needs you to answer some medical questions next.",
+      "type": "message",
+      "next": "BMS_Q1"
+    },
+    "BMS_Q1": {
+      "header": "Do you have bipolar disorder, mania, or hypomania?",
+      "type": "choice",
+      "answerOptions": [
+        {
+          "code": "BMS_Q1_ASRM_A0",
+          "text": "Yes",
+          "next": "BMS_Q3"
+        },
+        {
+          "code": "BMS_Q1_ASRM_A1",
+          "text": "No",
+          "next": "BMS_Q2"
+        }
+      ]
+    },
+    "BMS_Q2": {
+      "header": "Have you ever had bipolar disorder, mania, or hypomania?",
+      "type": "choice",
+
+      "answerOptions": [
+        {
+          "code": "BMS_Q2_ASRM_A0",
+          "text": "Yes",
+          "next": "BMS_Q3"
+        },
+        {
+          "code": "BMS_Q2_ASRM_A1",
+          "text": "No"
+        }
+      ]
+    },
+    "BMS_Q3": {
+      "type": "alarm",
+      "description": "Based on your response to the previous question, it is recommended that you seek in-person care instead of Zealthy or other telehealth providers."
+    },
+    "BMS_Q4": {
+      "type": "alarm",
+      "subheader": "Bipolar disorder (formerly called manic-depressive illness or manic depression) is a mental illness that causes unusual shifts in a person’s mood, energy, activity levels, and concentration. These shifts can make it difficult to carry out day-to-day tasks. There are three types of bipolar disorder. All three types involve clear changes in mood, energy, and activity levels. These moods range from periods of extremely “up,” elated, irritable, or energized behavior (known as manic episodes) to very “down,” sad, indifferent, or hopeless periods (known as depressive episodes). Less severe manic periods are known as hypomanic episodes. Bipolar I disorder is defined by manic episodes that last for at least 7 days (nearly every day for most of the day) or by manic symptoms that are so severe that the person needs immediate medical care. Usually, depressive episodes occur as well, typically lasting at least 2 weeks. Episodes of depression with mixed features (having depressive symptoms and manic symptoms at the same time) are also possible. Experiencing four or more episodes of mania or depression within 1 year is called “rapid cycling”. Bipolar II disorder is defined by a pattern of depressive episodes and hypomanic episodes.",
+      "description": "The hypomanic episodes are less severe than the manic episodes in bipolar I disorder. Cyclothymic disorder (also called cyclothymia) is defined by recurring hypomanic and depressive symptoms that are not intense enough or do not last long enough to qualify as hypomanic or depressive episodes. Sometimes a person might experience symptoms of bipolar disorder that do not match the three categories listed above, and this is referred to as “other specified and unspecified bipolar and related disorders. Bipolar disorder is often diagnosed during late adolescence (teen years) or early adulthood. Sometimes, bipolar symptoms can appear in children. Although the symptoms may vary over time, bipolar disorder usually requires lifelong treatment. Following a prescribed treatment plan can help people manage their symptoms and improve their quality of life."
+    }
+  }
+}

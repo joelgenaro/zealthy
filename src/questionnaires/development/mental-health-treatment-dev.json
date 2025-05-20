@@ -1,0 +1,55 @@
+{
+  "name": "mental-health-treatment",
+  "care": "anxiety or depression",
+  "version": "1",
+  "canvas_id": "20490b09-2174-4b95-85ad-e480987f2fdd",
+  "entry": "MENTAL_T_Q1",
+  "code": "MENTAL_T",
+  "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+  "questions": {
+    "MENTAL_T_Q1": {
+      "canvas_linkId": "97321ecc-7da6-4a63-b226-f3cfcb23dd3e",
+      "header": "Have you previously tried anxiety or depression treatment with medication?",
+      "type": "choice",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MENTAL_T_Q1_A1",
+          "next": "MENTAL_T_Q2"
+        },
+        {
+          "text": "No",
+          "code": "MENTAL_T_Q1_A2"
+        }
+      ]
+    },
+    "MENTAL_T_Q2": {
+      "canvas_linkId": "09605d19-dccb-4089-8292-0a82270ab90b",
+      "header": "What type of treatment have you tried?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "answerOptions": [
+        {
+          "text": "Antidepressants (e.g. Wellbutrin, Prozac, etc.)",
+          "code": "MENTAL_T_Q2_A1"
+        },
+        {
+          "text": "Other prescriptions (e.g. Xanax, Ambien, etc.)",
+          "code": "MENTAL_T_Q2_A2"
+        },
+        {
+          "text": "Seeing an in-person therapist",
+          "code": "MENTAL_T_Q2_A3"
+        },
+        {
+          "text": "Seeing an online therapist",
+          "code": "MENTAL_T_Q2_A4"
+        },
+        {
+          "text": "None of the above",
+          "code": "MENTAL_T_Q2_A5"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "mental-health-provider-schedule",
+  "version": "1",
+  "code": "MENTAL_HS_PS",
+  "entry": "MENTAL_HS_PS_Q1",
+  "questions": {
+    "MENTAL_HS_PS_Q1": {
+      "header": "Please schedule your remote visit.",
+      "type": "mental-health-provider-schedule"
+    }
+  }
+}

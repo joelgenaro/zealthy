@@ -1,0 +1,527 @@
+{
+  "name": "weight-loss-free-consult",
+  "care": "Weight Loss Free Consult",
+  "version": "1",
+  "code": "WL_FC",
+  "entry": "WL_FC_Q1",
+  "questions": {
+    "WL_FC_Q1": {
+      "hideHeader": true,
+      "type": "height-weight",
+      "index": 1,
+      "next": "WL_FC_Q2"
+    },
+    "WL_FC_Q2": {
+      "header": "Have you ever been diagnosed with any of the following?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WL_FC_Q3",
+      "index": 2,
+      "answerOptions": [
+        {
+          "text": "Type 1 diabetes",
+          "code": "WL_FC_Q2_A1"
+        },
+        {
+          "text": "Pancreatitis",
+          "code": "WL_FC_Q2_A2"
+        },
+        {
+          "text": "Gastroparesis",
+          "code": "WL_FC_Q2_A3"
+        },
+        {
+          "text": "Seizures",
+          "code": "WL_FC_Q2_A4"
+        },
+        {
+          "text": "Glaucoma",
+          "code": "WL_FC_Q2_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "WL_FC_Q2_A6"
+        }
+      ]
+    },
+    "WL_FC_Q3": {
+      "header": "What is your weight loss goal?",
+      "type": "choice",
+      "next": "WL_FC_Q4",
+      "index": 3,
+      "answerOptions": [
+        {
+          "text": "Lose 1-20 lbs for good",
+          "code": "WL_FC_Q3_A1"
+        },
+        {
+          "text": "Lose 21-50 lbs for good",
+          "code": "WL_FC_Q3_A2"
+        },
+        {
+          "text": "Lose over 50 lbs for good",
+          "code": "WL_FC_Q3_A3"
+        },
+        {
+          "text": "Maintain my weight and get fit",
+          "code": "WL_FC_Q3_A4"
+        },
+        {
+          "text": "Haven’t decided",
+          "code": "WL_FC_Q3_A5"
+        }
+      ]
+    },
+    "WL_FC_Q4": {
+      "header": "What goals are you looking to accomplish?",
+      "type": "multiple-choice",
+      "next": "WL_FC_Q5",
+      "index": 4,
+      "answerOptions": [
+        {
+          "text": "Lose weight",
+          "code": "WL_FC_Q4_A1"
+        },
+        {
+          "text": "Improve general health",
+          "code": "WL_FC_Q4_A2"
+        },
+        {
+          "text": "Look better",
+          "code": "WL_FC_Q4_A3"
+        },
+        {
+          "text": "Improve confidence",
+          "code": "WL_FC_Q4_A4"
+        },
+        {
+          "text": "Increase energy",
+          "code": "WL_FC_Q4_A5"
+        },
+        {
+          "text": "Better sex",
+          "code": "WL_FC_Q4_A6"
+        }
+      ]
+    },
+    "WL_FC_Q5": {
+      "header": "Which of the following do you have trouble with?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WL_FC_Q6",
+      "index": 5,
+      "answerOptions": [
+        {
+          "text": "Appetite",
+          "code": "WL_FC_Q5_A1"
+        },
+        {
+          "text": "Cravings",
+          "code": "WL_FC_Q5_A2"
+        },
+        {
+          "text": "Not enough exercise",
+          "code": "WL_FC_Q5_A3"
+        },
+        {
+          "text": "Slow metabolism",
+          "code": "WL_FC_Q5_A4"
+        },
+        {
+          "text": "Stress eating",
+          "code": "WL_FC_Q5_A5"
+        },
+        {
+          "text": "Late night eating",
+          "code": "WL_FC_Q5_A6"
+        },
+        {
+          "text": "None of the above",
+          "code": "WL_FC_Q5_A7"
+        }
+      ]
+    },
+    "WL_FC_Q6": {
+      "header": "Which of the following have you tried in the past?",
+      "description": "Select all that apply:",
+      "next": "WL_FC_Q7",
+      "type": "multiple-choice",
+      "index": 6,
+      "answerOptions": [
+        {
+          "text": "Keto or low carb",
+          "code": "WL_FC_Q6_A1"
+        },
+        {
+          "text": "Plant-based",
+          "code": "WL_FC_Q6_A2"
+        },
+        {
+          "text": "Macro or calorie counting",
+          "code": "WL_FC_Q6_A3"
+        },
+        {
+          "text": "Weight Watchers",
+          "code": "WL_FC_Q6_A4"
+        },
+        {
+          "text": "Noom",
+          "code": "WL_FC_Q6_A5"
+        },
+        {
+          "text": "Calibrate",
+          "code": "WL_FC_Q6_A6"
+        },
+        {
+          "text": "Found",
+          "code": "WL_FC_Q6_A7"
+        },
+        {
+          "text": "Alpha",
+          "code": "WL_FC_Q6_A8"
+        },
+        {
+          "text": "Push Health",
+          "code": "WL_FC_Q6_A9"
+        },
+        {
+          "text": "None of the above",
+          "code": "WL_FC_Q6_A10"
+        }
+      ]
+    },
+    "WL_FC_Q7": {
+      "header": "Do you have goverment insurance?",
+      "listItems": [
+        "Zealthy's weight loss program is not available to members of government insurance programs such as Medicare, Medicaid, or Tricare.",
+        "If you have commerical or employer-sponsored insurance or if you are uninsured, you may continue signing up and will be able to get a weight loss treatment plan which may include GLP-1 medication such as Ozempic, Zepbound, Mounjaro, Wegovy, Semaglutide, or Tirzepatide."
+      ],
+      "next": "WL_FC_Q8",
+      "type": "weight-loss-eligibility",
+      "index": 7
+    },
+    "WL_FC_Q8": {
+      "type": "analyze-weight-loss-results",
+      "hideHeader": true,
+      "index": 8,
+      "next": "WL_FC_Q9"
+    },
+    "WL_FC_Q9": {
+      "type": "weight-loss-bill-of-rights",
+      "index": 9,
+      "next": "WL_FC_Q10"
+    },
+    "WL_FC_Q10": {
+      "header": "Thank you for joining Zealthy!",
+      "description": "Congratulations! You've just completed the first step on your journey...making the commitment!",
+      "hideFooter": true,
+      "type": "weight-loss-free-consult-insurance",
+      "index": 10,
+      "next": "DELIVERY_ADDRESS"
+    },
+    "DELIVERY_ADDRESS": {
+      "type": "delivery-address",
+      "index": 10.5,
+      "next": "WL_FC_Q11"
+    },
+    "WL_FC_Q11": {
+      "header": "Do you have any of the following?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WL_FC_Q12",
+      "index": 11,
+      "answerOptions": [
+        {
+          "text": "History of severe GI disease",
+          "code": "WL_FC_Q11_A1"
+        },
+        {
+          "text": "Current gallbladder problems (not including previous gallbladder removal/cholecystectomy)",
+          "code": "WL_FC_Q11_A2"
+        },
+        {
+          "text": "Retinal impairment/diabetic retinopathy",
+          "code": "WL_FC_Q11_A3"
+        },
+        {
+          "text": "Bariatric surgery less than 6 months ago",
+          "code": "WL_FC_Q11_A4"
+        },
+        {
+          "text": "Multiple endocrine neoplasia syndrome type 2 (MEN-2)",
+          "code": "WL_FC_Q11_A5"
+        },
+        {
+          "text": "History of medullary thyroid cancer",
+          "code": "WL_FC_Q11_A6"
+        },
+        {
+          "text": "None of the above",
+          "code": "WL_FC_Q11_A7"
+        }
+      ]
+    },
+    "WL_FC_Q12": {
+      "header": "Do your siblings, or your parents have a history of the following conditions?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WL_FC_Q13",
+      "index": 12,
+      "answerOptions": [
+        {
+          "text": "Medullary thyroid cancer",
+          "code": "WL_FC_Q12_A1"
+        },
+        {
+          "text": "Multiple endocrine neoplasia type 2",
+          "code": "WL_FC_Q12_A2"
+        },
+        {
+          "text": "None of the above",
+          "code": "WL_FC_Q12_A3"
+        }
+      ]
+    },
+    "WL_FC_Q13": {
+      "header": "Have you previously had any of the following weight loss surgeries?",
+      "description": "Select all that apply:",
+      "next": "WL_FC_Q14",
+      "type": "multiple-choice",
+      "index": 13,
+      "answerOptions": [
+        {
+          "text": "Sleeve gastrectomy",
+          "code": "WL_FC_Q13_A1"
+        },
+        {
+          "text": "Laparoscopic adjustable gastric band (Lap-band)",
+          "code": "WL_FC_Q13_A2"
+        },
+        {
+          "text": "Roux-en-Y gastric bypass",
+          "code": "WL_FC_Q13_A3"
+        },
+        {
+          "text": "Gastric balloon",
+          "code": "WL_FC_Q13_A4"
+        },
+        {
+          "text": "Other procedure",
+          "code": "WL_FC_Q13_A5"
+        },
+        {
+          "text": "No, I haven't had any of the above surgeries",
+          "code": "WL_FC_Q13_A6"
+        }
+      ]
+    },
+    "WL_FC_Q14": {
+      "header": "Have you ever been diagnosed with any of the following?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WL_FC_Q15",
+      "index": 14,
+      "answerOptions": [
+        {
+          "text": "Type 1 diabetes",
+          "code": "WL_FC_Q14_A1"
+        },
+        {
+          "text": "Pancreatitis",
+          "code": "WL_FC_Q14_A2"
+        },
+        {
+          "text": "Gastroparesis",
+          "code": "WL_FC_Q14_A3"
+        },
+        {
+          "text": "Seizures",
+          "code": "WL_FC_Q14_A4"
+        },
+        {
+          "text": "Glaucoma",
+          "code": "WL_FC_Q14_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "WL_FC_Q14_A6"
+        }
+      ]
+    },
+    "WL_FC_Q15": {
+      "header": "Have you ever been diagnosed with any of the following?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WL_FC_Q16",
+      "index": 15,
+      "answerOptions": [
+        {
+          "text": "Type 2 diabetes",
+          "code": "WL_FC_Q15_A1"
+        },
+        {
+          "text": "Sleep apnea",
+          "code": "WL_FC_Q15_A2"
+        },
+        {
+          "text": "Low HDL-C",
+          "code": "WL_FC_Q15_A3"
+        },
+        {
+          "text": "High triglycerides",
+          "code": "WL_FC_Q15_A4"
+        },
+        {
+          "text": "Prediabetes",
+          "code": "WL_FC_Q15_A5"
+        },
+        {
+          "text": "High blood pressure",
+          "code": "WL_FC_Q15_A6"
+        },
+        {
+          "text": "Heart disease",
+          "code": "WL_FC_Q15_A7"
+        },
+        {
+          "text": "Osteoarthritis",
+          "code": "WL_FC_Q15_A8"
+        },
+        {
+          "text": "Polycystic ovarian syndrome (PCOS)",
+          "code": "WL_FC_Q15_A9"
+        },
+        {
+          "text": "Non-alcoholic fatty liver disease (NAFLD)",
+          "code": "WL_FC_Q15_A10"
+        },
+        {
+          "text": "None of the above",
+          "code": "WL_FC_Q15_A11"
+        }
+      ]
+    },
+    "WL_FC_Q16": {
+      "header": "Do you have a history of chronic renal disease? History of kidney failure? Or have you ever seen a kidney doctor?",
+      "type": "choice-details",
+      "next": "WL_FC_Q17",
+      "index": 16,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WL_FC_Q16_A1"
+        },
+        {
+          "text": "No",
+          "code": "WL_FC_Q16_A2"
+        }
+      ]
+    },
+    "WL_FC_Q17": {
+      "header": "Which GLP-1 medications have you taken?",
+      "description": "Select all that apply:",
+      "next": "WL_FC_Q18",
+      "type": "multiple-choice",
+      "index": 17,
+      "answerOptions": [
+        {
+          "text": "Wegovy (Semaglutide)",
+          "code": "WL_FC_Q17_A1"
+        },
+        {
+          "text": "Ozempic (Semaglutide)",
+          "code": "WL_FC_Q17_A2"
+        },
+        {
+          "text": "Mounjaro (Tirzepatide)",
+          "code": "WL_FC_Q17_A3"
+        },
+        {
+          "text": "Saxenda (Liraglutide)",
+          "code": "WL_FC_Q17_A4"
+        },
+        {
+          "text": "Victoza (Liraglutide)",
+          "code": "WL_FC_Q17_A5"
+        },
+        {
+          "text": "Compound Semaglutide",
+          "code": "WL_FC_Q17_A6"
+        },
+        {
+          "text": "Compound Tirzepatide",
+          "code": "WL_FC_Q17_A7"
+        },
+        {
+          "text": "None of the above",
+          "code": "WL_FC_Q17_A8"
+        }
+      ]
+    },
+    "WL_FC_Q18": {
+      "description": "Let's submit your request to a Zealthy medical provider for review (no payment is due at this time).",
+      "header": " ",
+      "type": "message",
+      "next": "WL_FC_Q19",
+      "index": 18,
+      "buttonText": "Submit"
+    },
+    "WL_FC_Q19": {
+      "type": "identity-verification",
+      "next": "WL_FC_Q20",
+      "index": 19
+    },
+    "WL_FC_Q20": {
+      "hideHeader": true,
+      "hideFooter": true,
+      "index": 20,
+      "type": "free-consult-selection",
+      "answerOptions": [
+        {
+          "text": "See a Provider",
+          "code": "WL_FC_Q20_A1",
+          "next": "ONBOARDING_PRECHECKOUT"
+        },
+        {
+          "text": "Schedule your consult",
+          "code": "WL_FC_Q20_A2",
+          "next": "APPOINTMENT_SCHEDULE"
+        }
+      ]
+    },
+    "APPOINTMENT_SCHEDULE": {
+      "index": 21,
+      "type": "free-consult-provider-schedule"
+    },
+    "ONBOARDING_PRECHECKOUT": {
+      "hideHeader": true,
+      "hideFooter": true,
+      "index": 22,
+      "type": "free-consult-precheckout",
+      "next": "MEDICATION_SELECTION"
+    },
+    "MEDICATION_SELECTION": {
+      "header": "Select your medication",
+      "hideFooter": true,
+      "index": 23,
+      "type": "free-consult-medication-selection",
+      "next": "MEDICATION_SELECTION_PERIOD",
+      "answerOptions": [
+        {
+          "text": "Semaglutide",
+          "code": "WL_FC_QMS_A1"
+        },
+        {
+          "text": "Tirzepatide",
+          "code": "WL_FC_QMS_A2"
+        }
+      ]
+    },
+    "MEDICATION_SELECTION_PERIOD": {
+      "header": "Our Recommended Starting Package",
+      "hideFooter": true,
+      "index": 24,
+      "type": "free-consult-medication-selection-period"
+    }
+  }
+}

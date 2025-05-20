@@ -1,0 +1,124 @@
+{
+  "name": "ed-hl-presignup",
+  "care": "Sex + Hair",
+  "version": "4",
+  "code": "EDHL_PRESIGNUP",
+  "entry": "EDHL_PRESIGNUP_Q1",
+  "questions": {
+    "EDHL_PRESIGNUP_Q1": {
+      "header": "Which is more important to you?",
+      "type": "choice",
+      "index": 1,
+      "questionnaire": "ed-hl-presignup",
+      "answerOptions": [
+        {
+          "text": "Getting hard when I want",
+          "code": "EDHL_PRESIGNUP_Q1_A1"
+        },
+        {
+          "text": "Staying hard long enough for great sex",
+          "code": "EDHL_PRESIGNUP_Q1_A2"
+        },
+        {
+          "text": "Both",
+          "code": "EDHL_PRESIGNUP_Q1_A3"
+        }
+      ]
+    },
+    "EDHL_PRESIGNUP_Q2": {
+      "header": "Do you want to delay your climax to last longer in bed?",
+      "type": "choice",
+      "index": 2,
+      "next": "EDHL_PRESIGNUP_INFO_1",
+      "questionnaire": "ed-hl-presignup",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "EDHL_PRESIGNUP_Q2_A1"
+        },
+        {
+          "text": "Not right now",
+          "code": "EDHL_PRESIGNUP_Q2_A2"
+        }
+      ]
+    },
+    "EDHL_PRESIGNUP_INFO_1": {
+      "header": "of men ages 40 to 70 experience some form of ED",
+      "type": "message",
+      "index": 3,
+      "questionnaire": "ed-hl-presignup"
+    },
+    "EDHL_PRESIGNUP_Q3": {
+      "header": "How often do your symptoms disrupt your sex life?",
+      "type": "choice",
+      "index": 4,
+      "questionnaire": "ed-hl-presignup",
+      "answerOptions": [
+        {
+          "text": "Pretty often",
+          "code": "EDHL_PRESIGNUP_Q3_A1"
+        },
+        {
+          "text": "Occasionally",
+          "code": "EDHL_PRESIGNUP_Q3_A2"
+        },
+        {
+          "text": "Rarely",
+          "code": "EDHL_PRESIGNUP_Q3_A3"
+        }
+      ]
+    },
+    "EDHL_PRESIGNUP_Q4": {
+      "header": "Are you avoiding sex because of your symptoms?",
+      "type": "choice",
+      "index": 5,
+      "questionnaire": "ed-hl-presignup",
+      "answerOptions": [
+        {
+          "text": "Sometimes",
+          "code": "EDHL_PRESIGNUP_Q4_A1"
+        },
+        {
+          "text": "Rarely",
+          "code": "EDHL_PRESIGNUP_Q4_A2"
+        }
+      ]
+    },
+    "EDHL_PRESIGNUP_INFO_2": {
+      "header": "Taking Sex + Hair daily can make it easier to have spontaneous sex, as it can remain active for the entire day",
+      "type": "message",
+      "index": 6,
+      "questionnaire": "ed-hl-presignup"
+    },
+    "EDHL_PRESIGNUP_Q5": {
+      "header": "How would you like to approach treatment options?",
+      "type": "choice",
+      "index": 7,
+      "questionnaire": "ed-hl-presignup",
+      "answerOptions": [
+        {
+          "text": "I have a specfic treatment in mind",
+          "code": "EDHL_PRESIGNUP_Q5_A1"
+        },
+        {
+          "text": "I'd like a recommendation",
+          "code": "EDHL_PRESIGNUP_Q5_A2"
+        }
+      ]
+    },
+    "EDHL_PRESIGNUP_INFO_3": {
+      "header": "Let's see which treatment option could be right for you",
+      "type": "message",
+      "index": 8,
+      "questionnaire": "ed-hl-presignup"
+    },
+    "EDHL_PRESIGNUP_Q6": {
+      "header": "Let us know your age",
+      "subheader": "Enter your date of birth",
+      "type": "text",
+      "index": 9,
+      "next": "EDHL_SIGNUP",
+      "input_placeholder": "MM/DD/YYYY"
+    }
+  }
+}

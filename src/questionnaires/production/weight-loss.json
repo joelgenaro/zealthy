@@ -1,0 +1,509 @@
+{
+  "name": "weight-loss",
+  "care": "weight loss",
+  "version": "1",
+  "canvas_id": "553d73c3-af18-42dd-ac5b-b95bbf43f64e",
+  "code": "WEIGHT_L",
+  "codingSystem": "http://schemas.getzealthy.canvasmedical.com/fhir/systems/internal",
+  "intro": {
+    "if": [
+      { "===": [{ "var": "potentialInsurance" }, "Semaglutide Bundled"] },
+      {
+        "header": "When sourced from the right pharmacies, compound Semaglutide is one of the safest, most effective weight loss treatments.",
+        "listItems": [
+          "Doctor-prescribed Semaglutide shipped to your door",
+          "Lose 15-20% of your body weight on average*",
+          "Holistic curriculum and ongoing expert support"
+        ],
+        "footnote": "* People using Ozempic® and Wegovy®, medications with the active ingredient semaglutide, lost 15% of their body weight on average in clinical studies."
+      },
+      { "===": [{ "var": "potentialInsurance" }, "Tirzepatide Bundled"] },
+      {
+        "header": "When sourced from the right pharmacies, compound Tirzepatide is one of the safest, most effective weight loss treatments.",
+        "listItems": [
+          "Doctor-prescribed Tirzepatide shipped to your door",
+          "Lose 20% of your body weight on average*",
+          "Holistic curriculum and ongoing expert support"
+        ],
+        "footnote": "* People using Mounjaro® and Zepbound™, medications with the active ingredient tirzepatide, lost 20% of their body weight on average in clinical studies."
+      },
+      { "===": [{ "var": "language" }, "esp"] },
+      {
+        "header": "Let’s find the safest, most effective weight loss treatment for you.",
+        "listItems": [
+          "Doctor-prescribed GLP-1 medication, including semaglutide, Wegovy, Zepbound, and more",
+          "Lose 15-20% of your body weight on average",
+          "Personalized 1:1 coaching",
+          "Holistic curriculum and ongoing expert support"
+        ]
+      },
+      {
+        "header": "Let’s find the safest, most effective weight loss treatment for you.",
+        "listItems": [
+          "Doctor-prescribed GLP-1 medication, including semaglutide or tirzepatide",
+          "Lose 15-20% of your body weight on average",
+          "Personalized 1:1 coaching",
+          "Holistic curriculum and ongoing expert support"
+        ]
+      }
+    ]
+  },
+  "entry": {
+    "if": [
+      {
+        "and": [
+          { "!!": [{ "var": "BMI" }, true] },
+          { "===": [{ "var": "gender" }, "female"] }
+        ]
+      },
+      "WEIGHT_L_Q3",
+      {
+        "and": [
+          { "!!": [{ "var": "BMI" }, true] },
+          { "===": [{ "var": "gender" }, "male"] }
+        ]
+      },
+      "WEIGHT_L_Q2",
+      "WEIGHT_L_Q1"
+    ]
+  },
+  "questions": {
+    "WEIGHT_L_Q1": {
+      "header": "What’s your current height and weight?",
+      "type": "height-weight",
+      "hideHeader": true,
+      "canvas_linkId": "a120d47c-6ac0-4431-847e-cf97b3892882",
+      "next": {
+        "if": [
+          { "===": [{ "var": "gender" }, "female"] },
+          "WEIGHT_L_Q2",
+          { "===": [{ "var": "variant6792" }, "Variation-1"] },
+          "INSURANCE_PLAN",
+          "WEIGHT_L_Q3"
+        ]
+      },
+      "index": 1
+    },
+    "WEIGHT_L_Q2": {
+      "header": "Are you currently pregnant or breastfeeding?",
+      "canvas_linkId": "cfef84cc-a573-487e-9be5-1339aacedb66",
+      "type": "choice",
+      "next": {
+        "if": [
+          { "===": [{ "var": "variant6792" }, "Variation-1"] },
+          "INSURANCE_PLAN",
+          "WEIGHT_L_Q3"
+        ]
+      },
+      "index": 2,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_Q2_A1",
+          "next": "DISQUALIFY_PREGNANCY"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_Q2_A2"
+        }
+      ]
+    },
+    "WEIGHT_L_Q3": {
+      "header": "Which of the following do you have trouble with?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_Q4",
+      "canvas_linkId": "4cbd031f-bc19-4a4b-bf9b-cd01d0bd3eee",
+      "index": 3,
+      "answerOptions": [
+        {
+          "text": "Appetite",
+          "code": "WEIGHT_L_Q3_A1"
+        },
+        {
+          "text": "Cravings",
+          "code": "WEIGHT_L_Q3_A2"
+        },
+        {
+          "text": "Not enough exercise",
+          "code": "WEIGHT_L_Q3_A3"
+        },
+        {
+          "text": "Slow metabolism",
+          "code": "WEIGHT_L_Q3_A4"
+        },
+        {
+          "text": "Stress eating",
+          "code": "WEIGHT_L_Q3_A5"
+        },
+        {
+          "text": "Late night eating",
+          "code": "WEIGHT_L_Q3_A6"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_Q3_A7"
+        }
+      ]
+    },
+    "WEIGHT_L_Q4": {
+      "header": "Which have you tried in the past?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_Q6",
+      "canvas_linkId": "376258ca-4b0b-42a4-8d9c-4882374dfb71",
+      "index": 4,
+      "answerOptions": [
+        {
+          "text": "Dieting",
+          "code": "WEIGHT_L_Q4_A1",
+          "next": "WEIGHT_L_Q5"
+        },
+        {
+          "text": "Exercise plans",
+          "code": "WEIGHT_L_Q4_A2"
+        },
+        {
+          "text": "Coaching",
+          "code": "WEIGHT_L_Q4_A3"
+        },
+        {
+          "text": "Medications",
+          "code": "WEIGHT_L_Q4_A4"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_Q4_A5"
+        }
+      ]
+    },
+    "WEIGHT_L_Q5": {
+      "header": "Which of the following have you tried in the past?",
+      "canvas_linkId": "d5176322-6bca-470a-87a2-f00eebea6234",
+      "description": "Select all that you’ve tried.",
+      "next": "WEIGHT_L_Q6",
+      "type": "multiple-choice",
+      "index": 4,
+      "answerOptions": [
+        {
+          "text": "Keto or low carb",
+          "code": "WEIGHT_L_Q5_A1"
+        },
+        {
+          "text": "Plant-based",
+          "code": "WEIGHT_L_Q5_A2"
+        },
+        {
+          "text": "Macro or calorie counting",
+          "code": "WEIGHT_L_Q5_A3"
+        },
+        {
+          "text": "Weight Watchers",
+          "code": "WEIGHT_L_Q5_A4"
+        },
+        { "text": "Noom", "code": "WEIGHT_L_Q5_A5" },
+        {
+          "text": "Calibrate",
+          "code": "WEIGHT_L_Q5_A6"
+        },
+        { "text": "Found", "code": "WEIGHT_L_Q5_A7" },
+        { "text": "Alpha", "code": "WEIGHT_L_Q5_A8" },
+        {
+          "text": "Push Health",
+          "code": "WEIGHT_L_Q5_A9"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_Q5_A10"
+        }
+      ]
+    },
+    "WEIGHT_L_Q6": {
+      "canvas_linkId": "0d9ca9df-3652-4415-a6cc-44dfa5c641a0",
+      "header": "Have you ever been diagnosed with any of the following?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_Q7",
+      "index": 6,
+      "answerOptions": [
+        {
+          "text": "Type 1 diabetes",
+          "code": "WEIGHT_L_Q6_A1",
+          "next": "DISQUALIFY_GLP1_Q1"
+        },
+        {
+          "text": "Pancreatitis",
+          "code": "WEIGHT_L_Q6_A2",
+          "next": "PANCREATITIS_DIAGNOSIS"
+        },
+        {
+          "text": "Gastroparesis",
+          "code": "WEIGHT_L_Q6_A3",
+          "next": "DISQUALIFY_GLP1_Q1"
+        },
+        {
+          "text": "Seizures",
+          "code": "WEIGHT_L_Q6_A4"
+        },
+        {
+          "text": "Glaucoma",
+          "code": "WEIGHT_L_Q6_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_Q6_A6"
+        }
+      ]
+    },
+    "PANCREATITIS_DIAGNOSIS": {
+      "header": "How long ago did you have Pancreatitis?",
+      "type": "choice",
+      "next": "DISQUALIFY_GLP1_Q1",
+      "index": 6,
+      "answerOptions": [
+        {
+          "text": "Less than six months ago",
+          "code": "WEIGHT_L_POST_Q6_A2_O1"
+        },
+        {
+          "text": "More than six months ago",
+          "code": "WEIGHT_L_POST_Q6_A2_O2",
+          "next": "WEIGHT_L_Q7"
+        }
+      ]
+    },
+    "DISQUALIFY_GLP1_Q1": {
+      "type": "disqualify-glp1",
+      "next": "WEIGHT_L_Q7",
+      "index": 6
+    },
+    "WEIGHT_L_Q7": {
+      "canvas_linkId": "576e8d8a-3f6b-46d6-b61c-64a2d24d17f1",
+      "header": "Have you ever been diagnosed with any of the following?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_Q8",
+      "index": 7,
+      "answerOptions": [
+        {
+          "text": "Type 2 diabetes",
+          "code": "WEIGHT_L_Q7_A1"
+        },
+        {
+          "text": "Sleep apnea",
+          "code": "WEIGHT_L_Q7_A2"
+        },
+        {
+          "text": "High cholesterol",
+          "code": "WEIGHT_L_Q7_A3"
+        },
+        {
+          "text": "High triglycerides",
+          "code": "WEIGHT_L_Q7_A4"
+        },
+        {
+          "text": "Prediabetes",
+          "code": "WEIGHT_L_Q7_A5"
+        },
+        {
+          "text": "High blood pressure",
+          "code": "WEIGHT_L_Q7_A6"
+        },
+        {
+          "text": "Heart disease",
+          "code": "WEIGHT_L_Q7_A7"
+        },
+        {
+          "text": "Osteoarthritis",
+          "code": "WEIGHT_L_Q7_A8"
+        },
+        {
+          "text": "Polycystic ovarian syndrome (PCOS)",
+          "code": "WEIGHT_L_Q7_A9"
+        },
+        {
+          "text": "Non-alcoholic fatty liver disease (NAFLD)",
+          "code": "WEIGHT_L_Q7_A10"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_Q7_A11",
+          "next": {
+            "if": [
+              {
+                "and": [
+                  { ">=": [{ "var": "BMI" }, 27] },
+                  {
+                    "<": [{ "var": "BMI" }, 30]
+                  }
+                ]
+              },
+              "DISQUALIFY_GLP1_Q2",
+              "WEIGHT_L_Q8"
+            ]
+          }
+        }
+      ]
+    },
+    "DISQUALIFY_GLP1_Q2": {
+      "type": "disqualify-glp1",
+      "next": "WEIGHT_L_Q8",
+      "index": 7
+    },
+    "WEIGHT_L_Q8": {
+      "header": "Do you, your siblings, or your parents have a history of the following conditions?",
+      "canvas_linkId": "665781e6-45dc-44a5-8bd1-0bab01443e23",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_Q9",
+      "index": 8,
+      "answerOptions": [
+        {
+          "text": "Medullary thyroid cancer",
+          "code": "WEIGHT_L_Q8_A1",
+          "next": "DISQUALIFY_GLP1_Q3"
+        },
+        {
+          "text": "Multiple endocrine neoplasia type 2",
+          "code": "WEIGHT_L_Q8_A2",
+          "next": "DISQUALIFY_GLP1_Q3"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_Q8_A3"
+        }
+      ]
+    },
+    "DISQUALIFY_GLP1_Q3": {
+      "type": "disqualify-glp1",
+      "next": "WEIGHT_L_Q9",
+      "index": 8
+    },
+    "WEIGHT_L_Q9": {
+      "canvas_linkId": "bf76885d-214c-403f-9015-66128d5c41b7",
+      "header": "Are you allergic to any medications?",
+      "type": "choice",
+      "next": "WEIGHT_L_Q11",
+      "index": 9,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_Q9_A1",
+          "next": "WEIGHT_L_Q10"
+        },
+        { "text": "No", "code": "WEIGHT_L_Q9_A2" }
+      ]
+    },
+    "WEIGHT_L_Q10": {
+      "canvas_linkId": "0476dcfc-d5ec-4c17-8e62-242584502fb3",
+      "header": "What medications are you allergic to?",
+      "type": "text",
+      "next": "WEIGHT_L_Q11"
+    },
+    "WEIGHT_L_Q11": {
+      "header": "Are you currently taking any of the medications below?",
+      "canvas_linkId": "b7cc0382-d8a4-45ea-a796-5776aaeb5355",
+      "next": "WEIGHT_L_Q12",
+      "type": "multiple-choice",
+      "index": 10,
+      "answerOptions": [
+        {
+          "text": "Insulin",
+          "code": "WEIGHT_L_Q11_A1",
+          "next": "DISQUALIFY_GLP1_Q4"
+        },
+        {
+          "text": "Sulfonylureas",
+          "code": "WEIGHT_L_Q11_A2",
+          "next": "DISQUALIFY_GLP1_Q4"
+        },
+        {
+          "text": "Opioid pain medication",
+          "code": "WEIGHT_L_Q11_A3"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_Q11_A4"
+        }
+      ]
+    },
+    "DISQUALIFY_GLP1_Q4": {
+      "type": "disqualify-glp1",
+      "next": "WEIGHT_L_Q12",
+      "index": 11
+    },
+    "WEIGHT_L_Q12": {
+      "header": "What’s your resting heart rate?",
+      "canvas_linkId": "fce1feb4-f367-46e4-a57b-c3ed2f35e303",
+      "description": "This helps Zealthy understand the best treatment options for you. If you don’t have a recent measurement, please follow the simple steps below:",
+      "listItems": [
+        "Place your index finger (next to your thumb) and middle finger on the side of your neck. They should go in the groove under your jaw and next to your windpipe.",
+        "Press firmly until you feel a pulse. If you can’t feel it, move your fingers around slightly and increase pressure until you do.",
+        "Count the pulses for 30 seconds (using a clock or stopwatch).",
+        "Double the number of pulses you counted to get your heart rate."
+      ],
+      "type": "number",
+      "next": {
+        "if": [
+          {
+            "and": [
+              {
+                "!!": [{ "var": "heart_rate" }, true]
+              },
+              {
+                "or": [
+                  { "<": [{ "var": "heart_rate" }, 55] },
+                  { ">": [{ "var": "heart_rate" }, 100] }
+                ]
+              }
+            ]
+          },
+          "ATTENTION_HEART_RATE",
+          { "===": [{ "var": "variant4935" }, "Variation-2"] },
+          "INSURANCE_PLAN",
+          ""
+        ]
+      },
+      "index": 12,
+      "input_placeholder": "Resting heart rate (beats per minute)",
+      "allowToSkip": true
+    },
+    "ATTENTION_HEART_RATE": {
+      "header": "Are you sure that you entered your heart rate correctly?",
+      "listItems": [
+        "Most healthy adults have a heart rate between 55 and 100. You indicated that your heart rate is [123].",
+        "If you think this may have been entered in error, go back and re-enter your heart rate."
+      ],
+      "type": "message"
+    },
+    "DISQUALIFY_BMI": {
+      "header": "We’re sorry!",
+      "type": "disqualify"
+    },
+    "ATTENTION_GLP1": {
+      "type": "message",
+      "header": "Since your BMI is between 27 and 30, you most likely won’t be eligible for GLP-1 medication if you have not been diagnosed with one or more of the conditions below.",
+      "description": "This is because GLP-1 medications are only FDA approved for people with BMI above 30 and those between 27 and 30 with at least one of the pre-existing conditions on the preceding screen.",
+      "next": "WEIGHT_L_Q8",
+      "buttonText": "I understand"
+    },
+    "DISQUALIFY_PREGNANCY": {
+      "header": "We’re sorry!",
+      "description": "Unfortunately, Zealthy can’t safely prescribe weight loss medication if you are currently pregnant, trying to get pregnant, and/or breastfeeding.",
+      "type": "alarm",
+      "buttonText": "Get healthy with Zealthy today"
+    },
+    "INSURANCE_PLAN": {
+      "header": "Do you plan to use insurance?",
+      "hideHeader": true,
+      "type": "insurance-plan",
+      "index": 2
+    },
+    "BUNDLED_PREFERENCE": {
+      "header": "Would you prefer to receive Semaglutide (active ingredient in Wegovy) or Tirzepatide (active ingredient in Zepbound)?",
+      "hideHeader": true,
+      "type": "bundled-choice",
+      "index": 3
+    }
+  }
+}

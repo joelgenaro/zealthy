@@ -1,0 +1,12 @@
+{
+  "name": "weight-loss-medical-history",
+  "version": "1",
+  "code": "WEIGHT-LOSS-MEDICAL-HISTORY-A",
+  "entry": "WEIGHT-LOSS-MEDICAL-HISTORY-A-Q1",
+  "questions": {
+    "WEIGHT-LOSS-MEDICAL-HISTORY-A-Q1": {
+      "header": "Do you currently have any other medical conditions besides those that you have already shared with us?",
+      "type": "text"
+    }
+  }
+}

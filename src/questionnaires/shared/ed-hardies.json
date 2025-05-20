@@ -1,0 +1,683 @@
+{
+  "name": "ed-hardies",
+  "care": "erectile dysfunction",
+  "version": "1",
+  "canvas_id": "e244a00a-e659-4f20-8bcd-d055ccae08d6",
+  "code": "ED",
+  "codingSystem": "http://schemas.getzealthy.canvasmedical.com/fhir/systems/internal",
+  "intro": {
+    "header": "Next, let’s check-in on your health.",
+    "description": "Answer these health questions so a provider can help you get care, including Zealthy Hardies (sildenafil + tadalafil, sildenafil + oxytocin, and tadalafil + oxytocin), generic or brand name Viagra, generic or brand name Cialis delivered to you."
+  },
+  "entry": {
+    "if": [{ "!!": [{ "var": "entry" }, true] }, { "var": "entry" }, "ED_Q1"]
+  },
+  "questions": {
+    "ED_Q1": {
+      "header": "How often do you have trouble getting or keeping an erection during sex?",
+      "type": "choice",
+      "canvas_linkId": "6b59f9fe-8f39-4a82-9723-65e5dbf6b3b2",
+      "next": "ED_Q2",
+      "index": 1,
+      "answerOptions": [
+        {
+          "text": "Always",
+          "code": "ED_Q1_A1"
+        },
+        {
+          "text": "More than half the time",
+          "code": "ED_Q1_A2"
+        },
+        {
+          "text": "Sometimes",
+          "code": "ED_Q1_A3"
+        },
+        {
+          "text": "Rarely",
+          "code": "ED_Q1_A4"
+        }
+      ]
+    },
+    "ED_Q2": {
+      "canvas_linkId": "1cc59ed0-4bb3-42b4-917d-43e8ef9f6e2f",
+      "header": "Select the scenario that most accurately reflects your ED.",
+      "type": "choice",
+      "index": 2,
+      "next": "ED_Q3",
+      "answerOptions": [
+        {
+          "text": "Difficulty achieving erections",
+          "code": "ED_Q2_A1"
+        },
+        {
+          "text": "Difficulty maintaining erections",
+          "code": "ED_Q2_A2"
+        },
+        {
+          "text": "Both",
+          "code": "ED_Q2_A3"
+        }
+      ]
+    },
+    "ED_Q3": {
+      "canvas_linkId": "268099ac-1920-420e-b64f-9ee19a570d90",
+      "header": "How did you first notice that you had ED?",
+      "type": "choice",
+      "index": 3,
+      "next": "ED_Q4",
+      "answerOptions": [
+        {
+          "text": "Suddenly",
+          "code": "ED_Q3_A1"
+        },
+        {
+          "text": "Gradually worsened over time",
+          "code": "ED_Q3_A2"
+        }
+      ]
+    },
+    "ED_Q4": {
+      "canvas_linkId": "e486a0ac-3ed9-4c30-8966-43300c744a28",
+      "header": "When you masturbate, how hard do your erections usually get?",
+      "type": "choice",
+      "next": "ED_Q5",
+      "index": 4,
+      "answerOptions": [
+        {
+          "text": "Penis does not enlarge",
+          "code": "ED_Q4_A1"
+        },
+        {
+          "text": "Penis is larger, but not hard",
+          "code": "ED_Q4_A2"
+        },
+        {
+          "text": "Penis is hard, but not hard enough for penetration",
+          "code": "ED_Q4_A3"
+        },
+        {
+          "text": "Penis is hard enough for penetration, but not completely hard",
+          "code": "ED_Q4_A4"
+        },
+        {
+          "text": "Penis is completely hard and fully rigid",
+          "code": "ED_Q4_A5"
+        }
+      ]
+    },
+    "ED_Q5": {
+      "canvas_linkId": "7c2a59c5-cbb3-4e19-9e93-14bdafbe18e5",
+      "header": "When you are with a sexual partner, how hard do your erections usually get?",
+      "type": "choice",
+      "index": 5,
+      "next": "ED_Q6",
+      "answerOptions": [
+        {
+          "text": "Penis does not enlarge",
+          "code": "ED_Q5_A1"
+        },
+        {
+          "text": "Penis is larger, but not hard",
+          "code": "ED_Q5_A2"
+        },
+        {
+          "text": "Penis is hard, but not hard enough for penetration",
+          "code": "ED_Q5_A3"
+        },
+        {
+          "text": "Penis is hard enough for penetration, but not completely hard",
+          "code": "ED_Q5_A4"
+        },
+        {
+          "text": "Penis is completely hard and fully rigid",
+          "code": "ED_Q5_A5"
+        }
+      ]
+    },
+    "ED_Q6": {
+      "canvas_linkId": "a46dfd06-54e0-42ea-b6b6-7269f2b29af8",
+      "header": "Are you experiencing decreased sex drive, overall vitality, or physical performance?",
+      "type": "choice",
+      "next": "ED_Q7",
+      "index": 6,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ED_Q6_A1"
+        },
+        {
+          "text": "No",
+          "code": "ED_Q6_A2"
+        }
+      ]
+    },
+    "ED_Q7": {
+      "canvas_linkId": "7f0e9a1f-acce-4ab9-80bc-5121fffa5a6a",
+      "header": "Have you used ED medication before?",
+      "type": "choice",
+      "index": 7,
+      "next": "ED_Q8",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ED_Q7_A1"
+        },
+        {
+          "text": "No",
+          "code": "ED_Q7_A2",
+          "next": "ED_Q11"
+        }
+      ]
+    },
+    "ED_Q8": {
+      "canvas_linkId": "2ce1cbd7-15d0-45b8-a2ce-4186ed41ab1b",
+      "header": "Which of the following ED treatments have you used before?",
+      "type": "choice",
+      "index": 8,
+      "next": "ED_Q9",
+      "answerOptions": [
+        {
+          "text": "Sildenafil (Viagra)",
+          "code": "ED_Q8_A1"
+        },
+        {
+          "text": "Tadalafil (Cialis)",
+          "code": "ED_Q8_A2"
+        },
+        {
+          "text": "Vardenafil (Levitra)",
+          "code": "ED_Q8_A3"
+        },
+        {
+          "text": "Avanafil (Stendra)",
+          "code": "ED_Q8_A4"
+        },
+        {
+          "text": "Other",
+          "code": "ED_Q8_A5"
+        }
+      ]
+    },
+    "ED_Q9": {
+      "canvas_linkId": "1efe9ad5-5dab-400e-8d3a-3446b8106891",
+      "header": "Were you happy with the results?",
+      "type": "choice",
+      "index": 9,
+      "next": "ED_Q10",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ED_Q9_A1"
+        },
+        {
+          "text": "No",
+          "code": "ED_Q9_A2"
+        }
+      ]
+    },
+    "ED_Q10": {
+      "canvas_linkId": "06a82097-f326-4d59-9bde-8ce971632363",
+      "header": "Anything else you'd like to share about your experience with ED treatment?",
+      "description": "Please include details such as the dosage you tried, how effective it was, and any adverse reactions you experienced.",
+      "type": "text",
+      "index": 10,
+      "next": "ED_Q11"
+    },
+    "ED_Q11": {
+      "canvas_linkId": "8f282d52-ea93-4056-8027-a4282861fca3",
+      "header": "Are you experiencing any of the following cardiovascular symptoms?",
+      "description": "Please select all that apply:",
+      "type": "multiple-choice",
+      "next": "ED_Q12",
+      "index": 11,
+      "answerOptions": [
+        {
+          "text": "Chest pain when climbing 2 flights of stairs or walking 4 blocks",
+          "code": "ED_Q11_A1"
+        },
+        {
+          "text": "Chest pain with sexual activity",
+          "code": "ED_Q11_A2"
+        },
+        {
+          "text": "Unexplained fainting or dizziness",
+          "code": "ED_Q11_A3"
+        },
+        {
+          "text": "Abnormal heart beats or rhythms",
+          "code": "ED_Q11_A4"
+        },
+        {
+          "text": "None of the above",
+          "code": "ED_Q11_A5"
+        }
+      ]
+    },
+    "ED_Q12": {
+      "canvas_linkId": "68cbafc8-3bda-4b12-bbc3-fa0c6883d36b",
+      "header": "Do you have or have you previously been diagnosed with any of the following heart conditions?",
+      "description": "Please select all that apply:",
+      "type": "multiple-choice",
+      "next": "ED_Q13",
+      "index": 12,
+      "answerOptions": [
+        {
+          "text": "Congestive heart failure",
+          "code": "ED_Q12_A1"
+        },
+        {
+          "text": "Coronary artery disease (without prior heart attack)",
+          "code": "ED_Q12_A2"
+        },
+        {
+          "text": "Coronary bypass surgery",
+          "code": "ED_Q12_A3"
+        },
+        {
+          "text": "Coronary angioplasty or stent",
+          "code": "ED_Q12_A4"
+        },
+        {
+          "text": "Heart attack",
+          "code": "ED_Q12_A5"
+        },
+        {
+          "text": "Hypertrophic obstructive cardiomyopathy",
+          "code": "ED_Q12_A6"
+        },
+        {
+          "text": "Long QT syndrome",
+          "code": "ED_Q12_A7"
+        },
+        {
+          "text": "Other electrical heart abnormalities",
+          "code": "ED_Q12_A8"
+        },
+        {
+          "text": "None of the above",
+          "code": "ED_Q12_A9"
+        }
+      ]
+    },
+    "ED_Q13": {
+      "canvas_linkId": "b9e2f87c-6f3c-497b-ba90-e7cb53b05070",
+      "header": "Do you have or have you previously been diagnosed with any of the following?",
+      "description": "Please select all that apply:",
+      "type": "multiple-choice",
+      "next": "MED_1",
+      "index": 13,
+      "answerOptions": [
+        {
+          "text": "Stroke, ministroke, or TIA",
+          "code": "ED_Q13_A1"
+        },
+        {
+          "text": "Diabetes",
+          "code": "ED_Q13_A2"
+        },
+        {
+          "text": "Prostate conditions",
+          "code": "ED_Q13_A3"
+        },
+        {
+          "text": "Kidney diseases or conditions",
+          "code": "ED_Q13_A4"
+        },
+        {
+          "text": "Liver, stomach, or other gastrointestinal conditions",
+          "code": "ED_Q13_A5"
+        },
+        {
+          "text": "Nerve, spinal cord, or brain disorders",
+          "code": "ED_Q13_A6"
+        },
+        {
+          "text": "Eye conditions or diseases",
+          "code": "ED_Q13_A7"
+        },
+        {
+          "text": "Blood conditions or diseases",
+          "code": "ED_Q13_A8"
+        },
+        {
+          "text": "Vascular conditions affecting arteries or veins",
+          "code": "ED_Q13_A9"
+        },
+        {
+          "text": "Penis conditions other than ED",
+          "code": "ED_Q13_A10"
+        },
+        {
+          "text": "Low blood pressure",
+          "code": "ED_Q13_A11"
+        },
+        {
+          "text": "High blood pressure",
+          "code": "ED_Q13_A12"
+        },
+        {
+          "text": "HIV/AIDS",
+          "code": "ED_Q13_A13"
+        },
+        {
+          "text": "None of the above",
+          "code": "ED_Q13_A14"
+        }
+      ]
+    },
+    "MED_1": {
+      "header": "Do you have any medical conditions or history of prior surgeries?",
+      "type": "choice-details",
+      "next": "MED_2",
+      "index": 14,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MED_3_A1"
+        },
+        {
+          "text": "No",
+          "code": "MED_3_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "MED_3_A1",
+        "code": "MED_3A",
+        "type": "text",
+        "description": "Please tell us about the medical conditions or surgeries you have had."
+      }
+    },
+    "MED_2": {
+      "header": "Do you have any drug allergies?",
+      "type": "choice-details",
+      "next": "ED_Q14",
+      "index": 15,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MED_2_A1"
+        },
+        {
+          "text": "No",
+          "code": "MED_2_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "MED_2_A1",
+        "code": "MED_2A",
+        "type": "text",
+        "description": "Please list your drug allergies below."
+      }
+    },
+    "ED_Q14": {
+      "canvas_linkId": "fdebeb30-7664-49ee-ab0f-a1a2814bbde7",
+      "header": "Do you take any of the following medications?",
+      "description": "Please select all that apply:",
+      "type": "multiple-choice",
+      "next": "MED_3",
+      "index": 16,
+      "answerOptions": [
+        {
+          "text": "Nitroglycerin spray, ointment, patches or tablets (e.g. Nitro-Dur, Nitrolingual, Nitrostat, NitroMist, Nitro-Bid, Transderm-Nitro, Nitro-Time, Deponit, Minitran, Nitrek, Nitrodisc, Nitrogard, Nitrong, Nitro-Par)",
+          "code": "ED_Q14_A1"
+        },
+        {
+          "text": "Isosorbide mononitrate or isosorbide dinitrate (e.g. Isordil, Dilatrate, Sorbitrate, Imdur, Ismo, Monoket)",
+          "code": "ED_Q14_A2"
+        },
+        {
+          "text": "Nitric oxide supplements/boosters",
+          "code": "ED_Q14_A3"
+        },
+        {
+          "text": "Nonselective alpha blockers: e.g. doxazosin (Cardura), prazosin (Minipress), terazosin (Hytrin)",
+          "code": "ED_Q14_A4"
+        },
+        {
+          "text": "Uroselective alpha blockers: e.g. tamsulosin (Flomax), alfuzosin (Uroxatral), and silodosin (Rapaflo)",
+          "code": "ED_Q14_A5"
+        },
+        {
+          "text": "Any of the following heart medications: amiodarone (Cordarone, Pacerone), sotalol (Betapace, Sorine, Sotylize), dofetilide (Tikosyn), ibutilide (Corvert), dronedarone (Multaq), quinidine (Quinaglute, Quinidex), procainamide (Pronestyl, Procan, Procanbid), disopyramide (Norpace, Rythmodan)",
+          "code": "ED_Q14_A6"
+        },
+        {
+          "text": "None of the above",
+          "code": "ED_Q14_A7"
+        }
+      ]
+    },
+    "MED_3": {
+      "header": "Do you take any other medications?",
+      "type": "choice-details",
+      "next": "ED_Q15",
+      "index": 17,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "MED_1_A1"
+        },
+        {
+          "text": "No",
+          "code": "MED_1_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "MED_1_A1",
+        "code": "MED_1A",
+        "type": "text",
+        "description": "Please list the medication(s) that you are currently taking."
+      }
+    },
+    "ED_Q15": {
+      "canvas_linkId": "4473f1a7-7a5e-4230-aa14-6af68cddaa1b",
+      "header": "Have you smoked, ingested, or used any of the following within the past 3 months?",
+      "description": "Please select all that apply:",
+      "type": "multiple-choice",
+      "index": 18,
+      "next": "ED_Q16",
+      "answerOptions": [
+        {
+          "text": "Cigarettes",
+          "code": "ED_Q15_A1"
+        },
+        {
+          "text": "Poppers or rush (Amyl Nitrate or Butyl Nitrate)",
+          "code": "ED_Q15_A2"
+        },
+        {
+          "text": "Cocaine",
+          "code": "ED_Q15_A3"
+        },
+        {
+          "text": "Methamphetamine (crystal meth)",
+          "code": "ED_Q15_A4"
+        },
+        {
+          "text": "Other",
+          "code": "ED_Q15_A5",
+          "next": "ED_Q17"
+        },
+        {
+          "text": "None of the above",
+          "code": "ED_Q15_A6",
+          "next": "TREATMENT_OPTIONS_V2-Q1"
+        }
+      ]
+    },
+    "ED_Q16": {
+      "canvas_linkId": "bee29be1-dd41-487e-bbcd-92fc490c29d3",
+      "header": "Within the past 3 months, have you used the recreational drug(s) more than you meant or felt you needed to cut down?",
+      "type": "choice",
+      "next": "ED_Q18",
+      "index": 19,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ED_Q16_A1"
+        },
+        {
+          "text": "No",
+          "code": "ED_Q16_A2"
+        }
+      ]
+    },
+    "ED_Q17": {
+      "canvas_linkId": "df6815ef-5807-4c2e-b749-1fd7ac65cb43",
+      "header": "Please share what recreational drug(s) you have used in the past 3 months, including frequency.",
+      "type": "text",
+      "index": 20,
+      "next": "DRUG_INTERACTION_DISCLAIMER"
+    },
+    "ED_Q18": {
+      "canvas_linkId": "3a891c24-4a14-46c7-a319-96e026bbe4ae",
+      "header": "On average, how frequently do you use recreational drugs?",
+      "type": "choice",
+      "index": 20,
+      "next": "DRUG_INTERACTION_DISCLAIMER",
+      "answerOptions": [
+        {
+          "text": "At least once per month, or more",
+          "code": "ED_Q18_A1"
+        },
+        {
+          "text": "Less than once per month",
+          "code": "ED_Q18_A2"
+        }
+      ]
+    },
+    "DRUG_INTERACTION_DISCLAIMER": {
+      "header": "Combining poppers, cocaine, methamphetamine, or cigarettes with oral medications for ED can cause severe life and health-threatening emergencies.",
+      "description": "Some of the emergencies that can occur when any of these recreational drugs and ED medications are combined include the following: priapism (an erection that doesn't go away and can cause permanent damage to your penis), stroke (which can cause permanent disability), cardiac arrest (your heart stops beating), muscle rigidity, very high fever, or death.",
+      "acknowledgment": "I have read the provided warning about the risks of serious medical harm and/or death if I use these recreational drugs and ED medications together.",
+      "type": "message",
+      "index": 21,
+      "next": "TREATMENT_OPTIONS_V2-Q1"
+    },
+    "TREATMENT_OPTIONS-Q1": {
+      "header": "Suggested treatments for you.",
+      "description": "These are all FDA-approved and taken before sex. They're best for people who can predict when they'll have sex or who only want to take pills when needed.",
+      "type": "ed-treatment-select",
+      "index": 24,
+      "answerOptions": [
+        {
+          "text": "Sildenafil (as needed)",
+          "code": "TREATMENT_OPTIONS-Q1-A1",
+          "next": "TREATMENT_OPTIONS-Q2"
+        },
+        {
+          "text": "Tadalafil (as needed)",
+          "code": "TREATMENT_OPTIONS-Q1-A2",
+          "next": "TREATMENT_OPTIONS-Q2"
+        },
+        {
+          "text": "Tadalafil (daily)",
+          "code": "TREATMENT_OPTIONS-Q1-A3"
+        },
+        {
+          "text": "Viagra (as needed)",
+          "code": "TREATMENT_OPTIONS-Q1-A4",
+          "next": "TREATMENT_OPTIONS-Q3"
+        },
+        {
+          "text": "Cialis (daily)",
+          "code": "TREATMENT_OPTIONS-Q1-A5"
+        }
+      ]
+    },
+    "TREATMENT_OPTIONS-Q2": {
+      "header": "Select your preferred dosage strength for [medication name].",
+      "type": "ed-dosage-select",
+      "next": "TREATMENT_OPTIONS-Q3",
+      "index": 25,
+      "footer": {
+        "description": "It will be up to your provider to decide whether this dosage is suitable or if an alternative dosage would be more appropriate."
+      }
+    },
+    "TREATMENT_OPTIONS-Q3": {
+      "header": "How frequently do you plan to use [medication name] per month?",
+      "description": "In a typical month, how many times do you expect to use [medication name]?",
+      "index": 26,
+      "type": "ed-quantity-select"
+    },
+    "TREATMENT_OPTIONS_V2-Q1": {
+      "header": "When do you want to take your medication?",
+      "type": "ed-usage-select",
+      "next": "TREATMENT_OPTIONS_V2-Q2",
+      "index": 22,
+      "buttonText": "Continue"
+    },
+
+    "TREATMENT_OPTIONS_V2-Q2": {
+      "header": "For your treatment, which options would you prefer?",
+      "type": "ed-usage-select",
+      "index": 23,
+      "answerOptions": [
+        {
+          "text": "Custom Chewable",
+          "code": "TREATMENT_OPTIONS_V2-Q2-A1",
+          "next": "TREATMENT_OPTIONS_V2-Q3"
+        },
+        {
+          "text": "Standard Pill",
+          "code": "TREATMENT_OPTIONS_V2-Q2-A2",
+          "next": "TREATMENT_OPTIONS-Q1"
+        }
+      ]
+    },
+
+    "TREATMENT_OPTIONS_V2-Q3": {
+      "header": "Suggested treatments for you.",
+      "description": "These are all FDA-approved and taken before sex. They're best for people who can predict when they'll have sex or who only want to take pills when needed.",
+      "type": "ed-treatment-select-v2",
+      "index": 24,
+      "next": {
+        "if": [
+          {
+            "some": [
+              { "var": "answers.TREATMENT_OPTIONS_V2-Q1.answer" },
+              {
+                "in": [{ "var": "valueString" }, ["Usage - Daily"]]
+              }
+            ]
+          },
+          "",
+          "TREATMENT_OPTIONS-Q3"
+        ]
+      },
+      "answerOptions": {
+        "if": [
+          { "===": [{ "var": "region" }, "CA"] },
+          [
+            {
+              "text": "Sildenafil Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A1"
+            },
+            {
+              "text": "Tadalafil Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A2"
+            }
+          ],
+          [
+            {
+              "text": "Sildenafil + Tadalafil Zealthy Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A1"
+            },
+            {
+              "text": "Sildenafil + Oxytocin Zealthy Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A3"
+            },
+            {
+              "text": "Tadalafil + Oxytocin Zealthy Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A4"
+            },
+            {
+              "text": "Tadalafil + Vardenafil Zealthy Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A2"
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,410 @@
+{
+  "name": "hair-loss-post",
+  "version": "1",
+  "code": "HL_POST",
+  "entry": "HL_POST_Q1",
+  "questions": {
+    "HL_POST_Q1": {
+      "header": "Just a few more questions to answer to complete your consultation for your hair loss treatment.",
+      "description": "This will take about 5 minutes.",
+      "type": "message",
+      "next": "HL_POST_Q2",
+      "styles": {
+        "header": {
+          "textAlign": "center"
+        }
+      }
+    },
+    "HL_POST_Q2": {
+      "header": "How long ago did you first notice changes to your hair?",
+      "type": "choice",
+      "next": "HL_POST_Q3",
+      "answerOptions": [
+        {
+          "text": "<6 months I noticed recent increases in hair loss",
+          "code": "HL_POST_Q2_A1"
+        },
+        {
+          "text": "6-12 months ago",
+          "code": "HL_POST_Q2_A2"
+        },
+        {
+          "text": "1-2 years ago",
+          "code": "HL_POST_Q2_A3"
+        },
+        {
+          "text": "Over 2 years ago",
+          "code": "HL_POST_Q2_A4"
+        }
+      ]
+    },
+    "HL_POST_Q3": {
+      "header": "Have you noticed any scaling, greasiness, or dandruff to your scalp?",
+      "type": "choice",
+      "next": "HL_POST_Q4",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HL_POST_Q3_A1"
+        },
+        {
+          "text": "No",
+          "code": "HL_POST_Q3_A2"
+        }
+      ]
+    },
+    "HL_POST_Q4": {
+      "header": "Select any of the following family members that have experienced hair loss:",
+      "type": "multiple-choice",
+      "next": "HL_POST_Q5",
+      "answerOptions": [
+        {
+          "text": "Parent(s)",
+          "code": "HL_POST_Q4_A1"
+        },
+        {
+          "text": "Sibling(s)",
+          "code": "HL_POST_Q4_A2"
+        },
+        {
+          "text": "Mother’s family",
+          "code": "HL_POST_Q4_A3"
+        },
+        {
+          "text": "Father’s family",
+          "code": "HL_POST_Q4_A4"
+        },
+        {
+          "text": "Not sure",
+          "code": "HL_POST_Q4_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "HL_POST_Q4_A6"
+        }
+      ]
+    },
+    "HL_POST_Q5": {
+      "header": "Have you ever addressed your hair loss by doing any of the following:",
+      "type": "multiple-choice",
+      "next": "HL_POST_Q6",
+      "answerOptions": [
+        {
+          "text": "Spoken to a healthcare professional",
+          "code": "HL_POST_Q5_A1"
+        },
+        {
+          "text": "Used a prescription",
+          "code": "HL_POST_Q5_A2"
+        },
+        {
+          "text": "Used over the counter medication/treatment",
+          "code": "HL_POST_Q5_A3"
+        },
+        {
+          "text": "None of the above",
+          "code": "HL_POST_Q5_A4"
+        }
+      ]
+    },
+    "HL_POST_Q6": {
+      "header": "How many alcoholic drinks do you consume per week?",
+      "type": "choice",
+      "next": "HL_POST_Q7",
+      "answerOptions": [
+        {
+          "text": "1-20",
+          "code": "HL_POST_Q6_A1"
+        },
+        {
+          "text": "21-24",
+          "code": "HL_POST_Q6_A2"
+        },
+        {
+          "text": "25 or more",
+          "code": "HL_POST_Q6_A3"
+        },
+        {
+          "text": "I rarely drink",
+          "code": "HL_POST_Q6_A4"
+        }
+      ]
+    },
+    "HL_POST_Q7": {
+      "header": "Have any of the following events happened to you in the last 6 months?",
+      "type": "multiple-choice",
+      "next": "HL_POST_Q9",
+      "answerOptions": [
+        {
+          "text": "Surgery",
+          "code": "HL_POST_Q7_A1"
+        },
+        {
+          "text": "Major illness",
+          "code": "HL_POST_Q7_A2"
+        },
+        {
+          "text": "Death of a loved one",
+          "code": "HL_POST_Q7_A3"
+        },
+        {
+          "text": "Unemployment or loss of a home",
+          "code": "HL_POST_Q7_A4"
+        },
+        {
+          "text": "Significant weight loss (more than 10 pounds)",
+          "code": "HL_POST_Q7_A5"
+        },
+        {
+          "text": "Other",
+          "code": "HL_POST_Q7_A6"
+        },
+        {
+          "text": "None of the above",
+          "code": "HL_POST_Q7_A7"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "HL_POST_Q7_A6",
+        "code": "HL_POST_Q8",
+        "type": "text",
+        "description": "Please describe the stressful life event.",
+        "input_placeholder": "Type here..."
+      }
+    },
+    "HL_POST_Q9": {
+      "header": "Are you planning to try to conceive in the next 3 months?",
+      "type": "choice",
+      "next": "HL_POST_Q10",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HL_POST_Q9_A1"
+        },
+        {
+          "text": "No",
+          "code": "HL_POST_Q9_A2"
+        }
+      ]
+    },
+    "HL_POST_Q10": {
+      "header": "Have you been diagnosed with any of the medical conditions below?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "HL_POST_Q12",
+      "answerOptions": [
+        {
+          "text": "Kidney disease",
+          "code": "HL_POST_Q10_A1"
+        },
+        {
+          "text": "Erectile dysfunction",
+          "code": "HL_POST_Q10_A2"
+        },
+        {
+          "text": "Liver disease",
+          "code": "HL_POST_Q10_A3"
+        },
+        {
+          "text": "Prostate cancer",
+          "code": "HL_POST_Q10_A4"
+        },
+        {
+          "text": "Thyroid disease",
+          "code": "HL_POST_Q10_A5"
+        },
+        {
+          "text": "Heart disease",
+          "code": "HL_POST_Q10_A6"
+        },
+        {
+          "text": "High blood pressure",
+          "code": "HL_POST_Q10_A7"
+        },
+        {
+          "text": "Lupus",
+          "code": "HL_POST_Q10_A8"
+        },
+        {
+          "text": "Other",
+          "code": "HL_POST_Q10_A9"
+        },
+        {
+          "text": "None of the above",
+          "code": "HL_POST_Q10_A10"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "HL_POST_Q10_A9",
+        "code": "HL_POST_Q11",
+        "type": "text",
+        "description": "Please describe the medical condition.",
+        "input_placeholder": "Type here..."
+      }
+    },
+    "HL_POST_Q12": {
+      "header": "Currently are you taking any medications or supplements?",
+      "type": "choice-details",
+      "next": "HL_POST_Q14",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HL_POST_Q12_A1"
+        },
+        {
+          "text": "No",
+          "code": "HL_POST_Q12_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "HL_POST_Q12_A1",
+        "code": "HL_POST_Q13",
+        "type": "text",
+        "description": "Please list the medication(s) and/or supplement(s) that you are currently taking.",
+        "input_placeholder": "Type here..."
+      }
+    },
+    "HL_POST_Q14": {
+      "header": "Do you have any drug allergies?",
+      "type": "choice-details",
+      "next": "HL_POST_Q16",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HL_POST_Q14_A1"
+        },
+        {
+          "text": "No",
+          "code": "HL_POST_Q14_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "HL_POST_Q14_A1",
+        "code": "HL_POST_Q15",
+        "type": "text",
+        "description": "Please list the medication(s) that you are allergic to.",
+        "input_placeholder": "Type here..."
+      }
+    },
+    "HL_POST_Q16": {
+      "header": "Have you had your blood pressure measured in the last year?",
+      "description": "It’s important to provide a recent reading as it can affect what types of medications are safe for you.",
+      "type": "choice",
+      "next": "HL_POST_Q17",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HL_POST_Q16_A1"
+        },
+        {
+          "text": "No",
+          "code": "HL_POST_Q16_A2",
+          "next": "DISCLAIMER_BLOOD_PRESSURE"
+        }
+      ]
+    },
+    "HL_POST_Q17": {
+      "header": "What was your most recent blood pressure reading?",
+      "type": "choice",
+      "next": "HL_POST_Q18",
+      "answerOptions": [
+        {
+          "text": "I’m not sure but it was within the normal range",
+          "code": "HL_POST_Q17_A1"
+        },
+        {
+          "text": "Normal (Less than 129/80)",
+          "code": "HL_POST_Q17_A2"
+        },
+        {
+          "text": "Elevated (130-139/80-89)",
+          "code": "HL_POST_Q17_A3"
+        },
+        {
+          "text": "High (140-149/90-99)",
+          "code": "HL_POST_Q17_A4"
+        },
+        {
+          "text": "Very High (More than 150/100)",
+          "code": "HL_POST_Q17_A5"
+        },
+        {
+          "text": "No blood pressure reading in the last year",
+          "code": "HL_POST_Q17_A6",
+          "next": "DISCLAIMER_BLOOD_PRESSURE"
+        }
+      ]
+    },
+    "HL_POST_Q18": {
+      "header": "Select any of the following mental health conditions you have been diagnosed with:",
+      "type": "multiple-choice",
+      "next": "HL_POST_Q20",
+      "answerOptions": [
+        {
+          "text": "Anxiety",
+          "code": "HL_POST_Q18_A1"
+        },
+        {
+          "text": "Bipolar disorder",
+          "code": "HL_POST_Q18_A2"
+        },
+        {
+          "text": "Depression",
+          "code": "HL_POST_Q18_A3"
+        },
+        {
+          "text": "Other",
+          "code": "HL_POST_Q18_A4"
+        },
+        {
+          "text": "None of the above",
+          "code": "HL_POST_Q18_A5"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "HL_POST_Q18_A4",
+        "code": "HL_POST_Q19",
+        "type": "text",
+        "description": "Please list the mental health conditions you’ve been diagnosed with:",
+        "input_placeholder": "Type here..."
+      }
+    },
+    "HL_POST_Q20": {
+      "header": "Have you recently or in the past had suicidal thoughts or suicide attempts?",
+      "type": "choice",
+      "next": "PHOTOS",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HL_POST_Q20_A1"
+        },
+        {
+          "text": "No",
+          "code": "HL_POST_Q20_A2"
+        }
+      ]
+    },
+    "PHOTOS": {
+      "header": "Take or upload a photo of the front of your hairline.",
+      "description": "To assess your hair loss, your Zealthy provider will need you to take a couple of pictures. We’ll start with a photo of the front of your hairline.",
+      "label": "Front of your hairline",
+      "type": "hair-loss-photo",
+      "buttonText": "Confirm photo",
+      "next": "PHOTOS_TWO"
+    },
+    "PHOTOS_TWO": {
+      "header": "Take or upload a photo of the top/back of your head.",
+      "description": "To assess your hair loss, your Zealthy provider will need you to take a couple of pictures. Now that we have a photo of the front of your hairline, go ahead and take a photo of the top/back of your head.",
+      "type": "hair-loss-photo",
+      "label": "Top/back of your head",
+      "buttonText": "Confirm photo"
+    },
+    "DISCLAIMER_BLOOD_PRESSURE": {
+      "header": "We’ll need a blood pressure reading.",
+      "description": "Go ahead and complete your health assessment, but your prescription won’t be processed until you tell us your blood pressure numbers. You can have your blood pressure checked at most pharmacies or use a home blood pressure cuff. If you aren’t sure when you last had it taken, call your doctor’s office and ask if it was within the last year and what the numbers were. After you submit your request, we will send you a message reminding you to tell us your blood pressure.",
+      "type": "message",
+      "buttonText": "I understand",
+      "next": "HL_POST_Q18"
+    }
+  }
+}

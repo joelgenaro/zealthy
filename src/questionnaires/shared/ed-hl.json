@@ -1,0 +1,1356 @@
+{
+  "name": "ed-hl",
+  "care": "Sex + Hair",
+  "version": "4",
+  "code": "EDHL",
+  "codingSystem": "http://schemas.getzealthy.canvasmedical.com/fhir/systems/internal",
+  "entry": "EDHL_Q1",
+  "questions": {
+    "EDHL_Q1": {
+      "header": "Is this treatment for you or someone else?",
+      "type": "choice-details",
+      "index": 1,
+      "answerOptions": [
+        {
+          "text": "Myself",
+          "code": "EDHL_Q1_A1",
+          "next": "EDHL_Q2"
+        },
+        {
+          "text": "Someone else",
+          "code": "EDHL_Q1_A2",
+          "next": "EDHL_Q2_V2"
+        }
+      ]
+    },
+    "EDHL_Q2": {
+      "header": "What sexual performance improvement are you looking for?",
+      "type": "multiple-choice",
+      "index": 2,
+      "next": "EDHL_Q3",
+      "answerOptions": [
+        {
+          "text": "Make it easier to get erections",
+          "code": "EDHL_Q2_A1"
+        },
+        {
+          "text": "Get stronger erections",
+          "code": "EDHL_Q2_A2"
+        },
+        {
+          "text": "Make it easier to maintain erections",
+          "code": "EDHL_Q2_A3"
+        },
+        {
+          "text": "Have more control over ejaculation",
+          "code": "EDHL_Q2_A4"
+        },
+        {
+          "text": "Last longer before ejaculation",
+          "code": "EDHL_Q2_A5"
+        }
+      ]
+    },
+    "EDHL_Q2_V2": {
+      "header": "Who is this treatment for?",
+      "type": "choice-details",
+      "index": 2,
+      "next": "EDHL_Q3_V2",
+      "answerOptions": [
+        {
+          "text": "Spouse",
+          "code": "EDHL_Q2_V2_A1"
+        },
+        {
+          "text": "Significant other",
+          "code": "EDHL_Q2_V2_A2"
+        },
+        {
+          "text": "Friend",
+          "code": "EDHL_Q2_V2_A3"
+        },
+        {
+          "text": "Someone else",
+          "code": "EDHL_Q2_V2_A4"
+        }
+      ]
+    },
+    "EDHL_Q3": {
+      "header": "Do you have difficulty getting or staying as hard as you want before ejaculating?",
+      "type": "choice-details",
+      "index": 3,
+      "next": "EDHL_Q4",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "EDHL_Q3_A1"
+        },
+        {
+          "text": "Rarely",
+          "code": "EDHL_Q3_A2"
+        },
+        {
+          "text": "Sometimes",
+          "code": "EDHL_Q3_A3"
+        },
+        {
+          "text": "Often or always",
+          "code": "EDHL_Q3_A4"
+        }
+      ]
+    },
+    "EDHL_Q3_V2": {
+      "header": "The visit can only be completed by the person seeking treatment.",
+      "type": "message",
+      "index": 3,
+      "listItems": [
+        "Patient safety is important to us. Thanks for your interest."
+      ],
+      "buttonText": "Back to Zealthy",
+      "next": "/visit/care-selection"
+    },
+    "EDHL_Q4": {
+      "header": "Which of the following best describes your sexual performance?",
+      "type": "choice-details",
+      "index": 4,
+      "next": "EDHL_Q5",
+      "answerOptions": [
+        {
+          "text": "I have difficulty getting hard",
+          "code": "EDHL_Q4_A1"
+        },
+        {
+          "text": "I have difficulty staying hard",
+          "code": "EDHL_Q4_A2"
+        },
+        {
+          "text": "Both",
+          "code": "EDHL_Q4_A3"
+        }
+      ]
+    },
+    "EDHL_Q5": {
+      "header": "Which of the following best describes how this started?",
+      "type": "choice-details",
+      "index": 5,
+      "next": "EDHL_Q6",
+      "answerOptions": [
+        {
+          "text": "Suddenly",
+          "code": "EDHL_Q5_A1"
+        },
+        {
+          "text": "Gradually worsened over time",
+          "code": "EDHL_Q5_A2"
+        }
+      ]
+    },
+    "EDHL_Q6": {
+      "header": "How would you rate the typical hardness of your erection during masturbation?",
+      "type": "choice-details",
+      "index": 6,
+      "next": "EDHL_Q7",
+      "answerOptions": [
+        {
+          "text": "Penis does not enlarge",
+          "code": "EDHL_Q6_A1"
+        },
+        {
+          "text": "My penis is larger, but not hard",
+          "code": "EDHL_Q6_A2"
+        },
+        {
+          "text": "My penis is hard, but not enough for penetration",
+          "code": "EDHL_Q6_A3"
+        },
+        {
+          "text": "My penis is hard enough for penetration, but not completely hard",
+          "code": "EDHL_Q6_A4"
+        },
+        {
+          "text": "My penis is completely hard and fully rigid",
+          "code": "EDHL_Q6_A5"
+        },
+        {
+          "text": "I don’t masturbate",
+          "code": "EDHL_Q6_A6"
+        }
+      ]
+    },
+    "EDHL_Q7": {
+      "header": "How would you rate the typical hardness of your erection with a sexual partner?",
+      "type": "choice-details",
+      "index": 7,
+      "next": "EDHL_Q8",
+      "answerOptions": [
+        {
+          "text": "Penis does not enlarge",
+          "code": "EDHL_Q7_A1"
+        },
+        {
+          "text": "My penis is larger, but not hard",
+          "code": "EDHL_Q7_A2"
+        },
+        {
+          "text": "My penis is hard, but not enough for penetration",
+          "code": "EDHL_Q7_A3"
+        },
+        {
+          "text": "My penis is hard enough for penetration, but not completely hard",
+          "code": "EDHL_Q7_A4"
+        },
+        {
+          "text": "My penis is completely hard and fully rigid",
+          "code": "EDHL_Q7_A5"
+        },
+        {
+          "text": "I have not tried with a partner within the last 6 months",
+          "code": "EDHL_Q7_A6"
+        }
+      ]
+    },
+    "EDHL_Q8": {
+      "header": "How do you rate your confidence that you could keep an erection?",
+      "type": "choice-details",
+      "index": 8,
+      "next": "EDHL_Q9",
+      "answerOptions": [
+        {
+          "text": "Very low",
+          "code": "EDHL_Q8_A1"
+        },
+        {
+          "text": "Low",
+          "code": "EDHL_Q8_A2"
+        },
+        {
+          "text": "Moderate",
+          "code": "EDHL_Q8_A3"
+        },
+        {
+          "text": "High",
+          "code": "EDHL_Q8_A4"
+        },
+        {
+          "text": "Very high",
+          "code": "EDHL_Q8_A5"
+        }
+      ]
+    },
+    "EDHL_Q9": {
+      "header": "When you had erections with sexual stimulation, how often were your erections hard enough for penetration?",
+      "type": "choice-details",
+      "index": 9,
+      "next": "EDHL_Q10",
+      "answerOptions": [
+        {
+          "text": "Never",
+          "code": "EDHL_Q9_A1"
+        },
+        {
+          "text": "Rarely",
+          "code": "EDHL_Q9_A2"
+        },
+        {
+          "text": "Sometimes",
+          "code": "EDHL_Q9_A3"
+        },
+        {
+          "text": "Often",
+          "code": "EDHL_Q9_A4"
+        },
+        {
+          "text": "Always",
+          "code": "EDHL_Q9_A5"
+        }
+      ]
+    },
+    "EDHL_Q10": {
+      "header": "During sexual intercourse, how often were you able to maintain your erection after you had penetrated your partner?",
+      "type": "choice-details",
+      "index": 10,
+      "next": "EDHL_Q11",
+      "answerOptions": [
+        {
+          "text": "Never",
+          "code": "EDHL_Q10_A1"
+        },
+        {
+          "text": "Rarely",
+          "code": "EDHL_Q10_A2"
+        },
+        {
+          "text": "Sometimes",
+          "code": "EDHL_Q10_A3"
+        },
+        {
+          "text": "Often",
+          "code": "EDHL_Q10_A4"
+        },
+        {
+          "text": "Always",
+          "code": "EDHL_Q10_A5"
+        }
+      ]
+    },
+    "EDHL_Q11": {
+      "header": "During sexual intercourse, how difficult was it to maintain your erection to completion of intercourse?",
+      "type": "choice-details",
+      "index": 11,
+      "next": "EDHL_Q12",
+      "answerOptions": [
+        {
+          "text": "Very difficult",
+          "code": "EDHL_Q11_A1"
+        },
+        {
+          "text": "Difficult",
+          "code": "EDHL_Q11_A2"
+        },
+        {
+          "text": "Neutral",
+          "code": "EDHL_Q11_A3"
+        },
+        {
+          "text": "Easy",
+          "code": "EDHL_Q11_A4"
+        },
+        {
+          "text": "Very easy",
+          "code": "EDHL_Q11_A5"
+        }
+      ]
+    },
+    "EDHL_Q12": {
+      "header": "When you attempted sexual intercourse, how often was it satisfactory for you?",
+      "type": "choice-details",
+      "index": 12,
+      "next": "EDHL_Q13",
+      "answerOptions": [
+        {
+          "text": "Never",
+          "code": "EDHL_Q12_A1"
+        },
+        {
+          "text": "Rarely",
+          "code": "EDHL_Q12_A2"
+        },
+        {
+          "text": "Sometimes",
+          "code": "EDHL_Q12_A3"
+        },
+        {
+          "text": "Often",
+          "code": "EDHL_Q12_A4"
+        },
+        {
+          "text": "Always",
+          "code": "EDHL_Q12_A5"
+        }
+      ]
+    },
+    "EDHL_Q13": {
+      "header": "Have you used medication for erectile dysfunction before?",
+      "type": "choice-details",
+      "index": 13,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "EDHL_Q13_A1",
+          "next": "EDHL_Q13_V2"
+        },
+        {
+          "text": "No",
+          "code": "EDHL_Q13_A2",
+          "next": "EDHL_Q14"
+        }
+      ]
+    },
+    "EDHL_Q13_V2": {
+      "header": "Which medication(s) have you used and at what dose(s)?",
+      "description": "Please include the medication names and any dosages. Separate your responses by comma (enter 'not sure' if you are unsure).",
+      "index": 13.1,
+      "next": "EDHL_Q14",
+      "input_placeholder": "Enter response",
+      "type": "text"
+    },
+    "EDHL_Q14": {
+      "header": "Sometimes sexual problems can be a sign of low testosterone. Do you have any of these other symptoms that low testosterone can also cause?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "index": 14,
+      "next": "EDHL_Q16_V2",
+      "answerOptions": [
+        {
+          "text": "Low energy",
+          "code": "EDHL_Q14_A1"
+        },
+        {
+          "text": "Low motivation",
+          "code": "EDHL_Q14_A2"
+        },
+        {
+          "text": "Decreased physical endurance",
+          "code": "EDHL_Q14_A3"
+        },
+        {
+          "text": "Decreased physical strength",
+          "code": "EDHL_Q14_A4"
+        },
+        {
+          "text": "Daytime sleepiness",
+          "code": "EDHL_Q14_A5"
+        },
+        {
+          "text": "None of these",
+          "code": "EDHL_Q14_A6"
+        }
+      ]
+    },
+    "EDHL_Q15": {
+      "header": "What was your sex assigned at birth?",
+      "type": "choice-details",
+      "index": 15,
+      "next": "EDHL_Q16",
+      "answerOptions": [
+        {
+          "text": "Male",
+          "code": "EDHL_Q15_A1"
+        },
+        {
+          "text": "Female",
+          "code": "EDHL_Q15_A2"
+        }
+      ]
+    },
+    "EDHL_Q16_V2": {
+      "header": "Do you have any allergies to medication?",
+      "index": 16,
+      "input_placeholder": "Enter response",
+      "type": "text",
+      "label": "Allergies and your reaction to each.",
+      "checkboxText": "I'm not sure",
+      "next": "EDHL_Q17"
+    },
+    "EDHL_Q17": {
+      "header": "Have you had any surgeries or hospitalizations?",
+      "type": "choice-details",
+      "index": 17,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "EDHL_Q17_A1",
+          "next": "EDHL_Q17_V2"
+        },
+        {
+          "text": "No",
+          "code": "EDHL_Q17_A2",
+          "next": "EDHL_Q18"
+        }
+      ]
+    },
+    "EDHL_Q17_V2": {
+      "header": "Please tell us the dates and reasons for your surgeries or hospitalizations.",
+      "type": "text",
+      "index": 17.1,
+      "next": "EDHL_Q18",
+      "input_placeholder": "Tell us more"
+    },
+    "EDHL_Q18": {
+      "header": "Have you experienced any of the following symptoms in the last 6 months?",
+      "type": "multiple-choice",
+      "index": 18,
+      "answerOptions": [
+        {
+          "text": "Chest pain when climbing 2 flights of stairs or walking 4 blocks",
+          "code": "EDHL_Q18_A1",
+          "next": "EDHL_Q18_V2"
+        },
+        {
+          "text": "Chest pain with sexual activity",
+          "code": "EDHL_Q18_A2",
+          "next": "EDHL_Q18_V2"
+        },
+        {
+          "text": "Severe lightheadedness, fainting or near fainting",
+          "code": "EDHL_Q18_A3",
+          "next": "EDHL_Q18_V2"
+        },
+        {
+          "text": "None of these",
+          "code": "EDHL_Q18_A4",
+          "next": "EDHL_Q19"
+        }
+      ]
+    },
+    "EDHL_Q18_V2": {
+      "header": "Explain the symptoms you’ve experienced in as much detail as you can.",
+      "type": "text",
+      "index": 18.1,
+      "next": "EDHL_Q19",
+      "input_placeholder": "Tell us more"
+    },
+    "EDHL_Q19": {
+      "header": "Do you have any of the following medical problems?",
+      "description": "Select all that apply.",
+      "type": "multiple-choice",
+      "index": 19,
+      "next": "EDHL_Q20",
+      "answerOptions": [
+        {
+          "text": "High blood pressure",
+          "code": "EDHL_Q19_A1",
+          "next": "EDHL_Q19_V2"
+        },
+        {
+          "text": "High cholesterol",
+          "code": "EDHL_Q19_A2"
+        },
+        {
+          "text": "Diabetes",
+          "code": "EDHL_Q19_A3"
+        },
+        {
+          "text": "Cardiovascular disease",
+          "code": "EDHL_Q19_A4"
+        },
+        {
+          "text": "Heart failure",
+          "code": "EDHL_Q19_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "EDHL_Q19_A6"
+        }
+      ]
+    },
+    "EDHL_Q19_V2": {
+      "header": "Do you take any medications to manage your high blood pressure?",
+      "type": "choice-details",
+      "index": 19.1,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "EDHL_Q19_V2_A1",
+          "next": "EDHL_Q19_V3"
+        },
+        {
+          "text": "No",
+          "code": "EDHL_Q19_V2_A2",
+          "next": "EDHL_Q20"
+        }
+      ]
+    },
+    "EDHL_Q19_V3": {
+      "header": "What medication(s) do you take to manage your high blood pressure?",
+      "type": "multiple-choice",
+      "index": 19.2,
+      "answerOptions": [
+        {
+          "text": "Amlodipine (Norvasc)",
+          "code": "EDHL_Q19_V3_A1",
+          "next": "EDHL_Q20"
+        },
+        {
+          "text": "Atenolol (Tenormin)",
+          "code": "EDHL_Q19_V3_A2",
+          "next": "EDHL_Q20"
+        },
+        {
+          "text": "Carvedilol (Coreg)",
+          "code": "EDHL_Q19_V3_A3",
+          "next": "EDHL_Q20"
+        },
+        {
+          "text": "Clonidine (Catapres)",
+          "code": "EDHL_Q19_V3_A4",
+          "next": "EDHL_Q20"
+        },
+        {
+          "text": "Furosemide (Lasix)",
+          "code": "EDHL_Q19_V3_A5",
+          "next": "EDHL_Q20"
+        },
+        {
+          "text": "None of the above",
+          "code": "EDHL_Q19_V3_A6",
+          "next": "EDHL_Q19_V4"
+        }
+      ]
+    },
+    "EDHL_Q19_V4": {
+      "header": "Please specify the medication(s) you take to manage your high blood pressure.",
+      "type": "text",
+      "index": 19.3,
+      "next": "EDHL_Q20",
+      "input_placeholder": "Enter response"
+    },
+    "EDHL_Q20": {
+      "header": "Have you ever been diagnosed with a mental health or psychiatric condition?",
+      "description": "We’re asking so we can personalize your treatment for you.",
+      "type": "choice-details",
+      "index": 20,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "EDHL_Q20_A1",
+          "next": "EDHL_Q20_V2"
+        },
+        {
+          "text": "No",
+          "code": "EDHL_Q20_A2",
+          "next": "EDHL_Q21"
+        }
+      ]
+    },
+    "EDHL_Q20_V2": {
+      "header": "Which of the following mental health or psychiatric conditions do you have?",
+      "description": "We’re asking so we can personalize your treatment for you.",
+      "type": "multiple-choice",
+      "index": 20.1,
+      "next": "EDHL_Q20_V3",
+      "answerOptions": [
+        {
+          "text": "Depression",
+          "code": "EDHL_Q20_V2_A1"
+        },
+        {
+          "text": "Generalized anxiety disorder",
+          "code": "EDHL_Q20_V2_A2"
+        },
+        {
+          "text": "Bipolar disease (manic depression)",
+          "code": "EDHL_Q20_V2_A3"
+        },
+        {
+          "text": "Schizophrenia or other psychosis",
+          "code": "EDHL_Q20_V2_A4"
+        },
+        {
+          "text": "Panic Disorder",
+          "code": "EDHL_Q20_V2_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "EDHL_Q20_V2_A6"
+        }
+      ]
+    },
+    "EDHL_Q20_V3": {
+      "header": "Please tell us more about your mental health or psychiatric condition.",
+      "description": "Include the diagnosis and treatment",
+      "index": 20.2,
+      "type": "text",
+      "input_placeholder": "Tell us more",
+      "next": "EDHL_Q21"
+    },
+    "EDHL_Q21": {
+      "header": "Do you have or have previously been diagnosed with any of the following heart conditions?",
+      "description": "Please select the option that best applies to you.",
+      "type": "choice-details",
+      "index": 21,
+      "next": "EDHL_Q22",
+      "answerOptions": [
+        {
+          "text": "Abnormal heart beats or rhythms",
+          "code": "EDHL_Q21_A1",
+          "next": "EDHL_Q21_V2"
+        },
+        {
+          "text": "Implanted internal cardioverter defibrillator (ICD)",
+          "code": "EDHL_Q21_A2"
+        },
+        {
+          "text": "Congestive heart failure",
+          "code": "EDHL_Q21_A3",
+          "next": "EDHL_Q21_V3"
+        },
+        {
+          "text": "Coronary artery disease (without prior heart attack)",
+          "code": "EDHL_Q21_A4"
+        },
+        {
+          "text": "Coronary bypass surgery",
+          "code": "EDHL_Q21_A5"
+        },
+        {
+          "text": "Coronary angioplasty or stent",
+          "code": "EDHL_Q21_A6"
+        },
+        {
+          "text": "Heart attack",
+          "code": "EDHL_Q21_A7",
+          "next": "EDHL_Q21_V5"
+        },
+        {
+          "text": "Idiopathic Hypertrophic Subaortic Stenosis (aka hypertrophic obstructive cardiomyopathy)",
+          "code": "EDHL_Q21_A8"
+        },
+        {
+          "text": "Long QT Syndrome (QT Prolongation)",
+          "code": "EDHL_Q21_A9"
+        },
+        {
+          "text": "Other electrical heart abnormalities",
+          "code": "EDHL_Q21_A10",
+          "next": "EDHL_Q21_V4"
+        },
+        {
+          "text": "None of these apply to me",
+          "code": "EDHL_Q21_A11"
+        }
+      ]
+    },
+    "EDHL_Q21_V2": {
+      "header": "What type of heart arrythmia abnormal heart beats or heart-related diagnosis do you have?",
+      "type": "text",
+      "next": "EDHL_Q22",
+      "input_placeholder": "Tell us more"
+    },
+    "EDHL_Q21_V3": {
+      "header": "Have you ever been admitted to the hospital or had an emergency room visit related to heart failure within the past year?",
+      "type": "choice-details",
+      "index": 21.2,
+      "next": "EDHL_Q22",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "EDHL_Q21_V3_A1"
+        },
+        {
+          "text": "No",
+          "code": "EDHL_Q21_V3_A2"
+        }
+      ]
+    },
+    "EDHL_Q21_V4": {
+      "header": "Please tell us more about your other heart abnormalities.",
+      "type": "text",
+      "index": 21.3,
+      "next": "EDHL_Q22",
+      "input_placeholder": "Tell us more"
+    },
+    "EDHL_Q21_V5": {
+      "header": "When was your most recent heart attack?",
+      "description": "We’re asking so we can personalize your treatment for you.",
+      "type": "choice-details",
+      "index": 21.4,
+      "next": "EDHL_Q22",
+      "answerOptions": [
+        {
+          "text": "Less than 3 months ago",
+          "code": "EDHL_Q21_V5_A1"
+        },
+        {
+          "text": "3-6 months ago",
+          "code": "EDHL_Q21_V5_A2"
+        },
+        {
+          "text": "More than 6 months ago",
+          "code": "EDHL_Q21_V5_A3"
+        }
+      ]
+    },
+    "EDHL_Q22": {
+      "header": "Do you have any other medical conditions you haven’t shared with us already?",
+      "description": "Be sure to include any medical conditions that you treat with medications.",
+      "type": "choice-details",
+      "index": 22,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "EDHL_Q22_A1",
+          "next": "EDHL_Q22_V2"
+        },
+        {
+          "text": "No",
+          "code": "EDHL_Q22_A2",
+          "next": "EDHL_Q23"
+        }
+      ]
+    },
+    "EDHL_Q22_V2": {
+      "header": "Please list any other medical conditions.",
+      "description": "This helps us to personalize your treatment.",
+      "type": "text",
+      "index": 22.1,
+      "next": "EDHL_Q23",
+      "input_placeholder": "Tell us more"
+    },
+    "EDHL_Q23": {
+      "header": "Which medications do you take?",
+      "description": "Please include the medication names and any dosages. Separate your responses by comma (enter 'none' if you do not take any medications currently).",
+      "type": "text",
+      "input_placeholder": "Enter response",
+      "index": 23,
+      "next": "EDHL_Q24"
+    },
+    "EDHL_Q24": {
+      "header": "When was the last time you or a healthcare provider checked your blood pressure?",
+      "type": "choice-details",
+      "index": 24,
+      "answerOptions": [
+        {
+          "text": "Within the last 18 months",
+          "code": "EDHL_Q24_A1",
+          "next": "EDHL_Q25"
+        },
+        {
+          "text": "More than 18 months",
+          "code": "EDHL_Q24_A2",
+          "next": "EDHL_Q24_V2"
+        }
+      ]
+    },
+    "EDHL_Q24_V2": {
+      "header": "To continue, we need your latest blood pressure.",
+      "listItems": [
+        "You can get this at a local pharmacy, grocery store, or with a healthcare provider.",
+        "Got it, I’ll get a new blood pressure measurement and then return to complete my visit."
+      ],
+      "type": "message",
+      "index": 24.1,
+      "next": "EDHL_Q25"
+    },
+    "EDHL_Q25": {
+      "header": "What was your last blood pressure reading?",
+      "type": "choice-details",
+      "index": 25,
+      "next": "EDHL_Q26",
+      "answerOptions": [
+        {
+          "text": "Low (Less than 90/60)",
+          "code": "EDHL_Q25_A1"
+        },
+        {
+          "text": "Normal (90-119/60-79)",
+          "code": "EDHL_Q25_A2"
+        },
+        {
+          "text": "Elevated (130-139/80-89)",
+          "code": "EDHL_Q25_A3"
+        },
+        {
+          "text": "High (140-149/90-99)",
+          "code": "EDHL_Q25_A4"
+        },
+        {
+          "text": "Very high (More than 150/100)",
+          "code": "EDHL_Q25_A5"
+        }
+      ]
+    },
+    "EDHL_Q26": {
+      "header": "Do you smoke cigarettes?",
+      "type": "choice-details",
+      "index": 26,
+      "next": "EDHL_Q27",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "EDHL_Q26_A1"
+        },
+        {
+          "text": "No",
+          "code": "EDHL_Q26_A2"
+        }
+      ]
+    },
+    "EDHL_Q27": {
+      "header": "Have you used any recreational drugs in the last 90 days or do you plan to while using medication for erectile dysfunction?",
+      "description": "If so, can you tell us which recreational drug(s) you used? Please include how frequently and the last time you used it. If not, enter 'no'.",
+      "label": "Recreational drugs",
+      "type": "text",
+      "input_placeholder": "Enter response",
+      "checkboxText": "I haven’t used any recreational drugs in the last 90 days.",
+      "index": 27,
+      "next": "EDHL_Q28"
+    },
+    "EDHL_Q28": {
+      "header": "Combining poppers, cocaine, methamphetamine, or cigarettes with oral medications for ED can cause severe life and health-threatening emergencies. ",
+      "type": "message",
+      "description": "Some of the emergencies that can occur when any of these recreational drugs and ED medications are combined include the following: priapism (an erection that doesn't go away and can cause permanent damage to your penis), stroke (which can cause permanent disability), cardiac arrest (your heart stops beating), muscle rigidity, very high fever, or death.",
+      "listItems": [
+        "I have read the provided warning about the risks of serious medical harm and/or death if I use these recreational drugs and sexual dysfunction medications together."
+      ],
+      "index": 28,
+      "next": "EDHL_Q29"
+    },
+    "EDHL_Q29": {
+      "header": "Aside from better sex, is there another area of your health you’d like to improve?",
+      "description": "This helps us get a full picture of your health goals and find the right treatment options for you.",
+      "type": "choice-details",
+      "next": "EDHL_Q30",
+      "index": 29,
+      "answerOptions": [
+        {
+          "text": "Hair regrowth",
+          "code": "EDHL_Q29_A1"
+        },
+        {
+          "text": "Weight loss",
+          "code": "EDHL_Q29_A2"
+        },
+        {
+          "text": "None of these",
+          "code": "EDHL_Q29_A3"
+        }
+      ]
+    },
+    "EDHL_Q30": {
+      "header": "Let’s get to know more about your hair goals with a few more questions",
+      "type": "message",
+      "index": 30,
+      "next": "EDHL_Q31"
+    },
+    "EDHL_Q31": {
+      "header": "Where are you on your hair loss journey?",
+      "type": "choice-details",
+      "index": 31,
+      "next": "EDHL_Q32",
+      "answerOptions": [
+        {
+          "text": "Experiencing hair loss",
+          "code": "EDHL_Q31_A1"
+        },
+        {
+          "text": "Noticing changes to my hair",
+          "code": "EDHL_Q31_A2"
+        },
+        {
+          "text": "Thinking ahead",
+          "code": "EDHL_Q31_A3"
+        }
+      ]
+    },
+    "EDHL_Q32": {
+      "header": "How are you looking to improve your hair?",
+      "type": "multiple-choice",
+      "description": "Choose as many as you’d like.",
+      "index": 32,
+      "next": "EDHL_Q33",
+      "answerOptions": [
+        {
+          "text": "A stronger, defined hairline",
+          "code": "EDHL_Q32_A1"
+        },
+        {
+          "text": "Visibly thicker, fuller hair",
+          "code": "EDHL_Q32_A2"
+        },
+        {
+          "text": "More scalp coverage",
+          "code": "EDHL_Q32_A3"
+        },
+        {
+          "text": "Keep the hair I have",
+          "code": "EDHL_Q32_A5"
+        },
+        {
+          "text": "Any of the above",
+          "code": "EDHL_Q32_A4"
+        }
+      ]
+    },
+    "EDHL_Q33": {
+      "header": "How much hair have you lost?",
+      "description": "This helps us get a full picture of your health goals and find the right treatment options for you.",
+      "type": "choice-details",
+      "index": 33,
+      "next": "EDHL_Q34",
+      "answerOptions": [
+        {
+          "text": "A lot",
+          "code": "EDHL_Q33_A1"
+        },
+        {
+          "text": "Some",
+          "code": "EDHL_Q33_A2"
+        },
+        {
+          "text": "A little",
+          "code": "EDHL_Q33_A3"
+        }
+      ]
+    },
+    "EDHL_Q34": {
+      "header": "When did you start noticing changes to your hair?",
+      "type": "choice-details",
+      "index": 34,
+      "next": "EDHL_Q35",
+      "answerOptions": [
+        {
+          "text": "Over a year ago",
+          "code": "EDHL_Q34_A1"
+        },
+        {
+          "text": "In the past year",
+          "code": "EDHL_Q34_A2"
+        },
+        {
+          "text": "In the past few months",
+          "code": "EDHL_Q34_A3"
+        },
+        {
+          "text": "Not sure",
+          "code": "EDHL_Q34_A4"
+        }
+      ]
+    },
+    "EDHL_Q35": {
+      "header": "Do you take any of the following medications?",
+      "type": "multiple-choice",
+      "index": 35,
+      "next": "EDHL_Q36",
+      "answerOptions": [
+        {
+          "text": "Topical Finasteride",
+          "code": "EDHL_Q35_A1"
+        },
+        {
+          "text": "Oral Finasteride 1 mg (Propecia)",
+          "code": "EDHL_Q35_A2"
+        },
+        {
+          "text": "Oral Finasteride 5 mg (Proscar)",
+          "code": "EDHL_Q35_A3"
+        },
+        {
+          "text": "Dutasteride (Jalyn, Avodart)",
+          "code": "EDHL_Q35_A4"
+        },
+        {
+          "text": "Oral Minoxidil (Loniten)",
+          "code": "EDHL_Q35_A5"
+        },
+        {
+          "text": "Doxazosin (Minipress)",
+          "code": "EDHL_Q35_A6"
+        },
+        {
+          "text": "Terazosin (Hytin)",
+          "code": "EDHL_Q35_A7"
+        },
+        {
+          "text": "None of the above",
+          "code": "EDHL_Q35_A8"
+        }
+      ]
+    },
+    "EDHL_Q36": {
+      "header": "Do you have any of the following medical conditions?",
+      "description": "We ask this because certain conditions can affect the types of treatment that would be right for you. Please select the condition that best applies to you. ",
+      "type": "choice-details",
+      "index": 36,
+
+      "answerOptions": [
+        {
+          "text": "Rheumatologic or autoimmune disease / thyroid problems",
+          "code": "EDHL_Q36_A1",
+          "next": "EDHL_Q36_V3"
+        },
+        {
+          "text": "Pheochromocytoma",
+          "code": "EDHL_Q36_A2",
+          "next": "EDHL_Q37"
+        },
+        {
+          "text": "Cancer",
+          "code": "EDHL_Q36_A3",
+          "next": "EDHL_Q36_V2"
+        },
+        {
+          "text": "No, none of the above",
+          "code": "EDHL_Q36_A4",
+          "next": "EDHL_Q37"
+        }
+      ]
+    },
+    "EDHL_Q36_V2": {
+      "header": "Please tell us more about your cancer diagnosis.",
+      "description": "Include the diagnosis and treatment.",
+      "index": 36.1,
+      "type": "text",
+      "next": "EDHL_Q37",
+      "input_placeholder": "Tell us more"
+    },
+    "EDHL_Q36_V3": {
+      "header": "What specific rheumatologic, autoimmune or thyroid condition have you been diagnosed with?",
+      "description": "Include the diagnosis and treatment.",
+      "index": 36.2,
+      "type": "text",
+      "next": "EDHL_Q37",
+      "input_placeholder": "Tell us more"
+    },
+    "EDHL_Q37": {
+      "header": "Have you experienced symptoms of depression?",
+      "description": "This helps the provider ensure you are getting the best treatment for your body.",
+      "type": "choice-details",
+      "index": 37,
+      "next": "EDHL_Q38",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "EDHL_Q37_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "EDHL_Q37_A2"
+        },
+        {
+          "text": "Not sure",
+          "code": "EDHL_Q37_A3"
+        }
+      ]
+    },
+    "EDHL_Q38": {
+      "header": "In the last 2 weeks, have you been bothered by any of the following?",
+      "type": "multiple-choice",
+      "index": 38,
+      "answerOptions": [
+        {
+          "text": "Little interest or pleasure in doing things.",
+          "code": "EDHL_Q38_A1",
+          "next": "EDHL_Q41"
+        },
+        {
+          "text": "Feeling down, depressed, or hopeless.",
+          "code": "EDHL_Q38_A2",
+          "next": "EDHL_Q39"
+        },
+        {
+          "text": "None of the above",
+          "code": "EDHL_Q38_A3",
+          "next": "EDHL_Q41"
+        }
+      ]
+    },
+    "EDHL_Q39": {
+      "header": "How often have you felt down, depressed, or hopeless in the last 2 weeks?",
+      "type": "choice-details",
+      "index": 39,
+      "next": "EDHL_Q41",
+      "answerOptions": [
+        {
+          "text": "1-2 days per week (several days)",
+          "code": "EDHL_Q39_A1"
+        },
+        {
+          "text": "3-4 days per week (more than half the days)",
+          "code": "EDHL_Q39_A2"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "EDHL_Q39_A3"
+        }
+      ]
+    },
+    "EDHL_Q40": {
+      "header": "For hair growth there are two main ingredients, which are often prescribed together to stop hair loss and regrow hair. Oral minoxidil is typically recommended to patients with a history of depression or mental health conditions because finasteride has been associated with increased depression, anxiety and suicidality in men younger than age 45 using finasteride for hair loss.",
+      "type": "choice-details",
+      "index": 40,
+      "next": "EDHL_Q41",
+      "answerOptions": [
+        {
+          "text": "I understand and would still like to be evaluated for a treatment with both minoxidil and finasteride",
+          "code": "EDHL_Q40_A1"
+        },
+        {
+          "text": "I prefer to only have minoxidil for hair growth",
+          "code": "EDHL_Q40_A2"
+        }
+      ]
+    },
+    "EDHL_Q41": {
+      "header": "Are you experiencing any of the following symptoms on your scalp?",
+      "description": "People can experience various causes of hair loss. We want to know whether yours is one that might be better treated elsewhere. ",
+      "type": "choice-details",
+      "index": 41,
+      "next": "EDHL_Q42",
+      "answerOptions": [
+        {
+          "text": "Burning or pain",
+          "code": "EDHL_Q41_A1",
+          "next": "EDHL_Q41_V2"
+        },
+        {
+          "text": "Patches of rough, scaly skin or scarring",
+          "code": "EDHL_Q41_A2",
+          "next": "EDHL_Q41_V3"
+        },
+        {
+          "text": "Pustules or crusting",
+          "code": "EDHL_Q41_A3",
+          "next": "EDHL_Q41_V4"
+        },
+        {
+          "text": "None of the above",
+          "code": "EDHL_Q41_A4",
+          "next": "EDHL_Q42"
+        }
+      ]
+    },
+    "EDHL_Q41_V2": {
+      "header": "Please tell us more about the burning or pain on your scalp.",
+      "description": "Your provider may want to know more about how long you’ve noticed this for, where it is located, and if you have been diagnosed with a scalp condition by a healthcare provider.",
+      "index": 41.1,
+      "type": "text",
+      "next": "EDHL_Q42",
+      "input_placeholder": "Tell us more"
+    },
+    "EDHL_Q41_V3": {
+      "header": "Please tell us more about the patches of rough, scaly skin or scarring on your scalp.",
+      "description": "Your provider may want to know more about how long you’ve noticed this for, where it is located, and if you have been diagnosed with a scalp condition by a healthcare provider.",
+      "index": 41.2,
+      "type": "text",
+      "next": "EDHL_Q42",
+      "input_placeholder": "Tell us more"
+    },
+    "EDHL_Q41_V4": {
+      "header": "Please tell us more about the pustules or crusting on your scalp.",
+      "description": "Your provider may want to know more about how long you’ve noticed this for, where it is located, and if you have been diagnosed with a scalp condition by a healthcare provider.",
+      "index": 41.3,
+      "type": "text",
+      "next": "EDHL_Q42",
+      "input_placeholder": "Tell us more"
+    },
+    "EDHL_Q42": {
+      "header": "Which best describes your hair loss?",
+      "type": "ed-hl-select",
+      "label": "Not sure photo",
+      "next": "PHOTO_HAIRLINE_FRONT",
+      "index": 42,
+      "answerOptions": [
+        {
+          "image": "/images/ed-hl-thinning-at-hairline.png",
+          "code": "EDHL_Q42_A1"
+        },
+        {
+          "image": "/images/ed-hl-thinning-at-top.png",
+          "code": "EDHL_Q42_A2"
+        },
+        {
+          "image": "/images/ed-hl-bald-patches.png",
+          "code": "EDHL_Q42_A3"
+        },
+        {
+          "image": "/images/ed-hl-redness-irritation.png",
+          "code": "EDHL_Q42_A4"
+        },
+        {
+          "text": "I’m not sure",
+          "code": "EDHL_Q42_A5"
+        }
+      ]
+    },
+    "PHOTO_HAIRLINE_FRONT": {
+      "header": "Front hairline",
+      "description": "To better assess your hair loss, your provider needs a couple photos. Let’s start with the front hairline.",
+      "label": "Take a photo of front of your hairline",
+      "type": "hair-loss-photo",
+      "next": "PHOTO_HAIRLINE_BACK",
+      "buttonText": "Continue"
+    },
+    "PHOTO_HAIRLINE_BACK": {
+      "header": "Back hairline",
+      "description": "To better assess your hair loss, your provider needs a couple photos. Let’s continue with the back of your head.",
+      "label": "Take a photo of back of your hairline",
+      "type": "hair-loss-photo",
+      "next": "EDHL_Q43",
+      "buttonText": "Continue"
+    },
+    "EDHL_Q43": {
+      "header": "Is there anything else you would like your provider to know today?",
+      "type": "text",
+      "input_placeholder": "Enter response",
+      "index": 45,
+      "next": "EDHL_Q44"
+    },
+    "EDHL_Q44": {
+      "type": "ed-hl-image-question",
+      "index": 46,
+      "next": "EDHL_Q45",
+      "content": {
+        "text1": "Meet the 3-in-1 pill made with ingredients for",
+        "highlight1": "better sex",
+        "textBetweenHighlights": "and",
+        "highlight2": "better hair",
+        "imageSrc": "/images/ed-hl/ed-hl-three-in-one.png"
+      }
+    },
+    "EDHL_Q45": {
+      "type": "ed-hl-image-question",
+      "index": 47,
+      "next": "EDHL_Q46",
+      "content": {
+        "text1": "Tadalafil helps you achieve",
+        "highlight1": "stronger",
+        "textBetweenHighlights": "and",
+        "highlight2": "longer lasting",
+        "text2": "erections",
+        "imageSrc": "/images/ed-hl/ed-hl-tadalafil.png"
+      }
+    },
+    "EDHL_Q46": {
+      "type": "ed-hl-image-question",
+      "index": 48,
+      "next": "EDHL_Q47",
+      "content": {
+        "text1": "Tadalafil works by",
+        "highlight1": "improving blood flow",
+        "textBetweenHighlights": "to the penis for",
+        "highlight2": "harder erections",
+        "imageSrc": "/images/ed-hl/ed-hl-tadalafil-works.png"
+      }
+    },
+    "EDHL_Q47": {
+      "type": "ed-hl-image-question",
+      "index": 49,
+      "next": "EDHL_Q48",
+      "content": {
+        "text1": "Minoxidil and Finasteride have been trusted by  dermatologists for over 30 years to",
+        "highlight1": "regrow hair",
+        "highlight2": "and prevent hair loss",
+        "imageSrc": "/images/ed-hl/ed-hl-minoxidil-and-finasteride.png"
+      }
+    },
+    "EDHL_Q48": {
+      "type": "ed-hl-image-question",
+      "index": 50,
+      "next": "EDHL_Q49",
+      "content": {
+        "text1": "It typically takes 3 to 6 months to",
+        "highlight1": "regrow thicker,",
+        "highlight2": "fuller hair",
+        "imageSrc": "/images/ed-hl/ed-hl-before-and-after.png"
+      }
+    },
+    "EDHL_Q49": {
+      "type": "ed-hl-image-question",
+      "index": 51,
+      "next": "EDHL_Q50",
+      "content": {
+        "text1": "Look good, feel good,",
+        "highlight1": "in and out",
+        "highlight2": "of the bedroom",
+        "imageSrc": "/images/ed-hl/ed-hl-satisfaction.png"
+      }
+    },
+    "EDHL_Q50": {
+      "type": "ed-hl-image-question",
+      "index": 52,
+      "next": "EDHL_Q51",
+      "content": {
+        "text1": "Would you like for a provider to determine if",
+        "highlight1": "Sex",
+        "highlight2": "+ Hair",
+        "text2": "is right for you?",
+        "imageSrc": "/images/ed-hl/ed-hl-right-for-you.png"
+      }
+    },
+    "EDHL_Q51": {
+      "type": "ed-hl-treatment-select",
+      "index": 53
+    }
+  }
+}

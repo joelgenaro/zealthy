@@ -1,0 +1,14 @@
+{
+  "name": "async-what-happens-next",
+  "version": "1",
+  "code": "ASYNC-WIN",
+  "entry": "ASYNC-WIN-Q1",
+  "questions": {
+    "ASYNC-WIN-Q1": {
+      "header": "What happens next.",
+      "description": "You're almost done; help us by verifying your photo ID or passport, and your prescription request will be completed.",
+      "type": "async-what-happens-next",
+      "buttonText": "Continue to upload photo ID"
+    }
+  }
+}

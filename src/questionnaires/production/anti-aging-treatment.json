@@ -1,0 +1,307 @@
+{
+  "name": "anti-aging-treatment",
+  "version": "1",
+  "canvas_id": "a514ed53-04bd-47bc-b20a-26de00c386c3",
+  "code": "ANTI_AT",
+  "codingSystem": "http://schemas.getzealthy.canvasmedical.com/fhir/systems/internal",
+  "entry": "ANTI_AT_Q1",
+  "questions": {
+    "ANTI_AT_Q1": {
+      "header": "Do you have any of the following conditions?",
+      "description": "Select all that apply.",
+      "canvas_linkId": "7b07cc94-69af-4a75-918c-de2d9dda8e75",
+      "type": "multiple-choice",
+      "next": {
+        "if": [
+          { "===": [{ "var": "gender" }, "female"] },
+          "ANTI_AT_Q2",
+          "ANTI_AT_Q3"
+        ]
+      },
+      "index": 6,
+      "answerOptions": [
+        {
+          "text": "Facial Eczema",
+          "code": "ANTI_AT_Q1_A1"
+        },
+        {
+          "text": "Rosacea",
+          "code": "ANTI_AT_Q1_A2"
+        },
+        {
+          "text": "Melasma",
+          "code": "ANTI_AT_Q1_A3"
+        },
+        {
+          "text": "None of the above",
+          "code": "ANTI_AT_Q1_A4"
+        }
+      ]
+    },
+    "ANTI_AT_Q2": {
+      "header": "Do any of the following apply to you?",
+      "description": "Select all that apply:",
+      "canvas_linkId": "4fc640cd-e0a4-4644-9f30-ad62f1ba7c18",
+      "type": "multiple-choice",
+      "next": "ANTI_AT_Q3",
+      "index": 7,
+      "answerOptions": [
+        {
+          "text": "I am pregnant.",
+          "code": "ANTI_AT_Q2_A1"
+        },
+        {
+          "text": "I am breastfeeding.",
+          "code": "ANTI_AT_Q2_A2"
+        },
+        {
+          "text": "I had a child in the last six weeks.",
+          "code": "ANTI_AT_Q2_A3"
+        },
+        {
+          "text": "None of the above",
+          "code": "ANTI_AT_Q2_A4"
+        }
+      ]
+    },
+    "ANTI_AT_Q3": {
+      "header": "Are you currently using any of the following prescription medications for your skin?",
+      "description": "Select all that apply.",
+      "canvas_linkId": "aaf73acf-6c1e-4022-8da8-57556359a599",
+      "type": "multiple-choice",
+      "next": "ANTI_AT_Q4",
+      "index": 8,
+      "answerOptions": [
+        {
+          "text": "Adapalene 0.1% (Differin)",
+          "code": "ANTI_AT_Q3_A1"
+        },
+        {
+          "text": "Adapalene 0.3% (Diferin)",
+          "code": "ANTI_AT_Q3_A2"
+        },
+        {
+          "text": "Adapalene/Benzoyl Peroxide 0.1% (Epiduo)",
+          "code": "ANTI_AT_Q3_A3"
+        },
+        {
+          "text": "Adapalene/Benxoyl Peroxide 0.3% (Epiduo Forte)",
+          "code": "ANTI_AT_Q3_A4"
+        },
+        {
+          "text": "Tazarotene 0.045% (Arazio)",
+          "code": "ANTI_AT_Q3_A5"
+        },
+        {
+          "text": "Tazarotene 0.05% (Tazorac)",
+          "code": "ANTI_AT_Q3_A6"
+        },
+        {
+          "text": "Tazarotene 0.1% (Avage, Tazorac, Fabior)",
+          "code": "ANTI_AT_Q3_A7"
+        },
+        {
+          "text": "Tretinoin 0.01% (Retin-A)",
+          "code": "ANTI_AT_Q3_A8"
+        },
+        {
+          "text": "Tretinoin 0.04% (Retin-A Micro)",
+          "code": "ANTI_AT_Q3_A9"
+        },
+        {
+          "text": "Tretinoin 0.05% (Retin-A, Athralin, Althreno)",
+          "code": "ANTI_AT_Q3_A10"
+        },
+        {
+          "text": "Tretinoin 0.08% (Retin-A Micro)",
+          "code": "ANTI_AT_Q3_A11"
+        },
+        {
+          "text": "Tretinoin 0.1% (Retin-A Micro)",
+          "code": "ANTI_AT_Q3_A12"
+        },
+        {
+          "text": "Trifarotene 0.005% (Aklief)",
+          "code": "ANTI_AT_Q3_A13"
+        },
+        {
+          "text": "Other topical retinoid",
+          "code": "ANTI_AT_Q3_A14"
+        },
+        {
+          "text": "None of the above",
+          "code": "ANTI_AT_Q3_A15",
+          "next": "ANTI_AT_Q5"
+        }
+      ]
+    },
+    "ANTI_AT_Q4": {
+      "description": "Please share with your Zealthy provider more about which prescription medications you are currently on for your skin as well as how well they work and how often you are taking them. If you have side effects, please share that also.",
+      "canvas_linkId": "d57b634a-bf83-47e3-b323-03d1a5a1d488",
+      "type": "text",
+      "next": "ANTI_AT_Q5",
+      "index": 9
+    },
+    "ANTI_AT_Q5": {
+      "header": "Have you previously used any of the following prescription medications for your skin that you no longer take?",
+      "description": "Select all that apply.",
+      "canvas_linkId": "50738394-a050-4c19-9ff4-3995f465dc45",
+      "type": "multiple-choice",
+      "next": "ANTI_AT_Q6",
+      "index": 10,
+      "answerOptions": [
+        {
+          "text": "Adapalene 0.1% (Differin)",
+          "code": "ANTI_AT_Q5_A1"
+        },
+        {
+          "text": "Adapalene 0.3% (Diferin)",
+          "code": "ANTI_AT_Q5_A2"
+        },
+        {
+          "text": "Adapalene/Benzoyl Peroxide 0.1% (Epiduo)",
+          "code": "ANTI_AT_Q5_A3"
+        },
+        {
+          "text": "Adapalene/Benxoyl Peroxide 0.3% (Epiduo Forte)",
+          "code": "ANTI_AT_Q5_A4"
+        },
+        {
+          "text": "Tazarotene 0.045% (Arazio)",
+          "code": "ANTI_AT_Q5_A5"
+        },
+        {
+          "text": "Tazarotene 0.05% (Tazorac)",
+          "code": "ANTI_AT_Q5_A6"
+        },
+        {
+          "text": "Tazarotene 0.1% (Avage, Tazorac, Fabior)",
+          "code": "ANTI_AT_Q5_A7"
+        },
+        {
+          "text": "Tretinoin 0.01% (Retin-A)",
+          "code": "ANTI_AT_Q5_A8"
+        },
+        {
+          "text": "Tretinoin 0.04% (Retin-A Micro)",
+          "code": "ANTI_AT_Q5_A9"
+        },
+        {
+          "text": "Tretinoin 0.05% (Retin-A, Athralin, Althreno)",
+          "code": "ANTI_AT_Q5_A10"
+        },
+        {
+          "text": "Tretinoin 0.08% (Retin-A Micro)",
+          "code": "ANTI_AT_Q5_A11"
+        },
+        {
+          "text": "Tretinoin 0.1% (Retin-A Micro)",
+          "code": "ANTI_AT_Q5_A12"
+        },
+        {
+          "text": "Trifarotene 0.005% (Aklief)",
+          "code": "ANTI_AT_Q5_A13"
+        },
+        {
+          "text": "Other topical retinoid",
+          "code": "ANTI_AT_Q5_A14"
+        },
+        {
+          "text": "None of the above",
+          "code": "ANTI_AT_Q5_A15",
+          "next": "ANTI_AT_Q7"
+        }
+      ]
+    },
+    "ANTI_AT_Q6": {
+      "description": "Please share with your Zealthy provider more about which prescription medications you previously took for your skin as well as how well they worked and how often you were taking them. If you had side effects, please share that also.",
+      "canvas_linkId": "c3220775-2e08-4312-aea5-eafa2fe2cb8f",
+      "type": "text",
+      "next": "ANTI_AT_Q7",
+      "index": 11
+    },
+    "ANTI_AT_Q7": {
+      "header": "Do you use any over-the-counter or prescription medication, including birth control and herbal supplements?",
+      "type": "choice-details",
+      "canvas_linkId": "28265157-f790-4d8e-8f46-19b732a626be",
+      "next": "ANTI_AT_Q9",
+      "index": 12,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ANTI_AT_Q7_A1"
+        },
+        {
+          "text": "No",
+          "code": "ANTI_AT_Q7_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ANTI_AT_Q7_A1",
+        "code": "ANTI_AT_Q8",
+        "type": "text",
+        "canvas_linkId": "722cbbdf-7c96-4e30-9924-4d1c8da47a65",
+        "description": "Please share what medication(s) you are currently on. If you don’t know, that is okay also."
+      }
+    },
+    "ANTI_AT_Q9": {
+      "header": "Do you have any drug or non-drug allergies?",
+      "type": "choice-details",
+      "canvas_linkId": "adc60538-a15e-46f5-ae40-047d2db8f7db",
+      "next": "PHOTO_FACE_1",
+      "index": 13,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ANTI_AT_Q9_A1"
+        },
+        {
+          "text": "No",
+          "code": "ANTI_AT_Q9_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ANTI_AT_Q9_A1",
+        "code": "ANTI_AT_Q10",
+        "type": "text",
+        "canvas_linkId": "b48721c6-9d4c-4f98-b5ca-78e23066369b",
+        "description": "Please share any additional information your Zealthy provider should know."
+      }
+    },
+    "PHOTO_FACE_1": {
+      "header": "Please provide a photo of your entire face looking directly at the camera",
+      "description": "For best results, remove make-up, be in a well-lit room or outdoors with sufficient lighting.",
+      "label": "Front of face",
+      "type": "hair-loss-photo",
+      "next": "PHOTO_FACE_2",
+      "index": 14,
+      "buttonText": "Continue"
+    },
+    "PHOTO_FACE_2": {
+      "header": "Please provide a photo looking to the left.",
+      "description": "Please include your entire left cheek with forehead visible.",
+      "label": "Left side of face",
+      "type": "hair-loss-photo",
+      "next": "PHOTO_FACE_3",
+      "index": 15,
+      "buttonText": "Continue"
+    },
+    "PHOTO_FACE_3": {
+      "header": "Please provide a photo looking to the right.",
+      "description": "Please include your right cheek with forehead visible.",
+      "label": "Right side of face",
+      "type": "hair-loss-photo",
+      "next": "COMPLETED",
+      "index": 16,
+      "buttonText": "Continue"
+    },
+    "COMPLETED": {
+      "header": "We’re ready to provide you care!",
+      "description": "Please note that Zealthy’s prescription skincare medical team does not screen for skin cancers. For any new or changing skin lesion, please schedule a video visit with a Zealthy provider or seek in person care with a dermatologist or medical professional near you.",
+      "type": "skin-treatment",
+      "subType": "Anti-Aging",
+      "buttonText": "Continue with anti-aging treatment",
+      "index": 17
+    }
+  }
+}

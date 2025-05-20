@@ -1,0 +1,13 @@
+{
+  "name": "pre-workout-previous-meds",
+  "version": "1",
+  "entry": "PRE_W_PM_Q1",
+  "questions": {
+    "PRE_W_PM_Q1": {
+      "banner": "Performance Protocol",
+      "header": "Tell us more about your [medication name] usage.",
+      "details": "Please include details such as the dosage you tried, how effective it was, and any adverse reactions you experienced.",
+      "type": "text"
+    }
+  }
+}

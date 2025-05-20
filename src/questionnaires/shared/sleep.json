@@ -1,0 +1,501 @@
+{
+  "name": "sleep",
+  "care": "sleep",
+  "version": "4",
+  "code": "SLEEP_Q1",
+  "entry": "SLEEP_Q1",
+  "questions": {
+    "SLEEP_Q1": {
+      "header": "Starting your free sleep consultation",
+      "subheader": "Deep sleep awaits",
+      "hideFooter": true,
+      "type": "transition",
+      "transition": {
+        "time": 3500
+      },
+      "index": 1,
+      "next": "SLEEP_Q2"
+    },
+    "SLEEP_Q2": {
+      "header": "Which sleep goal do you want help with the most?",
+      "description": "We can help with all of these. Please choose one goal for now.",
+      "type": "choice",
+      "index": 2,
+      "next": "SLEEP_Q3",
+      "answerOptions": [
+        {
+          "text": "Fall asleep faster",
+          "code": "SLEEP_Q2_A1"
+        },
+        {
+          "text": "Sleep through the night",
+          "code": "SLEEP_Q2_A2"
+        },
+        {
+          "text": "Wake up well-rested",
+          "code": "SLEEP_Q2_A3"
+        }
+      ]
+    },
+    "SLEEP_Q3": {
+      "header": "How often do you wake up in the middle of the night?",
+      "description": "We can help with all of these. Please choose one goal for now.",
+      "type": "choice",
+      "index": 3,
+      "next": "SLEEP_Q4",
+      "answerOptions": [
+        {
+          "text": "Every night",
+          "code": "SLEEP_Q3_A1"
+        },
+        {
+          "text": "Several times a week",
+          "code": "SLEEP_Q3_A2"
+        },
+        {
+          "text": "Less than once a week",
+          "code": "SLEEP_Q3_A3"
+        }
+      ]
+    },
+    "SLEEP_Q4": {
+      "header": "FDA-approved sleep treatments",
+      "subheader": "Address the core causes of your sleep issues, so you can sleep soundly for all the nights to come.",
+      "type": "image",
+      "index": 4,
+      "next": "SLEEP_Q5",
+      "content": {
+        "imageSrc": "/images/sleep/sleep-treatment.png",
+        "height": 300,
+        "width": 500
+      }
+    },
+    "SLEEP_Q5": {
+      "header": "What is your main reason for wanting to sleep better?",
+      "type": "choice",
+      "index": 5,
+      "next": "SLEEP_Q6",
+      "answerOptions": [
+        {
+          "text": "Look healthier & younger",
+          "code": "SLEEP_Q5_A1"
+        },
+        {
+          "text": "Be more productive & alert",
+          "code": "SLEEP_Q5_A2"
+        },
+        {
+          "text": "Get more energy to not feel tired during the day",
+          "code": "SLEEP_Q5_A3"
+        },
+        {
+          "text": "Engage more with family & friends",
+          "code": "SLEEP_Q5_A4"
+        },
+        {
+          "text": "Improve my weight & fitness levels",
+          "code": "SLEEP_Q5_A5"
+        }
+      ]
+    },
+    "SLEEP_Q6": {
+      "header": "On an average night, how much sleep do you get?",
+      "type": "choice",
+      "index": 6,
+      "next": "SLEEP_Q7",
+      "answerOptions": [
+        {
+          "text": "5 hours or less",
+          "code": "SLEEP_Q6_A1"
+        },
+        {
+          "text": "6 hours",
+          "code": "SLEEP_Q6_A2"
+        },
+        {
+          "text": "7 hours",
+          "code": "SLEEP_Q6_A3"
+        },
+        {
+          "text": "8 hours or more",
+          "code": "SLEEP_Q6_A4"
+        }
+      ]
+    },
+    "SLEEP_Q7": {
+      "header": "Drift off to sleep quickly and stay asleep all night",
+      "subheader": "Have you tried the only-FDA approved medication that regulates your body's natural sleep rhythm?",
+      "hideFooter": true,
+      "type": "transition",
+      "transition": {
+        "time": 3500
+      },
+      "index": 7,
+      "next": "SLEEP_Q8"
+    },
+    "SLEEP_Q8": {
+      "header": "Sleep medication that helps you:",
+      "checkItems": [
+        "Fall asleep quicker and stay asleep longer",
+        "Wake up feeling refreshed and ready to start the day",
+        "Calm racing thoughts and help you ease into a restful night"
+      ],
+      "hideFooter": true,
+      "type": "transition",
+      "transition": {
+        "time": 3500
+      },
+      "index": 8,
+      "next": "FDA_APPROVED"
+    },
+    "FDA_APPROVED": {
+      "hideHeader": true,
+      "hideFooter": true,
+      "type": "transition",
+      "transition": {
+        "time": 3500,
+        "imageSrc": "/images/sleep/fda-transition.png",
+        "imageSrcMobile": "/images/sleep/fda-transition-mobile.png"
+      },
+      "index": 8,
+      "next": "SLEEP_Q9"
+    },
+    "SLEEP_Q9": {
+      "header": "In the last 3 months, have you had trouble sleeping for 3 days or more a week?",
+      "type": "choice",
+      "index": 9,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "SLEEP_Q9_A1",
+          "next": "SLEEP_Q10"
+        },
+        {
+          "text": "No",
+          "code": "SLEEP_Q9_A2",
+          "next": "SLEEP_DISCLAIMER_1"
+        }
+      ]
+    },
+    "SLEEP_DISCLAIMER_1": {
+      "header": "Based on the answer you provided, you are not suitable for treatment with prescription sleep medication.",
+      "hideFooter": true,
+      "type": "message",
+      "alerts": ["No recommended treatment. Did you make a mistake answering?"],
+      "index": 9.5
+    },
+    "SLEEP_Q10": {
+      "header": "Does physical pain or discomfort contribute to your insomnia?",
+      "type": "choice-details",
+      "index": 10,
+      "next": "SLEEP_Q11",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "SLEEP_Q10_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "SLEEP_Q10_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "SLEEP_Q10_A2",
+        "code": "SLEEP_Q10_T1",
+        "type": "text",
+        "description": "Please provide more details:",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "SLEEP_Q11": {
+      "header": "Are you currently pregnant, planning to become pregnant, or breastfeeding?",
+      "type": "choice",
+      "index": 11,
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "SLEEP_Q11_A1",
+          "next": "SLEEP_Q12"
+        },
+        {
+          "text": "Yes",
+          "code": "SLEEP_Q11_A2",
+          "next": "SLEEP_DISCLAIMER_2"
+        }
+      ]
+    },
+    "SLEEP_DISCLAIMER_2": {
+      "header": "Based on the answer you provided, you are not suitable for treatment with prescription sleep medication.",
+      "type": "message",
+      "hideFooter": true,
+      "alerts": ["No recommended treatment. Did you make a mistake answering?"],
+      "index": 11.5
+    },
+    "SLEEP_Q12": {
+      "header": "Over the last 2 weeks, how often have you felt down, depressed, or hopeless?",
+      "type": "choice",
+      "index": 12,
+      "next": "SLEEP_Q13",
+      "answerOptions": [
+        {
+          "text": "Not at all",
+          "code": "SLEEP_Q12_A1"
+        },
+        {
+          "text": "Several days",
+          "code": "SLEEP_Q12_A2"
+        },
+        {
+          "text": "More than half of the days",
+          "code": "SLEEP_Q12_A3"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "SLEEP_Q12_A4"
+        }
+      ]
+    },
+    "SLEEP_Q13": {
+      "header": "Over the last 2 weeks, how often have you had little interest or pleasure in doing things?",
+      "type": "choice",
+      "index": 13,
+      "next": "SLEEP_Q14",
+      "answerOptions": [
+        {
+          "text": "Not at all",
+          "code": "SLEEP_Q13_A1"
+        },
+        {
+          "text": "Several days",
+          "code": "SLEEP_Q13_A2"
+        },
+        {
+          "text": "More than half of the days",
+          "code": "SLEEP_Q13_A3"
+        },
+        {
+          "text": "Nearly every day",
+          "code": "SLEEP_Q13_A4"
+        }
+      ]
+    },
+    "SLEEP_Q14": {
+      "header": "Does your job involve operating heavy machinery or the transport of others?",
+      "type": "choice-details",
+      "index": 14,
+      "next": "SLEEP_Q15",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "SLEEP_Q14_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "SLEEP_Q14_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "SLEEP_Q14_A2",
+        "code": "SLEEP_Q14_T1",
+        "type": "text",
+        "description": "Please tell us more.",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "SLEEP_Q15": {
+      "header": "Do you have a history of mental health issues?",
+      "type": "choice-details",
+      "index": 15,
+      "next": "SLEEP_Q16",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "SLEEP_Q15_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "SLEEP_Q15_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "SLEEP_Q15_A2",
+        "code": "SLEEP_Q15_T1",
+        "type": "text",
+        "description": "Please provide your mental health history (including psychiatric medications, seeing mental health providers, being hospitalized for mental health reasons, suicidal thoughts and/or suicide attempts.)",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "SLEEP_Q16": {
+      "header": "In the past year, how many times have you used an illicit drug?",
+      "type": "choice",
+      "index": 16,
+      "next": "SLEEP_Q17",
+      "answerOptions": [
+        {
+          "text": "None",
+          "code": "SLEEP_Q16_A1"
+        },
+        {
+          "text": "1-2 times",
+          "code": "SLEEP_Q16_A2"
+        },
+        {
+          "text": "3-5 times",
+          "code": "SLEEP_Q16_A3",
+          "next": "SLEEP_DISCLAIMER_3"
+        },
+        {
+          "text": "6-10 times",
+          "code": "SLEEP_Q16_A4",
+          "next": "SLEEP_DISCLAIMER_3"
+        },
+        {
+          "text": "11+ times",
+          "code": "SLEEP_Q16_A5",
+          "next": "SLEEP_DISCLAIMER_3"
+        }
+      ]
+    },
+    "SLEEP_DISCLAIMER_3": {
+      "header": "Based on the answer you provided, you are not suitable for treatment with prescription sleep medication.",
+      "hideFooter": true,
+      "type": "message",
+      "alerts": ["No recommended treatment. Did you make a mistake answering?"],
+      "index": 16.5
+    },
+    "SLEEP_Q17": {
+      "header": "In the past year, how many times have you had five or more drinks in a day?",
+      "type": "choice",
+      "index": 17,
+      "next": "SLEEP_Q18",
+      "answerOptions": [
+        {
+          "text": "None",
+          "code": "SLEEP_Q17_A1"
+        },
+        {
+          "text": "1-2 times",
+          "code": "SLEEP_Q17_A2"
+        },
+        {
+          "text": "3-5 times",
+          "code": "SLEEP_Q17_A3"
+        },
+        {
+          "text": "6-10 times",
+          "code": "SLEEP_Q17_A4"
+        },
+        {
+          "text": "11+ times",
+          "code": "SLEEP_Q17_A5"
+        }
+      ]
+    },
+    "SLEEP_Q18": {
+      "header": "Do you have a history of glaucoma or urinary retention?",
+      "type": "choice-details",
+      "index": 18,
+      "next": "SLEEP_Q19",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "SLEEP_Q18_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "SLEEP_Q18_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "SLEEP_Q18_A2",
+        "code": "SLEEP_Q18_T1",
+        "type": "text",
+        "description": "Please provide additional information about this condition, including its duration and whether you are currently undergoing treatment for it?",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "SLEEP_Q19": {
+      "header": "Do you currently have untreated sleep apnea?",
+      "type": "choice",
+      "index": 19,
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "SLEEP_Q19_A1",
+          "next": "SLEEP_Q20"
+        },
+        {
+          "text": "Yes",
+          "code": "SLEEP_Q19_A2",
+          "next": "SLEEP_DISCLAIMER_4"
+        }
+      ]
+    },
+    "SLEEP_DISCLAIMER_4": {
+      "header": "Based on the answer you provided, you are not suitable for treatment with prescription sleep medication.",
+      "hideFooter": true,
+      "type": "message",
+      "alerts": ["No recommended treatment. Did you make a mistake answering?"],
+      "index": 0
+    },
+    "SLEEP_Q20": {
+      "header": "Have you ever had an allergic reaction to any medication?",
+      "type": "choice-details",
+      "index": 20,
+      "next": "SLEEP_Q21",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "SLEEP_Q20_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "SLEEP_Q20_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "SLEEP_Q20_A2",
+        "code": "SLEEP_Q20_T1",
+        "type": "text",
+        "description": "Please list your allergies and your reaction to each one.",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "SLEEP_Q21": {
+      "header": "Do you take any medications, vitamins, or supplements daily?",
+      "type": "choice-details",
+      "index": 21,
+      "next": "SLEEP_Q22",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "SLEEP_Q21_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "SLEEP_Q21_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "SLEEP_Q21_A2",
+        "code": "SLEEP_Q21_T1",
+        "type": "text",
+        "description": "Please list the current medications, vitamins, or supplements you're currently taking.",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "SLEEP_Q22": {
+      "hideHeader": true,
+      "hideFooter": true,
+      "type": "sleep-treatment",
+      "index": 22,
+      "next": "SLEEP_Q23"
+    },
+    "SLEEP_Q23": {
+      "hideHeader": true,
+      "hideFooter": true,
+      "type": "sleep-selection",
+      "index": 23
+    }
+  }
+}

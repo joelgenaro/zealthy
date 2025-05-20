@@ -1,0 +1,51 @@
+{
+  "name": "async-mental-health-intro",
+  "version": "1",
+  "code": "ASYNC-MHI",
+  "entry": "ASYNC-MHI-Q2",
+  "questions": {
+    "ASYNC-MHI-Q1": {
+      "header": "We’re here to help you feel better",
+      "type": "async-mental-health-start",
+      "buttonText": "Continue",
+      "next": "ASYNC-MHI-Q2",
+      "styles": {
+        "container": {
+          "maxWidth": "1200px"
+        },
+        "button": {
+          "maxWidth": "397px"
+        },
+        "header": {
+          "textAlign": "center"
+        }
+      }
+    },
+    "ASYNC-MHI-Q2": {
+      "header": "You’re in the right place!",
+      "listItems": [
+        "About 1 in 5 Americans take medication for their mental health.",
+        "Your Zealthy mental health care team can review your responses and make sure you’re on the right path towards better mental health."
+      ],
+      "type": "message",
+      "next": "ASYNC-MHI-Q3"
+    },
+    "ASYNC-MHI-Q3": {
+      "header": "Taking a deeper look at yourself",
+      "listItems": [
+        "These simple screens will help you better understand your mental health.",
+        "In just a few screens, you’ll see your results and if we can help you feel like the best version of yourself."
+      ],
+      "type": "message",
+      "next": "ASYNC-MHI-Q4"
+    },
+    "ASYNC-MHI-Q4": {
+      "header": "Here is how it works",
+      "listItems": [
+        "These questions will allow you to quantify your symptoms, so your Zealthy provider can provider a diagnosis and create a customized treatment plan.",
+        "If prescribed, your medication will be sent directly to your home in discreet packaging."
+      ],
+      "type": "message"
+    }
+  }
+}

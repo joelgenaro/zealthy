@@ -1,0 +1,11 @@
+{
+  "name": "lab-or-blood-tests",
+  "version": "1",
+  "code": "LAB-OR-BLOOD-TESTS-A",
+  "entry": "LAB-OR-BLOOD-TESTS-A-Q1",
+  "questions": {
+    "LAB-OR-BLOOD-TESTS-A-Q1": {
+      "type": "lab-or-blood-tests"
+    }
+  }
+}

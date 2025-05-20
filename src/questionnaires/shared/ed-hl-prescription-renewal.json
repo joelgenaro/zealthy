@@ -1,0 +1,240 @@
+{
+  "name": "ed-hl-prescription-renewal",
+  "care": "Sex + Hair",
+  "version": "1",
+  "code": "EDHL_PRESCRIPTION_RENEWAL",
+  "intro": {
+    "header": "Let’s help you with your prescription renewal. Just answer a few questions and your Zealthy care team will help with your prescription renewal in 1-3 business days."
+  },
+  "entry": "EDHL_RENEWAL_Q1",
+  "questions": {
+    "EDHL_RENEWAL_Q1": {
+      "header": "Are you happy with the results of your Sex + Hair treatment?",
+      "type": "choice-details",
+      "next": "EDHL_RENEWAL_Q2",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "EDHL_RENEWAL_Q1_A1"
+        },
+        {
+          "text": "No",
+          "code": "EDHL_RENEWAL_Q1_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "EDHL_RENEWAL_Q1_A2",
+        "code": "EDHL_RENEWAL_Q1_Q3",
+        "type": "text",
+        "description": "How would you like it to be improved?"
+      }
+    },
+    "EDHL_RENEWAL_Q2": {
+      "header": "Anything else you'd like to share about your experience with Sex + Hair treatment? Please include details such as the dosage you tried, how effective it was, and any adverse reactions you experienced.",
+      "type": "text",
+      "next": "EDHL_RENEWAL_Q2_2",
+      "index": 2
+    },
+    "EDHL_RENEWAL_Q2_2": {
+      "header": "Are you experiencing any of the following cardiovascular symptoms? Please select all that apply:",
+      "type": "multiple-choice",
+      "next": "EDHL_RENEWAL_Q3",
+      "answerOptions": [
+        {
+          "text": "Chest pain when climbing 2 flights of stairs or walking 4 blocks",
+          "code": "EDHL_RENEWAL_Q5_A1"
+        },
+        {
+          "text": "Chest pain with sexual activity",
+          "code": "EDHL_RENEWAL_Q5_A2"
+        },
+        {
+          "text": "Unexplained fainting or dizziness",
+          "code": "EDHL_RENEWAL_Q5_A3"
+        },
+        {
+          "text": "Abnormal heart beats or rhythms",
+          "code": "EDHL_RENEWAL_Q5_A4"
+        },
+        {
+          "text": "None of the above",
+          "code": "EDHL_RENEWAL_Q5_A6"
+        }
+      ]
+    },
+    "EDHL_RENEWAL_Q3": {
+      "header": "Did you start any new medications since your last consultation with Zealthy?",
+      "type": "choice-details",
+      "index": 10,
+      "next": "EDHL_RENEWAL_Q4",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "EDHL_RENEWAL_Q3_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "EDHL_RENEWAL_Q3_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "EDHL_RENEWAL_Q3_A2",
+        "code": "EDHL_RENEWAL_Q3_T1",
+        "type": "text",
+        "description": "Please list the medication(s) that you are currently taking.",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "EDHL_RENEWAL_Q4": {
+      "header": "Have you been diagnosed with any new medical conditions since your last consultation with Zealthy?",
+      "type": "choice-details",
+      "index": 10,
+      "next": "EDHL_RENEWAL_Q5",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "EDHL_RENEWAL_Q4_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "EDHL_RENEWAL_Q4_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "EDHL_RENEWAL_Q4_A2",
+        "code": "EDHL_RENEWAL_Q4_T1",
+        "type": "text",
+        "description": "Please list the condition(s)",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "EDHL_RENEWAL_Q5": {
+      "header": "Have you smoked, ingested, or used any of the following within the past 3 months?",
+      "description": "Please select all that apply:",
+      "type": "multiple-choice",
+      "next": "EDHL_RENEWAL_Q6",
+      "index": 18,
+      "answerOptions": [
+        {
+          "text": "Cigarettes",
+          "code": "EDHL_RENEWAL_Q5_A1"
+        },
+        {
+          "text": "Poppers or rush (Amyl Nitrate or Butyl Nitrate)",
+          "code": "EDHL_RENEWAL_Q5_A2"
+        },
+        {
+          "text": "Cocaine",
+          "code": "EDHL_RENEWAL_Q5_A3"
+        },
+        {
+          "text": "Methamphetamine (crystal meth)",
+          "code": "EDHL_RENEWAL_Q5_A4"
+        },
+        {
+          "text": "Other",
+          "code": "EDHL_RENEWAL_Q5_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "EDHL_RENEWAL_Q5_A6"
+        }
+      ]
+    },
+    "EDHL_RENEWAL_Q6": {
+      "header": "Please share what recreational drug(s) you have used in the past 3 months, including frequency.",
+      "type": "text",
+      "index": 20,
+      "next": "EDHL_RENEWAL_Q6_2"
+    },
+    "EDHL_RENEWAL_Q6_2": {
+      "header": "In the last 2 weeks, have you been bothered by any of the following?",
+      "type": "multiple-choice",
+      "next": "EDHL_RENEWAL_Q6_3",
+      "answerOptions": [
+        {
+          "text": "Little interest or pleasure in doing things.",
+          "code": "EDHL_RENEWAL_Q6_2_A1"
+        },
+        {
+          "text": "Feeling down, depressed, or hopeless.",
+          "code": "EDHL_RENEWAL_Q6_2_A2"
+        },
+        {
+          "text": "None of the above",
+          "code": "EDHL_RENEWAL_Q6_2_A3"
+        }
+      ]
+    },
+    "EDHL_RENEWAL_Q6_3": {
+      "header": "Are you experiencing any of the following symptoms on your scalp?",
+      "type": "choice-details",
+      "next": "EDHL_RENEWAL_Q7",
+      "answerOptions": [
+        {
+          "text": "Burning or pain",
+          "code": "EDHL_RENEWAL_Q6_3_A1"
+        },
+        {
+          "text": "Patches of rough, scaly skin or scarring",
+          "code": "EDHL_RENEWAL_Q6_3_A2"
+        },
+        {
+          "text": "Pustules or crusting",
+          "code": "EEDHL_RENEWAL_Q6_3_A3"
+        },
+        {
+          "text": "None of the above",
+          "code": "EDHL_RENEWAL_Q6_3_A4"
+        }
+      ]
+    },
+    "EDHL_RENEWAL_Q7": {
+      "header": "Did you try any other ED or Hair medications along with the Sex + Hair medication that was prescribed to you by us?",
+      "type": "choice-details",
+      "next": "EDHL_RENEWAL_Q8",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "EDHL_RENEWAL_Q7_A1"
+        },
+        {
+          "text": "No",
+          "code": "EDHL_RENEWAL_Q7_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "EDHL_RENEWAL_Q7_A1",
+        "code": "EDHL_RENEWAL_Q1_Q3",
+        "type": "text",
+        "description": "Please list the medications(s) that you tried."
+      }
+    },
+    "EDHL_RENEWAL_Q8": {
+      "header": "Is there anything else you would like your provider to know today?",
+      "type": "choice-details",
+      "next": "EDHL_RENEWAL_Q9",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "EDHL_RENEWAL_Q8_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "EDHL_RENEWAL_Q8_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "EDHL_RENEWAL_Q8_A2",
+        "code": "EDHL_RENEWAL_Q8_T1",
+        "type": "text",
+        "description": "Please explain."
+      }
+    },
+    "EDHL_RENEWAL_Q9": {
+      "header": "What happens next.",
+      "description": "You’re almost done; your Zealthy provider will review your responses prior to writing your prescription, if medically appropriate.",
+      "type": "async-what-happens-next-v2"
+    }
+  }
+}

@@ -1,0 +1,446 @@
+{
+  "name": "weight-loss-esp",
+  "care": "weight loss",
+  "version": "2",
+  "code": "WEIGHT_L",
+  "intro": {
+    "if": [
+      { "===": [{ "var": "potentialInsurance" }, "Semaglutide Bundled"] },
+      {
+        "header": "Cuando se obtiene de las farmacias adecuadas, la Semaglutida compuesta es uno de los tratamientos para perder peso más seguros y efectivos.",
+        "listItems": [
+          "Semaglutida recetada por el médico enviada a tu puerta",
+          "Pierde un promedio del 15-20% de tu peso corporal*",
+          "Plan de estudios holístico y apoyo continuo de expertos"
+        ],
+        "footnote": "* Las personas que usan Ozempic® y Wegovy®, medicamentos con el ingrediente activo semaglutida, perdieron un promedio del 15% de su peso corporal en estudios clínicos."
+      },
+      { "===": [{ "var": "potentialInsurance" }, "Tirzepatide Bundled"] },
+      {
+        "header": "Cuando se obtiene de las farmacias adecuadas, la Tirzepatida compuesta es uno de los tratamientos para perder peso más seguros y efectivos.",
+        "listItems": [
+          "Tirzepatida recetada por el médico enviada a tu puerta",
+          "Pierde un promedio del 20% de tu peso corporal*",
+          "Plan de estudios holístico y apoyo continuo de expertos"
+        ],
+        "footnote": "* Las personas que usan Mounjaro® y Zepbound™, medicamentos con el ingrediente activo tirzepatida, perdieron un promedio del 20% de su peso corporal en estudios clínicos."
+      },
+      {
+        "header": "Encontremos el tratamiento para bajar de peso más seguro y efectivo para ti.",
+        "listItems": [
+          "Medicación GLP-1 prescrita por el médico, incluyendo semaglutida o tirzepatida",
+          "Pierde entre el 15% y el 20% de tu peso corporal en promedio",
+          "Entrenamiento personalizado 1:1",
+          "Currículo holístico y soporte experto"
+        ]
+      },
+      {
+        "header": "Encontremos el tratamiento para bajar de peso más seguro y efectivo para ti.",
+        "listItems": [
+          "Medicamento GLP-1 recetado por el médico, incluyendo semaglutida o tirzepatida",
+          "Pierde un promedio del 15-20% de tu peso corporal",
+          "Entrenamiento personalizado 1:1",
+          "Plan de estudios holístico y apoyo continuo de expertos"
+        ]
+      }
+    ]
+  },
+  "entry": "WEIGHT_L_Q1",
+  "questions": {
+    "WEIGHT_L_Q1": {
+      "header": "¿Cuál es tu altura y peso actual?",
+      "hideHeader": true,
+      "type": "height-weight",
+      "index": 2,
+      "next": {
+        "if": [
+          { "===": [{ "var": "gender" }, "female"] },
+          "WEIGHT_L_Q2",
+          { "===": [{ "var": "variant6792" }, "Variation-2"] },
+          "INSURANCE_PLAN",
+          "WEIGHT_L_Q3"
+        ]
+      }
+    },
+    "WEIGHT_L_Q2": {
+      "header": "¿Estás actualmente embarazada o amamantando?",
+      "type": "choice",
+      "next": {
+        "if": [
+          { "===": [{ "var": "variant6792" }, "Variation-2"] },
+          "INSURANCE_PLAN",
+          "WEIGHT_L_Q3"
+        ]
+      },
+      "index": 3,
+      "answerOptions": [
+        {
+          "text": "Sí",
+          "code": "WEIGHT_L_Q2_A1",
+          "next": "DISQUALIFY_PREGNANCY"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_Q2_A2"
+        }
+      ]
+    },
+    "WEIGHT_L_Q3": {
+      "header": "¿Alguna vez has sido diagnosticado con alguno de los siguientes?",
+      "description": "Selecciona todas las que apliquen:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_Q4",
+      "index": 4,
+      "answerOptions": [
+        {
+          "text": "Colesterol alto",
+          "code": "WEIGHT_L_Q3_A1"
+        },
+        {
+          "text": "Hígado graso",
+          "code": "WEIGHT_L_Q3_A2"
+        },
+        {
+          "text": "Prediabetes",
+          "code": "WEIGHT_L_Q3_A3"
+        },
+        {
+          "text": "Presión arterial alta",
+          "code": "WEIGHT_L_Q3_A4"
+        },
+        {
+          "text": "Ninguna de las anteriores",
+          "code": "WEIGHT_L_Q3_A5",
+          "next": {
+            "if": [
+              {
+                "and": [
+                  { ">=": [{ "var": "BMI" }, 27] },
+                  {
+                    "<": [{ "var": "BMI" }, 30]
+                  }
+                ]
+              },
+              "DISQUALIFY_GLP1_Q2",
+              "WEIGHT_L_Q4"
+            ]
+          }
+        }
+      ]
+    },
+    "DISQUALIFY_GLP1_Q2": {
+      "type": "disqualify-glp1",
+      "next": "WEIGHT_L_Q4"
+    },
+    "WEIGHT_L_Q4": {
+      "header": "¿Cuál es tu meta de pérdida de peso?",
+      "type": "choice",
+      "next": "WEIGHT_L_Q5",
+      "index": 5,
+      "answerOptions": [
+        {
+          "text": "Perder 1-20 libras para siempre",
+          "code": "WEIGHT_L_Q4_A1"
+        },
+        {
+          "text": "Perder 21-50 libras para siempre",
+          "code": "WEIGHT_L_Q4_A2"
+        },
+        {
+          "text": "Perder más de 50 libras para siempre",
+          "code": "WEIGHT_L_Q4_A3"
+        },
+        {
+          "text": "Mantener mi peso y ponerme en forma",
+          "code": "WEIGHT_L_Q4_A4"
+        },
+        {
+          "text": "No he decidido",
+          "code": "WEIGHT_L_Q4_A5"
+        }
+      ]
+    },
+    "WEIGHT_L_Q5": {
+      "header": "¿Qué metas buscas lograr?",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_Q6",
+      "index": 6,
+      "answerOptions": [
+        {
+          "text": "Perder peso",
+          "code": "WEIGHT_L_Q5_A1"
+        },
+        {
+          "text": "Mejorar la salud general",
+          "code": "WEIGHT_L_Q5_A2"
+        },
+        {
+          "text": "Verme mejor",
+          "code": "WEIGHT_L_Q5_A3"
+        },
+        {
+          "text": "Mejorar la confianza",
+          "code": "WEIGHT_L_Q5_A4"
+        },
+        {
+          "text": "Aumentar la energía",
+          "code": "WEIGHT_L_Q5_A5"
+        },
+        {
+          "text": "Mejor vida sexual",
+          "code": "WEIGHT_L_Q5_A6"
+        }
+      ]
+    },
+    "WEIGHT_L_Q6": {
+      "header": "¿Con cuál de los siguientes tienes problemas?",
+      "description": "Selecciona todas las que apliquen:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_Q8",
+      "index": 7,
+      "canvas_linkId": "96373192-84d2-40c5-873b-7e45dbf0bbb6",
+      "answerOptions": [
+        {
+          "text": "Apetito",
+          "code": "WEIGHT_L_Q6_A1"
+        },
+        {
+          "text": "Antojos",
+          "code": "WEIGHT_L_Q6_A2"
+        },
+        {
+          "text": "No suficiente ejercicio",
+          "code": "WEIGHT_L_Q6_A3"
+        },
+        {
+          "text": "Metabolismo lento",
+          "code": "WEIGHT_L_Q6_A4"
+        },
+        {
+          "text": "Comer por estrés",
+          "code": "WEIGHT_L_Q6_A5"
+        },
+        {
+          "text": "Comer tarde en la noche",
+          "code": "WEIGHT_L_Q6_A6"
+        },
+        {
+          "text": "Ninguna de las anteriores",
+          "code": "WEIGHT_L_Q6_A7"
+        }
+      ]
+    },
+    "WEIGHT_L_Q8": {
+      "header": "¿Cuál de los siguientes has probado en el pasado?",
+      "description": "Selecciona todas las que has probado.",
+      "next": "WEIGHT-COACHING-Q1A",
+      "type": "multiple-choice",
+      "index": 8,
+      "answerOptions": [
+        {
+          "text": "Keto o baja en carbohidratos",
+          "code": "WEIGHT_L_Q6_A1"
+        },
+        {
+          "text": "Basada en plantas",
+          "code": "WEIGHT_L_Q6_A2"
+        },
+        {
+          "text": "Conteo de macros o calorías",
+          "code": "WEIGHT_L_Q6_A3"
+        },
+        {
+          "text": "Weight Watchers",
+          "code": "WEIGHT_L_Q6_A4"
+        },
+        {
+          "text": "Noom",
+          "code": "WEIGHT_L_Q6_A5"
+        },
+        {
+          "text": "Calibrate",
+          "code": "WEIGHT_L_Q6_A6"
+        },
+        {
+          "text": "Found",
+          "code": "WEIGHT_L_Q6_A7"
+        },
+        {
+          "text": "Alpha",
+          "code": "WEIGHT_L_Q6_A8"
+        },
+        {
+          "text": "Push Health",
+          "code": "WEIGHT_L_Q6_A9"
+        },
+        {
+          "text": "Ninguna de las anteriores",
+          "code": "WEIGHT_L_Q6_A10"
+        }
+      ]
+    },
+    "WEIGHT-COACHING-Q1A": {
+      "header": {
+        "if": [
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicare Access Florida"]
+          },
+          "¿Tienes Medicare Florida?",
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicaid Access Florida"]
+          },
+          "¿Tienes Medicaid Florida?",
+          "¿Tienes seguro del gobierno?"
+        ]
+      },
+      "next": "WEIGHT-COACHING-Q2",
+      "type": "weight-loss-eligibility",
+      "index": 9,
+      "listItems": {
+        "if": [
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicare Access Florida"]
+          },
+          [
+            "Para inscribirte en Z-Plan de Zealthy, debes ser miembro de Medicare. Esto significa que tienes un seguro del gobierno."
+          ],
+          {
+            "===": [{ "var": "potentialInsurance" }, "Medicaid Access Florida"]
+          },
+          [
+            "Para inscribirte en Z-Plan de Zealthy, debes ser miembro de Medicaid. Esto significa que tienes un seguro del gobierno."
+          ],
+          [
+            "El programa de pérdida de peso de Zealthy no está disponible para miembros de programas de seguro gubernamentales como Medicare, Medicaid o Tricare.",
+            "Si tienes un seguro comercial o patrocinado por el empleador o si no tienes seguro, puedes continuar inscribiéndote y podrás obtener un plan de tratamiento para perder peso que puede incluir medicamentos GLP-1 como Ozempic, Zepbound, Mounjaro, Wegovy, Semaglutida o Tirzepatida."
+          ]
+        ]
+      },
+      "buttonText": "Continuar"
+    },
+    "WEIGHT-COACHING-Q2": {
+      "header": "La medicación GLP-1 como Wegovy, Zepbound u Ozempic es esencial para un programa efectivo de pérdida de peso.",
+      "type": "message",
+      "next": {
+        "if": [
+          {
+            "or": [
+              {
+                "===": [{ "var": "variant5777" }, "Variation-2"]
+              },
+              { "===": [{ "var": "variant5777" }, "Variation-3"] }
+            ]
+          },
+          "WEIGHT_L_Q9",
+          "WEIGHT-COACHING-Q3"
+        ]
+      },
+      "index": 10,
+      "buttonText": "Cuéntame más"
+    },
+    "WEIGHT-COACHING-Q3": {
+      "header": {
+        "if": [
+          { "===": [{ "var": "variant5777" }, "Variation-2"] },
+          "Tu plan de prescripción personalizado",
+          "El programa de pérdida de peso de Zealthy incluye:"
+        ]
+      },
+      "unorderedList": {
+        "if": [
+          { "===": [{ "var": "variant5751" }, "Variation-1"] },
+          [
+            "Programar y realizar una visita por video o teléfono con un proveedor de Zealthy para revisar la solicitud de GLP-1; prescripción si es médicamente apropiado",
+            "Asistencia para que sus medicamentos sean cubiertos por el seguro (que pueden costar más de $1,000/mes en otros lugares); medicamento asequible sin seguro ya que el seguro no siempre aprueba los GLP-1",
+            "Mensajería ilimitada con un entrenador que puede ayudarte a crear un plan personalizado",
+            "Seguimiento de tu progreso y metas de pérdida de peso"
+          ],
+          {
+            "===": [{ "var": "potentialInsurance" }, "Weight Loss Sync"]
+          },
+          [
+            "Programar y realizar una visita por video o teléfono con un proveedor de Zealthy para revisar la solicitud de GLP-1; prescripción si es médicamente apropiado",
+            "Asistencia para que sus medicamentos sean cubiertos por el seguro (que pueden costar más de $1,000/mes en otros lugares); medicamento GLP-1 asequible sin seguro",
+            "Mensajería ilimitada con un entrenador que puede ayudarte a crear un plan personalizado",
+            "Seguimiento de tu progreso y metas de pérdida de peso"
+          ],
+          [
+            "Revisión del proveedor de la solicitud de GLP-1 o medicamentos similares y prescripción si es médicamente apropiado",
+            "Asistencia para que sus medicamentos sean cubiertos por el seguro (que pueden costar más de $1,000/mes en otros lugares); medicamento asequible sin seguro",
+            "Mensajería ilimitada con un entrenador que puede ayudarte a crear un plan personalizado",
+            "Seguimiento de tu progreso y metas de pérdida de peso"
+          ]
+        ]
+      },
+      "type": "add-weight-coaching",
+      "next": "RESULTS",
+      "index": 11
+    },
+    "RESULTS": {
+      "type": "analyze-weight-loss-results",
+      "hideFooter": true,
+      "hideHeader": true,
+      "index": 12,
+      "next": {
+        "if": [
+          {
+            "or": [
+              {
+                "===": [{ "var": "variant5777" }, "Variation-2"]
+              },
+              { "===": [{ "var": "variant5777" }, "Variation-3"] }
+            ]
+          },
+          "DELIVERY-ADDRESS",
+          "WEIGHT_L_Q9"
+        ]
+      }
+    },
+    "WEIGHT_L_Q9": {
+      "header": "Tu plan de prescripción personalizado",
+      "description": "Alcanza tus metas con el programa de Pérdida de Peso de Zealthy. Dirigido por médicos que desarrollarán un plan personalizado que incluye medicación y apoyo.",
+      "type": "non-bundled-plan",
+      "index": 13,
+      "next": {
+        "if": [
+          {
+            "or": [
+              {
+                "===": [{ "var": "variant5777" }, "Variation-2"]
+              },
+              { "===": [{ "var": "variant5777" }, "Variation-3"] }
+            ]
+          },
+          "RESULTS",
+          "DELIVERY-ADDRESS"
+        ]
+      }
+    },
+    "DELIVERY-ADDRESS": {
+      "type": "delivery-address",
+      "index": 14
+    },
+    "DISQUALIFY_PREGNANCY": {
+      "header": "¡Lo sentimos!",
+      "description": "Desafortunadamente, Zealthy no puede recetar de manera segura medicamentos para bajar de peso si estás actualmente embarazada, intentando quedar embarazada y/o amamantando.",
+      "type": "alarm",
+      "buttonText": "Mejora tu salud con Zealthy hoy"
+    },
+    "INSURANCE_PLAN": {
+      "header": "¿Planeas usar seguro?",
+      "hideHeader": true,
+      "type": "insurance-plan",
+      "index": 3
+    },
+    "BUNDLED_PREFERENCE": {
+      "header": "¿Preferirías recibir Semaglutida (ingrediente activo en Wegovy) o Tirzepatida (ingrediente activo en Zepbound)?",
+      "hideHeader": true,
+      "type": "bundled-choice",
+      "index": 4
+    },
+    "DISQUALIFY_BMI": {
+      "header": "¡Lo sentimos!",
+      "type": "disqualify"
+    }
+  }
+}

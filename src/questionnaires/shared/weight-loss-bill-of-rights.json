@@ -1,0 +1,12 @@
+{
+  "name": "weight-loss-bill-of-rights",
+  "version": "1",
+  "code": "WEIGHT_LOSS_BOR",
+  "entry": "WEIGHT_LOSS_BOR-Q1",
+  "questions": {
+    "WEIGHT_LOSS_BOR-Q1": {
+      "type": "weight-loss-bill-of-rights",
+      "index": 29
+    }
+  }
+}

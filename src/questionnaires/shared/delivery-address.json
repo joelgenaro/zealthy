@@ -1,0 +1,12 @@
+{
+  "name": "delivery-address",
+  "version": "1",
+  "code": "DELIVERY-A",
+  "entry": "DELIVERY-A-Q1",
+  "questions": {
+    "DELIVERY-A-Q1": {
+      "type": "delivery-address",
+      "index": 3
+    }
+  }
+}

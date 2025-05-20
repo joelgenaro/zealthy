@@ -1,0 +1,12 @@
+{
+  "name": "weight-loss-bundled-treatment",
+  "version": "1",
+  "code": "WEIGHT-LOSS-BUNDLED-TREATMENT-A",
+  "entry": "WEIGHT-LOSS-BUNDLED-TREATMENT-A-Q1",
+  "questions": {
+    "WEIGHT-LOSS-BUNDLED-TREATMENT-A-Q1": {
+      "index": 18,
+      "type": "weight-loss-bundled-treatment"
+    }
+  }
+}

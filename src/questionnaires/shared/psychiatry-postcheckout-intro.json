@@ -1,0 +1,16 @@
+{
+  "name": "psychiatry-postcheckout-intro",
+  "version": "1",
+  "code": "PSYCHIATRY_PI",
+  "entry": "PSYCHIATRY_PI_Q1",
+  "questions": {
+    "PSYCHIATRY_PI_Q1": {
+      "header": "Next, you’ll answer questions about your medical history.",
+      "listItems": [
+        "This is important to complete because it will enable your provider to offer the safest, highest quality psychiatric care.",
+        "This will take about 5 minutes to complete."
+      ],
+      "type": "message"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "name": "weight-loss-bundled-4758",
+  "care": "weight loss",
+  "version": "4",
+  "code": "WEIGHT_L",
+  "entry": "WEIGHT_L_Q1",
+  "questions": {
+    "WEIGHT_L_Q1": {
+      "header": "What’s your current height and weight?",
+      "hideHeader": true,
+      "type": "height-weight",
+      "canvas_linkId": "279a41fc-3407-454f-849b-655f61f1a70d",
+      "index": 1,
+      "next": "WEIGHT_L_Q2"
+    },
+    "WEIGHT_L_Q2": {
+      "header": "What's your dream weight?⚖️",
+      "hideHeader": true,
+      "type": "weight-goal",
+      "index": 2,
+      "next": "WEIGHT_L_Q3"
+    },
+    "WEIGHT_L_Q3": {
+      "type": "weight-graph",
+      "index": 3,
+      "next": "WEIGHT_L_Q4"
+    },
+    "WEIGHT_L_Q4": {
+      "header": "What’s your motivation for wanting to lose weight?",
+      "type": "choice",
+      "index": 4,
+      "next": "WEIGHT_L_Q5",
+      "answerOptions": [
+        {
+          "text": "To be healthier",
+          "code": "WEIGHT_L_Q4_A1"
+        },
+        {
+          "text": "Improve my physical appearance",
+          "code": "WEIGHT_L_Q4_A2"
+        },
+        {
+          "text": "Feel better (in general)",
+          "code": "WEIGHT_L_Q4_A3"
+        },
+        {
+          "text": "Other",
+          "code": "WEIGHT_L_Q4_A4"
+        }
+      ]
+    },
+    "WEIGHT_L_Q5": {
+      "header": "Are you familiar with compounded semaglutide?",
+      "type": "choice",
+      "index": 5,
+      "next": "COMPOUND_SEM_EXPLANATION",
+      "answerOptions": [
+        {
+          "text": "I’m not sure",
+          "code": "WEIGHT_L_Q6_A1"
+        },
+        {
+          "text": "I’ve heard of them ",
+          "code": "WEIGHT_L_Q6_A2"
+        },
+        {
+          "text": "I’m an expert",
+          "code": "WEIGHT_L_Q6_A3"
+        }
+      ]
+    },
+    "COMPOUND_SEM_EXPLANATION": {
+      "type": "compound-sem-explanation",
+      "next": "PRICING_OPTIONS",
+      "index": 6
+    },
+    "PRICING_OPTIONS": {
+      "type": "pricing-options",
+      "index": 7,
+      "next": "DELIVERY-ADDRESS"
+    },
+    "DELIVERY-ADDRESS": {
+      "type": "delivery-address",
+      "index": 8
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "consultation-selection",
+  "version": "1",
+  "code": "CONSULTATION_SELECTION",
+  "entry": "CONSULTATION_SELECTION_Q1",
+  "questions": {
+    "CONSULTATION_SELECTION_Q1": {
+      "type": "consultation-selection"
+    }
+  }
+}

@@ -1,0 +1,359 @@
+{
+  "name": "ed-prescription-renewal",
+  "care": "erectile dysfunction",
+  "version": "1",
+  "code": "ED_PRESCRIPTION_RENEWAL",
+  "intro": {
+    "header": "Let’s help you with your prescription renewal. Just answer a few questions and your Zealthy care team will help with your prescription renewal in 1-3 business days."
+  },
+  "entry": "ED_RENEWAL_Q1",
+  "questions": {
+    "ED_RENEWAL_Q1": {
+      "header": "Are you happy with the results of your ED treatment?",
+      "type": "choice-details",
+      "next": "ED_RENEWAL_Q2",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ED_RENEWAL_Q1_A1"
+        },
+        {
+          "text": "No",
+          "code": "ED_RENEWAL_Q1_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ED_RENEWAL_Q1_A2",
+        "code": "ED_RENEWAL_Q1_Q3",
+        "type": "text",
+        "description": "How would you like it to be improved?"
+      }
+    },
+    "ED_RENEWAL_Q2": {
+      "header": "Anything else you'd like to share about your experience with your ED treatment? Please include details such as the dosage you tried, how effective it was, and any adverse reactions you experienced.",
+      "type": "text",
+      "next": "ED_RENEWAL_Q2_2",
+      "index": 2
+    },
+    "ED_RENEWAL_Q2_2": {
+      "header": "Are you experiencing any of the following cardiovascular symptoms? Please select all that apply:",
+      "type": "multiple-choice",
+      "next": "ED_RENEWAL_Q3",
+      "answerOptions": [
+        {
+          "text": "Chest pain when climbing 2 flights of stairs or walking 4 blocks",
+          "code": "ED_RENEWAL_Q5_A1"
+        },
+        {
+          "text": "Chest pain with sexual activity",
+          "code": "ED_RENEWAL_Q5_A2"
+        },
+        {
+          "text": "Unexplained fainting or dizziness",
+          "code": "ED_RENEWAL_Q5_A3"
+        },
+        {
+          "text": "Abnormal heart beats or rhythms",
+          "code": "ED_RENEWAL_Q5_A4"
+        },
+        {
+          "text": "None of the above",
+          "code": "ED_RENEWAL_Q5_A6"
+        }
+      ]
+    },
+    "ED_RENEWAL_Q3": {
+      "header": "Did you start any new medications since your last consultation with Zealthy?",
+      "type": "choice-details",
+      "index": 10,
+      "next": "ED_RENEWAL_Q4",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "ED_RENEWAL_Q3_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "ED_RENEWAL_Q3_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ED_RENEWAL_Q3_A2",
+        "code": "ED_RENEWAL_Q3_T1",
+        "type": "text",
+        "description": "Please list the medication(s) that you are currently taking.",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "ED_RENEWAL_Q4": {
+      "header": "Have you been diagnosed with any new medical conditions since your last consultation with Zealthy?",
+      "type": "choice-details",
+      "index": 10,
+      "next": "ED_RENEWAL_Q5",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "ED_RENEWAL_Q4_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "ED_RENEWAL_Q4_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ED_RENEWAL_Q4_A2",
+        "code": "ED_RENEWAL_Q4_T1",
+        "type": "text",
+        "description": "Please list the condition(s)",
+        "input_placeholder": "Enter your response"
+      }
+    },
+    "ED_RENEWAL_Q5": {
+      "header": "Have you smoked, ingested, or used any of the following within the past 3 months?",
+      "description": "Please select all that apply:",
+      "type": "multiple-choice",
+      "next": "ED_RENEWAL_Q6",
+      "index": 18,
+      "answerOptions": [
+        {
+          "text": "Cigarettes",
+          "code": "ED_RENEWAL_Q5_A1"
+        },
+        {
+          "text": "Poppers or rush (Amyl Nitrate or Butyl Nitrate)",
+          "code": "ED_RENEWAL_Q5_A2"
+        },
+        {
+          "text": "Cocaine",
+          "code": "ED_RENEWAL_Q5_A3"
+        },
+        {
+          "text": "Methamphetamine (crystal meth)",
+          "code": "ED_RENEWAL_Q5_A4"
+        },
+        {
+          "text": "Other",
+          "code": "ED_RENEWAL_Q5_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "ED_RENEWAL_Q5_A6"
+        }
+      ]
+    },
+    "ED_RENEWAL_Q6": {
+      "header": "Please share what recreational drug(s) you have used in the past 3 months, including frequency.",
+      "type": "text",
+      "index": 20,
+      "next": "ED_RENEWAL_Q7"
+    },
+    "ED_RENEWAL_Q7": {
+      "header": "Did you try any other ED medications along with the ED medication that was prescribed to you by us?",
+      "type": "choice-details",
+      "next": "ED_RENEWAL_Q8",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ED_RENEWAL_Q7_A1"
+        },
+        {
+          "text": "No",
+          "code": "ED_RENEWAL_Q7_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ED_RENEWAL_Q7_A1",
+        "code": "ED_RENEWAL_Q1_Q3",
+        "type": "text",
+        "description": "Please list the medications(s) that you tried."
+      }
+    },
+    "ED_RENEWAL_Q8": {
+      "header": "Is there anything else you would like your provider to know today?",
+      "type": "choice-details",
+      "next": "ED_RENEWAL_Q9",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "ED_RENEWAL_Q8_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "ED_RENEWAL_Q8_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "ED_RENEWAL_Q8_A2",
+        "code": "ED_RENEWAL_Q8_T1",
+        "type": "text",
+        "description": "Please explain."
+      }
+    },
+    "ED_RENEWAL_Q9": {
+      "header": "Would you like to continue with your current medication or change your medication? Most patients will keep their medication the same.",
+      "type": "choice",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "ED_RENEWAL_Q9_A1",
+          "next": "ED_RENEWAL_Q10"
+        },
+        {
+          "text": "No",
+          "code": "ED_RENEWAL_Q9_A2",
+          "next": "TREATMENT_OPTIONS_V2-Q1"
+        }
+      ]
+    },
+    "TREATMENT_OPTIONS-Q1": {
+      "header": "Suggested treatments for you.",
+      "description": "These are all FDA-approved and taken before sex. They're best for people who can predict when they'll have sex or who only want to take pills when needed.",
+      "type": "ed-treatment-select",
+      "index": 24,
+      "answerOptions": [
+        {
+          "text": "Sildenafil (as needed)",
+          "code": "TREATMENT_OPTIONS-Q1-A1",
+          "next": "TREATMENT_OPTIONS-Q2"
+        },
+        {
+          "text": "Tadalafil (as needed)",
+          "code": "TREATMENT_OPTIONS-Q1-A2",
+          "next": "TREATMENT_OPTIONS-Q2"
+        },
+        {
+          "text": "Tadalafil (daily)",
+          "code": "TREATMENT_OPTIONS-Q1-A3"
+        },
+        {
+          "text": "Viagra (as needed)",
+          "code": "TREATMENT_OPTIONS-Q1-A4",
+          "next": "TREATMENT_OPTIONS-Q3"
+        },
+        {
+          "text": "Cialis (daily)",
+          "code": "TREATMENT_OPTIONS-Q1-A5"
+        }
+      ]
+    },
+    "TREATMENT_OPTIONS-Q2": {
+      "header": "Select your preferred dosage strength for [medication name].",
+      "type": "ed-dosage-select",
+      "next": "TREATMENT_OPTIONS-Q3",
+      "index": 25,
+      "footer": {
+        "description": "It will be up to your provider to decide whether this dosage is suitable or if an alternative dosage would be more appropriate."
+      }
+    },
+    "TREATMENT_OPTIONS-Q3": {
+      "header": "How frequently do you plan to use [medication name] per month?",
+      "description": "In a typical month, how many times do you expect to use [medication name]?",
+      "type": "ed-quantity-select",
+      "index": 26
+    },
+
+    "TREATMENT_OPTIONS_V2-Q1": {
+      "header": "When do you want to take your medication?",
+      "type": "ed-usage-select",
+      "next": "TREATMENT_OPTIONS_V2-Q2",
+      "index": 22,
+      "buttonText": "Continue"
+    },
+
+    "TREATMENT_OPTIONS_V2-Q2": {
+      "header": "For your treatment, which options would you prefer?",
+      "type": "ed-usage-select",
+      "index": 23,
+      "answerOptions": [
+        {
+          "text": "Custom Chewable",
+          "code": "TREATMENT_OPTIONS_V2-Q2-A1",
+          "next": "TREATMENT_OPTIONS_V2-Q3"
+        },
+        {
+          "text": "Standard Pill",
+          "code": "TREATMENT_OPTIONS_V2-Q2-A2",
+          "next": "TREATMENT_OPTIONS-Q1"
+        }
+      ]
+    },
+
+    "TREATMENT_OPTIONS_V2-Q3": {
+      "header": "Suggested treatments for you.",
+      "description": "These are all FDA-approved and taken before sex. They're best for people who can predict when they'll have sex or who only want to take pills when needed.",
+      "type": "ed-treatment-select-v2",
+      "index": 24,
+      "next": {
+        "if": [
+          {
+            "some": [
+              { "var": "answers.TREATMENT_OPTIONS_V2-Q1.answer" },
+              {
+                "in": [{ "var": "valueString" }, ["Usage - Daily"]]
+              }
+            ]
+          },
+          "",
+          "TREATMENT_OPTIONS-Q3"
+        ]
+      },
+      "answerOptions": {
+        "if": [
+          { "===": [{ "var": "variant" }, "5440"] },
+          [
+            {
+              "text": "Tadalafil + Oxytocin Zealthy Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A4"
+            },
+            {
+              "text": "Sildenafil + Tadalafil Zealthy Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A1"
+            },
+            {
+              "text": "Sildenafil + Oxytocin Zealthy Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A3"
+            },
+            {
+              "text": "Tadalafil + Vardenafil Zealthy Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A2"
+            }
+          ],
+          { "===": [{ "var": "region" }, "CA"] },
+          [
+            {
+              "text": "Sildenafil Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A1"
+            },
+            {
+              "text": "Tadalafil Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A2"
+            }
+          ],
+          [
+            {
+              "text": "Sildenafil + Tadalafil Zealthy Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A1"
+            },
+            {
+              "text": "Sildenafil + Oxytocin Zealthy Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A3"
+            },
+            {
+              "text": "Tadalafil + Oxytocin Zealthy Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A4"
+            },
+            {
+              "text": "Tadalafil + Vardenafil Zealthy Hardies",
+              "code": "TREATMENT_OPTIONS_V2-Q3-A2"
+            }
+          ]
+        ]
+      }
+    },
+    "ED_RENEWAL_Q10": {
+      "header": "What happens next.",
+      "description": "You’re almost done; your Zealthy provider will review your responses prior to writing your prescription, if medically appropriate.",
+      "type": "async-what-happens-next-v2"
+    }
+  }
+}

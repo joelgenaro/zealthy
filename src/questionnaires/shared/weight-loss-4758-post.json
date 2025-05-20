@@ -1,0 +1,648 @@
+{
+  "name": "weight-loss-4758-post",
+  "care": "weight loss",
+  "version": "3",
+  "code": "WEIGHT_L_4758_POST",
+  "entry": "WEIGHT_L_4758_POST_Q1",
+  "questions": {
+    "WEIGHT_L_4758_POST_Q1": {
+      "header": "Which of the following do you have trouble with?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_4758_POST_Q2",
+      "index": 5,
+      "answerOptions": [
+        {
+          "text": "Appetite",
+          "code": "WEIGHT_L_4758_POST_Q1_A1"
+        },
+        {
+          "text": "Cravings",
+          "code": "WEIGHT_L_4758_POST_Q1_A2"
+        },
+        {
+          "text": "Not enough exercise",
+          "code": "WEIGHT_L_4758_POST_Q1_A3"
+        },
+        {
+          "text": "Slow metabolism",
+          "code": "WEIGHT_L_4758_POST_Q1_A4"
+        },
+        {
+          "text": "Stress eating",
+          "code": "WEIGHT_L_4758_POST_Q1_A5"
+        },
+        {
+          "text": "Late night eating",
+          "code": "WEIGHT_L_4758_POST_Q1_A6"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_4758_POST_Q1_A7"
+        }
+      ]
+    },
+    "WEIGHT_L_4758_POST_Q2": {
+      "header": "Have you ever been diagnosed with any of the following?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "DISQUALIFY_GLP1_Q1",
+      "index": 6,
+      "answerOptions": [
+        {
+          "text": "Type 1 diabetes",
+          "code": "WEIGHT_L_4758_POST_Q2_A1"
+        },
+        {
+          "text": "Pancreatitis",
+          "code": "WEIGHT_L_4758_POST_Q2_A2",
+          "next": "PANCREATITIS_DIAGNOSIS"
+        },
+        {
+          "text": "Gastroparesis",
+          "code": "WEIGHT_L_4758_POST_Q2_A3"
+        },
+        {
+          "text": "Seizures",
+          "code": "WEIGHT_L_4758_POST_Q2_A4",
+          "next": "WEIGHT_L_4758_POST_Q3"
+        },
+        {
+          "text": "Glaucoma",
+          "code": "WEIGHT_L_4758_POST_Q2_A5",
+          "next": "WEIGHT_L_4758_POST_Q3"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_4758_POST_Q2_A6",
+          "next": "WEIGHT_L_4758_POST_Q3"
+        }
+      ]
+    },
+    "PANCREATITIS_DIAGNOSIS": {
+      "header": "How long ago did you have Pancreatitis?",
+      "type": "choice",
+      "next": "DISQUALIFY_GLP1_Q1",
+      "index": 7,
+      "answerOptions": [
+        {
+          "text": "Less than six months ago",
+          "code": "PANCREATITIS_DIAGNOSIS_4758_A2_O1"
+        },
+        {
+          "text": "More than six months ago",
+          "code": "PANCREATITIS_DIAGNOSIS_4758_A2_O2",
+          "next": "WEIGHT_L_4758_POST_Q3"
+        }
+      ]
+    },
+    "DISQUALIFY_GLP1_Q1": {
+      "type": "disqualify-glp1",
+      "next": "WEIGHT_L_4758_POST_Q3",
+      "index": 8
+    },
+    "WEIGHT_L_4758_POST_Q3": {
+      "header": "Have you ever been diagnosed with any of the following?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "WEIGHT_L_4758_POST_Q4",
+      "index": 9,
+      "answerOptions": [
+        {
+          "text": "Type 2 diabetes",
+          "code": "WEIGHT_L_4758_POST_Q3_A1"
+        },
+        {
+          "text": "Sleep apnea",
+          "code": "WEIGHT_L_4758_POST_Q3_A2"
+        },
+        {
+          "text": "High cholesterol",
+          "code": "WEIGHT_L_4758_POST_Q3_A3"
+        },
+        {
+          "text": "High triglycerides",
+          "code": "WEIGHT_L_4758_POST_Q3_A4"
+        },
+        {
+          "text": "Prediabetes",
+          "code": "WEIGHT_L_4758_POST_Q3_A5"
+        },
+        {
+          "text": "High blood pressure",
+          "code": "WEIGHT_L_4758_POST_Q3_A6"
+        },
+        {
+          "text": "Heart disease",
+          "code": "WEIGHT_L_4758_POST_Q3_A7"
+        },
+        {
+          "text": "Osteoarthritis",
+          "code": "WEIGHT_L_4758_POST_Q3_A8"
+        },
+        {
+          "text": "Polycystic ovarian syndrome (PCOS)",
+          "code": "WEIGHT_L_4758_POST_Q3_A9"
+        },
+        {
+          "text": "Non-alcoholic fatty liver disease (NAFLD)",
+          "code": "WEIGHT_L_4758_POST_Q3_A10"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_4758_POST_Q3_A11",
+          "next": {
+            "if": [
+              {
+                "and": [
+                  { ">=": [{ "var": "BMI" }, 27] },
+                  {
+                    "<": [{ "var": "BMI" }, 30]
+                  }
+                ]
+              },
+              "DISQUALIFY_GLP1_Q2",
+              "WEIGHT_L_4758_POST_Q4"
+            ]
+          }
+        }
+      ]
+    },
+    "DISQUALIFY_GLP1_Q2": {
+      "type": "disqualify-glp1",
+      "next": "WEIGHT_L_4758_POST_Q4",
+      "index": 10
+    },
+    "WEIGHT_L_4758_POST_Q4": {
+      "header": "Are you allergic to any medications?",
+      "type": "choice",
+      "next": "WEIGHT_L_4758_POST_Q6",
+      "index": 11,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_4758_POST_Q4_A1",
+          "next": "WEIGHT_L_4758_POST_Q5"
+        },
+        { "text": "No", "code": "WEIGHT_L_4758_POST_Q4_A2" }
+      ]
+    },
+    "WEIGHT_L_4758_POST_Q5": {
+      "header": "What medications are you allergic to?",
+      "type": "text",
+      "index": 12,
+      "next": "WEIGHT_L_4758_POST_Q6"
+    },
+    "WEIGHT_L_4758_POST_Q6": {
+      "header": "What’s your resting heart rate?",
+      "description": "This helps Zealthy understand the best treatment options for you. If you don’t have a recent measurement, please follow the simple steps below:",
+      "listItems": [
+        "Place your index finger (next to your thumb) and middle finger on the side of your neck. They should go in the groove under your jaw and next to your windpipe.",
+        "Press firmly until you feel a pulse. If you can’t feel it, move your fingers around slightly and increase pressure until you do.",
+        "Count the pulses for 30 seconds (using a clock or stopwatch).",
+        "Double the number of pulses you counted to get your heart rate."
+      ],
+      "type": "number",
+      "next": {
+        "if": [
+          {
+            "and": [
+              {
+                "!!": [{ "var": "heart_rate" }, true]
+              },
+              {
+                "or": [
+                  { "<": [{ "var": "heart_rate" }, 55] },
+                  { ">": [{ "var": "heart_rate" }, 100] }
+                ]
+              }
+            ]
+          },
+          "ATTENTION_HEART_RATE",
+          "WEIGHT_LOSS_MEDICAL_HISTORY_Q1"
+        ]
+      },
+      "index": 13,
+      "input_placeholder": "Resting heart rate (beats per minute)",
+      "allowToSkip": true
+    },
+    "ATTENTION_HEART_RATE": {
+      "header": "Are you sure that you entered your heart rate correctly?",
+      "listItems": [
+        "Most healthy adults have a heart rate between 55 and 100. You indicated that your heart rate is [123].",
+        "If you think this may have been entered in error, go back and re-enter your heart rate."
+      ],
+      "type": "message"
+    },
+    "WEIGHT_LOSS_MEDICAL_HISTORY_Q1": {
+      "header": "Do you currently have any other medical conditions besides those that you have already shared with us?",
+      "canvas_linkId": "92962c44-daae-4e02-8f8b-77533a72e3d5",
+      "type": "text",
+      "next": "WEIGHT_L_POST_Q1",
+      "index": 14
+    },
+    "WEIGHT_L_POST_Q1": {
+      "header": "Have you previously had any of the following weight loss surgeries?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "SURGERY_DETAILS",
+      "index": 15,
+      "answerOptions": [
+        {
+          "text": "Sleeve gastrectomy",
+          "code": "WEIGHT_L_POST_Q1_A1"
+        },
+        {
+          "text": "Laparoscopic adjustable gastric band (Lap-band)",
+          "code": "WEIGHT_L_POST_Q1_A2"
+        },
+        {
+          "text": "Roux-en-Y gastric bypass",
+          "code": "WEIGHT_L_POST_Q1_A3"
+        },
+        {
+          "text": "Gastric balloon",
+          "code": "WEIGHT_L_POST_Q1_A4"
+        },
+        {
+          "text": "Other procedure",
+          "code": "WEIGHT_L_POST_Q1_A5"
+        },
+        {
+          "text": "No, I haven’t had any of the above surgeries",
+          "code": "WEIGHT_L_POST_Q1_A6",
+          "next": "WEIGHT_L_POST_Q2"
+        }
+      ]
+    },
+    "SURGERY_DETAILS": {
+      "header": "Tell us about any complications with your weight loss surgery or surgeries.",
+      "type": "text",
+      "next": "SURGERY_DATE",
+      "index": 16,
+      "input_placeholder": "Add here"
+    },
+    "SURGERY_DATE": {
+      "header": "When was your weight loss surgery?",
+      "type": "choice",
+      "next": "DISQUALIFY_GLP1_Q3",
+      "index": 17,
+      "answerOptions": [
+        {
+          "text": "Less than six months ago",
+          "code": "WEIGHT_L_POST_Q1_A1_O1"
+        },
+        {
+          "text": "More than six months ago",
+          "code": "WEIGHT_L_POST_Q1_A1_O2",
+          "next": "WEIGHT_L_POST_Q2"
+        }
+      ]
+    },
+    "DISQUALIFY_GLP1_Q3": {
+      "type": "disqualify-glp1",
+      "next": "WEIGHT_L_POST_Q2",
+      "index": 18
+    },
+    "WEIGHT_L_POST_Q2": {
+      "header": "Do you have a history of kidney disease or abnormal kidney function?",
+      "canvas_linkId": "86d6c6bc-1573-4810-9cff-d11f001b8d57",
+      "type": "choice",
+      "next": "WEIGHT_L_POST_Q3",
+      "index": 19,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_POST_Q2_A1",
+          "next": "WEIGHT_L_POST_Q3"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_POST_Q2_A2"
+        }
+      ]
+    },
+    "WEIGHT_L_POST_Q3": {
+      "header": "Which of the following medications have you used?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "MEDICATIONS_DETAILS",
+      "canvas_linkId": "cfcef1ab-a3e2-49a7-ac1c-cc082909b92a",
+      "index": 20,
+      "answerOptions": [
+        {
+          "text": "Qsymia",
+          "code": "WEIGHT_L_POST_Q3_A1"
+        },
+        {
+          "text": "Contrave",
+          "code": "WEIGHT_L_POST_Q3_A2"
+        },
+        {
+          "text": "Phentermine",
+          "code": "WEIGHT_L_POST_Q3_A3"
+        },
+        {
+          "text": "Topiramate",
+          "code": "WEIGHT_L_POST_Q3_A4"
+        },
+        {
+          "text": "Zonisamide",
+          "code": "WEIGHT_L_POST_Q3_A5"
+        },
+        {
+          "text": "Bupropion",
+          "code": "WEIGHT_L_POST_Q3_A6"
+        },
+        {
+          "text": "Naltrexone",
+          "code": "WEIGHT_L_POST_Q3_A7"
+        },
+        {
+          "text": "Metformin",
+          "code": "WEIGHT_L_POST_Q3_A8"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_POST_Q3_A9",
+          "next": "WEIGHT_L_POST_Q4"
+        }
+      ]
+    },
+
+    "MEDICATIONS_DETAILS": {
+      "type": "iterative",
+      "dependency": "WEIGHT_L_POST_Q3",
+      "template": "weight-loss-medications",
+      "next": "WEIGHT_L_POST_Q4",
+      "index": 21
+    },
+
+    "WEIGHT_L_POST_Q4": {
+      "header": "Which GLP-1 medications have you taken?",
+      "canvas_linkId": "e355b8c6-a8b0-47d7-95d0-e1b8d9ef12c6",
+      "description": "Select all that apply.",
+      "next": "WEIGHT_L_POST_Q20",
+      "type": "multiple-choice",
+      "index": 22,
+      "answerOptions": [
+        {
+          "text": "Wegovy (Semaglutide)",
+          "code": "WEIGHT_L_POST_Q4_A1"
+        },
+        {
+          "text": "Ozempic (Semaglutide)",
+          "code": "WEIGHT_L_POST_Q4_A2"
+        },
+        {
+          "text": "Mounjaro (Tirzepatide)",
+          "code": "WEIGHT_L_POST_Q4_A3"
+        },
+        {
+          "text": "Zepbound (Tirzepatide)",
+          "code": "WEIGHT_L_POST_Q4_A4"
+        },
+        {
+          "text": "Saxenda (Liraglutide)",
+          "code": "WEIGHT_L_POST_Q4_A5"
+        },
+        {
+          "text": "Victoza (Liraglutide)",
+          "code": "WEIGHT_L_POST_Q4_A6"
+        },
+        {
+          "text": "Compound Semaglutide",
+          "code": "WEIGHT_L_POST_Q4_A8"
+        },
+        {
+          "text": "Compound Tirzepatide",
+          "code": "WEIGHT_L_POST_Q4_A9"
+        },
+        {
+          "text": "None of the above",
+          "code": "WEIGHT_L_POST_Q4_A10",
+          "next": "WEIGHT_L_POST_Q5"
+        }
+      ]
+    },
+    "WEIGHT_L_POST_Q20": {
+      "header": "Of the GLP-1 medications you have taken, which did you take most recently?",
+      "canvas_linkId": "e355b8c6-a8b0-47d7-95d0-e1b8d9ef12c62",
+      "type": "choice",
+      "next": "GLP_1_MEDICATIONS_DETAILS",
+      "index": 23,
+      "answerOptions": {
+        "if": [
+          {
+            ">": [
+              {
+                "reduce": [
+                  { "var": "medications" },
+                  { "+": [1, { "var": "accumulator" }] },
+                  0
+                ]
+              },
+              1
+            ]
+          },
+          { "var": "medications" },
+          { "var": "medications" }
+        ]
+      }
+    },
+    "GLP_1_MEDICATIONS_DETAILS": {
+      "type": "iterative",
+      "dependency": "WEIGHT_L_POST_Q20",
+      "template": "weight-loss-glp1-medications",
+      "next": "WEIGHT_L_POST_Q5",
+      "index": 29
+    },
+    "WEIGHT_L_POST_Q5": {
+      "header": "Do you currently take any medications or supplements?",
+      "canvas_linkId": "1d8642b7-6b0e-4dd4-ac42-4fd5dc114da4",
+      "type": "text",
+      "next": "WEIGHT_L_POST_Q6",
+      "index": 24,
+      "input_placeholder": "Describe what you've tried"
+    },
+
+    "WEIGHT_L_POST_Q6": {
+      "canvas_linkId": "b0a628bd-32f2-46a4-9801-d12df63ea924",
+      "header": "Have you felt depressed in the past month?",
+      "type": "choice",
+      "next": "WEIGHT_L_POST_Q7",
+      "index": 25,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_POST_Q6_A1",
+          "next": "WEIGHT_L_POST_Q7"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_POST_Q6_A2"
+        }
+      ]
+    },
+
+    "WEIGHT_L_POST_Q7": {
+      "canvas_linkId": "6fb31330-f351-4f38-82b4-9a57709a049f",
+      "header": "In the past year, have you made yourself vomit to lose weight?",
+      "type": "choice",
+      "next": "WEIGHT_L_POST_Q8",
+      "index": 26,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_POST_Q7_A1",
+          "next": "WEIGHT_L_POST_Q8"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_POST_Q7_A2"
+        }
+      ]
+    },
+    "WEIGHT_L_POST_Q8": {
+      "canvas_linkId": "52c0286d-4eef-441c-9d97-90c0b9098164",
+      "header": "In the past year, have you taken more than the recommended dose of a medication to lose weight?",
+      "description": "This might include laxatives, water pills, or diuretics.",
+      "type": "choice",
+      "next": "WEIGHT_L_POST_Q9",
+      "index": 26,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_POST_Q8_A1",
+          "next": "WEIGHT_L_POST_Q9"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_POST_Q8_A2"
+        }
+      ]
+    },
+    "WEIGHT_L_POST_Q9": {
+      "canvas_linkId": "21109c70-212a-441b-b986-fbb4bada3dfc",
+      "header": "In the past six months, did you ever excessively fast or exercise with the significant fear of weight change if you did not perform the fast or exercise?",
+      "description": "For example, fasting despite feeling ill from not eating or exercising for more than 3 hours a day?",
+      "type": "choice",
+      "index": 27,
+      "next": {
+        "if": [
+          { "===": [{ "var": "skipInsurance" }, true] },
+          "WEIGHT_L_POST_Q11",
+          {
+            "===": [{ "var": "variant" }, "5071-Variation-1-no-ins"]
+          },
+          "WEIGHT_L_POST_Q12",
+          "WEIGHT_L_POST_Q10"
+        ]
+      },
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_POST_Q9_A1"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_POST_Q9_A2"
+        }
+      ]
+    },
+    "WEIGHT_L_POST_Q10": {
+      "canvas_linkId": "07dc341f-a1c1-4235-8edd-9ae076e22215",
+      "header": "Have you tried a weight management program for at least 6 months within the past year? (e.g. Noom, Weight Watchers)",
+      "description": "If you have, this will increase the likelihood of insurance covering your GLP-1 medication.",
+      "type": "choice",
+      "next": "WEIGHT_L_POST_Q11",
+      "index": 28,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_POST_Q10_A1"
+        },
+        {
+          "text": "No",
+          "code": "WEIGHT_L_POST_Q10_A2"
+        }
+      ]
+    },
+
+    "WEIGHT_L_POST_Q11": {
+      "header": "Please describe your weight loss journey.",
+      "canvas_linkId": "b26a5771-e7c4-41a7-bfca-423a756ca02",
+      "description": "How long have you struggled with weight? Are there particular life events or triggers for your weight gain?",
+      "type": "text",
+      "index": 29,
+      "next": {
+        "if": [
+          { "===": [{ "var": "skipInsurance" }, true] },
+          "LAB-OR-BLOOD-TESTS-A-Q1",
+          "WEIGHT_L_POST_Q12"
+        ]
+      },
+      "input_placeholder": "Share your story"
+    },
+    "WEIGHT_L_POST_Q12": {
+      "header": "What have you previously tried for weight loss? What has or hasn’t worked?",
+      "canvas_linkId": "f5fbff49-732c-4d73-9093-3223f2344e0b",
+      "type": "text",
+      "next": "LAB-OR-BLOOD-TESTS-A-Q1",
+      "index": 30,
+      "input_placeholder": "Describe what you've tried"
+    },
+    "LAB-OR-BLOOD-TESTS-A-Q1": {
+      "type": "lab-or-blood-tests",
+      "next": {
+        "if": [
+          {
+            "in": [
+              { "var": "potentialInsurance" },
+              ["Semaglutide Bundled", "Tirzepatide Bundled"]
+            ]
+          },
+          "",
+          { "===": [{ "var": "skipInsurance" }, true] },
+          "",
+
+          {
+            "===": [{ "var": "variant" }, "5071-Variation-1-no-ins"]
+          },
+          "",
+          "WEIGHT_L_POST_Q13"
+        ]
+      },
+      "index": 31
+    },
+    "WEIGHT_L_POST_Q13": {
+      "header": "What race do you identify with?",
+      "canvas_linkId": "2395e1f6-da58-431c-80f6-35ff5ad7949e",
+      "description": "You may select all that apply. At times, our providers will use this for clinical decisions.",
+      "index": 32,
+      "type": "multiple-choice",
+      "answerOptions": [
+        {
+          "text": "White",
+          "code": "WEIGHT_L_POST_Q13_A1"
+        },
+        {
+          "text": "Black or African American",
+          "code": "WEIGHT_L_POST_Q13_A2"
+        },
+        {
+          "text": "Asian",
+          "code": "WEIGHT_L_POST_Q13_A3"
+        },
+        {
+          "text": "American Indian or Alaska Native",
+          "code": "WEIGHT_L_POST_Q13_A4"
+        },
+        {
+          "text": "Native Hawaiian or other Pacific Islander",
+          "code": "WEIGHT_L_POST_Q13_A5"
+        }
+      ]
+    }
+  }
+}

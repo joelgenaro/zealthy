@@ -1,0 +1,747 @@
+{
+  "name": "prep",
+  "care": "prep",
+  "version": "4",
+  "code": "PREP_Q1",
+  "entry": "PREP_Q1",
+  "questions": {
+    "PREP_Q1": {
+      "header": "Honesty & Privacy",
+      "type": "honesty-privacy",
+      "index": 1,
+      "next": "PREP_Q2"
+    },
+    "PREP_Q2": {
+      "header": "What’s your current height and weight?",
+      "hideHeader": true,
+      "type": "height-weight",
+      "index": 2,
+      "next": "PREP_Q3"
+    },
+    "PREP_Q3": {
+      "header": "Have you ever been diagnosed with HIV?",
+      "type": "choice-details",
+      "index": 3,
+      "next": "PREP_Q4",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "PREP_Q3_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "PREP_Q3_A2",
+          "next": "PREP_DISCLAIMER_1"
+        }
+      ]
+    },
+    "PREP_Q4": {
+      "header": "Are you currently using PrEP",
+      "type": "choice-details",
+      "index": 4,
+      "next": "PREP_Q5",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "PREP_Q4_A1"
+        },
+        {
+          "text": "Yes, I use it on-demand",
+          "code": "PREP_Q4_A2",
+          "next": "PREP_Q5_V2"
+        },
+        {
+          "text": "Yes, I am currently taking PrEP on a daily basis",
+          "code": "PREP_Q4_A3",
+          "next": "PREP_Q5_V2"
+        }
+      ]
+    },
+    "PREP_Q5": {
+      "header": "HIV Concern",
+      "type": "choice-details",
+      "index": 5,
+      "description": "Are you concerned you may have ongoing risk for HIV or are you thinking of making life changes that may put you at higher risk for HIV?",
+      "next": "PREP_Q6",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "PREP_Q5_A1",
+          "next": "PREP_DISCLAIMER_2"
+        },
+        {
+          "text": "Yes",
+          "code": "PREP_Q5_A2"
+        }
+      ]
+    },
+    "PREP_Q5_V2": {
+      "header": "Are you planning to get pregnant with an HIV partner within the next few years?",
+      "type": "choice-details",
+      "index": 11,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PREP_Q5_V2_A1",
+          "next": "PREP_Q10_V1"
+        },
+        {
+          "text": "No",
+          "code": "PREP_Q5_V2_A2",
+          "next": "PREP_Q10_V2"
+        },
+        {
+          "text": "I'm not sure",
+          "code": "PREP_Q5_V2_A3",
+          "next": "PREP_Q10_V2"
+        }
+      ]
+    },
+    "PREP_Q6": {
+      "header": "HIV Exposure",
+      "type": "choice-details",
+      "index": 6,
+      "description": "In the last 72 hours, have you been exposed to the semen, vaginal fluid, or blood of someone you know to be HIV positive or is possibly HIV postitive?",
+      "next": "PREP_Q7",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "PREP_Q6_A1",
+          "next": "PREP_Q8_V1"
+        },
+        {
+          "text": "Yes",
+          "code": "PREP_Q6_A2"
+        }
+      ]
+    },
+    "PREP_Q7": {
+      "header": "Undetectable Partner?",
+      "type": "choice-details",
+      "index": 7,
+      "description": "Was this exposure from a partner who is HIV positive BUT is taking their HIV medications, and whose HIV is currently undetectable?",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "PREP_Q7_A1",
+          "next": "PREP_Q8_V2"
+        },
+        {
+          "text": "Yes",
+          "code": "PREP_Q7_A2",
+          "next": "PREP_Q8_V1"
+        },
+        {
+          "text": "I don't know",
+          "code": "PREP_Q7_A3",
+          "next": "PREP_Q8_V2"
+        }
+      ]
+    },
+    "PREP_Q8_V1": {
+      "header": "Do you think you may have been exposed to HIV within the last 30 days?",
+      "type": "choice-details",
+      "index": 8.1,
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "PREP_Q8_V1_A1",
+          "next": "PREP_Q5_V2"
+        },
+        {
+          "text": "Yes",
+          "code": "PREP_Q8_V1_A2",
+          "next": "PREP_Q9"
+        },
+        {
+          "text": "I don't know",
+          "code": "PREP_Q8_V1_A3",
+          "next": "PREP_Q9"
+        }
+      ]
+    },
+    "PREP_Q8_V2": {
+      "header": "PEP recommended",
+      "type": "message",
+      "index": 8.2,
+      "listItems": [
+        "If you think you have been exposed to HIV within the last 72 hours, we recommend you get PEP, an emergency treatment to prevent HIV infection, before starting PrEP.",
+        "Your local Emergency Department, Urgent Care Center or STI clinic should be able to provide PEP. Tell them - I had an exposure to HIV and need PEP"
+      ],
+      "buttonText": "I understand",
+      "next": "PREP_Q9"
+    },
+    "PREP_Q9": {
+      "header": "Do you currently have any of the following flu-like symptoms?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "index": 9,
+      "buttonText": "I understand",
+      "next": "PREP_Q5_V2",
+      "answerOptions": [
+        {
+          "text": "Sore throat",
+          "code": "PREP_Q9_A1"
+        },
+        {
+          "text": "Fevers",
+          "code": "PREP_Q9_A2"
+        },
+        {
+          "text": "Chills",
+          "code": "PREP_Q9_A3"
+        },
+        {
+          "text": "Sweats",
+          "code": "PREP_Q9_A4"
+        },
+        {
+          "text": "Headache",
+          "code": "PREP_Q9_A5"
+        },
+        {
+          "text": "Muscle aches or pains",
+          "code": "PREP_Q9_A6"
+        },
+        {
+          "text": "Runny nose",
+          "code": "PREP_Q9_A7"
+        },
+        {
+          "text": "Swollen glands",
+          "code": "PREP_Q9_A8"
+        },
+        {
+          "text": "None of the above",
+          "code": "PREP_Q9_A9"
+        }
+      ]
+    },
+    "PREP_Q10_V1": {
+      "header": "Please indicate when you are planning on getting pregnant with an HIV positive partner:",
+      "type": "choice-details",
+      "index": 11.5,
+      "answerOptions": [
+        {
+          "text": "Within the next 6 months",
+          "code": "PREP_Q10_V1_A1",
+          "next": "PREP_Q10_V2"
+        },
+        {
+          "text": "7-12 months from now",
+          "code": "PREP_Q10_V1_A2",
+          "next": "PREP_Q10_V2"
+        },
+        {
+          "text": "More than 1 year from now",
+          "code": "PREP_Q10_V1_A3",
+          "next": "PREP_Q10_V2"
+        }
+      ]
+    },
+    "PREP_Q10_V2": {
+      "header": "In the last year, have you been diagnosed with gonorrhea?",
+      "type": "choice-details",
+      "index": 12,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PREP_Q10_V2_A1",
+          "next": "PREP_Q11"
+        },
+        {
+          "text": "No",
+          "code": "PREP_Q10_V2_A2",
+          "next": "PREP_Q13"
+        }
+      ]
+    },
+    "PREP_Q11": {
+      "header": "Please indicate the areas affected by gonorrhea:",
+      "type": "multiple-choice",
+      "index": 12.5,
+      "next": "PREP_Q12",
+      "answerOptions": [
+        {
+          "text": "Rectum",
+          "code": "PREP_Q11_A1"
+        },
+        {
+          "text": "Urethra",
+          "code": "PREP_Q11_A2"
+        },
+        {
+          "text": "Vagina",
+          "code": "PREP_Q11_A3"
+        },
+        {
+          "text": "Throat",
+          "code": "PREP_Q11_A4"
+        },
+        {
+          "text": "None of the above",
+          "code": "PREP_Q11_A5"
+        }
+      ]
+    },
+    "PREP_Q12": {
+      "header": "Did you complete treatment for the gonorrhea infection?",
+      "type": "choice-details",
+      "index": 13,
+      "next": "PREP_Q13",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "PREP_Q12_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "PREP_Q12_A2"
+        },
+        {
+          "text": "I don't know",
+          "code": "PREP_Q12_A3"
+        }
+      ]
+    },
+    "PREP_Q13": {
+      "header": "In the last year, have you been diagnosed with chlamydia?",
+      "type": "choice-details",
+      "index": 14,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PREP_Q13_A1",
+          "next": "PREP_Q14"
+        },
+        {
+          "text": "No",
+          "code": "PREP_Q13_A2",
+          "next": "PREP_Q16"
+        }
+      ]
+    },
+    "PREP_Q14": {
+      "header": "Please indicate the areas affected by chlamydia:",
+      "type": "multiple-choice",
+      "index": 14.5,
+      "next": "PREP_Q15",
+      "answerOptions": [
+        {
+          "text": "Rectum",
+          "code": "PREP_Q14_A1"
+        },
+        {
+          "text": "Urethra",
+          "code": "PREP_Q14_A2"
+        },
+        {
+          "text": "Vagina",
+          "code": "PREP_Q14_A3"
+        },
+        {
+          "text": "Throat",
+          "code": "PREP_Q14_A4"
+        },
+        {
+          "text": "None of the above",
+          "code": "PREP_Q14_A5"
+        }
+      ]
+    },
+    "PREP_Q15": {
+      "header": "Did you complete treatment for the chlamydia infection?",
+      "type": "choice-details",
+      "index": 15,
+      "next": "PREP_Q16",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "PREP_Q15_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "PREP_Q15_A2"
+        },
+        {
+          "text": "I don't know",
+          "code": "PREP_Q15_A3"
+        }
+      ]
+    },
+    "PREP_Q16": {
+      "header": "In your lifetime, have you ever been diagnosed with syphilis?",
+      "type": "choice-details",
+      "index": 16,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PREP_Q16_A1",
+          "next": "PREP_Q17"
+        },
+        {
+          "text": "No",
+          "code": "PREP_Q16_A2",
+          "next": "PREP_Q19"
+        }
+      ]
+    },
+    "PREP_Q17": {
+      "header": "Do you remember when and where you were last treated for syphilis?",
+      "type": "choice-details",
+      "index": 17,
+      "next": "PREP_Q18",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PREP_Q17_A1"
+        },
+        {
+          "text": "No",
+          "code": "PREP_Q17_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "PREP_Q17_A1",
+        "code": "PREP_Q17_T1",
+        "type": "text",
+        "input_placeholder": "e.g. August 2022 at Mount Sinai, New York City"
+      }
+    },
+    "PREP_Q18": {
+      "header": "What was your last titer?",
+      "type": "choice-details",
+      "index": 18,
+      "next": "PREP_Q19",
+      "answerOptions": [
+        {
+          "text": "I'm not sure",
+          "code": "PREP_Q18_A1"
+        },
+        {
+          "text": "Non-reactive",
+          "code": "PREP_Q18_A2"
+        },
+        {
+          "text": "Weakly reactive",
+          "code": "PREP_Q18_A3"
+        },
+        {
+          "text": "1:2",
+          "code": "PREP_Q18_A4"
+        },
+        {
+          "text": "1:4",
+          "code": "PREP_Q18_A5"
+        },
+        {
+          "text": "1:8",
+          "code": "PREP_Q18_A6"
+        },
+        {
+          "text": "1:16",
+          "code": "PREP_Q18_A7"
+        },
+        {
+          "text": "1:32",
+          "code": "PREP_Q18_A8"
+        },
+        {
+          "text": "1:64",
+          "code": "PREP_Q18_A9"
+        },
+        {
+          "text": "1:128",
+          "code": "PREP_Q18_A10"
+        },
+        {
+          "text": "1:256",
+          "code": "PREP_Q18_A11"
+        }
+      ]
+    },
+    "PREP_Q19": {
+      "header": "Have you ever been diagnosed with any of these conditions?",
+      "description": "Check all that apply:",
+      "type": "multiple-choice",
+      "index": 19,
+      "next": "PREP_Q21",
+      "answerOptions": [
+        {
+          "text": "Hepatitis C",
+          "code": "PREP_Q19_A1"
+        },
+        {
+          "text": "Hepatitis B",
+          "code": "PREP_Q19_A2",
+          "next": "PREP_Q20"
+        },
+        {
+          "text": "Uncontrolled Diabetes",
+          "code": "PREP_Q19_A3"
+        },
+        {
+          "text": "Kidney Disease",
+          "code": "PREP_Q19_A4"
+        },
+        {
+          "text": "Liver Disease",
+          "code": "PREP_Q19_A5"
+        },
+        {
+          "text": "None of the above",
+          "code": "PREP_Q19_A6"
+        }
+      ]
+    },
+    "PREP_Q20": {
+      "header": "What medications are you on for treatment of Hepatitis B?",
+      "description": "Check all that apply:",
+      "type": "multiple-choice",
+      "index": 20,
+      "next": "PREP_Q21",
+      "answerOptions": [
+        {
+          "text": "Baraclude",
+          "code": "PREP_Q20_A1"
+        },
+        {
+          "text": "Emtriva",
+          "code": "PREP_Q20_A2"
+        },
+        {
+          "text": "Epivir",
+          "code": "PREP_Q20_A3"
+        },
+        {
+          "text": "Intron A",
+          "code": "PREP_Q20_A4"
+        },
+        {
+          "text": "Hepsera",
+          "code": "PREP_Q20_A5"
+        },
+        {
+          "text": "Pegasys",
+          "code": "PREP_Q20_A6"
+        },
+        {
+          "text": "Vemlidy",
+          "code": "PREP_Q20_A7"
+        },
+        {
+          "text": "Viread",
+          "code": "PREP_Q20_A8"
+        },
+        {
+          "text": "Other",
+          "code": "PREP_Q20_A9"
+        }
+      ]
+    },
+    "PREP_Q21": {
+      "header": "Have you been vaccinated for HPV (Human Papillomavirus)?",
+      "type": "choice-details",
+      "index": 21,
+      "next": "PREP_Q22",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PREP_Q21_A1"
+        },
+        {
+          "text": "No",
+          "code": "PREP_Q21_A2"
+        },
+        {
+          "text": "Not sure",
+          "code": "PREP_Q21_A3"
+        }
+      ]
+    },
+    "PREP_Q22": {
+      "header": "When did you last get tested for STIs (sexually transmitted infections)?",
+      "type": "choice-details",
+      "index": 22,
+      "next": "PREP_Q23",
+      "answerOptions": [
+        {
+          "text": "Within the last 12 months",
+          "code": "PREP_Q22_A1"
+        },
+        {
+          "text": "1-2 years",
+          "code": "PREP_Q22_A2"
+        },
+        {
+          "text": "2+ years",
+          "code": "PREP_Q22_A3"
+        },
+        {
+          "text": "I don't know",
+          "code": "PREP_Q22_A4"
+        }
+      ]
+    },
+    "PREP_Q23": {
+      "header": "Are you taking any medications or supplements routinely?",
+      "type": "choice-details",
+      "index": 23,
+      "next": "PREP_Q24",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PREP_Q23_A1"
+        },
+        {
+          "text": "No",
+          "code": "PREP_Q23_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "PREP_Q23_A1",
+        "code": "PREP_Q23_T1",
+        "type": "text",
+        "description": "Please list all treatments and drugs:",
+        "body": "Are you currently taking any prescription medications, over the counter drugs or herbal supplements, including St. John's Wort or creatine supplements on a regular basis?",
+        "input_placeholder": "Write anything here..."
+      }
+    },
+    "PREP_Q24": {
+      "header": "Do you have any drug allergies?",
+      "type": "choice-details",
+      "index": 24,
+      "next": "PREP_Q25",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PREP_Q24_A1"
+        },
+        {
+          "text": "No",
+          "code": "PREP_Q24_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "PREP_Q24_A1",
+        "code": "PREP_Q24_T1",
+        "type": "text",
+        "description": "Please tell us which medication(s) you are allergic to and briefly describe your allergic reaction.",
+        "input_placeholder": "Type Here"
+      }
+    },
+    "PREP_Q25": {
+      "header": "Do you have non-drug allergies?",
+      "type": "choice-details",
+      "index": 25,
+      "next": "PREP_Q26",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PREP_Q25_A1"
+        },
+        {
+          "text": "No",
+          "code": "PREP_Q25_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "PREP_Q25_A1",
+        "code": "PREP_Q25_T1",
+        "type": "text",
+        "description": "Please tell us which non-drug allergies you have, and briefly describe your allergic reaction.",
+        "body": "Relevant non-drug substance may include: Peanuts, Soy, Latex, Shellfish, Adhesive & Tapes, Disinfectants (e.g. iodine, hexachlorophene/phisohex)",
+        "input_placeholder": "Type Here"
+      }
+    },
+    "PREP_Q26": {
+      "header": "Please provide the name, address, and phone number of your preferred local pharmacy in case one is needed.",
+      "type": "text",
+      "index": 26,
+      "next": "PREP_Q27"
+    },
+    "PREP_Q27": {
+      "header": "Anything else we should know about your medical history?",
+      "type": "choice-details",
+      "index": 27,
+      "next": "PREP_Q28",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "PREP_Q27_A1"
+        },
+        {
+          "text": "No",
+          "code": "PREP_Q27_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "PREP_Q27_A1",
+        "code": "PREP_Q27_T1",
+        "type": "text",
+        "description": "Tell us about any concerns or questions you have for the medical team.",
+        "input_placeholder": "Type Here..."
+      }
+    },
+    "PREP_Q28": {
+      "header": "Almost there!",
+      "description": "Just wanted to confirm that by continuing with your request for PrEP, you acknowledge and consent to the ordering and performance of an HIV test.",
+      "type": "message",
+      "index": 28,
+      "next": "MY_LAB_KIT"
+    },
+    "MY_LAB_KIT": {
+      "label": "Lab work",
+      "type": "lab-or-blood-tests",
+      "next": "PREP_Q29",
+      "index": 29
+    },
+    "PREP_Q29": {
+      "hideHeader": true,
+      "type": "prep-insurance",
+      "index": 29,
+      "answerOptions": [
+        {
+          "text": "Out-of-Pocket",
+          "code": "PREP_Q29_A1",
+          "next": "GILEAD_ASSISTANCE"
+        },
+        {
+          "text": "Insurance",
+          "code": "PREP_Q29_A2",
+          "next": "INSURANCE_INFORMATION"
+        }
+      ]
+    },
+    "GILEAD_ASSISTANCE": {
+      "hideHeader": true,
+      "hideFooter": true,
+      "type": "gilead-assistance",
+      "index": 30
+    },
+    "INSURANCE_INFORMATION": {
+      "hideHeader": true,
+      "hideFooter": true,
+      "type": "insurance-information",
+      "index": 30
+    },
+    "PREP_DISCLAIMER_1": {
+      "header": "We're sorry",
+      "hideFooter": true,
+      "listItems": [
+        "Based on your responses, you are not eligible for PrEP at Zealthy."
+      ],
+      "type": "message",
+      "index": 4
+    },
+    "PREP_DISCLAIMER_2": {
+      "header": "We're sorry",
+      "hideFooter": true,
+      "listItems": [
+        "Based on your responses, you are not eligible for PrEP at Zealthy."
+      ],
+      "type": "message",
+      "index": 6
+    }
+  }
+}

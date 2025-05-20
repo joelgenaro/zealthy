@@ -1,0 +1,32 @@
+{
+  "name": "checkout-success",
+  "version": "1",
+  "code": "CHECKOUT_S",
+  "entry": "CHECKOUT_S_Q1",
+  "questions": {
+    "CHECKOUT_S_Q1": {
+      "header": {
+        "if": [
+          { "===": [{ "var": "status" }, "ACTIVE"] },
+          "You have successfully submitted your payment information.",
+          { "===": [{ "var": "specificCare" }, "Enclomiphene"] },
+          "Thank you for signing up for Zealthy’s enclomiphene treatment program.",
+          "Thank you for becoming a valued Zealthy member!"
+        ]
+      },
+      "description": {
+        "if": [
+          { "===": [{ "var": "specificCare" }, "Enclomiphene"] },
+          "To get started with enclomiphene, you’ll need to continue to answer additional health questions for your provider. If you didn’t upload labs, you’ll also need to get your lab work done, which will be shipped to your home in the coming days.",
+          "To access your high-quality care, you’ll need to continue to answer additional health questions for your care team."
+        ]
+      },
+      "type": "message",
+      "styles": {
+        "header": {
+          "textAlign": "center"
+        }
+      }
+    }
+  }
+}

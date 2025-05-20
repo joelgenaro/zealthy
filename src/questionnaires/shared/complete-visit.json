@@ -1,0 +1,11 @@
+{
+  "name": "complete-visit",
+  "version": "1",
+  "code": "WEIGHT_LOSS_COMPLETE",
+  "entry": "WEIGHT_LOSS_COMPLETE-Q1",
+  "questions": {
+    "WEIGHT_LOSS_COMPLETE-Q1": {
+      "type": "complete-visit"
+    }
+  }
+}

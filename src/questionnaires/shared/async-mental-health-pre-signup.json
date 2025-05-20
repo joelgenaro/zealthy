@@ -1,0 +1,201 @@
+{
+  "name": "async-mental-health-pre-signup",
+  "care": "Mental health",
+  "version": "1",
+  "canvas_id": "0a9406d3-7b4b-4484-aff0-951b4d27cfe2",
+  "code": "AMH_Q",
+
+  "entry": "AMH_Q1",
+  "questions": {
+    "AMH_Q1": {
+      "header": "When did you first notice these changes to your mental health?",
+      "details": "Select all that apply",
+      "type": "choice",
+      "canvas_linkId": "037721b8-2cf8-4594-977e-89d6a07d6c16",
+      "next": "AMH_Q2",
+      "answerOptions": [
+        {
+          "text": "The past few months",
+          "code": "AMH_Q1_A1"
+        },
+        {
+          "text": "The past year",
+          "code": "AMH_Q1_A2"
+        },
+        {
+          "text": "A few years ago",
+          "code": "AMH_Q1_A3"
+        },
+        {
+          "text": "Longer than I can remember",
+          "code": "AMH_Q1_A4"
+        },
+        {
+          "text": "Unsure. It's been on and off",
+          "code": "AMH_Q1_A5"
+        }
+      ]
+    },
+
+    "AMH_Q2": {
+      "header": "What brings you here today?",
+      "details": "Select all that apply",
+      "type": "questionnaire-choice",
+      "canvas_linkId": "a6176d1d-1ce7-4f3e-8fd9-5f25861ed2b7",
+      "next": "AMH_Q3",
+      "answerOptions": [
+        {
+          "text": "Feeling anxious",
+          "code": "AMH_Q2_A1"
+        },
+        {
+          "text": "Feeling unusually down",
+          "code": "AMH_Q2_A2"
+        },
+        {
+          "text": "Feeling depressed",
+          "code": "AMH_Q2_A3"
+        },
+        {
+          "text": "Not feeling social",
+          "code": "AMH_Q2_A4"
+        },
+        {
+          "text": "Feeling consistently worried",
+          "code": "AMH_Q2_A5"
+        },
+        {
+          "text": "Feeling stressed",
+          "code": "AMH_Q2_A6"
+        },
+        {
+          "text": "Feeling burnt out",
+          "code": "AMH_Q2_A7"
+        },
+        {
+          "text": "Experiencing panic attacks",
+          "code": "AMH_Q2_A8"
+        },
+        {
+          "text": "Not feeling like myself",
+          "code": "AMH_Q2_A9"
+        },
+        {
+          "text": "Other",
+          "code": "AMH_Q2_A10"
+        }
+      ]
+    },
+    "AMH_Q3": {
+      "header": "Do any of the following factors play a role in how you’ve been feeling lately?",
+      "details": "Select all that apply",
+      "type": "questionnaire-choice",
+      "canvas_linkId": "a6176d1d-1ce7-4f3e-8fd9-5f25861ed2b7",
+      "next": "AMH_Q4",
+      "answerOptions": [
+        {
+          "text": "Relationship",
+          "code": "AMH_Q3_A1"
+        },
+        {
+          "text": "Work stress",
+          "code": "AMH_Q3_A2"
+        },
+        {
+          "text": "Being a parent",
+          "code": "AMH_Q3_A3"
+        },
+        {
+          "text": "Pregnancy or post partem",
+          "code": "AMH_Q3_A4"
+        },
+        {
+          "text": "School stress",
+          "code": "AMH_Q3_A5"
+        },
+        {
+          "text": "Social life",
+          "code": "AMH_Q3_A6"
+        },
+        {
+          "text": "Physical health",
+          "code": "AMH_Q3_A7"
+        },
+        {
+          "text": "Self confidence",
+          "code": "AMH_Q3_A8"
+        },
+        {
+          "text": "Something else",
+          "code": "AMH_Q3_A9"
+        }
+      ]
+    },
+    "AMH_Q4": {
+      "header": "Which areas of your life have been impacted by how you've been feeling recently?",
+      "details": "Select all that apply",
+      "type": "questionnaire-choice",
+      "canvas_linkId": "a6176d1d-1ce7-4f3e-8fd9-5f25861ed2b7",
+      "next": "AMH_Q5",
+      "answerOptions": [
+        {
+          "text": "Rekatuibsguo",
+          "code": "AMH_Q4_A1"
+        },
+        {
+          "text": "Family",
+          "code": "AMH_Q4_A2"
+        },
+        {
+          "text": "Friends and social life",
+          "code": "AMH_Q4_A3"
+        },
+        {
+          "text": "Self esteem",
+          "code": "AMH_Q4_A4"
+        },
+        {
+          "text": "Daily routine",
+          "code": "AMH_Q4_A5"
+        },
+        {
+          "text": "Sleep",
+          "code": "AMH_Q4_A6"
+        },
+        {
+          "text": "Eating habits",
+          "code": "AMH_Q4_A7"
+        },
+        {
+          "text": "Physical health",
+          "code": "AMH_Q4_A8"
+        },
+        {
+          "text": "Something else",
+          "code": "AMH_Q4_A9"
+        }
+      ]
+    },
+    "AMH_Q5": {
+      "header": "How do you feel about taking medication to treat mental health symptoms?",
+      "details": "Select all that apply",
+      "type": "questionnaire-choice",
+      "canvas_linkId": "a6176d1d-1ce7-4f3e-8fd9-5f25861ed2b7",
+
+      "answerOptions": [
+        {
+          "text": "I'm ready to get started",
+          "code": "AMH_Q5_A1"
+        },
+        {
+          "text": "I'm open to it but want more information",
+          "code": "AMH_Q5_A2"
+        },
+        {
+          "text": "I'm unsure about getting started",
+          "code": "AMH_Q5_A3"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "unable-confirm-walkedin-appointment",
+  "version": "1",
+  "code": "UNABLE_CWA",
+  "entry": "UNABLE_CWA_Q1",
+  "questions": {
+    "UNABLE_CWA_Q1": {
+      "type": "message",
+      "header": "We’re sorry! Treat me now is no longer available.",
+      "listItems": [
+        "Our providers are no longer available to treat you now. Not to worry, you can schedule a visit for later and have the ability to select your Zealthy provider of choice.",
+        "We’ll also notify you when our providers return online to provide immediate care."
+      ],
+      "next": "UNABLE_CWA_Q2",
+      "buttonText": "Schedule visit"
+    },
+    "UNABLE_CWA_Q2": {
+      "type": "provider-schedule"
+    }
+  }
+}

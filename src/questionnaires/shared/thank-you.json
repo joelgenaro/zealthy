@@ -1,0 +1,18 @@
+{
+  "name": "thank-you",
+  "version": "1",
+  "code": "THANK-U",
+  "entry": "THANK-U-Q1",
+  "questions": {
+    "THANK-U-Q1": {
+      "header": "Thank you for providing Zealthy with your health information!",
+      "description": "There are only 2 steps left.",
+      "type": "message",
+      "styles": {
+        "header": {
+          "textAlign": "center"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "async-what-happens-next-v2",
+  "version": "1",
+  "code": "ASYNC-WIN",
+  "entry": "ASYNC-WIN-Q1",
+  "questions": {
+    "ASYNC-WIN-Q1": {
+      "header": "What happens next.",
+      "description": "You’re almost done; your Zealthy provider will review your responses prior to writing your prescription, if medically appropriate.",
+      "type": "async-what-happens-next-v2",
+      "buttonText": "Continue"
+    }
+  }
+}

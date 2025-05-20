@@ -1,0 +1,51 @@
+{
+  "name": "weight-loss-compound-refill-recurring",
+  "version": "1",
+  "code": "WEIGHT_L_CHECKIN",
+  "entry": "WEIGHT_L_RECURRING_INTRO",
+  "questions": {
+    "WEIGHT_L_RECURRING_INTRO": {
+      "type": "recurring-intro",
+      "next": "WEIGHT_L_CHECKIN_Q1"
+    },
+    "WEIGHT_L_CHECKIN_Q1": {
+      "header": "What’s your current weight?",
+      "type": "weight-checkin",
+      "next": "WEIGHT_L_CHECKIN_Q2"
+    },
+    "WEIGHT_L_CHECKIN_Q2": {
+      "header": "Are you currently experiencing any side effects from your weight loss medication?",
+      "canvas_linkId": "c1a458e5-1a13-41cd-89c3-763cf42dc546",
+      "type": "choice-details",
+      "next": "WEIGHT_L_CHECKIN_Q3",
+      "answerOptions": [
+        {
+          "text": "No",
+          "code": "WEIGHT_L_CHECKIN_Q2_A1"
+        },
+        {
+          "text": "Yes",
+          "code": "WEIGHT_L_CHECKIN_Q2_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "WEIGHT_L_CHECKIN_Q2_A2",
+        "code": "WEIGHT_L_CHECKIN_Q3",
+        "type": "text",
+        "canvas_linkId": "6349eeb2-28cc-421a-9c7c-c4dd0dbb6da6",
+        "description": "Tell us more about your side effects",
+        "body": "We want to know what you’re experiencing so that, if appropriate, we can help you adjust your medication or dosage."
+      }
+    },
+    "WEIGHT_L_CHECKIN_Q3": {
+      "header": "In the past month, have there been any changes to your health and/or the medications(s) you are taking?",
+      "description": "Let us know if there is anything else that your Zealthy Care Team should know.",
+      "canvas_linkId": "7d94ad97-ced7-4427-ab64-ab99a4d4c3d8",
+      "type": "text",
+      "next": "RECURRING_TREATMENT_OPTIONS"
+    },
+    "RECURRING_TREATMENT_OPTIONS": {
+      "type": "compound-weight-loss-refill-recurring-treatment"
+    }
+  }
+}

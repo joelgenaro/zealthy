@@ -1,0 +1,33 @@
+{
+  "name": "weight-loss-medications",
+  "version": "1",
+  "entry": "WL_M_Q1",
+  "questions": {
+    "WL_M_Q1": {
+      "header": "How long did you take [medication name]? Was it effective? Did you experience any side effects? When did you last take it?",
+      "type": "text",
+      "input_placeholder": {
+        "if": [
+          {
+            "some": [
+              { "var": "coaching" },
+              {
+                "in": [
+                  { "var": "name" },
+                  [
+                    "Zealthy Weight Loss + Semaglutide Program",
+                    "Zealthy Weight Loss + Tirzepatide Program"
+                  ]
+                ]
+              }
+            ]
+          },
+          "Type here...",
+          { "!!": [{ "var": "skippedInsurance" }] },
+          "Tell us about your experience including your dosage",
+          "Tell us about your experience with this medication or medications. Answering this will help us with your prior authorization to get your GLP-1 covered by insurance."
+        ]
+      }
+    }
+  }
+}

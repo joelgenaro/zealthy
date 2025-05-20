@@ -1,0 +1,36 @@
+{
+  "name": "async-mental-health-results",
+  "version": "1",
+  "code": "ASYNC_MHR",
+  "entry": "ASYNC_MHR-Q1",
+  "questions": {
+    "ASYNC_MHR-Q1": {
+      "header": "Interpreting my results",
+      "description": "While your results aren’t a diagnosis, they will help you and your provider make a customized plan to helping you feel like the best version of yourself.",
+      "type": "message",
+      "buttonText": "Get my results",
+      "next": "ASYNC_MHR-Q2"
+    },
+    "ASYNC_MHR-Q2": {
+      "type": "async-results",
+      "next": "ASYNC_MHR-Q3"
+    },
+
+    "ASYNC_MHR-Q3": {
+      "header": "[First Name]'s Results",
+      "listItems": [
+        "Here are your initial assessment results.",
+        "Symptoms of anxiety or depression are very common.",
+        "Now that you’ve established your anxiety & depression baseline, you’re closer to getting the support you need to feel your best."
+      ],
+      "type": "mental-health-result",
+      "next": "ASYNC_MHR-Q4"
+    },
+
+    "ASYNC_MHR-Q4": {
+      "header": "Your provider needs you to answer a few more questions",
+      "description": "You’re almost finished! To provide a diagnosis and customized Rx treatment plan, your provider needs you to answer some medical questions next.",
+      "type": "message"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "insurance-information",
+  "version": "1",
+  "code": "INSURANCE-INFORMATION-A",
+  "entry": "INSURANCE-INFORMATION-A-Q1",
+  "questions": {
+    "INSURANCE-INFORMATION-A-Q1": {
+      "type": "insurance-information",
+      "index": 4
+    }
+  }
+}

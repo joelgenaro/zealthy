@@ -1,0 +1,27 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "MPBB5NP7L4.com.zealthy.mobileapp"
+        ],
+        "components": [
+          {
+            "/": "*",
+            "comment": "Matches all routes"
+          }
+        ]
+      }
+    ]
+  },
+  "activitycontinuation": {
+    "apps": [
+      "MPBB5NP7L4.com.zealthy.mobileapp"
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "MPBB5NP7L4.com.zealthy.mobileapp"
+    ]
+  }
+}

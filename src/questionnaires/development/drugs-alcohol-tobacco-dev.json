@@ -1,0 +1,203 @@
+{
+  "name": "drugs-alcohol-tobacco",
+  "version": "1",
+  "canvas_id": "234315c9-31bf-4f4c-987c-3419527dfca6",
+  "code": "DAT_U",
+  "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+  "entry": "DAT_U_Q1",
+  "questions": {
+    "DAT_U_Q1": {
+      "header": "How often did you have a drink containing alcohol in the past year?",
+      "type": "choice",
+      "canvas_linkId": "6dd18778-c8e8-4a51-a398-1ee342ced03f",
+      "next": "DAT_U_Q2",
+      "answerOptions": [
+        {
+          "code": "DAT_U_Q1_A1",
+          "text": "Never",
+          "next": "DAT_U_Q4"
+        },
+        {
+          "code": "DAT_U_Q1_A2",
+          "text": "Monthly or less"
+        },
+        {
+          "code": "DAT_U_Q1_A3",
+          "text": "2 to 4 times a month"
+        },
+        {
+          "code": "DAT_U_Q1_A4",
+          "text": "2 to 3 times a week"
+        },
+        {
+          "code": "DAT_U_Q1_A5",
+          "text": "4 or more times a week"
+        }
+      ]
+    },
+    "DAT_U_Q2": {
+      "canvas_linkId": "d2330923-a0cf-4398-9f24-9fec2ab72786",
+      "header": "How many drinks containing alcohol did you have on a typical day when you were drinking in the past year?",
+      "type": "choice",
+      "next": "DAT_U_Q3",
+      "answerOptions": [
+        {
+          "code": "DAT_U_Q2_A1",
+          "text": "1 or 2"
+        },
+        {
+          "code": "DAT_U_Q2_A2",
+          "text": "3 or 4"
+        },
+        {
+          "code": "DAT_U_Q2_A3",
+          "text": "5 or 6"
+        },
+        {
+          "code": "DAT_U_Q2_A4",
+          "text": "7 to 9"
+        },
+        {
+          "code": "DAT_U_Q2_A5",
+          "text": "10 or more"
+        }
+      ]
+    },
+    "DAT_U_Q3": {
+      "canvas_linkId": "17e404a8-c953-42cd-a786-e08b63be07e8",
+      "header": "How often did you have six or more drinks on one occasion in the past year?",
+      "type": "choice",
+      "next": "DAT_U_Q4",
+      "answerOptions": [
+        {
+          "code": "DAT_U_Q3_A1",
+          "text": "Never"
+        },
+        {
+          "code": "DAT_U_Q3_A2",
+          "text": "Less than monthly"
+        },
+        {
+          "code": "DAT_U_Q3_A3",
+          "text": "Monthly"
+        },
+        {
+          "code": "DAT_U_Q3_A4",
+          "text": "Weekly"
+        },
+        {
+          "code": "DAT_U_Q3_A5",
+          "text": "Daily or almost daily"
+        }
+      ]
+    },
+    "DAT_U_Q4": {
+      "canvas_linkId": "48e3cdeb-8dc3-48e1-9bf9-be713e352503",
+      "header": "Do you currently or have you previously been a user of tobacco products?",
+      "type": "choice",
+      "next": "DAT_U_Q5",
+      "answerOptions": [
+        {
+          "code": "DAT_U_Q4_A1",
+          "text": "Yes"
+        },
+        {
+          "code": "DAT_U_Q4_A2",
+          "text": "No",
+          "next": "DAT_U_Q7"
+        }
+      ]
+    },
+    "DAT_U_Q5": {
+      "canvas_linkId": "25b1e466-11f4-4e04-be61-2e1114ba1b5b",
+      "header": "In the past year, how frequently did you smoke cigarettes or use other tobacco products?",
+      "type": "choice",
+      "next": "DAT_U_Q6",
+      "answerOptions": [
+        {
+          "code": "DAT_U_Q5_A1",
+          "text": "Never"
+        },
+        {
+          "code": "DAT_U_Q5_A2",
+          "text": "Once or twice"
+        },
+        {
+          "code": "DAT_U_Q5_A3",
+          "text": "Monthly"
+        },
+        {
+          "code": "DAT_U_Q5_A4",
+          "text": "Weekly or more"
+        }
+      ]
+    },
+    "DAT_U_Q6": {
+      "canvas_linkId": "df3478bc-00be-407a-b7f9-a5089785b590",
+      "header": "About how many cigarettes have you smoked in your entire life?",
+      "type": "choice",
+      "next": "DAT_U_Q7",
+      "answerOptions": [
+        {
+          "code": "DAT_U_Q6_A1",
+          "text": "10 or less"
+        },
+        {
+          "code": "DAT_U_Q6_A2",
+          "text": "11 to 100"
+        },
+        {
+          "code": "DAT_U_Q6_A3",
+          "text": "More than 100"
+        }
+      ]
+    },
+    "DAT_U_Q7": {
+      "canvas_linkId": "9df2fd76-0f3a-48f3-8350-01384861e136",
+      "header": "In the past year, how many times have you used prescription drugs that were not prescribed for you?",
+      "type": "choice",
+      "next": "DAT_U_Q8",
+      "answerOptions": [
+        {
+          "code": "DAT_U_Q7_A1",
+          "text": "Never"
+        },
+        {
+          "code": "DAT_U_Q7_A2",
+          "text": "Once or twice"
+        },
+        {
+          "code": "DAT_U_Q7_A3",
+          "text": "Monthly"
+        },
+        {
+          "code": "DAT_U_Q7_A4",
+          "text": "Weekly or more"
+        }
+      ]
+    },
+    "DAT_U_Q8": {
+      "canvas_linkId": "42d69c3e-f419-40be-a1f1-e9e66e9647a7",
+      "header": "In the past year, how many times have you used illegal drugs?",
+      "type": "choice",
+      "answerOptions": [
+        {
+          "code": "DAT_U_Q8_A1",
+          "text": "Never"
+        },
+        {
+          "code": "DAT_U_Q8_A2",
+          "text": "Once or twice"
+        },
+        {
+          "code": "DAT_U_Q8_A3",
+          "text": "Monthly"
+        },
+        {
+          "code": "DAT_U_Q8_A4",
+          "text": "Weekly or more"
+        }
+      ]
+    }
+  }
+}

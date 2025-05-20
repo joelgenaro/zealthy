@@ -1,0 +1,11 @@
+{
+  "name": "photo-identification",
+  "version": "1",
+  "code": "PHOTO_ID",
+  "entry": "PHOTO_ID-Q1",
+  "questions": {
+    "PHOTO_ID-Q1": {
+      "type": "photo-identification"
+    }
+  }
+}

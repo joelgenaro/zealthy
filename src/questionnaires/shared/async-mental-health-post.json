@@ -1,0 +1,617 @@
+{
+  "name": "async-mental-health-post",
+  "version": "1",
+  "canvas_id": "6a1e3ddf-91c3-40c9-a16a-9fbcfc851dac",
+  "code": "AMH_P_Q",
+  "codingSystem": "http://schemas.getzealthy-dev.canvasmedical.com/fhir/systems/internal",
+  "entry": "AMH_P_Q1",
+  "questions": {
+    "AMH_P_Q1": {
+      "canvas_linkId": "0d9bb7c8-9437-43f0-9426-f84edd8fcd4a",
+      "header": "How have you been feeling the past few weeks?",
+      "type": "multiple-choice",
+      "description": "Select all that apply:",
+      "answerOptions": [
+        {
+          "text": "Sad",
+          "code": "AMH_P_Q1_A1"
+        },
+        {
+          "text": "Emotional",
+          "code": "AMH_P_Q1_A2"
+        },
+        {
+          "text": "Stressed",
+          "code": "AMH_P_Q1_A3"
+        },
+        {
+          "text": "Afraid",
+          "code": "AMH_P_Q1_A4"
+        },
+        {
+          "text": "Worried",
+          "code": "AMH_P_Q1_A5"
+        },
+        {
+          "text": "Apathetic",
+          "code": "AMH_P_Q1_A6"
+        },
+        {
+          "text": "Unmotivated",
+          "code": "AMH_P_Q1_A7"
+        },
+        {
+          "text": "Tired",
+          "code": "AMH_P_Q1_A8"
+        },
+        {
+          "text": "Hypervigilant",
+          "code": "AMH_P_Q1_A9"
+        },
+        {
+          "text": "None of the above",
+          "code": "AMH_P_Q1_A10"
+        }
+      ],
+      "next": "AMH_P_Q2"
+    },
+    "AMH_P_Q2": {
+      "canvas_linkId": "3ae74b05-898f-4f49-bf75-e7d92b0cc6fc",
+      "header": "Which of the following do you relate to most days?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "AMH_P_Q3",
+      "answerOptions": [
+        {
+          "text": "Having trouble sleeping",
+          "code": "AMH_P_Q2_A1"
+        },
+        {
+          "text": "Sleeping too much",
+          "code": "AMH_P_Q2_A2"
+        },
+        {
+          "text": "Stressed or on edge",
+          "code": "AMH_P_Q2_A3"
+        },
+        {
+          "text": "No energy (lethargic)",
+          "code": "AMH_P_Q2_A4"
+        },
+        {
+          "text": "Feeling wired",
+          "code": "AMH_P_Q2_A5"
+        },
+        {
+          "text": "Feeling unmotivated",
+          "code": "AMH_P_Q2_A6"
+        },
+        {
+          "text": "None of the above",
+          "code": "AMH_P_Q2_A7"
+        }
+      ]
+    },
+    "AMH_P_Q3": {
+      "header": "Have you been diagnosed or have a history of any of the following mental health conditions?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "AMH_P_Q4",
+      "answerOptions": [
+        {
+          "text": "Depression",
+          "code": "AMH_P_Q3_A1"
+        },
+        {
+          "text": "Generalized anxiety",
+          "code": "AMH_P_Q3_A2"
+        },
+        {
+          "text": "ADD/ADHD",
+          "code": "AMH_P_Q3_A3"
+        },
+        {
+          "text": "Bipolar disorder",
+          "code": "AMH_P_Q3_A4"
+        },
+        {
+          "text": "Psychosis",
+          "code": "AMH_P_Q3_A5"
+        },
+        {
+          "text": "Pchizophrenia or schizoaffective disorder",
+          "code": "AMH_P_Q3_A6"
+        },
+        {
+          "text": "Anorexia or bulimia",
+          "code": "AMH_P_Q3_A7"
+        },
+        {
+          "text": "Binge eating",
+          "code": "AMH_P_Q3_A8"
+        },
+        {
+          "text": "Borderline personality disorder",
+          "code": "AMH_P_Q3_A9"
+        },
+        {
+          "text": "Serotonin syndrome",
+          "code": "AMH_P_Q3_A10"
+        },
+        {
+          "text": "Psychiatric hospitalization",
+          "code": "AMH_P_Q3_A11"
+        },
+        {
+          "text": "Moderate to severe substance abuse",
+          "code": "AMH_P_Q3_A12"
+        },
+        {
+          "text": "None of the above",
+          "code": "AMH_P_Q3_A13"
+        }
+      ]
+    },
+    "AMH_P_Q4": {
+      "header": "Do you currently have any desire to harm yourself or others?",
+      "type": "choice",
+      "next": "AMH_P_Q5",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "AMH_P_Q4_A1",
+          "next": "S_DISCLAIMER_1"
+        },
+        {
+          "text": "No",
+          "code": "AMH_P_Q4_A2"
+        }
+      ]
+    },
+    "AMH_P_Q5": {
+      "header": "Are you currently worried that you might harm yourself or others?",
+      "type": "choice",
+      "next": "AMH_P_Q6",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "AMH_P_Q5_A1",
+          "next": "S_DISCLAIMER_2"
+        },
+        {
+          "text": "No",
+          "code": "AMH_P_Q5_A2"
+        }
+      ]
+    },
+    "AMH_P_Q6": {
+      "header": "Do you have a family history of anxiety or depression?",
+      "type": "choice",
+      "next": "AMH_P_Q9",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "AMH_P_Q6_A1",
+          "next": "AMH_P_Q7"
+        },
+        {
+          "text": "No",
+          "code": "AMH_P_Q6_A2"
+        },
+        {
+          "text": "Not sure",
+          "code": "AMH_P_Q6_A3"
+        }
+      ]
+    },
+    "AMH_P_Q7": {
+      "header": "Did your family member effectively treat their condition with medication?",
+      "type": "choice",
+      "next": "AMH_P_Q9",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "AMH_P_Q7_A1",
+          "next": "AMH_P_Q8"
+        },
+        {
+          "text": "No",
+          "code": "AMH_P_Q7_A2"
+        },
+        {
+          "text": "Not sure",
+          "code": "AMH_P_Q7_A3"
+        }
+      ]
+    },
+    "AMH_P_Q8": {
+      "header": "Which of the following medications did they use to treat depression or anxiety?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "AMH_P_Q9",
+      "answerOptions": [
+        {
+          "text": "Abilify (Aripiprazole)",
+          "code": "AMH_P_Q8_A1"
+        },
+        {
+          "text": "Bupropion (Wellbutrin)",
+          "code": "AMH_P_Q8_A2"
+        },
+        {
+          "text": "Buspirone (BuSpar)",
+          "code": "AMH_P_Q8_A3"
+        },
+        {
+          "text": "Caplyta (Lumateperone)",
+          "code": "AMH_P_Q8_A4"
+        },
+        {
+          "text": "Citalopram (Celexa)",
+          "code": "AMH_P_Q8_A5"
+        },
+        {
+          "text": "Depakote (Valproate)",
+          "code": "AMH_P_Q8_A6"
+        },
+        {
+          "text": "Duloxetine (Cymbalta)",
+          "code": "AMH_P_Q8_A7"
+        },
+        {
+          "text": "Escitalopram (Lexapro)",
+          "code": "AMH_P_Q8_A8"
+        },
+        {
+          "text": "Fluoxetine (Prozac)",
+          "code": "AMH_P_Q8_A9"
+        },
+        {
+          "text": "Ketamine",
+          "code": "AMH_P_Q8_A10"
+        },
+        {
+          "text": "Lamictal (Lamotrigine)",
+          "code": "AMH_P_Q8_A11"
+        },
+        {
+          "text": "Latuda (Lurasidone)",
+          "code": "AMH_P_Q8_A12"
+        },
+        {
+          "text": "Lithium (Lithobid)",
+          "code": "AMH_P_Q8_A13"
+        },
+        {
+          "text": "Rexulti (Brexpiprazole)",
+          "code": "AMH_P_Q8_A14"
+        },
+        {
+          "text": "Risperdal (Risperidone)",
+          "code": "AMH_P_Q8_A15"
+        },
+        {
+          "text": "Seroquel (Quetiapine)",
+          "code": "AMH_P_Q8_A16"
+        },
+        {
+          "text": "Sertraline (Zoloft)",
+          "code": "AMH_P_Q8_A17"
+        },
+        {
+          "text": "Tegretol (Carbamazepine)",
+          "code": "AMH_P_Q8_A18"
+        },
+        {
+          "text": "Trileptal (Oxcarbazepine)",
+          "code": "AMH_P_Q8_A19"
+        },
+        {
+          "text": "Venlafaxine (Effexor)",
+          "code": "AMH_P_Q8_A20"
+        },
+        {
+          "text": "Vraylar (Cariprazine)",
+          "code": "AMH_P_Q8_A21"
+        },
+        {
+          "text": "Zyprexa (Olanzapine)",
+          "code": "AMH_P_Q8_A22"
+        },
+        {
+          "text": "None of the above",
+          "code": "AMH_P_Q8_A23"
+        }
+      ]
+    },
+
+    "AMH_P_Q9": {
+      "header": "Are you currently prescribed and taking a blood thinner (i.e. anticoagulant or antiplatelet) or an antiarrhythmic (i.e. flecainide)?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "AMH_P_Q12",
+      "answerOptions": [
+        {
+          "text": "Yes, I’m taking a blood thinner",
+          "code": "AMH_P_Q9_A1",
+          "next": "AMH_P_Q10"
+        },
+        {
+          "text": "Yes, I’m taking an antiarrhythmic",
+          "code": "AMH_P_Q9_A2",
+          "next": "AMH_P_Q11"
+        },
+        {
+          "text": "None of the above",
+          "code": "AMH_P_Q9_A3"
+        }
+      ]
+    },
+
+    "AMH_P_Q10": {
+      "header": "Which blood thinner are you taking?",
+      "type": "text",
+      "next": "AMH_P_Q12"
+    },
+
+    "AMH_P_Q11": {
+      "header": "Which antiarrhythmic are you taking?",
+      "type": "text",
+      "next": "AMH_P_Q12"
+    },
+
+    "AMH_P_Q12": {
+      "header": "What other prescription medications, over-the-counter medications, or supplements do you take? List the prescription names and exact doses of any medications with prescriptions.",
+      "type": "text",
+      "next": "AMH_P_Q13"
+    },
+
+    "AMH_P_Q13": {
+      "header": "Do you have a history of any of the following medical conditions?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "AMH_P_Q14",
+      "answerOptions": [
+        {
+          "text": "Diabetes with peripheral neuropathy",
+          "code": "AMH_P_Q13_A1"
+        },
+        {
+          "text": "Enlarged prostate (benign prostate hyperplasia)",
+          "code": "AMH_P_Q13_A2"
+        },
+        {
+          "text": "Hair loss",
+          "code": "AMH_P_Q13_A3"
+        },
+        {
+          "text": "High blood pressure",
+          "code": "AMH_P_Q13_A4"
+        },
+        {
+          "text": "History of hyponatremia",
+          "code": "AMH_P_Q13_A5"
+        },
+        {
+          "text": "Kidney failure",
+          "code": "AMH_P_Q13_A6"
+        },
+        {
+          "text": "Liver disease",
+          "code": "AMH_P_Q13_A7"
+        },
+        {
+          "text": "Narrow angle glaucoma",
+          "code": "AMH_P_Q13_A8"
+        },
+        {
+          "text": "Premature ejaculation",
+          "code": "AMH_P_Q13_A9"
+        },
+        {
+          "text": "QT prolongnation",
+          "code": "AMH_P_Q13_A10"
+        },
+        {
+          "text": "Seizure disorder or epilepsy",
+          "code": "AMH_P_Q13_A11"
+        },
+        {
+          "text": "Thyroid disease (diagnosed)",
+          "code": "AMH_P_Q13_A12"
+        },
+        {
+          "text": "None of the above",
+          "code": "AMH_P_Q13_A13"
+        }
+      ]
+    },
+
+    "AMH_P_Q14": {
+      "header": "Do you use tobacco or smoke any nicotine products (i.e. smoking, vaping, chewing)?",
+      "type": "choice",
+      "next": "AMH_P_Q15",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "AMH_P_Q14_A1"
+        },
+        {
+          "text": "No",
+          "code": "AMH_P_Q14_A2"
+        }
+      ]
+    },
+
+    "AMH_P_Q15": {
+      "header": "How often in the past year have you binge drank, meaning 5 or more drinks one one occasion for males and 4 or more drinks on one occasion for females?",
+      "type": "choice",
+      "next": "AMH_P_Q16",
+      "answerOptions": [
+        {
+          "text": "Never",
+          "code": "AMH_P_Q15_A1"
+        },
+        {
+          "text": "A few times a year",
+          "code": "AMH_P_Q15_A2"
+        },
+        {
+          "text": "Once a month",
+          "code": "AMH_P_Q15_A3"
+        },
+        {
+          "text": "Once a week",
+          "code": "AMH_P_Q15_A4"
+        },
+        {
+          "text": "Daily or nearly every day",
+          "code": "AMH_P_Q15_A5"
+        }
+      ]
+    },
+
+    "AMH_P_Q16": {
+      "header": "Have you taken any of the following drugs in the past 6 months?",
+      "description": "Select all that apply:",
+      "type": "multiple-choice",
+      "next": "AMH_P_Q17",
+      "answerOptions": [
+        {
+          "text": "Marijuana, cannabis, THC",
+          "code": "AMH_P_Q16_A1"
+        },
+        {
+          "text": "Cocaine",
+          "code": "AMH_P_Q16_A2"
+        },
+        {
+          "text": "Ecstasy (MDMA/molly)",
+          "code": "AMH_P_Q16_A3"
+        },
+        {
+          "text": "Kratom",
+          "code": "AMH_P_Q16_A4"
+        },
+        {
+          "text": "Opiates/opioids (heroin, fentanyl, OxyContin)",
+          "code": "AMH_P_Q16_A5"
+        },
+        {
+          "text": "Stimulants (methamphetamines or illicit stimulants)",
+          "code": "AMH_P_Q16_A6"
+        },
+        {
+          "text": "Tianeptine",
+          "code": "AMH_P_Q16_A7"
+        },
+        {
+          "text": "None of the above",
+          "code": "AMH_P_Q16_A8"
+        }
+      ]
+    },
+
+    "AMH_P_Q17": {
+      "header": "Do you have any other medical conditions?",
+      "type": "choice-details",
+      "next": "AMH_P_Q19",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "AMH_P_Q17_A1"
+        },
+        {
+          "text": "No",
+          "code": "AMH_P_Q17_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "AMH_P_Q17_A1",
+        "code": "AMH_P_Q18",
+        "type": "text",
+        "canvas_linkId": "2d01d2ee-9484-4921-8d62-b648250a90ac",
+        "input_placeholder": "Enter your other medical conditions here..."
+      }
+    },
+
+    "AMH_P_Q19": {
+      "header": "Have you had any surgeries or hospitalizations?",
+      "type": "choice-details",
+      "next": "AMH_P_Q21",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "AMH_P_Q19_A1"
+        },
+        {
+          "text": "No",
+          "code": "AMH_P_Q19_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "AMH_P_Q19_A1",
+        "code": "AMH_P_Q20",
+        "type": "text",
+        "canvas_linkId": "2d01d2ee-9484-4921-8d62-b648250a90ac",
+        "input_placeholder": "Details..."
+      }
+    },
+
+    "AMH_P_Q21": {
+      "header": "Do you have any other allergies (i.e. medications, foods, etc.) that your provider should know of?",
+      "type": "choice-details",
+      "next": "AMH_P_Q22",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "AMH_P_Q21_A1"
+        },
+        {
+          "text": "No",
+          "code": "AMH_P_Q21_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "AMH_P_Q21_A1",
+        "code": "AMH_P_Q22",
+        "type": "text",
+        "canvas_linkId": "2d01d2ee-9484-4921-8d62-b648250a90ac",
+        "input_placeholder": "Details..."
+      }
+    },
+
+    "AMH_P_Q22": {
+      "header": "Do you have auditory or visual hallucinations?",
+      "type": "choice",
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "next": "AMH_P_Q23_B1",
+          "code": "AMH_P_Q22_A1"
+        },
+        {
+          "text": "No",
+          "code": "AMH_P_Q22_A2"
+        }
+      ]
+    },
+
+    "AMH_P_Q23_B1": {
+      "type": "alarm",
+      "header": "Zealthy’s mental health program isn’t the best fit for those who are experiencing audio or visual hallucinations. We recommend that you seek in-person treatment instead."
+    },
+    "S_DISCLAIMER_1": {
+      "type": "suicide-disclaimer",
+      "header": "If you are thinking about hurting yourself, please seek help using the following resources:",
+      "next": "AMH_P_Q5",
+      "buttonText": "I understand"
+    },
+    "S_DISCLAIMER_2": {
+      "type": "suicide-disclaimer",
+      "header": "If you are thinking about hurting yourself, please seek help using the following resources:",
+      "next": "AMH_P_Q6",
+      "buttonText": "I understand"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "identity-verification",
+  "version": "1",
+  "code": "IDENTITY-V",
+  "entry": "IDENTITY-V-Q1",
+  "questions": {
+    "IDENTITY-V-Q1": {
+      "type": "identity-verification",
+      "index": 29,
+      "semaBundledIndex": 20
+    }
+  }
+}

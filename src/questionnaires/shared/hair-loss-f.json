@@ -1,0 +1,505 @@
+{
+  "name": "hair-loss-f",
+  "care": "hair loss f",
+  "version": "1",
+  "code": "HAIR_LOSS_F",
+  "entry": "HAIR_LOSS_F_Q1",
+  "questions": {
+    "HAIR_LOSS_F_Q1": {
+      "header": "What changes have you noticed in your hair?",
+      "description": "Select all that apply.",
+      "type": "multiple-choice",
+      "next": "HAIR_LOSS_F_Q2",
+      "index": 1,
+      "answerOptions": [
+        {
+          "text": "More thinning than usual",
+          "code": "HAIR_LOSS_F_Q1_A1"
+        },
+        {
+          "text": "Increased shedding",
+          "code": "HAIR_LOSS_F_Q1_A2"
+        },
+        {
+          "text": "Widening part",
+          "code": "HAIR_LOSS_F_Q1_A3"
+        },
+        {
+          "text": "None, I just want thicker hair",
+          "code": "HAIR_LOSS_F_Q1_A4"
+        }
+      ]
+    },
+    "HAIR_LOSS_F_Q2": {
+      "header": "Are you experiencing these common symptoms?",
+      "description": "Select all that apply.",
+      "type": "multiple-choice",
+      "next": "HAIR_LOSS_F_Q3",
+      "index": 2,
+      "answerOptions": [
+        {
+          "text": "More scalp showing",
+          "code": "HAIR_LOSS_F_Q2_A1"
+        },
+        {
+          "text": "More hair in my brush",
+          "code": "HAIR_LOSS_F_Q2_A2"
+        },
+        {
+          "text": "Increased shedding",
+          "code": "HAIR_LOSS_F_Q2_A3"
+        },
+        {
+          "text": "Thinner ponytail",
+          "code": "HAIR_LOSS_F_Q2_A4"
+        },
+        {
+          "text": "Increased breakage",
+          "code": "HAIR_LOSS_F_Q2_A5"
+        },
+        {
+          "text": "None of these",
+          "code": "HAIR_LOSS_F_Q2_A6"
+        }
+      ]
+    },
+    "HAIR_LOSS_F_Q3": {
+      "header": "Don’t worry, you’re not alone.",
+      "type": "hair-loss-message",
+      "next": "HAIR_LOSS_F_Q4",
+      "index": 3
+    },
+    "HAIR_LOSS_F_Q4": {
+      "header": "Are the changes to your hair noticeable?",
+      "type": "choice",
+      "next": "HAIR_LOSS_F_Q5",
+      "index": 4,
+      "answerOptions": [
+        {
+          "text": "Only I have noticed",
+          "code": "HAIR_LOSS_F_Q4_A1"
+        },
+        {
+          "text": "People close to me have noticed it",
+          "code": "HAIR_LOSS_F_Q4_A2"
+        },
+        {
+          "text": "Anyone can notice it",
+          "code": "HAIR_LOSS_F_Q4_A3"
+        }
+      ]
+    },
+    "HAIR_LOSS_F_Q5": {
+      "header": "When did you start to notice changes to your hair?",
+      "type": "choice",
+      "next": "HAIR_LOSS_F_Q6",
+      "index": 5,
+      "answerOptions": [
+        {
+          "text": "More than a year ago",
+          "code": "HAIR_LOSS_F_Q5_A1"
+        },
+        {
+          "text": "Within the past year",
+          "code": "HAIR_LOSS_F_Q5_A2"
+        },
+        {
+          "text": "Last few months",
+          "code": "HAIR_LOSS_F_Q5_A3"
+        },
+        {
+          "text": "Not sure",
+          "code": "HAIR_LOSS_F_Q5_A4"
+        }
+      ]
+    },
+    "HAIR_LOSS_F_Q6": {
+      "header": "How quickly did the changes occur?",
+      "type": "choice",
+      "next": "HAIR_LOSS_F_Q7",
+      "index": 6,
+      "answerOptions": [
+        {
+          "text": "Suddenly",
+          "code": "HAIR_LOSS_F_Q6_A1"
+        },
+        {
+          "text": "Gradually",
+          "code": "HAIR_LOSS_F_Q6_A2"
+        },
+        {
+          "text": "Not sure",
+          "code": "HAIR_LOSS_F_Q6_A3"
+        }
+      ]
+    },
+    "HAIR_LOSS_F_Q7": {
+      "header": "Hear from Zealthy members like you",
+      "type": "hair-loss-review",
+      "next": "HAIR_LOSS_F_Q8",
+      "index": 7
+    },
+    "HAIR_LOSS_F_Q8": {
+      "header": "What are your goals?",
+      "description": "This will help us determine a personalized treatment plan just for you. Select all that apply.",
+      "type": "multiple-choice",
+      "next": "HAIR_LOSS_F_Q9",
+      "index": 8,
+      "answerOptions": [
+        {
+          "text": "Less shedding",
+          "code": "HAIR_LOSS_F_Q8_A1"
+        },
+        {
+          "text": "Thicker and fuller hair",
+          "code": "HAIR_LOSS_F_Q8_A2"
+        },
+        {
+          "text": "Regrow lost hair",
+          "code": "HAIR_LOSS_F_Q8_A3"
+        },
+        {
+          "text": "Help hair health",
+          "code": "HAIR_LOSS_F_Q8_A4"
+        },
+        {
+          "text": "Feel more confident",
+          "code": "HAIR_LOSS_F_Q8_A5"
+        }
+      ]
+    },
+    "HAIR_LOSS_F_Q9": {
+      "type": "hair-loss-before-after",
+      "next": "HAIR_LOSS_F_Q10",
+      "index": 9
+    },
+    "HAIR_LOSS_F_Q10": {
+      "header": "Have you tried any products for hair growth?",
+      "type": "choice-details",
+      "next": "HAIR_LOSS_F_Q12",
+      "index": 10,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HAIR_LOSS_F_Q10_A1"
+        },
+        {
+          "text": "No",
+          "code": "HAIR_LOSS_F_Q10_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "HAIR_LOSS_F_Q10_A1",
+        "code": "HAIR_LOSS_F_Q10A",
+        "type": "text",
+        "description": "Tell us more"
+      }
+    },
+    "HAIR_LOSS_F_Q12": {
+      "header": "Is thinning hair common in your family?",
+      "type": "choice",
+      "next": "HAIR_LOSS_F_Q13",
+      "index": 12,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HAIR_LOSS_F_Q12_A1"
+        },
+        {
+          "text": "No",
+          "code": "HAIR_LOSS_F_Q12_A2"
+        },
+        {
+          "text": "Not sure",
+          "code": "HAIR_LOSS_F_Q12_A3"
+        }
+      ]
+    },
+    "HAIR_LOSS_F_Q13": {
+      "header": "How often do you feel stressed in your daily life?",
+      "type": "choice",
+      "next": "HAIR_LOSS_F_Q14",
+      "index": 13,
+      "answerOptions": [
+        {
+          "text": "Never",
+          "code": "HAIR_LOSS_F_Q13_A1"
+        },
+        {
+          "text": "Rarely",
+          "code": "HAIR_LOSS_F_Q13_A2"
+        },
+        {
+          "text": "Sometimes",
+          "code": "HAIR_LOSS_F_Q13_A3"
+        },
+        {
+          "text": "Often",
+          "code": "HAIR_LOSS_F_Q13_A4"
+        },
+        {
+          "text": "Always",
+          "code": "HAIR_LOSS_F_Q13_A5"
+        }
+      ]
+    },
+    "HAIR_LOSS_F_Q14": {
+      "header": "Have you recently experienced a major recent event?",
+      "type": "choice-details",
+      "next": "HAIR_LOSS_F_Q15",
+      "index": 14,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HAIR_LOSS_F_Q14_A1"
+        },
+        {
+          "text": "No",
+          "code": "HAIR_LOSS_F_Q14_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "HAIR_LOSS_F_Q14_A1",
+        "code": "HAIR_LOSS_F_Q14A",
+        "type": "text",
+        "description": "Tell us more"
+      }
+    },
+    "HAIR_LOSS_F_Q15": {
+      "header": "What is your current diet?",
+      "type": "choice",
+      "next": "HAIR_LOSS_F_Q16",
+      "index": 15,
+      "answerOptions": [
+        {
+          "text": "Eat meat regularly/sometimes",
+          "code": "HAIR_LOSS_F_Q15_A1"
+        },
+        {
+          "text": "Vegetarian",
+          "code": "HAIR_LOSS_F_Q15_A2"
+        },
+        {
+          "text": "Vegan",
+          "code": "HAIR_LOSS_F_Q15_A3"
+        },
+        {
+          "text": "Something else",
+          "code": "HAIR_LOSS_F_Q15_A4"
+        }
+      ]
+    },
+    "HAIR_LOSS_F_Q16": {
+      "header": "How much water do you drink per day?",
+      "type": "choice",
+      "next": "HAIR_LOSS_F_WHAT_NEXT",
+      "index": 16,
+      "answerOptions": [
+        {
+          "text": "1-2 glasses",
+          "code": "HAIR_LOSS_F_Q16_A1"
+        },
+        {
+          "text": "3-7 glasses",
+          "code": "HAIR_LOSS_F_Q16_A2"
+        },
+        {
+          "text": "8 glasses or more",
+          "code": "HAIR_LOSS_F_Q16_A3"
+        }
+      ]
+    },
+    "HAIR_LOSS_F_WHAT_NEXT": {
+      "type": "hair-loss-what-next",
+      "next": "HAIR_LOSS_F_Q17",
+      "index": 17
+    },
+    "HAIR_LOSS_F_Q17": {
+      "header": "Have you had a hysterectomy or are you postmenopausal?",
+      "type": "choice",
+      "next": "HAIR_LOSS_F_Q18",
+      "index": 18,
+      "answerOptions": [
+        {
+          "text": "No, neither of these apply to me",
+          "code": "HAIR_LOSS_F_Q17_A1"
+        },
+        {
+          "text": "Yes, I had a hysterectomy and/or removal of both ovaries",
+          "code": "HAIR_LOSS_F_Q17_A2"
+        },
+        {
+          "text": "Yes, I am postmenopausal (no period in 12 months)",
+          "code": "HAIR_LOSS_F_Q17_A3"
+        }
+      ]
+    },
+    "HAIR_LOSS_F_Q18": {
+      "header": "Are you experiencing any of the symptoms on your scalp?",
+      "type": "multiple-choice",
+      "next": "HAIR_LOSS_F_Q19",
+      "index": 19,
+      "answerOptions": [
+        {
+          "text": "Dry scalp",
+          "code": "HAIR_LOSS_F_Q18_A1"
+        },
+        {
+          "text": "Oily scalp",
+          "code": "HAIR_LOSS_F_Q18_A2"
+        },
+        {
+          "text": "Smooth bald spots with complete hair loss",
+          "code": "HAIR_LOSS_F_Q18_A3"
+        },
+        {
+          "text": "Redness and crusting around hair follicles",
+          "code": "HAIR_LOSS_F_Q18_A4"
+        },
+        {
+          "text": "No, none of these",
+          "code": "HAIR_LOSS_F_Q18_A5"
+        }
+      ]
+    },
+    "HAIR_LOSS_F_Q19": {
+      "header": "Do you have any allergies?",
+      "type": "choice-details",
+      "next": "HAIR_LOSS_F_Q20",
+      "index": 20,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HAIR_LOSS_F_Q19_A1"
+        },
+        {
+          "text": "No",
+          "code": "HAIR_LOSS_F_Q19_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "HAIR_LOSS_F_Q19_A1",
+        "code": "HAIR_LOSS_F_Q19A",
+        "type": "text",
+        "description": "Tell us more"
+      }
+    },
+    "HAIR_LOSS_F_Q20": {
+      "header": "Do you currently take any medications?",
+      "type": "choice-details",
+      "next": "HAIR_LOSS_F_Q21",
+      "index": 21,
+      "answerOptions": [
+        {
+          "text": "Yes",
+          "code": "HAIR_LOSS_F_Q20_A1"
+        },
+        {
+          "text": "No",
+          "code": "HAIR_LOSS_F_Q20_A2"
+        }
+      ],
+      "followUp": {
+        "showIfResponse": "HAIR_LOSS_F_Q20_A1",
+        "code": "HAIR_LOSS_F_Q20A",
+        "type": "text",
+        "description": "Tell us more"
+      }
+    },
+    "HAIR_LOSS_F_Q21": {
+      "header": "If prescribed, which treatment type do you prefer?",
+      "type": "choice",
+      "next": "HAIR_LOSS_F_SELECT",
+      "index": 22,
+      "answerOptions": [
+        {
+          "text": "Take treatment orally",
+          "code": "HAIR_LOSS_F_Q21_A1"
+        },
+        {
+          "text": "Apply treatment to my scalp",
+          "code": "HAIR_LOSS_F_Q21_A2"
+        }
+      ]
+    },
+    "HAIR_LOSS_F_SELECT": {
+      "header": "Which best describes your hair loss?",
+      "type": "female-hair-loss-select",
+      "next": "HAIR_LOSS_F_INFO_Q1",
+      "index": 23,
+      "answerOptions": [
+        {
+          "text": "General thinning or shedding",
+          "code": "HAIR_LOSS_F_SELECT_A1"
+        },
+        {
+          "text": "Thinning at temples",
+          "code": "HAIR_LOSS_F_SELECT_A2"
+        },
+        {
+          "text": "Bald spots or areas",
+          "code": "HAIR_LOSS_F_SELECT_A3"
+        },
+        {
+          "text": "Redness and crusting",
+          "code": "HAIR_LOSS_F_SELECT_A4"
+        },
+        {
+          "text": "I’m not sure, I’ll submit a photo",
+          "code": "HAIR_LOSS_F_SELECT_A5"
+        }
+      ]
+    },
+    "HAIR_LOSS_F_INFO_Q1": {
+      "header": "Minoxidil, trusted by providers for decades",
+      "type": "female-hair-loss-info",
+      "next": "HAIR_LOSS_F_INFO_Q2",
+      "index": 24
+    },
+    "HAIR_LOSS_F_INFO_Q2": {
+      "header": "We’re here to help you get results",
+      "type": "female-hair-loss-info",
+      "next": "HAIR_LOSS_F_TREATMENT_SELECT",
+      "index": 25
+    },
+    "HAIR_LOSS_F_TREATMENT_SELECT": {
+      "type": "female-hair-loss-treatment-select",
+      "index": 26,
+      "next": "V_IDENTITY_Q1"
+    },
+    "V_IDENTITY_Q1": {
+      "header": "What is your delivery address?",
+      "description": "If your provider approves your prescription request, your medication will be sent to your doorstep. Your order will be shipped in discreet packaging that never references Zealthy, pharmacies, or your prescription.",
+      "type": "crosscheck-verification",
+      "index": 27
+    },
+    "V_IDENTITY_Q2": {
+      "header": "Enter the last 4 digits of your social security.",
+      "description": "This will enable us to verify your identity, which is required by telemedicine law.",
+      "type": "ssn-verification",
+      "index": 28
+    },
+    "V_IDENTITY_Q3": {
+      "type": "photo-identification",
+      "index": 29,
+      "next": "PHOTOS"
+    },
+    "PHOTOS": {
+      "header": "Take or upload a photo of the front of your hairline.",
+      "description": "To assess your hair loss, your Zealthy provider will need you to take a couple of pictures. We’ll start with a photo of the front of your hairline.",
+      "label": "Front of your hairline",
+      "type": "hair-loss-photo",
+      "buttonText": "Confirm photo",
+      "index": 30,
+      "next": "PHOTOS_TWO"
+    },
+    "PHOTOS_TWO": {
+      "header": "Take or upload a photo of the top/back of your head.",
+      "description": "To assess your hair loss, your Zealthy provider will need you to take a couple of pictures. Now that we have a photo of the front of your hairline, go ahead and take a photo of the top/back of your head.",
+      "type": "hair-loss-photo",
+      "label": "Top/back of your head",
+      "buttonText": "Confirm photo",
+      "index": 31
+    }
+  }
+}
